@@ -59,27 +59,27 @@
 				<longitude></longitude>
 			</geo>
 			<attachments> <!-- all refering documents belong here -->
-				<MediaObject type="ENUM(ImageObject)" external="external" order="1">
+				<media type="ENUM(image)" external="external" order="1">
 					<description></description>
 					<image></image>
 					<name></name>
 					<url></url> <!-- if internal '/attachment/' is root -->
 					<caption></caption> 
-				</MediaObject>
-				<MediaObject order="2">
+				</media>
+				<media type="ENUM(image)" order="2">
 					<description></description>
 					<image></image>
 					<name></name>
 					<url></url>
 					<caption></caption>
-				</MediaObject>
-				<MediaObject order="3">
+				</media>
+				<media type="ENUM(image)" order="3">
 					<description></description>
 					<image></image>
 					<name></name>
 					<url></url>
 					<caption></caption>
-				</MediaObject>
+				</media>
 			</attachments>
 			<features>
 				<feature key="(required)" value="(optional)" />
