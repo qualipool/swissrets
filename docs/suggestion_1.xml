@@ -1,9 +1,10 @@
 <property><!--min 1--><!--*-->
 	<description>A short description of the item.</description><!-- Plain Text description file. This will be truncated after 255 characters -->
-	<image>http://homestreet24.ch/</image><!-- Full image URL to main Image file -->
+	<image external="true/false">http://homestreet24.ch/</image><!-- Full image URL to main Image file -->
 	<name>The name of the item.</name><!-- Sales or descriptive searchable name -->
 	<url>URL of the item.</url><!-- Requested Target URL of property (Portals are not required to use this value if they do not wish to promote a target service) -->
 	<productID>123487</productID><!--*--><!-- The ID that the exporter decides upon for cross referenzing. This Value must be unique to the exporters property -->
+	<transferOwnerID></transferOwnerID><!--*--><!-- This determines the account that is responsible for the property (this account should be registarable at a central location?)  -->
 	<releaseDate></releaseDate><!-- The Date the Property has/will become available for sale a value in the past will make the item available immiedialy, if there is no value or the element is missing, it will be considered as a "per request" item  -->
 	<offer main="true/false"><!--*--><!-- Multiple offers are possible first encountered main will be used as main offer (or only offer depending on the recipient) if there is no main specified the first one will be considered as main. -->
 		<type>ENUM(buy,rent)</type><!--*--><!-- warming! a missing value will consider "buy" as a value or will not be syncroniced at all -->
