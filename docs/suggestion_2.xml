@@ -1,6 +1,6 @@
 <exporter id="">
 	<property id=""><!--min 1--><!--*-->
-		<description>A short description of the item.</description><!-- Plain Text description file. This will be truncated after 255 characters -->
+		<description>A short description of the property.</description><!-- Plain Text description file. This will be truncated after 255 characters -->
 		<image external="true/false">http://homestreet24.ch/</image><!-- Full image URL to main Image file -->
 		<name>The name of the item.</name><!-- Sales or descriptive searchable name -->
 		<url>URL of the item.</url><!-- Requested Target URL of property (Portals are not required to use this value if they do not wish to promote a target service) -->
@@ -8,7 +8,7 @@
 		<transferOwnerID></transferOwnerID><!--*--><!-- This determines the account that is responsible for the property (this account should be registarable at a central location?)  -->
 		<releaseDate></releaseDate><!-- The Date the Property has/will become available for sale a value in the past will make the item available immiedialy, if there is no value or the element is missing, it will be considered as a "per request" item  -->
 		<offer main="true/false"><!--*--><!-- Multiple offers are possible first encountered main will be used as main offer (or only offer depending on the recipient) if there is no main specified the first one will be considered as main. -->
-			<type>ENUM(buy,rent)</type><!--*--><!-- warming! a missing value will consider "buy" as a value or will not be syncroniced at all -->
+			<type>ENUM(buy,rent)</type><!--*--><!-- warming! a missing value will consider "buy" as a value, or will not be syncroniced at all -->
 			<availability>Discontinued/InStock</availability>
 			<availabilityStarts>DateTime</availabilityStarts>
 			<category>house/Office block</category>
@@ -47,7 +47,9 @@
 				<streetAddress>The street address. For example, 1600 Amphitheatre Pkwy.</streetAddress>
 			</address>
 			<contactpoint>
-				<contactType>A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.</contactType>
+				<contactType>ENUM('visit,landlord')</contactType>
+				<givenName></givenName>
+				<familyName></familyName>
 				<email>Email address.</email>
 				<faxNumber>The fax number.</faxNumber>
 				<telephone>The telephone number.</telephone>
@@ -56,34 +58,32 @@
 				<latitude></latitude>
 				<longitude></longitude>
 			</geo>
-			<photo>
-				<imageobject>
+			<attachments> <!-- all refering documents belong here -->
+				<MediaObject type="ENUM(ImageObject)" external="external" order="1">
+					<description></description>
+					<image></image>
+					<name></name>
+					<url></url> <!-- if internal '/attachment/' is root -->
+					<caption></caption> 
+				</MediaObject>
+				<MediaObject order="2">
 					<description></description>
 					<image></image>
 					<name></name>
 					<url></url>
 					<caption></caption>
-				</imageobject>
-				<imageobject>
+				</MediaObject>
+				<MediaObject order="3">
 					<description></description>
 					<image></image>
 					<name></name>
 					<url></url>
 					<caption></caption>
-				</imageobject>
-				<imageobject>
-					<description></description>
-					<image></image>
-					<name></name>
-					<url></url>
-					<caption></caption>
-				</imageobject>
-			</photo>
-			<!--customItem-->
+				</MediaObject>
+			</attachments>
 			<features>
-				<wheelchairaccess>novalue means (1 oder Y)</wheelchairaccess>
+				<feature key="(required)" value="(optional)" />
 			</features>
-
 		</place>
 	</property>
 </exporter>
