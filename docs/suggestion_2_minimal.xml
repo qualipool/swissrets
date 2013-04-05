@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exporter id="123">
+	<default_property_lang>ch_DE</default_property_lang>
+	<timezone>+1</timezone>
+	<property id="1"> <!-- not required -->
+		<name>The name of the item.</name>
+		<offer main="true">
+			<type>buy</type>
+			<seller>
+				<!-- ... -->
+			</seller>
+		</offer>
+		<address>
+			<addressCountry>ISO 3166-1 alpha-2 country code.</addressCountry>
+			<addressRegion>The region. For example, CA.</addressRegion>
+			<postalCode>The postal code. For example, 94043.</postalCode>
+		</address>
+	</property>
+</exporter>

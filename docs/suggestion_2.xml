@@ -1,89 +1,183 @@
-<exporter id="">
-	<property id=""><!--min 1--><!--*-->
-		<description>A short description of the property.</description><!-- Plain Text description file. This will be truncated after 255 characters -->
-		<image external="true/false">http://homestreet24.ch/</image><!-- Full image URL to main Image file -->
-		<name>The name of the item.</name><!-- Sales or descriptive searchable name -->
-		<url>URL of the item.</url><!-- Requested Target URL of property (Portals are not required to use this value if they do not wish to promote a target service) -->
-		<productID>123487</productID><!--*--><!-- The ID that the exporter decides upon for cross referenzing. This Value must be unique to the exporters property -->
-		<transferOwnerID></transferOwnerID><!--*--><!-- This determines the account that is responsible for the property (this account should be registarable at a central location?)  -->
-		<releaseDate></releaseDate><!-- The Date the Property has/will become available for sale a value in the past will make the item available immiedialy, if there is no value or the element is missing, it will be considered as a "per request" item  -->
-		<offer main="true/false"><!--*--><!-- Multiple offers are possible first encountered main will be used as main offer (or only offer depending on the recipient) if there is no main specified the first one will be considered as main. -->
-			<type>ENUM(buy,rent)</type><!--*--><!-- warming! a missing value will consider "buy" as a value, or will not be syncroniced at all -->
-			<availability>Discontinued/InStock</availability>
-			<availabilityStarts>DateTime</availabilityStarts>
-			<category>house/Office block</category>
-			<price frequency="NUMERIC" unit="ENUM(m,w,d,y,h,infinite)"><!-- DECIMAL(2) || free --></price> <!-- default frequency = 0, default unit = 'infinite', empty/missing/0 element will be considered "per request", string 'free' can be submited -->
-			<priceCurrency>in 3-letter ISO 4217 format</priceCurrency><!-- no currency will result in 0 price value -->
-			<seller><!--*-->
-				<organization>
-					<address>
-						<addressCountry>ISO 3166-1 alpha-2 country code.</addressCountry>
-						<addressLocality>The locality. For example, Mountain View.</addressLocality>
-						<addressRegion>The region. For example, CA.</addressRegion>
-						<postalCode>The postal code. For example, 94043.</postalCode>
-						<postOfficeBoxNumber>The post offce box number for PO box addresses.</postOfficeBoxNumber>
-						<streetAddress>The street address. For example, 1600 Amphitheatre Pkwy.</streetAddress>
-					</address>
-					<legalName>Betterhomes</legalName>
-					<logo>URL</logo>
-				</organization>
-				<person>
-					<givenName></givenName>
-					<familyName></familyName>
-					<email></email>
-					<faxNumber></faxNumber>
-					<telephone></telephone>
-					<gender></gender>
-				</person>
-			</seller>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<exporter id="123">
+	<organization> <!-- for fallback -->
+		<address>
+			<addressCountry>ISO 3166-1 alpha-2 country code.</addressCountry> 
+			<addressLocality>The locality. For example, Mountain View.</addressLocality>
+			<addressRegion>The region. For example, CA.</addressRegion>
+			<postalCode>The postal code. For example, 94043.</postalCode>
+			<postOfficeBoxNumber>The post offce box number for PO box addresses.</postOfficeBoxNumber>
+			<streetAddress>The street address. For example, 1600 Amphitheatre Pkwy.</streetAddress>
+		</address>
+		<legalName>Betterhomes</legalName>
+		<logo external="false">URL</logo>
+	</organization>
+
+	<person> <!-- for fallback -->
+		<function></function> <!-- examples ('ceo', 'sales', 'information', 'technicalFeedback') -->
+		<givenName></givenName>
+		<familyName></familyName>
+		<email></email>
+		<faxNumber></faxNumber>
+		<telephone></telephone>
+		<gender>F/M</gender>
+	</person>
+
+	<exportInformation>
+		<software></software>
+		<exportDate></exportDate>
+		<exportIteration></exportIteration><!-- exporters can store te iteration number here for reference -->
+		<user>123</user><!-- used by exporter to identify the culprit (usualy: username or ID) -->
+	</exportInformation>
+
+	<technicalFeedback primary="true"><!-- {Multiple possible} --><!-- email verification for various feedbacks such as once put online -->
+		<givenName></givenName>
+		<familyName></familyName>
+		<email></email>
+		<telephone></telephone>
+		<gender>F/M</gender>
+	</technicalFeedback>
+
+	<property id="1" lang="ch_DE"><!--min 1--><!--*--><!-- [2lettercountry]_[2LETTERLANGUAGE] -->
+		<alternatePropertyLanguage lang="ch_FR" exporter="123">3</alternatePropertyLanguage><!-- determines alternate languages. if no exporter defaults to own. content is the id of the property. -->
+		<similarProperty exporter="123">3</similarProperty><!-- connection for things like alternate flats (in the language of current one) -->
+		
+		<url primary="true">http://homestreet.ch/single/111111</url><!-- {Multiple possible with primary} Requested Target URL of property -->
+
+		<releaseDate>2013-04-02T19:20:30+01:00</releaseDate><!-- The Date (W3C) this entry was created/released. Some import services rely on this!-->
+		<modifyDate>2013-04-02T19:20:30+01:00</modifyDate><!-- The Date (W3C) this objects was last modified. Some import services rely on this!-->
+
+		<category primary="true">house</category><!-- some only support one category! -->
+		<category>test</category>
+
+		<excerpt>A short description of the property.</excerpt><!-- Plain Text description file. This will be truncated after 255 characters -->
+		<description><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description><!-- Valid html5 content. if it does not pass W3C it will not be exepted as HTML and will be stript of its tags! -->
+		<description title="another part of the description"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
+		<description><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
+		<description title="some title"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
+
+		<name>The ultimate Test-Object</name><!-- Sales or descriptive searchable name -->
+
+		<offer primary="true" title=""><!--*--><!-- {Multiple possible} -->
+			<type>buy</type><!--*--><!-- ENUM(buy,rent) warming! a missing value will consider "buy" as a value, or will not be syncroniced at all -->
+			<availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts><!-- The Date the Offer has/will become available for sale a value in the past will make the item available immiedialy, if there is no value or the element is missing, it will be considered as a "per request" item  -->
+			<price frequency="NUMERIC" timesegment="ENUM(m,w,d,y,h,infinite)" propertysegment="ENUM(m2,km2,hk2,all)">700000</price> <!-- DECIMAL(2) || free --><!-- default frequency = 0, default unit = 'infinite', empty/missing/0 element will be considered "per request", string 'free' can be submited and means available for no money-->
+			<netPrice frequency="NUMERIC" timesegment="ENUM(m,w,d,y,h,infinite)" propertysegment="ENUM(m2,km2,hk2,all)"></netPrice>
+			<extraCost title="Nebenkosten Gas &amp; Elektrik" frequency="NUMERIC" timesegment="ENUM(m,w,d,y,h,infinite)" propertysegment="ENUM(m2,km2,hk2,all)"></extraCost><!-- multiple possible -->
+			<extraCost title="Kaution" frequency="NUMERIC" timesegment="ENUM(m,w,d,y,h,infinite)" propertysegment="ENUM(m2,km2,hk2,all)"></extraCost><!-- multiple possible -->
+			<priceCurrency>CHF</priceCurrency><!-- no currency will result in 0 price value -->
 		</offer>
-		<place>
-			<address>
-				<addressCountry>ISO 3166-1 alpha-2 country code.</addressCountry>
-				<addressLocality>The locality. For example, Mountain View.</addressLocality>
-				<addressRegion>The region. For example, CA.</addressRegion>
-				<postalCode>The postal code. For example, 94043.</postalCode>
-				<postOfficeBoxNumber>The post offce box number for PO box addresses.</postOfficeBoxNumber>
-				<streetAddress>The street address. For example, 1600 Amphitheatre Pkwy.</streetAddress>
-			</address>
-			<contactpoint>
-				<contactType>ENUM('visit,landlord')</contactType>
+
+		<seller><!--*-->
+			<organization>
+				<address>
+					<addressCountry>CH</addressCountry>
+					<addressLocality>Arbon</addressLocality>
+					<addressRegion>Thurgau</addressRegion>
+					<postalCode>9320</postalCode>
+					<streetAddress>Weitegasse 17</streetAddress>
+				</address>
+				<legalName>Betterhomes</legalName>
+				<logo>URL</logo>
+				<email></email>
+				<faxNumber></faxNumber>
+				<telephone type=""></telephone> <!-- ENUM('direct','central','mobile') -->
+				<telephone></telephone>
+			</organization>
+			<person>
+				<function></function> <!-- examples ('Ceo', 'Sales', 'Information', 'Guide') -->
 				<givenName></givenName>
 				<familyName></familyName>
-				<email>Email address.</email>
-				<faxNumber>The fax number.</faxNumber>
-				<telephone>The telephone number.</telephone>
-			</contactpoint>
-			<geo>
-				<latitude></latitude>
-				<longitude></longitude>
-			</geo>
-			<attachments> <!-- all refering documents belong here -->
-				<media type="ENUM(image)" external="external" order="1">
-					<description></description>
-					<image></image>
-					<name></name>
-					<url></url> <!-- if internal '/attachment/' is root -->
-					<caption></caption> 
-				</media>
-				<media type="ENUM(image)" order="2">
-					<description></description>
-					<image></image>
-					<name></name>
-					<url></url>
-					<caption></caption>
-				</media>
-				<media type="ENUM(image)" order="3">
-					<description></description>
-					<image></image>
-					<name></name>
-					<url></url>
-					<caption></caption>
-				</media>
-			</attachments>
-			<features>
-				<feature key="(required)" value="(optional)" />
-			</features>
-		</place>
+				<email></email>
+				<faxNumber></faxNumber>
+				<telephone type=""></telephone> <!-- ENUM('direct','central','mobile') -->
+				<telephone></telephone>
+				<gender></gender>
+			</person>
+		</seller>
+
+		<address>
+			<addressCountry>CH</addressCountry>
+			<addressLocality>Arbon</addressLocality>
+			<addressRegion>Thurgau</addressRegion>
+			<postalCode>9320</postalCode>
+			<streetAddress>Weitegasse 17</streetAddress>
+		</address>
+
+		<geo>
+			<latitude>2</latitude><!-- (FLOAT) no limitation -->
+			<longitude></longitude><!-- (FLOAT) no limitation -->
+		</geo>
+
+		<attachments> <!-- all refering documents belong here -->
+			<media type="image" order="1">
+				<alt>Adler fehlt hier</alt>
+				<title>Adler im flug</title>
+				<file>1/Eagle &amp; Waterfall.jpg</file><!-- '/attachment/' is root -->
+				<url></url> 
+				<caption>Adler können von weiter entfehrnung ihre Beute sehen</caption>
+			</media>
+			<media type="image" order="2">
+				<alt>Fehlendes Elephantenbild</alt>
+				<title>Ein Elephantenbild</title>
+				<file>1/wallpaper_fish.JPG</file><!-- '/attachment/' is root -->
+				<url></url> 
+				<caption>Elefanten sind sehr gross</caption>
+			</media>
+			<media type="image" order="3">
+				<alt>Hier wären Flamingos</alt>
+				<title>Bild von Flamigos</title>
+				<file>1/Moon.JPG</file><!-- '/attachment/' is root -->
+				<url></url> 
+				<caption>Flamingos sind sehr schöne Tiere</caption>
+			</media>
+			<media type="image" order="4">
+				<file>1/Andromeda Galaxy.jpg</file><!-- '/attachment/' is root -->
+				<caption>a test2</caption>
+				<alt>An alt text222</alt>
+			</media>
+			<media type="document" order="5">
+				<file>1/Floating-Leaves.jpg</file>
+			</media>
+			<media type="image" order="6">
+				<file>1/beach-800x600.jpg</file><!-- '/attachment/' is root -->
+			</media>
+			<media type="document" order="100">
+				<title>R intro2222</title>
+				<url>http://cran.r-project.org/doc/manuals/R-intro.pdf</url>
+			</media>
+			<media type="plan" order="9">
+				<title>R intro Plan33333</title>
+				<url>http://homestreet.ch/uploads/property/39184_49fc027ee9e02a548e4fe69e77d6c5b2_thumb_530x335_c.jpg</url>
+			</media>
+			<media type="youtube" order="10">
+				<alt>Walthrough Video wäre hier</alt>
+				<title>Walthrough Video von der Anlage</title>
+				<file></file><!-- '/attachment/' is root -->
+				<url>http://youtu.be/nwdqcFu0WG8</url> 
+				<caption>Adler können von weiter entfehrnung ihre Beute sehen</caption>
+			</media>
+		</attachments>
+
+		<features>
+			<feature key="(required)" value="(optional)" order="1" /> <!-- See online matchlist -->
+			<feature key="wheel-chair-access" value="true" order="2" />
+			<feature key="animals-alowed" value="2" order="3" />
+		</features>
+
+		<numericValues>
+			<!-- 
+				# 	numeric float point number (increment-steps are defined in matchlist) <= 2 siginificant places (required)
+				SI 	{m = meter | km = kilometer | kg = kilogram}
+				-	meaning "to" to define a range. this does NOT mean "subtract"
+				+	defines that an(more) aditional value(s) are defined
+			-->
+			<!-- [#][SI] - [#][SI] + [#][SI] -->
+			<value key="floor">1to2+4to5</value> <!-- See online matchlist -->
+			<value key="distance-to-primaryschool">500m+700m</value>
+			<value key="number-of-rooms">3.5</value>
+			<value key="max-elivator-weight">500kg+100kg</value>
+		</numericValues>
 	</property>
 </exporter>
