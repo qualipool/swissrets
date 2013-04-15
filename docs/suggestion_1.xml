@@ -1,6 +1,6 @@
 <property><!--min 1--><!--*-->
 	<description>A short description of the item.</description><!-- Plain Text description file. This will be truncated after 255 characters -->
-	<image external="true/false">http://homestreet24.ch/</image><!-- Full image URL to main Image file -->
+	<image external="true/false">http://casasoft.ch/</image><!-- Full image URL to main Image file -->
 	<name>The name of the item.</name><!-- Sales or descriptive searchable name -->
 	<url>URL of the item.</url><!-- Requested Target URL of property (Portals are not required to use this value if they do not wish to promote a target service) -->
 	<productID>123487</productID><!--*--><!-- The ID that the exporter decides upon for cross referenzing. This Value must be unique to the exporters property -->
@@ -23,7 +23,7 @@
 					<postOfficeBoxNumber>The post offce box number for PO box addresses.</postOfficeBoxNumber>
 					<streetAddress>The street address. For example, 1600 Amphitheatre Pkwy.</streetAddress>
 				</address>
-				<legalName>Betterhomes</legalName>
+				<legalName>Casasoft AG</legalName>
 				<logo>URL</logo>
 			</organization>
 			<person>
