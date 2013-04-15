@@ -10,7 +10,7 @@
 			<postOfficeBoxNumber>The post offce box number for PO box addresses.</postOfficeBoxNumber>
 			<streetAddress>The street address. For example, 1600 Amphitheatre Pkwy.</streetAddress>
 		</address>
-		<legalName>Betterhomes</legalName>
+		<legalName>Casasoft AG</legalName>
 		<logo external="false">URL</logo>
 	</organization>
 
@@ -77,7 +77,7 @@
                     <postalCode>9320</postalCode>
                     <streetAddress>Weitegasse 17</streetAddress>
                 </address>
-                <legalName>Betterhomes</legalName>
+                <legalName>Casasoft AG</legalName>
                 <logo>URL</logo>
                 <email></email>
                 <faxNumber></faxNumber>
