@@ -7,22 +7,15 @@
             <addressLocality/>
             <addressRegion>Zürich</addressRegion>
             <postalCode>8000</postalCode>
-            <postOfficeBoxNumber>+41 99 999 99 99</postOfficeBoxNumber>
+            <postOfficeBoxNumber>123</postOfficeBoxNumber>
             <streetAddress>Street 999</streetAddress>
         </address>
         <legalName>Your Company</legalName>
         <logo external="false"/>
-        <telephone>123</telephone>
+        <email></email>
+        <faxNumber></faxNumber>
+        <telephone type=""></telephone> <!-- ENUM('direct','central','mobile') -->
     </organization>
-    <person>
-        <function/>
-        <givenName/>
-        <familyName/>
-        <email/>
-        <faxNumber/>
-        <telephone/>
-        <gender/>
-    </person>
     <exportInformation>
         <software>Casasoft</software>
         <exportDate/>
