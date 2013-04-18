@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <exporter id="123">
+<<<<<<< HEAD
 	<organization> <!-- for fallback -->
 		<address>
 			<addressCountry>ISO 3166-1 alpha-2 country code.</addressCountry> 
@@ -40,6 +41,44 @@
 	</technicalFeedback>
 
 	<property id="1" lang="ch_DE"><!--min 1--><!--*--><!-- [2lettercountry]_[2LETTERLANGUAGE] -->
+=======
+	<organization>
+        <address>
+            <addressCountry/>
+            <addressLocality/>
+            <addressRegion>Zug</addressRegion>
+            <postalCode>6300</postalCode>
+            <postOfficeBoxNumber>+41 41 755 00 01</postOfficeBoxNumber>
+            <streetAddress>Baarerstrasse 112</streetAddress>
+        </address>
+        <legalName>hegglin group ag</legalName>
+        <logo external="false"/>
+        <telephone>123</telephone>
+    </organization>
+    <person>
+        <function/>
+        <givenName/>
+        <familyName/>
+        <email/>
+        <faxNumber/>
+        <telephone/>
+        <gender/>
+    </person>
+    <exportInformation>
+        <software>Casasoft</software>
+        <exportDate/>
+        <exportIteration/>
+        <user/>
+    </exportInformation>
+    <technicalFeedback>
+        <givenName/>
+        <familyName/>
+        <email>dev@casasoft.ch</email>
+        <telephone>+41 71 686 94 94</telephone>
+        <gender>M</gender>
+    </technicalFeedback>
+    <property id="1" lang="ch_DE"><!--min 1--><!--*--><!-- [2lettercountry]_[2LETTERLANGUAGE] -->
+>>>>>>> alterations
         <alternatePropertyLanguage lang="ch_FR" exporter="123">3</alternatePropertyLanguage><!-- determines alternate languages. if no exporter defaults to own. content is the id of the property. -->
         <similarProperty exporter="123">3</similarProperty><!-- connection for things like alternate flats (in the language of current one) -->
         
@@ -138,6 +177,7 @@
             </media>
             <media type="document" order="5">
                 <file>1/Floating-Leaves.jpg</file>
+                <caption>Document description</caption>
             </media>
             <media type="image" order="6">
                 <file>1/beach-800x600.jpg</file><!-- '/attachment/' is root -->
@@ -159,10 +199,10 @@
             </media>
         </attachments>
 
-        <features>
-            <feature key="(required)" order="1">(optional)</feature> <!-- See online matchlist -->
-            <feature key="wheel-chair-access" order="2" />
-            <feature key="animals-alowed" order="3">2</feature>
+<features>
+            <feature key="prop_elevator" order="1">2</feature> <!-- See online matchlist -->
+            <feature key="prop_child-friendly" order="2" />
+            <feature key="animal_allowed" order="3">2</feature>
         </features>
 
         <numericValues>
@@ -173,11 +213,12 @@
                 +   defines that an(more) aditional value(s) are defined
             -->
             <!-- [#][SI] - [#][SI] + [#][SI] -->
-            <value key="floor">-1+0+1+2+3+4</value> <!-- See online matchlist -->
-            <value key="distance-to-primaryschool">500m+700m</value>
-            <value key="number-of-rooms">3.5</value>
-            <value key="max-elivator-weight">500kg+100kg</value>
-            <value key="living-space">200m</value>
+            <value key="floor">-1+0+1+2+3+4</value>
+            <value key="number_of_floors">3</value>
+            <value key="distance_kindergarten">500m+700m</value>
+            <value key="number_of_rooms">3.5</value>
+            <value key="max_elivator_weight">500kg+100kg</value>
+            <value key="surface_living">200m</value>
         </numericValues>
     </property>
 </exporter>
