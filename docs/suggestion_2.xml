@@ -5,12 +5,12 @@
         <address>
             <addressCountry/>
             <addressLocality/>
-            <addressRegion>Zug</addressRegion>
-            <postalCode>6300</postalCode>
-            <postOfficeBoxNumber>+41 41 755 00 01</postOfficeBoxNumber>
-            <streetAddress>Baarerstrasse 112</streetAddress>
+            <addressRegion>Zürich</addressRegion>
+            <postalCode>8000</postalCode>
+            <postOfficeBoxNumber>+41 99 999 99 99</postOfficeBoxNumber>
+            <streetAddress>Street 999</streetAddress>
         </address>
-        <legalName>hegglin group ag</legalName>
+        <legalName>Your Company</legalName>
         <logo external="false"/>
         <telephone>123</telephone>
     </organization>
@@ -32,15 +32,15 @@
     <technicalFeedback>
         <givenName/>
         <familyName/>
-        <email>dev@casasoft.ch</email>
-        <telephone>+41 71 686 94 94</telephone>
+        <email>info@youremail.ch</email>
+        <telephone>+41 99 999 99 99</telephone>
         <gender>M</gender>
     </technicalFeedback>
     <property id="1" lang="ch_DE"><!--min 1--><!--*--><!-- [2lettercountry]_[2LETTERLANGUAGE] -->
         <alternatePropertyLanguage lang="ch_FR" exporter="123">3</alternatePropertyLanguage><!-- determines alternate languages. if no exporter defaults to own. content is the id of the property. -->
         <similarProperty exporter="123">3</similarProperty><!-- connection for things like alternate flats (in the language of current one) -->
         
-        <url primary="true">http://homestreet.ch/single/111111</url><!-- {Multiple possible with primary} Requested Target URL of property -->
+        <url primary="true">http://youremail.ch/property/111111</url><!-- {Multiple possible with primary} Requested Target URL of property -->
 
         <releaseDate>2013-04-02T19:20:30+01:00</releaseDate><!-- The Date (W3C) this entry was created/released. Some import services rely on this!-->
         <modifyDate>2013-04-02T19:20:30+01:00</modifyDate><!-- The Date (W3C) this objects was last modified. Some import services rely on this!-->
@@ -69,12 +69,12 @@
             <organization>
                 <address>
                     <addressCountry>CH</addressCountry>
-                    <addressLocality>Arbon</addressLocality>
-                    <addressRegion>Thurgau</addressRegion>
-                    <postalCode>9320</postalCode>
-                    <streetAddress>Weitegasse 17</streetAddress>
+                    <addressLocality>Zürich</addressLocality>
+                    <addressRegion>Zürich</addressRegion>
+                    <postalCode>8000</postalCode>
+                    <streetAddress>Street 999</streetAddress>
                 </address>
-                <legalName>Betterhomes</legalName>
+                <legalName>Your Company</legalName>
                 <logo>URL</logo>
                 <email></email>
                 <faxNumber></faxNumber>
@@ -95,10 +95,10 @@
 
         <address>
             <addressCountry>CH</addressCountry>
-            <addressLocality>Arbon</addressLocality>
-            <addressRegion>Thurgau</addressRegion>
-            <postalCode>9320</postalCode>
-            <streetAddress>Weitegasse 17</streetAddress>
+            <addressLocality>Zürich</addressLocality>
+            <addressRegion>Zürich</addressRegion>
+            <postalCode>8000</postalCode>
+            <streetAddress>Street 999</streetAddress>
         </address>
 
         <geo>
@@ -146,7 +146,7 @@
             </media>
             <media type="plan" order="9">
                 <title>R intro Plan33333</title>
-                <url>http://homestreet.ch/uploads/property/39184_49fc027ee9e02a548e4fe69e77d6c5b2_thumb_530x335_c.jpg</url>
+                <url>http://yourdomain.ch/property/39184_49fc027ee9e02a548e4fe69e77d6c5b2_thumb_530x335_c.jpg</url>
             </media>
             <media type="youtube" order="10">
                 <alt>Walthrough Video wäre hier</alt>
@@ -157,7 +157,7 @@
             </media>
         </attachments>
 
-<features>
+        <features>
             <feature key="prop_elevator" order="1">2</feature> <!-- See online matchlist -->
             <feature key="prop_child-friendly" order="2" />
             <feature key="animal_allowed" order="3">2</feature>
