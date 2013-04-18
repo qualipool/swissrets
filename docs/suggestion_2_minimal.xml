@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <exporter id="123">
-	<default_property_lang>ch_DE</default_property_lang>
-	<timezone>+1</timezone>
 	<property id="1"> <!-- not required -->
 		<name>The name of the item.</name>
+		<modifyDate>2013-04-02T19:20:30+01:00</modifyDate>
 		<offer main="true">
 			<type>buy</type>
 			<seller>
-				<!-- ... -->
+				<person type="inquiry">
+					<email>email@host.com</email>
+				</person>
 			</seller>
 		</offer>
 		<address>

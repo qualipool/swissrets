@@ -82,15 +82,15 @@
                     <streetAddress>Street 999</streetAddress>
                 </address>
                 <legalName>Your Company</legalName>
-                <logo>URL</logo>
-                <email></email>
-                <faxNumber></faxNumber>
+                <brand>Your Brandname</brand>
+                <!-- <logo external="false"/> has not yet been implemented-->
+                <email>email@host.com</email>
+                <faxNumber>+41 123 456 78 90</faxNumber>
                 <telephone type="direct">+41 123 456 78 90</telephone>
                 <telephone type="central">+41 123 456 78 90</telephone>
                 <telephone type="mobile">+41 123 456 78 90</telephone>
-                <brand></brand>
             </organization>
-            <person type="view">
+            <person type="view"><!-- presented up front -->
                 <function>CEO</function>
                 <givenName>Max</givenName>
                 <familyName>Muster</familyName>
@@ -101,7 +101,7 @@
                 <telephone type="mobile">+41 123 456 78 90</telephone>
                 <gender>M</gender>
             </person>
-            <person type="inquiry">
+            <person type="inquiry"><!-- used for inquiry messages -->
                 <function>Sachbearbeiterin</function>
                 <givenName>Jane</givenName>
                 <familyName>Muster</familyName>
