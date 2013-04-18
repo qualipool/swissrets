@@ -1,47 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <exporter id="123">
-<<<<<<< HEAD
-	<organization> <!-- for fallback -->
-		<address>
-			<addressCountry>ISO 3166-1 alpha-2 country code.</addressCountry> 
-			<addressLocality>The locality. For example, Mountain View.</addressLocality>
-			<addressRegion>The region. For example, CA.</addressRegion>
-			<postalCode>The postal code. For example, 94043.</postalCode>
-			<postOfficeBoxNumber>The post offce box number for PO box addresses.</postOfficeBoxNumber>
-			<streetAddress>The street address. For example, 1600 Amphitheatre Pkwy.</streetAddress>
-		</address>
-		<legalName>Casasoft AG</legalName>
-		<logo external="false">URL</logo>
-	</organization>
-
-	<person> <!-- for fallback -->
-		<function></function> <!-- examples ('ceo', 'sales', 'information', 'technicalFeedback') -->
-		<givenName></givenName>
-		<familyName></familyName>
-		<email></email>
-		<faxNumber></faxNumber>
-		<telephone></telephone>
-		<gender>F/M</gender>
-	</person>
-
-	<exportInformation>
-		<software></software>
-		<exportDate></exportDate>
-		<exportIteration></exportIteration><!-- exporters can store te iteration number here for reference -->
-		<user>123</user><!-- used by exporter to identify the culprit (usualy: username or ID) -->
-	</exportInformation>
-
-	<technicalFeedback primary="true"><!-- {Multiple possible} --><!-- email verification for various feedbacks such as once put online -->
-		<givenName></givenName>
-		<familyName></familyName>
-		<email></email>
-		<telephone></telephone>
-		<gender>F/M</gender>
-	</technicalFeedback>
-
-	<property id="1" lang="ch_DE"><!--min 1--><!--*--><!-- [2lettercountry]_[2LETTERLANGUAGE] -->
-=======
 	<organization>
         <address>
             <addressCountry/>
@@ -78,7 +37,6 @@
         <gender>M</gender>
     </technicalFeedback>
     <property id="1" lang="ch_DE"><!--min 1--><!--*--><!-- [2lettercountry]_[2LETTERLANGUAGE] -->
->>>>>>> alterations
         <alternatePropertyLanguage lang="ch_FR" exporter="123">3</alternatePropertyLanguage><!-- determines alternate languages. if no exporter defaults to own. content is the id of the property. -->
         <similarProperty exporter="123">3</similarProperty><!-- connection for things like alternate flats (in the language of current one) -->
         
@@ -116,7 +74,7 @@
                     <postalCode>9320</postalCode>
                     <streetAddress>Weitegasse 17</streetAddress>
                 </address>
-                <legalName>Casasoft AG</legalName>
+                <legalName>Betterhomes</legalName>
                 <logo>URL</logo>
                 <email></email>
                 <faxNumber></faxNumber>
