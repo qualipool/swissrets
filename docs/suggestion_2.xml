@@ -3,59 +3,72 @@
 <exporter id="123">
 	<organization>
         <address>
-            <addressCountry/>
-            <addressLocality/>
-            <addressRegion>Zürich</addressRegion>
-            <postalCode>8000</postalCode>
+            <addressCountry>CH</addressCountry>
+            <addressLocality>Arbon</addressLocality>
+            <addressRegion>Thurgau</addressRegion>
+            <postalCode>9320</postalCode>
             <postOfficeBoxNumber>123</postOfficeBoxNumber>
             <streetAddress>Street 999</streetAddress>
         </address>
-        <legalName>Your Company</legalName>
-        <logo external="false"/>
-        <email></email>
-        <faxNumber></faxNumber>
-        <telephone type=""></telephone> <!-- ENUM('direct','central','mobile') -->
+        <legalName>Your Main Company</legalName>
+        <brand>Your Brandname</brand>
+        <!-- <logo external="false"/> has not yet been implemented-->
+        <email>info@domain.com</email>
+        <faxNumber>+41 123 456 78 90</faxNumber>
+        <telephone type="direct">+41 123 456 78 90</telephone>
+        <telephone type="central">+41 123 456 78 90</telephone>
+        <telephone type="mobile">+41 123 456 78 90</telephone>
     </organization>
     <exportInformation>
         <software>Casasoft</software>
-        <exportDate/>
-        <exportIteration/>
-        <user/>
+        <exportDate>2013-04-02T19:20:30+01:00</exportDate>
+        <exportIteration>23</exportIteration>
+        <user>max.muster</user>
     </exportInformation>
     <technicalFeedback>
-        <givenName/>
-        <familyName/>
+        <givenName>Max</givenName>
+        <familyName>Muster</familyName>
         <email>info@youremail.ch</email>
         <telephone>+41 99 999 99 99</telephone>
         <gender>M</gender>
     </technicalFeedback>
-    <property id="1" lang="ch_DE"><!--min 1--><!--*--><!-- [2lettercountry]_[2LETTERLANGUAGE] -->
-        <alternatePropertyLanguage lang="ch_FR" exporter="123">3</alternatePropertyLanguage><!-- determines alternate languages. if no exporter defaults to own. content is the id of the property. -->
-        <similarProperty exporter="123">3</similarProperty><!-- connection for things like alternate flats (in the language of current one) -->
-        
-        <url primary="true">http://youremail.ch/property/111111</url><!-- {Multiple possible with primary} Requested Target URL of property -->
+    <property id="1" lang="ch_DE">
+        <alternatePropertyLanguage lang="ch_FR" exporter="123">3</alternatePropertyLanguage>
+        <similarProperty exporter="123">3</similarProperty>
 
-        <releaseDate>2013-04-02T19:20:30+01:00</releaseDate><!-- The Date (W3C) this entry was created/released. Some import services rely on this!-->
-        <modifyDate>2013-04-02T19:20:30+01:00</modifyDate><!-- The Date (W3C) this objects was last modified. Some import services rely on this!-->
+        <url primary="true">http://youremail.ch/property/111111</url>
+        <url>http://youremail.ch/property/111111</url>
 
-        <category primary="true">house</category><!-- some only support one category! -->
-        <category>test</category>
+        <releaseDate>2013-04-02T19:20:30+01:00</releaseDate>
+        <modifyDate>2013-04-02T19:20:30+01:00</modifyDate>
 
-        <excerpt>A short description of the property.</excerpt><!-- Plain Text description file. This will be truncated after 255 characters -->
+        <category primary="true">apartment</category><!-- some only support one category! -->
+        <category>duplex</category>
+
+        <excerpt>A short description of the property.</excerpt>
         <description><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description><!-- Valid html5 content. if it does not pass W3C it will not be exepted as HTML and will be stript of its tags! -->
         <description title="Infos"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
         <description title="Titel"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
 
-        <name>The ultimate Test-Object</name><!-- Sales or descriptive searchable name -->
+        <name>The ultimate Test-Object</name>
 
-        <offer primary="true" title=""><!--*--><!-- {Multiple possible} -->
-            <type>buy</type><!--*--><!-- ENUM(buy,rent) warming! a missing value will consider "buy" as a value, or will not be syncroniced at all -->
-            <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts><!-- The Date the Offer has/will become available for sale a value in the past will make the item available immiedialy, if there is no value or the element is missing, it will be considered as a "per request" item  -->
-            <price frequency="NUMERIC" timesegment="ENUM(m,w,d,y,h,infinite)" propertysegment="ENUM(m2,km2,hk2,all)">700000</price> <!-- DECIMAL(2) || free --><!-- default frequency = 0, default unit = 'infinite', empty/missing/0 element will be considered "per request", string 'free' can be submited and means available for no money-->
-            <netPrice frequency="NUMERIC" timesegment="ENUM(m,w,d,y,h,infinite)" propertysegment="ENUM(m2,km2,hk2,all)">2340023.5</netPrice>
-            <extraCost title="Nebenkosten Gas &amp; Elektrik" frequency="NUMERIC" timesegment="h" propertysegment="m2">2334</extraCost><!-- multiple possible -->
-            <extraCost title="Kaution" frequency="NUMERIC" timesegment="d" propertysegment="all">12345</extraCost><!-- multiple possible -->
-            <priceCurrency>CHF</priceCurrency><!-- no currency will result in 0 price value -->
+        <offer primary="true" title="">
+            <type>buy</type>
+            <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts>
+            <price frequency="0" timesegment="infinite" propertysegment="m2">700</price>
+            <extraCost title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
+            <extraCost title="Kaution" frequency="1" timesegment="infinite" propertysegment="all">12345</extraCost>
+            <priceCurrency>CHF</priceCurrency>
+        </offer>
+        <offer title="">
+            <type>rent</type>
+            <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts>
+            <price frequency="1" timesegment="m" propertysegment="all">700</price><!-- required Price used for filtration/overviews -->
+            <netPrice frequency="1" timesegment="m" propertysegment="all">700</netPrice>
+            <grossPrice frequency="1" timesegment="m" propertysegment="all">800</grossPrice>
+            <extraCost title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
+            <extraCost title="Kaution" frequency="1" timesegment="infinite" propertysegment="all">80</extraCost>
+            <priceCurrency>CHF</priceCurrency>
         </offer>
 
         <seller><!--*-->
@@ -65,24 +78,39 @@
                     <addressLocality>Zürich</addressLocality>
                     <addressRegion>Zürich</addressRegion>
                     <postalCode>8000</postalCode>
+                    <postOfficeBoxNumber>123</postOfficeBoxNumber>
                     <streetAddress>Street 999</streetAddress>
                 </address>
                 <legalName>Your Company</legalName>
                 <logo>URL</logo>
                 <email></email>
                 <faxNumber></faxNumber>
-                <telephone type=""></telephone> <!-- ENUM('direct','central','mobile') -->
-                <telephone></telephone>
+                <telephone type="direct">+41 123 456 78 90</telephone>
+                <telephone type="central">+41 123 456 78 90</telephone>
+                <telephone type="mobile">+41 123 456 78 90</telephone>
+                <brand></brand>
             </organization>
-            <person>
-                <function></function> <!-- examples ('Ceo', 'Sales', 'Information', 'Guide') -->
-                <givenName></givenName>
-                <familyName></familyName>
-                <email></email>
-                <faxNumber></faxNumber>
-                <telephone type=""></telephone> <!-- ENUM('direct','central','mobile') -->
-                <telephone></telephone>
-                <gender></gender>
+            <person type="view">
+                <function>CEO</function>
+                <givenName>Max</givenName>
+                <familyName>Muster</familyName>
+                <email>email@host.com</email>
+                <faxNumber>+41 123 456 78 90</faxNumber>
+                <telephone type="direct">+41 123 456 78 90</telephone>
+                <telephone type="central">+41 123 456 78 90</telephone>
+                <telephone type="mobile">+41 123 456 78 90</telephone>
+                <gender>M</gender>
+            </person>
+            <person type="inquiry">
+                <function>Sachbearbeiterin</function>
+                <givenName>Jane</givenName>
+                <familyName>Muster</familyName>
+                <email>inquiry@host.com</email>
+                <faxNumber>+41 123 456 78 90</faxNumber>
+                <telephone type="direct">+41 123 456 78 90</telephone>
+                <telephone type="central">+41 123 456 78 90</telephone>
+                <telephone type="mobile">+41 123 456 78 90</telephone>
+                <gender>F</gender>
             </person>
         </seller>
 
@@ -95,11 +123,11 @@
         </address>
 
         <geo>
-            <latitude>2</latitude><!-- (FLOAT) no limitation -->
-            <longitude></longitude><!-- (FLOAT) no limitation -->
+            <latitude>76.234098203984</latitude><!-- (FLOAT) no limitation -->
+            <longitude>-80.234098203984</longitude><!-- (FLOAT) no limitation -->
         </geo>
 
-        <attachments> <!-- all refering documents belong here -->
+        <attachments>
             <media type="image" order="1">
                 <alt>Adler fehlt hier</alt>
                 <title>Adler im flug</title>
@@ -157,13 +185,6 @@
         </features>
 
         <numericValues>
-            <!-- 
-                #   numeric float point number (increment-steps are defined in matchlist) <= 2 siginificant places (required)
-                SI  {m = meter | km = kilometer | kg = kilogram}
-                -   meaning "to" to define a range. this does NOT mean "subtract"
-                +   defines that an(more) aditional value(s) are defined
-            -->
-            <!-- [#][SI] - [#][SI] + [#][SI] -->
             <value key="floor">-1+0+1+2+3+4</value>
             <value key="number_of_floors">3</value>
             <value key="distance_kindergarten">500m+700m</value>
