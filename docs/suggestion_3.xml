@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <exporter id="123">
     <exportInformation>
@@ -15,7 +15,6 @@
             <locality>Arbon</locality>
             <region>Thurgau</region>
             <postalCode>9320</postalCode>
-            <postOfficeBoxNumber>123</postOfficeBoxNumber>
             <street>Street</street>
             <streetNumber>999</streetNumber>
             <subunit>1</subunit>
@@ -132,8 +131,8 @@
             </attachments>
                 
             <offer title="Sales Title">
-                <category sort="1">apartment</category><!-- some only support one category! -->
-                <category sort="2">duplex</category>
+                <category sort="1">Apartment</category><!-- some only support one category! -->
+                <category sort="2">Secondary rooms</category>
                 <salestarget>vacation</salestarget><!-- new-construction, vacation,  -->
 
                 <description title="Infos"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
