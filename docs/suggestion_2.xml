@@ -146,22 +146,22 @@
             <media type="image" order="1">
                 <alt>Adler fehlt hier</alt>
                 <title>Adler im flug</title>
-                <file>1/Eagle &amp; Waterfall.jpg</file><!-- '/attachment/' is root -->
-                <url></url> 
+                <file></file><!-- '/attachment/' is root -->
+                <url>http://lorempixel.com/800/600/city/</url> 
                 <caption>Adler können von weiter entfehrnung ihre Beute sehen</caption>
             </media>
             <media type="image" order="2">
                 <alt>Fehlendes Elephantenbild</alt>
                 <title>Ein Elephantenbild</title>
                 <file>1/wallpaper_fish.JPG</file><!-- '/attachment/' is root -->
-                <url></url> 
+                <url>http://lorempixel.com/800/600/city/</url> 
                 <caption>Elefanten sind sehr gross</caption>
             </media>
             <media type="image" order="3">
                 <alt>Hier wären Flamingos</alt>
                 <title>Bild von Flamigos</title>
                 <file>1/Moon.JPG</file><!-- '/attachment/' is root -->
-                <url></url> 
+                <url>http://lorempixel.com/800/600/city/</url> 
                 <caption>Flamingos sind sehr schöne Tiere</caption>
             </media>
             <media type="image" order="4">

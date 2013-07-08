@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<export>
+<exporter id="123">
     <exportInformation>
         <exportDate>2013-04-02T19:20:30+01:00</exportDate>
         <exportIteration>23</exportIteration>
     </exportInformation>
 
-    <property id="1" lang="ch_DE">
-        <alternatePropertyLanguage lang="ch_FR" providerId="123">3</alternatePropertyLanguage>
+    <property id="1" lang="de">
+        <alternatePropertyLanguage lang="fr" providerId="123">3</alternatePropertyLanguage>
         <similarProperty providerId="123" title="Zweiter Stock">3</similarProperty>
 
         <address>
@@ -84,15 +84,15 @@
                 <media type="image" order="1">
                     <alt>Adler fehlt hier</alt>
                     <title>Adler im flug</title>
-                    <file>1/Eagle &amp; Waterfall.jpg</file><!-- '/attachment/' is root -->
-                    <url></url> 
+                    <file></file><!-- '/attachment/' is root -->
+                    <url>http://lorempixel.com/800/600/city/</url>
                     <caption>Adler können von weiter entfehrnung ihre Beute sehen</caption>
                 </media>
                 <media type="image" order="2">
                     <alt>Fehlendes Elephantenbild</alt>
                     <title>Ein Elephantenbild</title>
-                    <file>1/wallpaper_fish.JPG</file><!-- '/attachment/' is root -->
-                    <url></url> 
+                    <file></file><!-- '/attachment/' is root -->
+                    <url>http://lorempixel.com/800/600/city/</url>
                     <caption>Elefanten sind sehr gross</caption>
                 </media>
                 <media type="image" order="3">
@@ -203,4 +203,4 @@
         </provider>
         
     </property>
-</export>
+</exporter>
