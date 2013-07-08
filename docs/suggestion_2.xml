@@ -3,17 +3,20 @@
 <exporter id="123">
 	<organization>
         <address>
-            <addressCountry>CH</addressCountry>
-            <addressLocality>Arbon</addressLocality>
-            <addressRegion>Thurgau</addressRegion>
+            <country>CH</country>
+            <locality>Arbon</locality>
+            <region>Thurgau</region>
             <postalCode>9320</postalCode>
             <postOfficeBoxNumber>123</postOfficeBoxNumber>
-            <streetAddress>Street 999</streetAddress>
+            <street>Street</street>
+            <streetNumber>999</streetNumber>
+            <subunit>1</subunit>
         </address>
         <legalName>Your Main Company</legalName>
         <brand>Your Brandname</brand>
         <!-- <logo external="false"/> has not yet been implemented-->
-        <email>info@domain.com</email>
+        <email type="general">info@domain.com</email>
+        <email type="rem">rem@domain.com</email>
         <faxNumber>+41 123 456 78 90</faxNumber>
         <telephone type="direct">+41 123 456 78 90</telephone>
         <telephone type="central">+41 123 456 78 90</telephone>
@@ -36,7 +39,7 @@
         <alternatePropertyLanguage lang="ch_FR" exporter="123">3</alternatePropertyLanguage>
         <similarProperty exporter="123">3</similarProperty>
 
-        <url primary="true">http://youremail.ch/property/111111</url>
+        <url type="private-listing" title="title here">http://youremail.ch/property/111111</url>
         <url>http://youremail.ch/property/111111</url>
 
         <releaseDate>2013-04-02T19:20:30+01:00</releaseDate>
@@ -45,15 +48,18 @@
         <category primary="true">apartment</category><!-- some only support one category! -->
         <category>duplex</category>
 
+
         <excerpt>A short description of the property.</excerpt>
         <description><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description><!-- Valid html5 content. if it does not pass W3C it will not be exepted as HTML and will be stript of its tags! -->
         <description title="Infos"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
         <description title="Titel"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
+        <visitInformation><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy! for visiting infos</p><ul><li>listitem</li><li>listitem</li></ul>]]></visitInformation>
 
         <name>The ultimate Test-Object</name>
 
-        <offer primary="true" title="">
-            <type>buy</type>
+        <offer primary="true" title=""><!-- some only support one offer! -->
+            <type>buy</type><!-- rent / buy / reference -->
+            <availabilty title="Reserved">reserved</availabilty> <!-- reserved / available -->
             <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts>
             <price frequency="0" timesegment="infinite" propertysegment="m2">700</price>
             <extraCost title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
@@ -62,24 +68,30 @@
         </offer>
         <offer title="">
             <type>rent</type>
+            <availabilty title="Verfügbar">available</availabilty>
             <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts>
             <price frequency="1" timesegment="m" propertysegment="all">700</price><!-- required Price used for filtration/overviews -->
             <netPrice frequency="1" timesegment="m" propertysegment="all">700</netPrice>
             <grossPrice frequency="1" timesegment="m" propertysegment="all">800</grossPrice>
-            <extraCost title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
-            <extraCost title="Kaution" frequency="1" timesegment="infinite" propertysegment="all">80</extraCost>
+            <extraCost type="electric+gas" title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
+            <extraCost type="deposit" title="Kaution" frequency="1" timesegment="infinite" propertysegment="all">80</extraCost>
             <priceCurrency>CHF</priceCurrency>
+        </offer>
+        <offer title="">
+            <type>reference</type>
         </offer>
 
         <seller><!--*-->
             <organization>
                 <address>
-                    <addressCountry>CH</addressCountry>
-                    <addressLocality>Zürich</addressLocality>
-                    <addressRegion>Zürich</addressRegion>
-                    <postalCode>8000</postalCode>
+                    <country>CH</country>
+                    <locality>Arbon</locality>
+                    <region>Thurgau</region>
+                    <postalCode>9320</postalCode>
                     <postOfficeBoxNumber>123</postOfficeBoxNumber>
-                    <streetAddress>Street 999</streetAddress>
+                    <street>Street</street>
+                    <streetNumber>999</streetNumber>
+                    <subunit>1</subunit>
                 </address>
                 <legalName>Your Company</legalName>
                 <brand>Your Brandname</brand>
@@ -115,11 +127,14 @@
         </seller>
 
         <address>
-            <addressCountry>CH</addressCountry>
-            <addressLocality>Zürich</addressLocality>
-            <addressRegion>Zürich</addressRegion>
-            <postalCode>8000</postalCode>
-            <streetAddress>Street 999</streetAddress>
+            <country>CH</country>
+            <locality>Arbon</locality>
+            <region>Thurgau</region>
+            <postalCode>9320</postalCode>
+            <postOfficeBoxNumber>123</postOfficeBoxNumber>
+            <street>Street</street>
+            <streetNumber>999</streetNumber>
+            <subunit>1</subunit>
         </address>
 
         <geo>
@@ -189,7 +204,7 @@
             <value key="number_of_floors">3</value>
             <value key="distance_kindergarten">500m+700m</value>
             <value key="number_of_rooms">3.5</value>
-            <value key="max_elivator_weight">500kg+100kg</value>
+            <value key="max_elevator_weight">500kg+100kg</value>
             <value key="surface_living">200m</value>
         </numericValues>
     </property>
