@@ -6,10 +6,7 @@
         <exportIteration>23</exportIteration>
     </exportInformation>
 
-    <property id="1" lang="de">
-        <alternatePropertyLanguage lang="fr" providerId="123">3</alternatePropertyLanguage>
-        <similarProperty providerId="123" title="Zweiter Stock">3</similarProperty>
-
+    <property id="1">
         <address>
             <country>CH</country>
             <locality>Arbon</locality>
@@ -43,7 +40,10 @@
         <category sort="1">Apartment</category><!-- some only support one category! -->
         <category sort="2">Secondary rooms</category>
 
-        <provider id="123" label="Era Kreuzlingen">
+        
+        <offer title="Sales Title" providerId="3" providerLabel="ERA Kreuzlingen" lang="de">
+            <similarOffer providerId="123" title="Zweiter Stock">3</similarOffer>
+            
             <software id="13" label="Casasoft AG">
                 <lastUser>max.muster</lastUser>
                 <lastUpdate>2013-04-02T19:20:30+01:00</lastUpdate>
@@ -136,74 +136,72 @@
                     <caption>Adler können von weiter entfehrnung ihre Beute sehen</caption>
                 </media>
             </attachments>
-                
-            <offer title="Sales Title">
-                <salestarget>vacation</salestarget><!-- new-construction, vacation, student, business  -->
 
-                
-                <visitInformation><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy! for visiting infos</p><ul><li>listitem</li><li>listitem</li></ul>]]></visitInformation>
+            <salestarget>vacation</salestarget><!-- new-construction, vacation, student, business  -->
 
-                <type>buy</type><!-- rent / buy / reference -->
-                <availabilty title="Reserved">reserved</availabilty> <!-- reserved / available -->
-                <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts>
-                <price frequency="0" timesegment="infinite" propertysegment="m2">700</price>
-                <extraCost title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
-                <extraCost title="Kaution" frequency="1" timesegment="infinite" propertysegment="all">12345</extraCost>
-                <priceCurrency>CHF</priceCurrency>
+            
+            <visitInformation><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy! for visiting infos</p><ul><li>listitem</li><li>listitem</li></ul>]]></visitInformation>
 
-                <seller><!-- used for contact purposes-->
-                    <person type="view"><!-- presented up front (may be used as inquiry if none given) -->
-                        <function>CEO</function>
-                        <givenName>Max</givenName>
-                        <familyName>Muster</familyName>
-                        <email>email@host.com</email>
-                        <fax>+41 123 456 78 90</fax>
-                        <phone type="direct">+41 123 456 78 90</phone>
-                        <phone type="central">+41 123 456 78 90</phone>
-                        <phone type="mobile">+41 123 456 78 90</phone>
-                        <gender>M</gender>
-                    </person>
-                    <person type="inquiry"><!-- optional for alternate E-Mail/inquiry person -->
-                        <function>Sachbearbeiterin</function>
-                        <givenName>Jane</givenName>
-                        <familyName>Muster</familyName>
-                        <email>inquiry@host.com</email>
-                        <fax>+41 123 456 78 90</fax>
-                        <phone type="direct">+41 123 456 78 90</phone>
-                        <phone type="central">+41 123 456 78 90</phone>
-                        <phone type="mobile">+41 123 456 78 90</phone>
-                        <gender>F</gender>
-                    </person>
-                </seller>
+            <type>buy</type><!-- rent / buy / reference -->
+            <availabilty title="Reserved">reserved</availabilty> <!-- reserved / available -->
+            <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts>
+            <price frequency="0" timesegment="infinite" propertysegment="m2">700</price>
+            <extraCost title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
+            <extraCost title="Kaution" frequency="1" timesegment="infinite" propertysegment="all">12345</extraCost>
+            <priceCurrency>CHF</priceCurrency>
 
-                <publisher id="3" label="Homegate AG">
-                    <featured>true</featured>
-                    <featuredData></featuredData> <!-- custom field for publisher such as duration/position etc -->
-                    <!-- FUTURE ATTRIBUTE FOR PUBLISHER HERE -->
-                </publisher>
-            </offer>
-            <offer title="">
-                <type>rent</type>
-                <availabilty title="Verfügbar">available</availabilty>
-                <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts>
-                <price frequency="1" timesegment="m" propertysegment="all">700</price><!-- required Price used for filtration/overviews -->
-                <netPrice frequency="1" timesegment="m" propertysegment="all">700</netPrice>
-                <grossPrice frequency="1" timesegment="m" propertysegment="all">800</grossPrice>
-                <extraCost type="electric+gas" title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
-                <extraCost type="deposit" title="Kaution" frequency="1" timesegment="infinite" propertysegment="all">80</extraCost>
-                <priceCurrency>CHF</priceCurrency>
-                <seller>
-                    <person>
-                        <familyName>Muster</familyName>
-                        <email>email@host.com</email>
-                    </person>
-                </seller>
-            </offer>
-            <offer title="">
-                <type>reference</type><!-- supply no additional data please! -->
-            </offer>
+            <seller><!-- used for contact purposes-->
+                <person type="view"><!-- presented up front (may be used as inquiry if none given) -->
+                    <function>CEO</function>
+                    <givenName>Max</givenName>
+                    <familyName>Muster</familyName>
+                    <email>email@host.com</email>
+                    <fax>+41 123 456 78 90</fax>
+                    <phone type="direct">+41 123 456 78 90</phone>
+                    <phone type="central">+41 123 456 78 90</phone>
+                    <phone type="mobile">+41 123 456 78 90</phone>
+                    <gender>M</gender>
+                </person>
+                <person type="inquiry"><!-- optional for alternate E-Mail/inquiry person -->
+                    <function>Sachbearbeiterin</function>
+                    <givenName>Jane</givenName>
+                    <familyName>Muster</familyName>
+                    <email>inquiry@host.com</email>
+                    <fax>+41 123 456 78 90</fax>
+                    <phone type="direct">+41 123 456 78 90</phone>
+                    <phone type="central">+41 123 456 78 90</phone>
+                    <phone type="mobile">+41 123 456 78 90</phone>
+                    <gender>F</gender>
+                </person>
+            </seller>
 
-        </provider>
+            <publisher id="3" label="Homegate AG">
+                <featured>true</featured>
+                <featuredData></featuredData> <!-- custom field for publisher such as duration/position etc -->
+                <!-- FUTURE ATTRIBUTE FOR PUBLISHER HERE -->
+            </publisher>
+        </offer>
+        <offer title="Sales Title" providerId="3" providerLabel="ERA Kreuzlingen" lang="de">
+            <type>rent</type>
+            <availabilty title="Verfügbar">available</availabilty>
+            <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts>
+            <price frequency="1" timesegment="m" propertysegment="all">700</price><!-- required Price used for filtration/overviews -->
+            <netPrice frequency="1" timesegment="m" propertysegment="all">700</netPrice>
+            <grossPrice frequency="1" timesegment="m" propertysegment="all">800</grossPrice>
+            <extraCost type="electric+gas" title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
+            <extraCost type="deposit" title="Kaution" frequency="1" timesegment="infinite" propertysegment="all">80</extraCost>
+            <priceCurrency>CHF</priceCurrency>
+            <seller>
+                <person>
+                    <familyName>Muster</familyName>
+                    <email>email@host.com</email>
+                </person>
+            </seller>
+        </offer>
+        <offer title="" providerId="3" providerLabel="ERA Kreuzlingen" lang="de">
+            <type>reference</type><!-- supply no additional data please! -->
+        </offer>
+
         
     </property>
 </exporter>
