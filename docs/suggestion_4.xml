@@ -7,6 +7,41 @@
     </exportInformation>
 
     <property id="1">
+        <software id="13" label="Casasoft AG">
+            <lastUser>max.muster</lastUser>
+            <lastUpdate>2013-04-02T19:20:30+01:00</lastUpdate>
+            <updateIteration>3</updateIteration>
+            <creation>2013-04-02T19:20:30+01:00</creation>
+        </software>
+        <referenceId>4lkj3l45</referenceId>
+        <provider id="3">
+            <organization public="false">
+                <address>
+                    <country>CH</country>
+                    <locality>Arbon</locality>
+                    <region>Thurgau</region>
+                    <postalCode>9320</postalCode>
+                    <postOfficeBoxNumber>123</postOfficeBoxNumber>
+                    <street>Street</street>
+                    <streetNumber>999</streetNumber>
+                    <subunit>1</subunit>
+                </address>
+                <legalName>Your Main Company</legalName>
+                <brand>Your Brandname</brand>
+                <!-- <logo external="false"/> has not yet been implemented-->
+                <email type="general">info@domain.com</email>
+                <email type="rem">rem@domain.com</email>
+                <fax>+41 123 456 78 90</fax>
+                <phone type="direct">+41 123 456 78 90</phone>
+                <phone type="central">+41 123 456 78 90</phone>
+                <phone type="mobile">+41 123 456 78 90</phone>
+                <website title="maklersoftware" label="Casasoft Website">http://Casasoft.ch</website>
+            </organization>
+        </provider>
+
+        
+
+
         <address>
             <country>CH</country>
             <locality>Arbon</locality>
@@ -37,42 +72,12 @@
             <value key="surface_living">200m</value>
         </numericValues>
 
-        <category sort="1">Apartment</category><!-- some only support one category! -->
-        <category sort="2">Secondary rooms</category>
+        <category sort="1">apartment</category><!-- some only support one category! -->
+        <category sort="2">secondary_rooms</category>
 
-        
-        <offer title="Sales Title" providerId="3" providerLabel="ERA Kreuzlingen" lang="de">
+        <offer lang="de">
             <similarOffer providerId="123" title="Zweiter Stock">3</similarOffer>
-            
-            <software id="13" label="Casasoft AG">
-                <lastUser>max.muster</lastUser>
-                <lastUpdate>2013-04-02T19:20:30+01:00</lastUpdate>
-                <updateIteration>3</updateIteration>
-                <creation>2013-04-02T19:20:30+01:00</creation>
-            </software>
-
-            <organization public="false">
-                <address>
-                    <country>CH</country>
-                    <locality>Arbon</locality>
-                    <region>Thurgau</region>
-                    <postalCode>9320</postalCode>
-                    <postOfficeBoxNumber>123</postOfficeBoxNumber>
-                    <street>Street</street>
-                    <streetNumber>999</streetNumber>
-                    <subunit>1</subunit>
-                </address>
-                <legalName>Your Main Company</legalName>
-                <brand>Your Brandname</brand>
-                <!-- <logo external="false"/> has not yet been implemented-->
-                <email type="general">info@domain.com</email>
-                <email type="rem">rem@domain.com</email>
-                <fax>+41 123 456 78 90</fax>
-                <phone type="direct">+41 123 456 78 90</phone>
-                <phone type="central">+41 123 456 78 90</phone>
-                <phone type="mobile">+41 123 456 78 90</phone>
-                <website title="maklersoftware" label="Casasoft Website">http://Casasoft.ch</website>
-            </organization>
+            <start>2015-04-02T19:20:30+01:00</start>
 
             <url type="private-listing" title="title here" label="Yourdomain.ch">http://yourdomain.ch/property/111111</url>
             <url>http://youremail.ch/property/111111</url>
@@ -144,13 +149,35 @@
 
             <type>buy</type><!-- rent / buy / reference -->
             <availabilty title="Reserved">reserved</availabilty> <!-- reserved / available -->
-            <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts>
+            
             <price frequency="0" timesegment="infinite" propertysegment="m2">700</price>
             <extraCost title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
             <extraCost title="Kaution" frequency="1" timesegment="infinite" propertysegment="all">12345</extraCost>
             <priceCurrency>CHF</priceCurrency>
 
             <seller><!-- used for contact purposes-->
+                <organization> <!-- Overwrides provider -->
+                    <address>
+                        <country>CH</country>
+                        <locality>Arbon</locality>
+                        <region>Thurgau</region>
+                        <postalCode>9320</postalCode>
+                        <postOfficeBoxNumber>123</postOfficeBoxNumber>
+                        <street>Street</street>
+                        <streetNumber>999</streetNumber>
+                        <subunit>1</subunit>
+                    </address>
+                    <legalName>Your Main Company</legalName>
+                    <brand>Your Brandname</brand>
+                    <!-- <logo external="false"/> has not yet been implemented-->
+                    <email type="general">info@domain.com</email>
+                    <email type="rem">rem@domain.com</email>
+                    <fax>+41 123 456 78 90</fax>
+                    <phone type="direct">+41 123 456 78 90</phone>
+                    <phone type="central">+41 123 456 78 90</phone>
+                    <phone type="mobile">+41 123 456 78 90</phone>
+                    <website title="maklersoftware" label="Casasoft Website">http://Casasoft.ch</website>
+                </organization>
                 <person type="view"><!-- presented up front (may be used as inquiry if none given) -->
                     <function>CEO</function>
                     <givenName>Max</givenName>
@@ -178,13 +205,13 @@
             <publisher id="3" label="Homegate AG">
                 <featured>true</featured>
                 <featuredData></featuredData> <!-- custom field for publisher such as duration/position etc -->
-                <!-- FUTURE ATTRIBUTE FOR PUBLISHER HERE -->
+                <!-- FUTURE ATTRIBUTES FOR PUBLISHER HERE -->
             </publisher>
         </offer>
         <offer title="Sales Title" providerId="3" providerLabel="ERA Kreuzlingen" lang="de">
             <type>rent</type>
             <availabilty title="Verfügbar">available</availabilty>
-            <availabilityStarts>2015-04-02T19:20:30+01:00</availabilityStarts>
+            <start>2015-04-02T19:20:30+01:00</start>
             <price frequency="1" timesegment="m" propertysegment="all">700</price><!-- required Price used for filtration/overviews -->
             <netPrice frequency="1" timesegment="m" propertysegment="all">700</netPrice>
             <grossPrice frequency="1" timesegment="m" propertysegment="all">800</grossPrice>
