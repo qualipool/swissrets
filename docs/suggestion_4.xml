@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<exporter id="123" label="CasaStation">
+<exporter id="SO-123" label="Casasoft AG">
     <exportInformation>
         <exportDate>2013-04-02T19:20:30+01:00</exportDate>
         <exportIteration>23</exportIteration>
     </exportInformation>
 
-    <property id="1">
-        <software id="13" label="Casasoft AG">
+    <property id="1A47C"> <!-- unique identifier used for matching (this is NOT the PY-## number) software exporters tend to choose their own id as unique instead of relying on the referenceId-->
+        <software> <!-- Information from the software concearning this property -->
             <lastUser>max.muster</lastUser>
             <lastUpdate>2013-04-02T19:20:30+01:00</lastUpdate>
             <updateIteration>3</updateIteration>
             <creation>2013-04-02T19:20:30+01:00</creation>
         </software>
-        <referenceId>4lkj3l45</referenceId>
-        <provider id="3">
-            <organization public="false">
+        <referenceId>4lkj3l45</referenceId> <!-- internal reference number for comparisons between complex exchanges and publications -->
+        <provider id="3" label="Somecompany AG"> <!-- if id="PR-###" otherwise it is considered a exportproviderid matched with the software -->
+            <public>false</public> <!-- Determines if the property and its offers should include this provider if an organisation has not been defined -->
+            <!-- <organization public="false">
                 <address>
                     <country>CH</country>
                     <locality>Arbon</locality>
@@ -28,7 +29,7 @@
                 </address>
                 <legalName>Your Main Company</legalName>
                 <brand>Your Brandname</brand>
-                <!-- <logo external="false"/> has not yet been implemented-->
+                <logo external="false"/> has not yet been implemented
                 <email type="general">info@domain.com</email>
                 <email type="rem">rem@domain.com</email>
                 <fax>+41 123 456 78 90</fax>
@@ -36,12 +37,8 @@
                 <phone type="central">+41 123 456 78 90</phone>
                 <phone type="mobile">+41 123 456 78 90</phone>
                 <website title="maklersoftware" label="Casasoft Website">http://Casasoft.ch</website>
-            </organization>
+            </organization> PROVIDER INFORMATION SHOULD BE THE RESPONSIBILITY OF THE IMPORTER!!! if it has to be provided this would be the accaptable form--> 
         </provider>
-
-        
-
-
         <address>
             <country>CH</country>
             <locality>Arbon</locality>
@@ -75,8 +72,10 @@
         <category sort="1">apartment</category><!-- some only support one category! -->
         <category sort="2">secondary_rooms</category>
 
-        <offer lang="de">
-            <similarOffer providerId="123" title="Zweiter Stock">3</similarOffer>
+        <offer lang="de" id="1A47C-1"> <!-- unique identifier (must be unique within this property)-->
+            <referenceId>4lkj3l45-1</referenceId>
+
+            <similarOffer providerId="123" title="Zweiter Stock">3</similarOffer> <!-- if id="PR-###" otherwise it is considered a exportproviderid -->
             <start>2015-04-02T19:20:30+01:00</start>
 
             <url type="private-listing" title="title here" label="Yourdomain.ch">http://yourdomain.ch/property/111111</url>
@@ -84,9 +83,9 @@
 
             <name>The ultimate Test-Object</name><!-- Sales-Name of the property irelevant to the offer -->
             <excerpt>A short description of the property.</excerpt><!-- Short description of dhe property irelevant to the offer -->
-            <description><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description><!-- Main description of the property irelevant to the offer -->
-            <description title="Infos"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
-            <description title="Titel"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
+            <description sort="1"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description><!-- Main description of the property irelevant to the offer -->
+            <description sort="2" title="Infos"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
+            <description sort="3" title="Titel"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
 
             <attachments>
                 <media type="image" order="1">
@@ -144,7 +143,6 @@
 
             <salestarget>vacation</salestarget><!-- new-construction, vacation, student, business  -->
 
-            
             <visitInformation><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy! for visiting infos</p><ul><li>listitem</li><li>listitem</li></ul>]]></visitInformation>
 
             <type>buy</type><!-- rent / buy / reference -->
@@ -202,13 +200,23 @@
                 </person>
             </seller>
 
-            <publisher id="3" label="Homegate AG">
-                <featured>true</featured>
-                <featuredData></featuredData> <!-- custom field for publisher such as duration/position etc -->
-                <!-- FUTURE ATTRIBUTES FOR PUBLISHER HERE -->
+            <publisher id="PU-3" label="Homegate AG"> <!-- id="homegate" can also be used -->
+                <image_limit>unlimited</image_limit> <!-- INT or 'unlimited' only publish images up to... missing element = 'unlimited' -->
+                <document_limit>unlimited</document_limit>
+                <plan_limit>unlimited</plan_limit>
+                <hide_address>true</hide_address> <!-- true or false missing element = "false" -->
+                <options><!-- everything within options the publisher can use as they see fit -->
+                    <featured>true</featured>
+                    <featuredData></featuredData>
+                </options>
             </publisher>
+
+            <!-- <publishergroup id="PG-5" label"All free platforms"> --> <!--  id="all-free-platforms" can also be used-->
+                <!-- Publishing group settings -->
+                <!-- The indivitual publisher settings always supercede publishergroup settings -->
+            <!-- </publishergroup> -->
         </offer>
-        <offer title="Sales Title" providerId="3" providerLabel="ERA Kreuzlingen" lang="de">
+        <offer title="Sales Title" providerId="3" providerLabel="ERA Kreuzlingen" lang="de"> <!-- if id="PR-###" otherwise it is considered a exportproviderid -->
             <type>rent</type>
             <availabilty title="Verfügbar">available</availabilty>
             <start>2015-04-02T19:20:30+01:00</start>
