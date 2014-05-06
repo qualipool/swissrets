@@ -57,18 +57,19 @@
             <similarOffer providerId="123" title="Zweiter Stock">3</similarOffer> <!-- if id="PR-###" otherwise it is considered a exportproviderid -->
             <start>2015-04-02T19:20:30+01:00</start>
 
-            <url type="private-listing" title="title here" label="Yourdomain.ch">http://yourdomain.ch/property/111111</url>
+            <url type="private-listing" title="title here" label="Yourdomain.ch">http://yourdomain.ch/property/111111</url> <!-- TODO: define url type-slugs -->
             <url>http://youremail.ch/property/111111</url>
 
-            <name>The ultimate Test-Object</name><!-- Sales-Name of the property irelevant to the offer -->
-            <excerpt>A short description of the property.</excerpt><!-- Short description of dhe property irelevant to the offer -->
-            <description sort="1"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description><!-- Main description of the property irelevant to the offer -->
+            <name>The ultimate Test-Object</name><!-- Sales-Name of the property -->
+            <excerpt>A short description of the property.</excerpt><!-- Short description of the property -->
+            <description sort="1"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description><!-- Main description of the property -->
             <description sort="2" title="Infos"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
             <description sort="3" title="Titel"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
             
             <type>buy</type><!-- rent / buy -->
-            <availabilty title="on-request">reserved</availabilty> <!-- reserved / active / taken / reference -->
+            <availabilty>reserved</availabilty> <!-- reserved / active / taken / reference -->
             
+            <!-- TODO: define of frequency should be dropped! -->
             <price frequency="0" timesegment="infinite" propertysegment="m2">700</price>
             <extraCost key="gas+electric" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
             <extraCost key="water" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
@@ -239,7 +240,7 @@
         </offer>
         <offer title="Sales Title" providerId="3" providerLabel="ERA Kreuzlingen" lang="de"> <!-- if id="PR-###" otherwise it is considered a exportproviderid -->
             <type>rent</type>
-            <availabilty title="Verfügbar">available</availabilty>
+            <availabilty>active</availabilty>
             <start>2015-04-02T19:20:30+01:00</start>
             <price frequency="1" timesegment="m" propertysegment="all">700</price><!-- required Price used for filtration/overviews -->
             <netPrice frequency="1" timesegment="m" propertysegment="all">700</netPrice>
@@ -254,10 +255,6 @@
                 </person>
             </seller>
         </offer>
-        <offer title="" providerId="3" providerLabel="ERA Kreuzlingen" lang="de">
-            <type>reference</type><!-- supply no additional data please! -->
-        </offer>
-
         
     </property>
 </exporter>
