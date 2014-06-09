@@ -32,9 +32,10 @@
         </address>
 
         <features>
-            <feature key="prop_elevator">2</feature> <!-- See online matchlist -->
-            <feature key="prop_child-friendly" />
-            <feature key="animal_allowed">2</feature>
+            <feature>has-elevator</feature> <!-- See online matchlist -->
+            <feature>is-child-friendly</feature>
+            <feature>is-animal-friendly</feature>
+            <feature>is-wheelchair-accessible</feature>
         </features>
 
         <numericValues>
@@ -55,7 +56,8 @@
         <offer lang="de" id="1A47C-1"> <!-- unique identifier (must be unique within this property)-->
             <referenceId>4lkj3l45-1</referenceId> <!-- internal reference number for comparisons between complex exchanges and publications -->
 
-            <similarOffer provider="PR-123" title="Zweiter Stock">
+            <similarOffer>
+                <title>Zweiter Stock</title>
                 <provider>PR-123</provider>
                 <property>1A47C</property>
                 <offer>1A47C-3</offer>
@@ -141,7 +143,8 @@
             
             <events>
                 <visitInformation><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy! for visiting infos</p><ul><li>listitem</li><li>listitem</li></ul>]]></visitInformation>
-                <event name="(Open Doors) Visit us!" type="visit">
+                <event type="visit">
+                    <name>(Open Doors) Visit us!</name>
                     <start>2015-04-02T19:20:30+01:00</start>
                     <end>2015-04-02T19:23:30+01:00</end>
                     <location><![CDATA[Somestreet 17, 9320 Arbon, At the Castlegates]]></location>
@@ -160,19 +163,23 @@
                         <street>Street</street>
                         <streetNumber>999</streetNumber>
                         <subunit>1</subunit>
+                        <geo>
+                            <latitude>76.234098203984</latitude><!-- (FLOAT) no limitation -->
+                            <longitude>-80.234098203984</longitude><!-- (FLOAT) no limitation -->
+                        </geo>
                     </address>
                     <legalName>Your Main Company</legalName>
                     <brand>Your Brandname</brand>
                     <!-- <logo external="false"/> has not yet been implemented-->
-                    <email type="general">info@domain.com</email>
-                    <email type="rem">rem@domain.com</email>
+                    <email>info@domain.com</email>
+                    <emailRem>rem@domain.com</emailRem>
                     <fax>+41 123 456 78 90</fax>
-                    <phone type="direct">+41 123 456 78 90</phone>
-                    <phone type="central">+41 123 456 78 90</phone>
-                    <phone type="mobile">+41 123 456 78 90</phone>
+                    <phoneDirect>+41 123 456 78 90</phoneDirect>
+                    <phoneCentral>+41 123 456 78 90</phoneCentral>
+                    <phoneMobile>+41 123 456 78 90</phoneMobile>
                     <website title="maklersoftware" label="Casasoft Website">http://Casasoft.ch</website>
                 </organization>
-                <person type="view"><!-- presented up front (may be used as inquiry if none given) -->
+                <viewPerson><!-- presented up front (may be used as inquiry if none given) -->
                     <function>CEO</function>
                     <givenName>Max</givenName>
                     <familyName>Muster</familyName>
@@ -183,8 +190,8 @@
                     <phone type="mobile">+41 123 456 78 90</phone>
                     <gender>M</gender>
                     <note></note>
-                </person>
-                <person type="visit"><!-- Person to contact for visit information -->
+                </viewPerson>
+                <visitPerson><!-- Person to contact for visit information -->
                     <function>CEO</function>
                     <givenName>Max</givenName>
                     <familyName>Muster</familyName>
@@ -195,8 +202,8 @@
                     <phone type="mobile">+41 123 456 78 90</phone>
                     <gender>M</gender>
                     <note></note>
-                </person>
-                <person type="inquiry"><!-- optional for alternate E-Mail/inquiry person -->
+                </visitPerson>
+                <inquiryPerson><!-- optional for alternate E-Mail/inquiry person -->
                     <function>Sachbearbeiterin</function>
                     <givenName>Jane</givenName>
                     <familyName>Muster</familyName>
@@ -207,7 +214,7 @@
                     <phone type="mobile">+41 123 456 78 90</phone>
                     <gender>F</gender>
                     <note></note>
-                </person>
+                </inquiryPerson>
             </seller>
 
             <publisherSettings id="PU-3" label="Homegate AG"> <!-- id="homegate" can also be used -->

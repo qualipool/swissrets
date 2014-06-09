@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="person">
+    <xs:all>
+      <xs:element type="xs:string" name="function" minOccurs="0"/>
+      <xs:element type="xs:string" name="givenName" minOccurs="0"/>
+      <xs:element type="xs:string" name="familyName" minOccurs="0"/>
+      <xs:element type="xs:string" name="email" minOccurs="0"/>
+      <xs:element type="xs:string" name="emailRem" minOccurs="0"/>
+      <xs:element type="xs:string" name="fax" minOccurs="0"/>
+      <xs:element type="xs:string" name="phoneDirect" minOccurs="0"/>
+      <xs:element type="xs:string" name="phoneCentral" minOccurs="0"/>
+      <xs:element type="xs:string" name="phoneMobile" minOccurs="0"/>
+      <xs:element type="xs:string" name="gender" minOccurs="0"/>
+      <xs:element type="xs:string" name="note" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="address">
+      <xs:all>
+        <xs:element type="xs:string" name="country"/>
+        <xs:element type="xs:string" name="locality"/>
+        <xs:element type="xs:string" name="region"/>
+        <xs:element type="xs:short" name="postalCode"/>
+        <xs:element type="xs:byte" name="postOfficeBoxNumber"/>
+        <xs:element type="xs:string" name="street"/>
+        <xs:element type="xs:short" name="streetNumber"/>
+        <xs:element type="xs:byte" name="subunit"/>
+        <xs:element name="geo">
+          <xs:complexType>
+            <xs:all>
+              <xs:element type="xs:float" name="latitude"/>
+              <xs:element type="xs:float" name="longitude"/>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+  </xs:complexType>
+
+  <xs:simpleType name="availability">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="reserved"/>
+      <xs:enumeration value="active"/>
+      <xs:enumeration value="taken"/>
+      <xs:enumeration value="reference"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="price">
+    <xs:simpleContent>
+      <xs:extension base="xs:positiveInteger">
+        <xs:attribute type="xs:positiveInteger" name="frequency" use="optional"/>
+        <xs:attribute type="xs:string" name="timesegment" use="optional"/>
+        <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:simpleType name="currencyCodeType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3"/>
+      <xs:maxLength value="3"/>
+      <xs:pattern value="[A-Z]{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="fullUrl">
+    <xs:simpleContent>
+      <xs:extension base="xs:anyURI">
+        <xs:attribute type="xs:string" name="type" use="optional"/>
+        <xs:attribute type="xs:string" name="title" use="optional"/>
+        <xs:attribute type="xs:string" name="label" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="category">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="apartment"/>
+      <xs:enumeration value="attic-flat"/>
+      <xs:enumeration value="bachelor-flat"/>
+      <xs:enumeration value="bifamiliar-house"/>
+      <xs:enumeration value="building-land"/>
+      <xs:enumeration value="double-garage"/>
+      <xs:enumeration value="duplex"/>
+      <xs:enumeration value="factory"/>
+      <xs:enumeration value="farm"/>
+      <xs:enumeration value="farm-house"/>
+      <xs:enumeration value="furnished-flat"/>
+      <xs:enumeration value="garage"/>
+      <xs:enumeration value="house"/>
+      <xs:enumeration value="loft"/>
+      <xs:enumeration value="mountain-farm"/>
+      <xs:enumeration value="multiple-dwelling"/>
+      <xs:enumeration value="open-slot"/>
+      <xs:enumeration value="parking-space"/>
+      <xs:enumeration value="plot"/>
+      <xs:enumeration value="roof-flat"/>
+      <xs:enumeration value="row-house"/>
+      <xs:enumeration value="single-garage"/>
+      <xs:enumeration value="single-house"/>
+      <xs:enumeration value="single-room"/>
+      <xs:enumeration value="terrace-flat"/>
+      <xs:enumeration value="terrace-house"/>
+      <xs:enumeration value="underground-slot"/>
+      <xs:enumeration value="villa"/>
+      <xs:enumeration value="chalet"/>
+      <xs:enumeration value="studio"/>
+      <xs:enumeration value="house"/>
+      <xs:enumeration value="covered-slot"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="utility">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="commercial"/>
+      <xs:enumeration value="gastronomy"/>
+      <xs:enumeration value="vacation"/>
+      <xs:enumeration value="agricultural"/>
+      <xs:enumeration value="industrial"/>
+      <xs:enumeration value="residential"/>
+      <xs:enumeration value="storage"/>
+      <xs:enumeration value="parking"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+ 
+
+  <xs:element name="exporter">
+    <xs:complexType>
+
+      <xs:sequence>
+        <xs:element name="exportInformation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:dateTime" name="exportDate"/>
+              <xs:element type="xs:integer" name="exportIteration" default="1"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="property">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="softwareInformation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="lastUser"/>
+                    <xs:element type="xs:dateTime" name="lastUpdate"/>
+                    <xs:element type="xs:byte" name="updateIteration"/>
+                    <xs:element type="xs:dateTime" name="creation"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="id" use="required"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="providerInformation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:boolean" name="public"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="address" type="address"/>
+              <xs:element name="features">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="feature" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="numericValues">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="value" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="category" name="category" maxOccurs="unbounded" minOccurs="1"/>
+              <xs:element type="utility" name="utility" maxOccurs="unbounded" minOccurs="1"/>
+              <xs:element name="offer" maxOccurs="unbounded" minOccurs="1">
+                <xs:complexType>
+                  
+                  <xs:choice maxOccurs="unbounded" minOccurs="0">
+                    <xs:element type="xs:string" name="referenceId"/>
+                    <xs:element type="xs:string" name="similarOffer"/> <!-- TODO -->
+                    <xs:element type="xs:dateTime" name="start" />
+                    <xs:element type="fullUrl" name="url"/>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="excerpt"/>
+                    <xs:element name="description">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="title" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="type"/>
+                    <xs:element type="availability" name="availabilty"/>
+                    <xs:element type="price" name="price"/>
+                    <xs:element type="price" name="netPrice"/>
+                    <xs:element type="price" name="grossPrice"/>
+                    <xs:element name="extraCost">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="key" use="optional"/>
+                            <xs:attribute type="xs:byte" name="frequency" use="optional"/>
+                            <xs:attribute type="xs:string" name="timesegment" use="optional"/>
+                            <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
+                            <xs:attribute type="xs:string" name="type" use="optional"/>
+                            <xs:attribute type="xs:string" name="title" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="currencyCodeType" name="priceCurrency"/>
+                    <xs:element name="attachments">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="media" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:choice maxOccurs="unbounded" minOccurs="0">
+                                <xs:element type="xs:string" name="alt"/>
+                                <xs:element type="xs:string" name="title"/>
+                                <xs:element type="xs:string" name="file"/>
+                                <xs:element type="xs:string" name="url"/>
+                                <xs:element type="xs:string" name="caption"/>
+                                <xs:element type="xs:string" name="description"/>
+                              </xs:choice>
+                              <xs:attribute type="xs:string" name="type" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="events">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="visitInformation"/>
+                          <xs:element name="event">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="name"/>
+                                <xs:element type="xs:dateTime" name="start"/>
+                                <xs:element type="xs:dateTime" name="end"/>
+                                <xs:element type="xs:string" name="location"/>
+                                <xs:element type="xs:string" name="summary"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="type"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="seller">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="organization" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="address" type="address"/>
+                                <xs:element type="xs:string" name="legalName"/>
+                                <xs:element type="xs:string" name="brand"/>
+                                <xs:element name="email" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="type" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="fax"/>
+                                <xs:element name="phone" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="type" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="website">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:anyURI">
+                                        <xs:attribute type="xs:string" name="title"/>
+                                        <xs:attribute type="xs:string" name="label"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="person" name="viewPerson"    maxOccurs="1" minOccurs="0"/>
+                          <xs:element type="person" name="visitPerson"   maxOccurs="1" minOccurs="0"/>
+                          <xs:element type="person" name="inquiryPerson" maxOccurs="1" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="publisherSettings">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="image_limit" minOccurs="0"/>
+                          <xs:element type="xs:string" name="document_limit" minOccurs="0"/>
+                          <xs:element type="xs:string" name="plan_limit" minOccurs="0"/>
+                          <xs:element type="xs:string" name="hide_address" minOccurs="0"/>
+                          <xs:element type="xs:string" name="hide_street" minOccurs="0"/>
+                          <xs:element name="options">
+                            <xs:complexType mixed="true">
+                              <xs:sequence>
+                                <xs:element name="option" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="name" use="required"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="id" use="required"/>
+                        <xs:attribute type="xs:string" name="label" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                  <xs:attribute type="xs:string" name="lang" use="required"/>
+                  <xs:attribute type="xs:string" name="id" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="id"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="id"/>
+      <xs:attribute type="xs:string" name="label"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
