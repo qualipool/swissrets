@@ -403,7 +403,7 @@
                                       <xs:element name="publisherSetting" minOccurs="0"
                                         maxOccurs="unbounded">
                                         <xs:complexType>
-                                          <xs:sequence>
+                                          <xs:all>
                                             <xs:element type="xs:string" name="image_limit"
                                               minOccurs="0" maxOccurs="1"/>
                                             <xs:element type="xs:string" name="document_limit"
@@ -431,7 +431,7 @@
                                                 </xs:sequence>
                                               </xs:complexType>
                                             </xs:element>
-                                          </xs:sequence>
+                                          </xs:all>
                                           <xs:attribute type="xs:string" name="id" use="required"/>
                                           <xs:attribute type="xs:string" name="label" use="optional"
                                           />
