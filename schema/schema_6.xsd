@@ -7,7 +7,7 @@
       <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:string" name="givenName" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:string" name="familyName" minOccurs="0" maxOccurs="1"/>
-      <xs:element type="xs:string" name="email" minOccurs="0" maxOccurs="1"/>
+      <xs:element type="emailAddress" name="email" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1"/>
@@ -18,7 +18,7 @@
 
   <xs:complexType name="address">
     <xs:all>
-      <xs:element type="xs:string" name="country" minOccurs="1" maxOccurs="1"/>
+      <xs:element type="countryCodeType" name="country" minOccurs="1" maxOccurs="1"/>
       <xs:element type="xs:string" name="locality" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:string" name="region" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:short" name="postalCode" minOccurs="0" maxOccurs="1"/>
@@ -50,8 +50,25 @@
     <xs:simpleContent>
       <xs:extension base="xs:positiveInteger">
         <xs:attribute type="xs:positiveInteger" name="frequency" use="optional"/>
-        <xs:attribute type="xs:string" name="timesegment" use="optional"/>
-        <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
+        <xs:attribute name="timesegment" use="optional">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="infinite"></xs:enumeration>
+              <xs:enumeration value="w"></xs:enumeration>
+              <xs:enumeration value="m"></xs:enumeration>
+              <xs:enumeration value="y"></xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="propertysegment" use="optional">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="all"></xs:enumeration>
+              <xs:enumeration value="m2"></xs:enumeration>
+              <xs:enumeration value="km2"></xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -61,6 +78,14 @@
       <xs:minLength value="3"/>
       <xs:maxLength value="3"/>
       <xs:pattern value="[A-Z]{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="countryCodeType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="2"/>
+      <xs:pattern value="[A-Z]{2}"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -74,7 +99,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:simpleType name="category">
+  <xs:simpleType name="categoryTypes">
     <xs:restriction base="xs:string">
       <xs:enumeration value="apartment"/>
       <xs:enumeration value="attic-flat"/>
@@ -111,7 +136,7 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="utility">
+  <xs:simpleType name="utilityTypes">
     <xs:restriction base="xs:string">
       <xs:enumeration value="commercial"/>
       <xs:enumeration value="gastronomy"/>
@@ -124,7 +149,7 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="feature">
+  <xs:simpleType name="featureTypes">
     <xs:restriction base="xs:string">
       <xs:enumeration value="has-elevator"/>
       <xs:enumeration value="is-child-friendly"/>
@@ -133,7 +158,32 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="mediaTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="image"/>
+      <xs:enumeration value="document"/>
+      <xs:enumeration value="plan"/>
+      <xs:enumeration value="youtube"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="numericValuekeys">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="floor"/>
+      <xs:enumeration value="number_of_floors"/>
+      <xs:enumeration value="distance_kindergarten"/>
+      <xs:enumeration value="number_of_rooms"/>
+      <xs:enumeration value="max_elevator_weight"/>
+      <xs:enumeration value="surface_living"/>
+      <xs:enumeration value="gross_premium"/>
+    </xs:restriction>
+  </xs:simpleType>
 
+  <xs:simpleType name="emailAddress"> 
+    <xs:restriction base="xs:string"> 
+      <xs:pattern value="[^@]+@[^\.]+\..+"/> 
+    </xs:restriction> 
+  </xs:simpleType> 
 
 
   <xs:element name="exporter">
@@ -177,7 +227,7 @@
                     <xs:element name="features" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="feature" type="feature" maxOccurs="unbounded"
+                          <xs:element name="feature" type="featureTypes" maxOccurs="unbounded"
                             minOccurs="1"/>
                         </xs:sequence>
                       </xs:complexType>
@@ -189,7 +239,7 @@
                             <xs:complexType>
                               <xs:simpleContent>
                                 <xs:extension base="xs:string">
-                                  <xs:attribute type="xs:string" name="key" use="required"/>
+                                  <xs:attribute type="numericValuekeys" name="key" use="required"/>
                                 </xs:extension>
                               </xs:simpleContent>
                             </xs:complexType>
@@ -200,7 +250,7 @@
                     <xs:element name="categories" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element type="category" name="category" minOccurs="1"
+                          <xs:element type="categoryTypes" name="category" minOccurs="1"
                             maxOccurs="unbounded"/>
                         </xs:sequence>
                       </xs:complexType>
@@ -208,7 +258,7 @@
                     <xs:element name="utilities" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element type="utility" name="utility" minOccurs="1"
+                          <xs:element type="utilityTypes" name="utility" minOccurs="1"
                             maxOccurs="unbounded"/>
                         </xs:sequence>
                       </xs:complexType>
@@ -268,7 +318,6 @@
                                     <xs:sequence>
                                       <xs:element name="similarOffer" minOccurs="0"
                                         maxOccurs="unbounded">
-                                        <!-- TODO -->
                                         <xs:complexType>
                                           <xs:all>
                                             <xs:element maxOccurs="1" minOccurs="1" name="title"
@@ -315,15 +364,21 @@
                                     <xs:sequence>
                                       <xs:element name="media" minOccurs="1" maxOccurs="unbounded">
                                         <xs:complexType>
-                                          <xs:choice maxOccurs="unbounded" minOccurs="0">
-                                            <xs:element type="xs:string" name="alt"/>
-                                            <xs:element type="xs:string" name="title"/>
-                                            <xs:element type="xs:string" name="file"/>
-                                            <xs:element type="xs:string" name="url"/>
-                                            <xs:element type="xs:string" name="caption"/>
-                                            <xs:element type="xs:string" name="description"/>
-                                          </xs:choice>
-                                          <xs:attribute type="xs:string" name="type" use="optional"
+                                          <xs:all maxOccurs="1" minOccurs="1">
+                                            <xs:element type="xs:string" name="alt" maxOccurs="1"
+                                              minOccurs="0"/>
+                                            <xs:element type="xs:string" name="title" maxOccurs="1"
+                                              minOccurs="0"/>
+                                            <xs:element type="xs:string" name="file" maxOccurs="1"
+                                              minOccurs="0"/>
+                                            <xs:element type="xs:string" name="url" maxOccurs="1"
+                                              minOccurs="0"/>
+                                            <xs:element type="xs:string" name="caption" default=""
+                                              maxOccurs="1" minOccurs="0"/>
+                                            <xs:element type="xs:string" name="description"
+                                              maxOccurs="1" minOccurs="0"/>
+                                          </xs:all>
+                                          <xs:attribute type="mediaTypes" name="type" use="required"
                                           />
                                         </xs:complexType>
                                       </xs:element>
@@ -367,9 +422,9 @@
                                               minOccurs="0" maxOccurs="1"/>
                                             <xs:element type="xs:string" name="brand" minOccurs="0"
                                               maxOccurs="1"/>
-                                            <xs:element type="xs:string" name="email" minOccurs="0"
+                                            <xs:element type="emailAddress" name="email" minOccurs="0"
                                               maxOccurs="1"/>
-                                            <xs:element type="xs:string" name="emailRem"
+                                            <xs:element type="emailAddress" name="emailRem"
                                               minOccurs="0" maxOccurs="1"/>
                                             <xs:element type="xs:string" name="fax" minOccurs="0"
                                               maxOccurs="1"/>
