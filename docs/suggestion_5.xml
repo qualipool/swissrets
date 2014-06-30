@@ -67,7 +67,7 @@
             <description sort="3" title="Titel"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
             
             <type>buy</type><!-- rent / buy -->
-            <availabilty>reserved</availabilty> <!-- reserved / active / taken / reference -->
+            <availability>reserved</availability> <!-- reserved / active / taken / reference -->
             
             <!-- TODO: define of frequency should be dropped! -->
             <price frequency="0" timesegment="infinite" propertysegment="m2">700</price>
