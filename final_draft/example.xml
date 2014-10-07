@@ -96,6 +96,14 @@
                     </extraCosts>
                 
                     <attachments>
+                        <media type="offer-logo">
+                            <alt>Projekt Logo</alt>
+                            <title>A Project Name</title>
+                            <file></file><!-- '/attachment/' is root -->
+                            <url>http://lorempixel.com/800/600/city/</url>
+                            <caption>A short Project description or slogan</caption>
+                            <description>Seams a bit superfluous but possible</description>
+                        </media>
                         <media type="image">
                             <alt>Adler fehlt hier</alt>
                             <title>Adler im flug</title>
