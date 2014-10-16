@@ -228,6 +228,7 @@
       <xs:enumeration value="max_elevator_weight"/>
       <xs:enumeration value="surface_living"/>
       <xs:enumeration value="gross_premium"/>
+      <xs:enumeration value="utilization_number"/> //Ausnützungsziffer
     </xs:restriction>
   </xs:simpleType>
 
