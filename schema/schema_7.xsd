@@ -146,6 +146,7 @@
       <xs:enumeration value="residential"/>
       <xs:enumeration value="storage"/>
       <xs:enumeration value="parking"/>
+      <xs:enumeration value="building"/>
 
       <xs:enumeration value="advertising-area"/>
       <xs:enumeration value="arcade"/>
@@ -272,6 +273,8 @@
                     <xs:element type="xs:string" name="referenceId" minOccurs="0"
                       maxOccurs="1"/>
                     <xs:element type="xs:string" name="type" minOccurs="1" maxOccurs="1"/>
+                    <xs:element type="availability" name="availabilty" minOccurs="1"
+                      maxOccurs="1"/>
                     <xs:element type="xs:dateTime" name="start" minOccurs="0"
                       maxOccurs="1"/>
                     <xs:element type="currencyCodeType" name="priceCurrency"
@@ -305,8 +308,8 @@
                                       <xs:complexType>
                                       <xs:simpleContent>
                                       <xs:extension base="xs:string">
-                                      <xs:attribute type="xs:string" name="name"
-                                      use="required"/>
+                                      <xs:attribute type="xs:string" name="key"
+                                      use="optional"/>
                                       </xs:extension>
                                       </xs:simpleContent>
                                       </xs:complexType>
@@ -407,9 +410,6 @@
                                 <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1"/>
                                 <xs:element type="xs:string" name="excerpt" minOccurs="0"
                                   maxOccurs="1"/>
-                                <xs:element type="availability" name="availabilty" minOccurs="1"
-                                  maxOccurs="1"/>
-                                
                                 <xs:element name="extraCosts" maxOccurs="1" minOccurs="0">
                                   <xs:complexType>
                                     <xs:sequence>
@@ -559,7 +559,7 @@
                                 </xs:element>
                               </xs:all>
                               <xs:attribute type="xs:string" name="lang" use="required"/>
-                              <xs:attribute type="xs:string" name="id" use="required"/>
+                              <xs:attribute type="xs:string" name="id" use="optional"/>
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
@@ -567,6 +567,8 @@
                     </xs:element>
                   </xs:all>
                   <xs:attribute type="xs:string" name="id" use="required"/>
+                  <xs:attribute type="xs:integer" name="layer" use="optional"/>
+                  <xs:attribute type="xs:string" name="parent" use="optional"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
@@ -574,9 +576,6 @@
         </xs:element>
 
       </xs:all>
-      <xs:attribute type="xs:string" name="software" use="required"/>
-      <xs:attribute type="xs:string" name="label" use="optional"/>
-      <xs:attribute name="provider" type="xs:string"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>
