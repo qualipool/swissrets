@@ -251,12 +251,13 @@
   </xs:simpleType> 
 
 
-  <xs:element name="exporter">
+  <xs:element name="export">
     <xs:complexType>
       <xs:all>
         <xs:element name="exportInformation" maxOccurs="1" minOccurs="1">
           <xs:complexType>
             <xs:all>
+              <xs:element type="xs:string" name="exporter"/>
               <xs:element type="xs:dateTime" name="exportDate"/>
               <xs:element type="xs:integer" name="exportIteration" default="1"/>
             </xs:all>
