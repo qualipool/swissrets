@@ -242,9 +242,6 @@
     </xs:restriction>
   </xs:simpleType>
 
-
-  
-
   <xs:simpleType name="emailAddress"> 
     <xs:restriction base="xs:string"> 
       <xs:pattern value="[^@]+@[^\.]+\..+"/> 
@@ -258,12 +255,9 @@
         <xs:element name="exportInformation" maxOccurs="1" minOccurs="1">
           <xs:complexType>
             <xs:all>
-              <xs:element type="xs:string" name="exporter" minOccurs="0"
-                      maxOccurs="1"/>
-              <xs:element type="xs:dateTime" name="exportDate" minOccurs="0"
-                      maxOccurs="1"/>
-              <xs:element type="xs:integer" name="exportIteration" default="1" minOccurs="0"
-                      maxOccurs="1"/>
+              <xs:element type="xs:string" name="exporter" minOccurs="0" maxOccurs="1"/>
+              <xs:element type="xs:dateTime" name="exportDate" minOccurs="0" maxOccurs="1"/>
+              <xs:element type="xs:integer" name="exportIteration" default="1" minOccurs="0" maxOccurs="1"/>
             </xs:all>
           </xs:complexType>
         </xs:element>
@@ -273,39 +267,27 @@
               <xs:element name="property" maxOccurs="unbounded" minOccurs="1">
                 <xs:complexType>
                   <xs:all>
-                    <xs:element type="xs:string" name="referenceId" minOccurs="0"
-                      maxOccurs="1"/>
+                    <xs:element type="xs:string" name="referenceId" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="xs:string" name="type" minOccurs="1" maxOccurs="1"/>
-                    <xs:element type="availability" name="availability" minOccurs="1"
-                      maxOccurs="1"/>
-                    <xs:element type="xs:dateTime" name="start" minOccurs="0"
-                      maxOccurs="1"/>
-                    <xs:element type="currencyCodeType" name="priceCurrency"
-                      minOccurs="1" maxOccurs="1"/>
+                    <xs:element type="availability" name="availability" minOccurs="1" maxOccurs="1"/>
+                    <xs:element type="xs:dateTime" name="start" minOccurs="0" maxOccurs="1"/>
+                    <xs:element type="currencyCodeType" name="priceCurrency" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="price" name="price" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="price" name="netPrice" minOccurs="0" maxOccurs="1"/>
-                    <xs:element type="price" name="grossPrice" minOccurs="0"
-                      maxOccurs="1"/>
-                    <xs:element name="extraCosts">
+                    <xs:element type="price" name="grossPrice" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="extraCosts" minOccurs="0" maxOccurs="1">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element name="extraCost" minOccurs="1"
-                          maxOccurs="unbounded">
+                        <xs:element name="extraCost" minOccurs="1" maxOccurs="unbounded">
                           <xs:complexType>
                             <xs:simpleContent>
                               <xs:extension base="xs:short">
-                                <xs:attribute type="xs:string" name="key"
-                                  use="optional"/>
-                                <xs:attribute type="xs:byte" name="frequency"
-                                  use="optional"/>
-                                <xs:attribute type="xs:string" name="timesegment"
-                                  use="optional"/>
-                                <xs:attribute type="xs:string" name="propertysegment"
-                                  use="optional"/>
-                                <xs:attribute type="xs:string" name="type"
-                                  use="optional"/>
-                                <xs:attribute type="xs:string" name="title"
-                                  use="optional"/>
+                                <xs:attribute type="xs:string" name="key" use="optional"/>
+                                <xs:attribute type="xs:byte" name="frequency" use="optional"/>
+                                <xs:attribute type="xs:string" name="timesegment" use="optional"/>
+                                <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
+                                <xs:attribute type="xs:string" name="type" use="optional"/>
+                                <xs:attribute type="xs:string" name="title" use="optional"/>
                               </xs:extension>
                             </xs:simpleContent>
                           </xs:complexType>
@@ -316,30 +298,22 @@
                     <xs:element name="publisherSettings" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="publisherSetting" minOccurs="0"
-                            maxOccurs="unbounded">
+                          <xs:element name="publisherSetting" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:all>
-                                <xs:element type="xs:string" name="image_limit"
-                                  minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="document_limit"
-                                  minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="plan_limit"
-                                  minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="hide_address"
-                                  minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="hide_street"
-                                  minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="image_limit" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="document_limit" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="plan_limit" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="hide_address" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="hide_street" minOccurs="0" maxOccurs="1"/>
                                 <xs:element name="options" minOccurs="0" maxOccurs="1">
                                   <xs:complexType mixed="true">
                                     <xs:sequence>
-                                      <xs:element name="option" maxOccurs="unbounded"
-                                      minOccurs="1">
+                                      <xs:element name="option" maxOccurs="unbounded" minOccurs="1">
                                       <xs:complexType>
                                       <xs:simpleContent>
                                       <xs:extension base="xs:string">
-                                      <xs:attribute type="xs:string" name="key"
-                                      use="optional"/>
+                                      <xs:attribute type="xs:string" name="key" use="optional"/>
                                       </xs:extension>
                                       </xs:simpleContent>
                                       </xs:complexType>
@@ -349,8 +323,7 @@
                                 </xs:element>
                               </xs:all>
                               <xs:attribute type="xs:string" name="id" use="required"/>
-                              <xs:attribute type="xs:string" name="label" use="optional"
-                              />
+                              <xs:attribute type="xs:string" name="label" use="optional"/>
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
@@ -361,12 +334,9 @@
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element type="xs:string" name="lastUser" minOccurs="0" maxOccurs="1"/>
-                          <xs:element type="xs:dateTime" name="lastUpdate" minOccurs="1"
-                            maxOccurs="1"/>
-                          <xs:element type="xs:byte" name="updateIteration" minOccurs="0"
-                            maxOccurs="1"/>
-                          <xs:element type="xs:dateTime" name="creation" minOccurs="0" maxOccurs="1"
-                          />
+                          <xs:element type="xs:dateTime" name="lastUpdate" minOccurs="1" maxOccurs="1"/>
+                          <xs:element type="xs:byte" name="updateIteration" minOccurs="0" maxOccurs="1"/>
+                          <xs:element type="xs:dateTime" name="creation" minOccurs="0" maxOccurs="1"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -380,8 +350,7 @@
                     <xs:element name="features" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="feature" type="featureTypes" maxOccurs="unbounded"
-                            minOccurs="1"/>
+                          <xs:element name="feature" type="featureTypes" maxOccurs="unbounded" minOccurs="1"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -403,16 +372,14 @@
                     <xs:element name="categories" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element type="categoryTypes" name="category" minOccurs="1"
-                            maxOccurs="unbounded"/>
+                          <xs:element type="categoryTypes" name="category" minOccurs="1" maxOccurs="unbounded"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
                     <xs:element name="utilities" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element type="utilityTypes" name="utility" minOccurs="1"
-                            maxOccurs="unbounded"/>
+                          <xs:element type="utilityTypes" name="utility" minOccurs="1" maxOccurs="unbounded"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -431,76 +398,64 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="seller" minOccurs="0" maxOccurs="1">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element name="organization" minOccurs="0" maxOccurs="1">
-                            <xs:complexType>
-                              <xs:all>
-                                <xs:element name="address" type="address" minOccurs="0"
-                                  maxOccurs="1"/>
-                                <xs:element type="xs:string" name="legalName"
-                                  minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="brand" minOccurs="0"
-                                  maxOccurs="1"/>
-                                <xs:element type="emailAddress" name="email" minOccurs="0"
-                                  maxOccurs="1"/>
-                                <xs:element type="emailAddress" name="emailRem"
-                                  minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="fax" minOccurs="0"
-                                  maxOccurs="1"/>
-                                <xs:element type="xs:string" name="phone" minOccurs="0"
-                                  maxOccurs="1"/>
-                                <xs:element name="website" minOccurs="0" maxOccurs="1">
-                                  <xs:complexType>
-                                    <xs:simpleContent>
-                                      <xs:extension base="xs:anyURI">
-                                      <xs:attribute type="xs:string" name="title"/>
-                                      <xs:attribute type="xs:string" name="label"/>
-                                      </xs:extension>
-                                    </xs:simpleContent>
-                                  </xs:complexType>
-                                </xs:element>
-                              </xs:all>
-                            </xs:complexType>
-                          </xs:element>
-                          <xs:element type="person" name="viewPerson" minOccurs="0"
-                            maxOccurs="1"/>
-                          <xs:element type="person" name="visitPerson" minOccurs="0"
-                            maxOccurs="1"/>
-                          <xs:element type="person" name="inquiryPerson" minOccurs="0"
-                            maxOccurs="1"/>
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
                     <xs:element name="details" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="detail" minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:all>
+                                
+                                <xs:element name="seller" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="organization" minOccurs="0" maxOccurs="1">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="address" type="address" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element type="emailAddress" name="email" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element type="emailAddress" name="emailRem" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element name="website" minOccurs="0" maxOccurs="1">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:anyURI">
+                                                  <xs:attribute type="xs:string" name="title"/>
+                                                  <xs:attribute type="xs:string" name="label"/>
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1"/>
+                                      <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1"/>
+                                      <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+
                                 <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="excerpt" minOccurs="0"
-                                  maxOccurs="1"/>
+                                <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1"/>
                                 
                                 <xs:element name="urls" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element type="fullUrl" name="url" minOccurs="0"
-                                        maxOccurs="unbounded"/>
+                                      <xs:element type="fullUrl" name="url" minOccurs="0" maxOccurs="unbounded"/>
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
                                 <xs:element name="descriptions" maxOccurs="1" minOccurs="0">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element name="description" minOccurs="0"
-                                        maxOccurs="unbounded">
+                                      <xs:element name="description" minOccurs="0" maxOccurs="unbounded">
                                         <xs:complexType>
                                           <xs:simpleContent>
                                             <xs:extension base="xs:string">
-                                              <xs:attribute type="xs:string" name="title"
-                                                use="optional"/>
+                                              <xs:attribute type="xs:string" name="title" use="optional"/>
                                             </xs:extension>
                                           </xs:simpleContent>
                                         </xs:complexType>

@@ -196,8 +196,8 @@
                         </event>
                     </events>
 
-                    <seller><!-- used for contact purposes-->
-                        <organization> <!-- Overwrides provider -->
+                    <seller>
+                        <organization>
                             <address>
                                 <country>CH</country>
                                 <locality>Arbon</locality>
@@ -257,14 +257,7 @@
                     </seller>
                 </detail>
                 <detail lang="de" id="123kn1j23kb"> <!-- if id="PR-###" otherwise it is considered a exportproviderid -->
-                    <type>rent</type>
-                    <availability>active</availability>
-                    <start>2015-04-02T19:20:30+01:00</start>
                     <name>No name</name>
-                    <priceCurrency>CHF</priceCurrency>
-                    <price frequency="1" timesegment="m" propertysegment="all">700</price><!-- required Price used for filtration/overviews -->
-                    <netPrice frequency="1" timesegment="m" propertysegment="all">700</netPrice>
-                    <grossPrice frequency="1" timesegment="m" propertysegment="all">800</grossPrice>
                     <seller>
                         <viewPerson>
                             <familyName>Muster</familyName>
