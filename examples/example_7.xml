@@ -107,6 +107,66 @@
                 <relation key="closeProximity">1A34Cd</relation>
             </relations>
             
+            <seller>
+                <organization>
+                    <address>
+                        <country>CH</country>
+                        <locality>Arbon</locality>
+                        <region>Thurgau</region>
+                        <postalCode>9320</postalCode>
+                        <postOfficeBoxNumber>123</postOfficeBoxNumber>
+                        <street>Street</street>
+                        <streetNumber>999</streetNumber>
+                        <subunit>1</subunit>
+                        <geo>
+                            <latitude>76.234098203984</latitude><!-- (FLOAT) no limitation -->
+                            <longitude>-80.234098203984</longitude><!-- (FLOAT) no limitation -->
+                        </geo>
+                    </address>
+                    <legalName>Your Main Company</legalName>
+                    <brand>Your Brandname</brand>
+                    <!-- <logo external="false"/> has not yet been implemented-->
+                    <email>info@domain.com</email>
+                    <emailRem>rem@domain.com</emailRem>
+                    <fax>+41 123 456 78 90</fax>
+                    <phone>+41 123 456 78 90</phone>
+                    <website title="maklersoftware" label="Casasoft Website">http://Casasoft.ch</website>
+                </organization>
+                <viewPerson><!-- presented up front (may be used as inquiry if none given) -->
+                    <function>CEO</function>
+                    <givenName>Max</givenName>
+                    <familyName>Muster</familyName>
+                    <email>email@host.com</email>
+                    <fax>+41 123 456 78 90</fax>
+                    <phone>+41 123 456 78 90</phone>
+                    <mobile>+41 123 456 78 90</mobile>
+                    <gender>M</gender>
+                    <note></note>
+                </viewPerson>
+                <visitPerson><!-- Person to contact for visit information -->
+                    <function>CEO</function>
+                    <givenName>Max</givenName>
+                    <familyName>Muster</familyName>
+                    <email>email@host.com</email>
+                    <fax>+41 123 456 78 90</fax>
+                    <phone>+41 123 456 78 90</phone>
+                    <mobile>+41 123 456 78 90</mobile>
+                    <gender>M</gender>
+                    <note></note>
+                </visitPerson>
+                <inquiryPerson><!-- optional for alternate E-Mail/inquiry person -->
+                    <function>Sachbearbeiterin</function>
+                    <givenName>Jane</givenName>
+                    <familyName>Muster</familyName>
+                    <email>inquiry@host.com</email>
+                    <fax>+41 123 456 78 90</fax>
+                    <phone>+41 123 456 78 90</phone>
+                    <mobile>+41 123 456 78 90</mobile>
+                    <gender>F</gender>
+                    <note></note>
+                </inquiryPerson>
+            </seller>
+            
             <details>
                 <detail lang="de" id="1A47C-1"> <!-- unique identifier (must be unique within this property)-->
                     <name>The ultimate Test-Object</name><!-- Sales-Name of the property -->
@@ -195,75 +255,9 @@
                             <summary><![CDATA[Will only take place if reserved, please contact us at: 000 000 00 0]]></summary>
                         </event>
                     </events>
-
-                    <seller>
-                        <organization>
-                            <address>
-                                <country>CH</country>
-                                <locality>Arbon</locality>
-                                <region>Thurgau</region>
-                                <postalCode>9320</postalCode>
-                                <postOfficeBoxNumber>123</postOfficeBoxNumber>
-                                <street>Street</street>
-                                <streetNumber>999</streetNumber>
-                                <subunit>1</subunit>
-                                <geo>
-                                    <latitude>76.234098203984</latitude><!-- (FLOAT) no limitation -->
-                                    <longitude>-80.234098203984</longitude><!-- (FLOAT) no limitation -->
-                                </geo>
-                            </address>
-                            <legalName>Your Main Company</legalName>
-                            <brand>Your Brandname</brand>
-                            <!-- <logo external="false"/> has not yet been implemented-->
-                            <email>info@domain.com</email>
-                            <emailRem>rem@domain.com</emailRem>
-                            <fax>+41 123 456 78 90</fax>
-                            <phone>+41 123 456 78 90</phone>
-                            <website title="maklersoftware" label="Casasoft Website">http://Casasoft.ch</website>
-                        </organization>
-                        <viewPerson><!-- presented up front (may be used as inquiry if none given) -->
-                            <function>CEO</function>
-                            <givenName>Max</givenName>
-                            <familyName>Muster</familyName>
-                            <email>email@host.com</email>
-                            <fax>+41 123 456 78 90</fax>
-                            <phone>+41 123 456 78 90</phone>
-                            <mobile>+41 123 456 78 90</mobile>
-                            <gender>M</gender>
-                            <note></note>
-                        </viewPerson>
-                        <visitPerson><!-- Person to contact for visit information -->
-                            <function>CEO</function>
-                            <givenName>Max</givenName>
-                            <familyName>Muster</familyName>
-                            <email>email@host.com</email>
-                            <fax>+41 123 456 78 90</fax>
-                            <phone>+41 123 456 78 90</phone>
-                            <mobile>+41 123 456 78 90</mobile>
-                            <gender>M</gender>
-                            <note></note>
-                        </visitPerson>
-                        <inquiryPerson><!-- optional for alternate E-Mail/inquiry person -->
-                            <function>Sachbearbeiterin</function>
-                            <givenName>Jane</givenName>
-                            <familyName>Muster</familyName>
-                            <email>inquiry@host.com</email>
-                            <fax>+41 123 456 78 90</fax>
-                            <phone>+41 123 456 78 90</phone>
-                            <mobile>+41 123 456 78 90</mobile>
-                            <gender>F</gender>
-                            <note></note>
-                        </inquiryPerson>
-                    </seller>
                 </detail>
                 <detail lang="de" id="123kn1j23kb"> <!-- if id="PR-###" otherwise it is considered a exportproviderid -->
                     <name>No name</name>
-                    <seller>
-                        <viewPerson>
-                            <familyName>Muster</familyName>
-                            <email>email@host.com</email>
-                        </viewPerson>
-                    </seller>
                 </detail>
             </details>
         </property>

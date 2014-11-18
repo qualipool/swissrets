@@ -398,45 +398,44 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+                    <xs:element name="seller" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="organization" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="address" type="address" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="emailAddress" name="email" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="emailAddress" name="emailRem" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1"/>
+                                <xs:element name="website" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:anyURI">
+                                      <xs:attribute type="xs:string" name="title"/>
+                                      <xs:attribute type="xs:string" name="label"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1"/>
+                          <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1"/>
+                          <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
                     <xs:element name="details" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="detail" minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:all>
-                                
-                                <xs:element name="seller" minOccurs="0" maxOccurs="1">
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element name="organization" minOccurs="0" maxOccurs="1">
-                                        <xs:complexType>
-                                          <xs:all>
-                                            <xs:element name="address" type="address" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element type="emailAddress" name="email" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element type="emailAddress" name="emailRem" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element name="website" minOccurs="0" maxOccurs="1">
-                                              <xs:complexType>
-                                                <xs:simpleContent>
-                                                  <xs:extension base="xs:anyURI">
-                                                  <xs:attribute type="xs:string" name="title"/>
-                                                  <xs:attribute type="xs:string" name="label"/>
-                                                  </xs:extension>
-                                                </xs:simpleContent>
-                                              </xs:complexType>
-                                            </xs:element>
-                                          </xs:all>
-                                        </xs:complexType>
-                                      </xs:element>
-                                      <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1"/>
-                                      <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1"/>
-                                      <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1"/>
-                                    </xs:sequence>
-                                  </xs:complexType>
-                                </xs:element>
 
                                 <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1"/>
                                 <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1"/>
