@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <exporter provider="PR-123" software="SO-123" label="Immo AG">
     <exportInformation>
-        <exportDate>
-        <exportIteration>
+        <exportDate/>
+        <exportIteration/>
     </exportInformation>
     <properties>
         <property id="Project1" layer="1">
@@ -75,8 +75,8 @@
             <start/>
             <type/>
             <availabilty/>
-            <priceCurrency>
-            <price frequency="1" timesegment="infinite" propertysegment="m2">
+            <priceCurrency/>
+            <price frequency="1" timesegment="infinite" propertysegment="m2"/>
             <publisherSettings/>
             <softwareInformation/>
             <providerInformation/>

@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<exporter provider="PR-123" software="SO-123" label="Immo AG">
+<export>
     <exportInformation>
         <exportDate>2013-04-02T19:20:30+01:00</exportDate>
         <exportIteration>23</exportIteration>
     </exportInformation>
     <properties>
-        <property id="1A47C"> <!-- unique identifier within provider used for matching (this is NOT the PY-## number) software exporters tend to choose their own id as unique instead of relying on the referenceId-->
+        <property id="s8d7f8sdtf" layer="1">
+            <referenceId>4lkj3l45-1</referenceId> <!-- internal reference number for comparisons between complex exchanges and publications -->
+            <start>2015-04-02T19:20:30+01:00</start>
+            <type>buy</type><!-- rent / buy -->
+            <availability>reserved</availability> <!-- reserved / active / taken / reference -->
+            <priceCurrency>CHF</priceCurrency>
+            <price frequency="1" timesegment="infinite" propertysegment="m2">700</price>
+            
+            <extraCosts>
+                <extraCost key="gas+electric" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
+                <extraCost key="water" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
+                <extraCost key="kaution" frequency="1" timesegment="infinite" propertysegment="all">12345</extraCost>
+                <extraCost key="extra-costs" frequency="1" timesegment="m" propertysegment="all">12345</extraCost>
+                <extraCost frequency="1" timesegment="m" propertysegment="all">12345</extraCost>
+            </extraCosts>
+
+            <publisherSettings>
+                <publisherSetting id="PU-3" label="Homegate AG"> <!-- id="homegate" can also be used -->
+                    <image_limit>unlimited</image_limit> <!-- INT or 'unlimited' only publish images up to... missing element = 'unlimited' -->
+                    <document_limit>unlimited</document_limit>
+                    <plan_limit>unlimited</plan_limit>
+                    <hide_address>true</hide_address> <!-- hide the properties address (will also hide street) | true or false missing element = "false" -->
+                    <hide_street>true</hide_street> <!-- hide the properties street and number | true or false missing element = "false" -->
+                    <options><!-- everything within options the publisher can use as they see fit -->
+                        <option key="premium_id">094kjhk98304jlkj45h</option>
+                        <option key="premium_until">2013-04-02T19:20:30+01:00</option>
+                        <option key="premium_position">left</option>
+                    </options>
+                </publisherSetting>
+
+                <publisherSetting id="PU-1" label="CasaStation"> <!-- example for the recieving end to handle publishing -->
+                    <options>
+                        <option key="publish_group">all-free-platforms</option>
+                        <option key="publish_group_image_limit">unlimited</option>
+                        <option key="publish_group_document_limit">unlimited</option>
+                        <option key="publish_group_plan_limit">unlimited</option>
+                        <option key="publish_group_hide_address">false</option>
+                        <option key="publish_group_hide_street">false</option>
+                    </options>
+                </publisherSetting>
+
+                <publisherSetting id="PU-13" label="CasaSync"> <!-- example for publications to a WordPress plugin -->
+                    <options>
+                       <option key="custom_category_1_slug">something</option>
+                       <option key="custom_category_1_label">Something</option>
+                    </options>
+                </publisherSetting>
+            </publisherSettings>
+
             <softwareInformation> <!-- Information from the software concearning this property -->
                 <lastUser>max.muster</lastUser>
                 <lastUpdate>2013-04-02T19:20:30+01:00</lastUpdate>
@@ -55,47 +103,35 @@
                 <utility>commercial</utility>
                 <utility>residential</utility>
             </utilities>
-            <offers>
-                <offer lang="de" id="1A47C-1"> <!-- unique identifier (must be unique within this property)-->
-                    <referenceId>4lkj3l45-1</referenceId> <!-- internal reference number for comparisons between complex exchanges and publications -->
-                    <similarOffers>
-                        <similarOffer>
-                            <title>Zweiter Stock</title>
-                            <provider>PR-123</provider>
-                            <property>1A47C</property>
-                            <offer>1A47C-3</offer>
-                        </similarOffer>
-                    </similarOffers>
-                    <start>2015-04-02T19:20:30+01:00</start>
-                    <urls>
-                        <url type="private-listing" title="title here" label="Yourdomain.ch">http://yourdomain.ch/property/111111</url> <!-- TODO: define url type-slugs -->
-                        <url>http://youremail.ch/property/111111</url>
-                    </urls>
-
+            <relations>
+                <relation key="closeProximity">1A34Cd</relation>
+            </relations>
+            
+            <details>
+                <detail lang="de" id="1A47C-1"> <!-- unique identifier (must be unique within this property)-->
                     <name>The ultimate Test-Object</name><!-- Sales-Name of the property -->
                     <excerpt>A short description of the property.</excerpt><!-- Short description of the property -->
+                    
                     <descriptions>
                         <description><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description><!-- Main description of the property -->
                         <description title="Infos"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
                         <description title="Titel"><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy!</p><ul><li>listitem</li><li>listitem</li></ul>]]></description>
                     </descriptions>
-                    
-                    <type>buy</type><!-- rent / buy -->
-                    <availabilty>reserved</availabilty> <!-- reserved / active / taken / reference -->
-                    
-                    <priceCurrency>CHF</priceCurrency>
-                    <price frequency="1" timesegment="infinite" propertysegment="m2">700</price>
-                    <!--<grossPrice></grossPrice>-->
-                    <!--<netPrice></netPrice>-->
-                    <extraCosts>
-                        <extraCost key="gas+electric" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
-                        <extraCost key="water" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
-                        <extraCost key="kaution" frequency="1" timesegment="infinite" propertysegment="all">12345</extraCost>
-                        <extraCost key="extra-costs" frequency="1" timesegment="m" propertysegment="all">12345</extraCost>
-                        <extraCost frequency="1" timesegment="m" propertysegment="all">12345</extraCost>
-                    </extraCosts>
-                
+
+                    <urls>
+                        <url type="private-listing" title="title here" label="Yourdomain.ch">http://yourdomain.ch/property/111111</url> <!-- TODO: define url type-slugs -->
+                        <url>http://youremail.ch/property/111111</url>
+                    </urls>
+
                     <attachments>
+                        <media type="detail-logo">
+                            <alt>Projekt Logo</alt>
+                            <title>A Project Name</title>
+                            <file></file><!-- '/attachment/' is root -->
+                            <url>http://lorempixel.com/800/600/city/</url>
+                            <caption>A short Project description or slogan</caption>
+                            <description>Seams a bit superfluous but possible</description>
+                        </media>
                         <media type="image">
                             <alt>Adler fehlt hier</alt>
                             <title>Adler im flug</title>
@@ -149,8 +185,8 @@
                         </media>
                     </attachments>
                     
+                    <visitInformation><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy! for visiting infos</p><ul><li>listitem</li><li>listitem</li></ul>]]></visitInformation>
                     <events>
-                        <visitInformation><![CDATA[<p><strong>Here</strong> can2 <i>HTML</i> become handy! for visiting infos</p><ul><li>listitem</li><li>listitem</li></ul>]]></visitInformation>
                         <event type="visit">
                             <name>(Open Doors) Visit us!</name>
                             <start>2015-04-02T19:20:30+01:00</start>
@@ -219,60 +255,24 @@
                             <note></note>
                         </inquiryPerson>
                     </seller>
-                    <publisherSettings>
-                        <publisherSetting id="PU-3" label="Homegate AG"> <!-- id="homegate" can also be used -->
-                            <image_limit>unlimited</image_limit> <!-- INT or 'unlimited' only publish images up to... missing element = 'unlimited' -->
-                            <document_limit>unlimited</document_limit>
-                            <plan_limit>unlimited</plan_limit>
-                            <hide_address>true</hide_address> <!-- hide the properties address (will also hide street) | true or false missing element = "false" -->
-                            <hide_street>true</hide_street> <!-- hide the properties street and number | true or false missing element = "false" -->
-                            <options><!-- everything within options the publisher can use as they see fit -->
-                                <option name="premium_id">094kjhk98304jlkj45h</option>
-                                <option name="premium_until">2013-04-02T19:20:30+01:00</option>
-                                <option name="premium_position">left</option>
-                            </options>
-                        </publisherSetting>
-
-                        <publisherSetting id="PU-1" label="CasaStation"> <!-- example for the recieving end to handle publishing -->
-                            <options>
-                                <option name="publish_group">all-free-platforms</option>
-                                <option name="publish_group_image_limit">unlimited</option>
-                                <option name="publish_group_document_limit">unlimited</option>
-                                <option name="publish_group_plan_limit">unlimited</option>
-                                <option name="publish_group_hide_address">false</option>
-                                <option name="publish_group_hide_street">false</option>
-                            </options>
-                        </publisherSetting>
-
-                        <publisherSetting id="PU-13" label="CasaSync"> <!-- example for publications to a WordPress plugin -->
-                            <options>
-                               <option name="custom_category_1_slug">something</option>
-                               <option name="custom_category_1_label">Something</option>
-                            </options>
-                        </publisherSetting>
-                    </publisherSettings>
-                </offer>
-                <offer lang="de" id="123kn1j23kb"> <!-- if id="PR-###" otherwise it is considered a exportproviderid -->
+                </detail>
+                <detail lang="de" id="123kn1j23kb"> <!-- if id="PR-###" otherwise it is considered a exportproviderid -->
                     <type>rent</type>
-                    <availabilty>active</availabilty>
+                    <availability>active</availability>
                     <start>2015-04-02T19:20:30+01:00</start>
                     <name>No name</name>
                     <priceCurrency>CHF</priceCurrency>
                     <price frequency="1" timesegment="m" propertysegment="all">700</price><!-- required Price used for filtration/overviews -->
                     <netPrice frequency="1" timesegment="m" propertysegment="all">700</netPrice>
                     <grossPrice frequency="1" timesegment="m" propertysegment="all">800</grossPrice>
-                    <extraCosts>
-                        <extraCost type="electric+gas" title="Nebenkosten Gas &amp; Elektrik" frequency="1" timesegment="m" propertysegment="m2">500</extraCost>
-                        <extraCost type="deposit" title="Kaution" frequency="1" timesegment="infinite" propertysegment="all">80</extraCost>
-                    </extraCosts>
                     <seller>
                         <viewPerson>
                             <familyName>Muster</familyName>
                             <email>email@host.com</email>
                         </viewPerson>
                     </seller>
-                </offer>
-            </offers>
+                </detail>
+            </details>
         </property>
     </properties>
-</exporter>
+</export>
