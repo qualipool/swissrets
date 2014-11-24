@@ -231,11 +231,13 @@
       <xs:enumeration value="distance_bank"/>
       <xs:enumeration value="distance_cable_railway_station"/>
       <xs:enumeration value="distance_boat_dock"/>
+      <xs:enumeration value="distance_public_transport"/>
       <xs:enumeration value="number_of_rooms"/>
       <xs:enumeration value="max_elevator_weight"/>
       <xs:enumeration value="surface_living"/>
       <xs:enumeration value="gross_premium"/>
       <xs:enumeration value="utilization_number"/> <!--Ausnützungsziffer-->
+      <xs:enumeration value="year_built"/> <!--Ausnützungsziffer-->
     </xs:restriction>
   </xs:simpleType>
 
