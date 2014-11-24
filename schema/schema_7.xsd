@@ -231,7 +231,7 @@
       <xs:enumeration value="distance_bank"/>
       <xs:enumeration value="distance_cable_railway_station"/>
       <xs:enumeration value="distance_boat_dock"/>
-      <xs:enumeration value="distance_public_transport"/> <!--Very generic-->
+      <xs:enumeration value="distance_public_transport"/> <!-- depricated -->
       <xs:enumeration value="distance_shop"/>
       <xs:enumeration value="distance_motorway"/> <!--freeway???-->
       <xs:enumeration value="number_of_rooms"/>
@@ -243,6 +243,8 @@
       <xs:enumeration value="ceiling_height"/>
       <xs:enumeration value="hall_height"/>
       <xs:enumeration value="maximal_floor_loading"/> <!-- m2 -->
+      <xs:enumeration value="carrying_capacity_crane"/> <!-- depricated -->
+      <xs:enumeration value="carrying_capacity_elevator"/>
     </xs:restriction>
   </xs:simpleType>
 
