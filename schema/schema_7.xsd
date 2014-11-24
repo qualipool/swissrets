@@ -183,7 +183,7 @@
       <xs:enumeration value="has-parking"/>
       <xs:enumeration value="has-garage"/>
       <xs:enumeration value="has-balcony"/>
-      <xs:enumeration value="has-isdn"/>
+      <xs:enumeration value="has-isdn"/> <!-- depricated -->
       <xs:enumeration value="is-wheelchair-accessible"/>
       <xs:enumeration value="is-animal-friendly"/>
       <xs:enumeration value="has-ramp"/>
@@ -240,6 +240,7 @@
       <xs:enumeration value="gross_premium"/>
       <xs:enumeration value="utilization_number"/> <!--Ausnützungsziffer-->
       <xs:enumeration value="year_built"/>
+      <xs:enumeration value="year_last_renovated"/>
       <xs:enumeration value="ceiling_height"/>
       <xs:enumeration value="hall_height"/>
       <xs:enumeration value="maximal_floor_loading"/> <!-- m2 -->
