@@ -226,6 +226,7 @@
       <xs:enumeration value="number_of_floors"/>
       <xs:enumeration value="number_of_apartments"/>
       <xs:enumeration value="number_of_parcels"/>
+      <xs:enumeration value="number_of_rooms"/>
       <xs:enumeration value="distance_kindergarten"/>
       <xs:enumeration value="distance_primary_school"/> 
       <xs:enumeration value="distance_high_school"/> 
@@ -240,7 +241,6 @@
       <xs:enumeration value="distance_shop"/>
       <xs:enumeration value="distance_motorway"/> <!--freeway???-->
       <xs:enumeration value="distance_airport"/>
-      <xs:enumeration value="number_of_rooms"/>
       <xs:enumeration value="max_elevator_weight"/>
       <xs:enumeration value="area_gross_floor"/>
       <xs:enumeration value="area_net"/>
