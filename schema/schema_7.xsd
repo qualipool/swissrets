@@ -243,7 +243,7 @@
       <xs:enumeration value="distance_airport"/>
       <xs:enumeration value="max_elevator_weight"/>
       
-       <!-- SIA 416 -->
+      <!-- SIA 416 -->
       <xs:enumeration value="area_sia_gf"/>
       <xs:enumeration value="area_sia_ngf"/>
       <xs:enumeration value="area_sia_kf"/>
@@ -256,12 +256,12 @@
       <xs:enumeration value="area_sia_nnf"/>
       
       <!-- DIN 277 -->
-      <xs:enumeration value="area_din_bgf"/>
-      <xs:enumeration value="area_din_kgf"/>
-      <xs:enumeration value="area_din_ngf"/>
-      <xs:enumeration value="area_din_nf"/>
-      <xs:enumeration value="area_din_tf"/>
-      <xs:enumeration value="area_din_vf"/>
+      <!--<xs:enumeration value="area_din_bgf"/>-->
+      <!--<xs:enumeration value="area_din_kgf"/>-->
+      <!--<xs:enumeration value="area_din_ngf"/>-->
+      <!--<xs:enumeration value="area_din_nf"/>-->
+      <!--<xs:enumeration value="area_din_tf"/>-->
+      <!--<xs:enumeration value="area_din_vf"/>-->
       
       <xs:enumeration value="gross_premium"/> <!-- Bruttorendite -->
       <xs:enumeration value="utilization_number"/> <!--Ausnützungsziffer-->
@@ -573,7 +573,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-
       </xs:all>
     </xs:complexType>
   </xs:element>
