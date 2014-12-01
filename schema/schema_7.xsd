@@ -239,6 +239,7 @@
       <xs:enumeration value="distance_public_transport"/> <!-- depricated -->
       <xs:enumeration value="distance_shop"/>
       <xs:enumeration value="distance_motorway"/> <!--freeway???-->
+      <xs:enumeration value="distance_airport"/>
       <xs:enumeration value="number_of_rooms"/>
       <xs:enumeration value="max_elevator_weight"/>
       <xs:enumeration value="area_gross_floor"/>
