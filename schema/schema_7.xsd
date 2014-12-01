@@ -244,20 +244,20 @@
       <xs:enumeration value="max_elevator_weight"/>
       
       <!-- Pseudo Norm -->
-      <xs:enumeration value="area_bwf"/>
-      <xs:enumeration value="area_nwf"/>
+      <xs:enumeration value="area_bwf"/> <!-- Bruttowohnfläche -->
+      <xs:enumeration value="area_nwf"/> <!-- Nettowohnfläche -->
       
       <!-- SIA 416 -->
-      <xs:enumeration value="area_sia_gf"/>
-      <xs:enumeration value="area_sia_ngf"/>
-      <xs:enumeration value="area_sia_kf"/>
-      <xs:enumeration value="area_sia_nf"/>
-      <xs:enumeration value="area_sia_vf"/>
-      <xs:enumeration value="area_sia_ff"/>
-      <xs:enumeration value="area_sia_kft"/>
-      <xs:enumeration value="area_sia_kfn"/>
-      <xs:enumeration value="area_sia_hnf"/>
-      <xs:enumeration value="area_sia_nnf"/>
+      <xs:enumeration value="area_sia_gf"/> <!-- (Brutto) Geschossfläche -->
+      <xs:enumeration value="area_sia_ngf"/> <!-- Nettogeschossfläche -->
+      <xs:enumeration value="area_sia_kf"/> <!-- Konstruktionsfläche -->
+      <xs:enumeration value="area_sia_nf"/> <!-- Nutzfläche -->
+      <xs:enumeration value="area_sia_vf"/> <!-- Verkehrsfläche -->
+      <xs:enumeration value="area_sia_ff"/> <!-- Funktionsfläche -->
+      <xs:enumeration value="area_sia_kft"/> <!-- Konstruktionsfläche Tragend -->
+      <xs:enumeration value="area_sia_kfn"/> <!-- Konstruktionsfläche nicht Tragend -->
+      <xs:enumeration value="area_sia_hnf"/> <!-- Hauptnutzfläche -->
+      <xs:enumeration value="area_sia_nnf"/> <!-- Nebennutzfläche -->
       
       <!-- DIN 277 -->
       <!--<xs:enumeration value="area_din_bgf"/>-->
