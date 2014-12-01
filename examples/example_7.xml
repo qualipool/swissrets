@@ -89,11 +89,11 @@
             <numericValues>
                 <value key="floor">+2</value> <!-- starting floor of object (-1+0+1+2+3+4) (+ is optional) ("null" is not alowed!!! please omit tag)-->
                 <value key="number_of_floors">3</value> <!-- the "house"'s total number of floors (not offer!) (0 is not alowed!!!) -->
-                <value key="distance_kindergarten">500m+700m</value>
+                <value key="distance_kindergarten">500</value>
                 <value key="number_of_rooms">3.5</value>
-                <value key="max_elevator_weight">500kg+100kg</value>
-                <value key="surface_living">200m</value>
-                <value key="gross_premium">5.25p</value> <!-- p stands for '%' -->
+                <value key="max_elevator_weight">500</value>
+                <value key="area_bwf">200</value>
+                <value key="gross_premium">5.25</value>
             </numericValues>
             <categories>
                 <category>apartment</category>
