@@ -243,6 +243,10 @@
       <xs:enumeration value="distance_airport"/>
       <xs:enumeration value="max_elevator_weight"/>
       
+      <!-- Pseudo Norm -->
+      <xs:enumeration value="area_bwf"/>
+      <xs:enumeration value="area_nwf"/>
+      
       <!-- SIA 416 -->
       <xs:enumeration value="area_sia_gf"/>
       <xs:enumeration value="area_sia_ngf"/>
