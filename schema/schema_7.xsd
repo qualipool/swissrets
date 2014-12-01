@@ -253,6 +253,9 @@
       <xs:enumeration value="maximal_floor_loading"/> <!-- m2 -->
       <xs:enumeration value="carrying_capacity_crane"/> <!-- depricated -->
       <xs:enumeration value="carrying_capacity_elevator"/>
+      <xs:enumeration value="area_net"/>
+      <xs:enumeration value="area_gross"/>
+      <xs:enumeration value="area_gross_floor"/>
     </xs:restriction>
   </xs:simpleType>
 
