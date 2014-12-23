@@ -244,6 +244,8 @@
       <xs:enumeration value="distance_airport"/>
       <xs:enumeration value="max_elevator_weight"/>
       
+      <xs:enumeration value="area_property_land"/>
+
       <!-- Pseudo Norm -->
       <xs:enumeration value="area_bwf"/> <!-- Bruttowohnfläche -->
       <xs:enumeration value="area_nwf"/> <!-- Nettowohnfläche -->
