@@ -494,6 +494,13 @@
                                 <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1"/>
                                 <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1"/>
                                 
+                                <xs:element name="tags" maxOccurs="1" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="tag" minOccurs="0" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
                                 <xs:element name="urls" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
