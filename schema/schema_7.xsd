@@ -276,6 +276,8 @@
       
       <xs:enumeration value="gross_premium"/> <!-- Bruttorendite -->
       <xs:enumeration value="utilization_number"/> <!--Ausnützungsziffer-->
+      <xs:enumeration value="construction_utilization_number"/> <!--Ausnützungsziffer (bau)-->
+      
       <xs:enumeration value="year_built"/>
       <xs:enumeration value="year_last_renovated"/>
       <xs:enumeration value="ceiling_height"/>
