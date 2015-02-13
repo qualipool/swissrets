@@ -323,6 +323,8 @@
               <xs:element name="property" maxOccurs="unbounded" minOccurs="1">
                 <xs:complexType>
                   <xs:all>
+                    <xs:element type="xs:string" name="zone" minOccurs="0" maxOccurs="1"/>
+                    <xs:element type="xs:string" name="parcel" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="xs:string" name="referenceId" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="xs:string" name="type" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="availability" name="availability" minOccurs="1" maxOccurs="1"/>
