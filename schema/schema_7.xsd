@@ -245,6 +245,7 @@
       <xs:enumeration value="max_elevator_weight"/>
       
       <xs:enumeration value="area_property_land"/>
+      <xs:enumeration value="property_land_price"/>
 
       <!-- Pseudo Norm -->
       <xs:enumeration value="area_bwf"/> <!-- Bruttowohnfläche -->
@@ -285,6 +286,8 @@
       <xs:enumeration value="maximal_floor_loading"/> <!-- m2 -->
       <xs:enumeration value="carrying_capacity_crane"/> <!-- depricated -->
       <xs:enumeration value="carrying_capacity_elevator"/>
+
+
     
     </xs:restriction>
   </xs:simpleType>
