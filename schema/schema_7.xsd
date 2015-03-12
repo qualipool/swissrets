@@ -208,6 +208,9 @@
       <xs:enumeration value="has-swimmingpool"/>
       <xs:enumeration value="is-minergie-general"/>
       <xs:enumeration value="is-minergie-certified"/>
+      
+      <xs:enumeration value="is-sunny"/>
+      <xs:enumeration value="is-quiet"/>
     </xs:restriction>
   </xs:simpleType>
 
