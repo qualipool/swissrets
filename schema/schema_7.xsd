@@ -211,6 +211,10 @@
       
       <xs:enumeration value="is-sunny"/>
       <xs:enumeration value="is-quiet"/>
+      <xs:enumeration value="is_projection"/>
+      <xs:enumeration value="has_demolition_property"/>
+      
+      
     </xs:restriction>
   </xs:simpleType>
 
