@@ -239,6 +239,8 @@
       <xs:enumeration value="number_of_apartments"/>
       <xs:enumeration value="number_of_parcels"/>
       <xs:enumeration value="number_of_rooms"/>
+      <xs:enumeration value="number_of_bathrooms"/>
+      
       <xs:enumeration value="distance_kindergarten"/>
       <xs:enumeration value="distance_primary_school"/> 
       <xs:enumeration value="distance_high_school"/> 
