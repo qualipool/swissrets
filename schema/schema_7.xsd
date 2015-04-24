@@ -216,6 +216,7 @@
       
       <xs:enumeration value="has-mountain-view"/>
       <xs:enumeration value="on-a-south-slope"/>
+      <xs:enumeration value="on-a-slope"/>
       <xs:enumeration value="has-car-port"/>
       <xs:enumeration value="has-double-garage"/>
       
