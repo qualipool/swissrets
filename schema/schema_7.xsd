@@ -136,6 +136,14 @@
       <xs:enumeration value="covered-slot"/>
     </xs:restriction>
   </xs:simpleType>
+  
+  <!--<xs:simpleType name="urlTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="link"/>
+      <xs:enumeration value="virtual-tour"/>
+      <xs:enumeration value="youtube"/>
+    </xs:restriction>
+  </xs:simpleType>-->
 
   <xs:simpleType name="utilityTypes">
     <xs:restriction base="xs:string">
