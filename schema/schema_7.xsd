@@ -93,7 +93,7 @@
   <xs:complexType name="fullUrl">
     <xs:simpleContent>
       <xs:extension base="xs:anyURI">
-        <xs:attribute type="xs:string" name="type" use="optional"/>
+        <xs:attribute type="urlTypes" name="type" use="optional"/>
         <xs:attribute type="xs:string" name="title" use="optional"/>
         <xs:attribute type="xs:string" name="label" use="optional"/>
       </xs:extension>
@@ -137,13 +137,13 @@
     </xs:restriction>
   </xs:simpleType>
   
-  <!--<xs:simpleType name="urlTypes">
+  <xs:simpleType name="urlTypes">
     <xs:restriction base="xs:string">
       <xs:enumeration value="link"/>
       <xs:enumeration value="virtual-tour"/>
       <xs:enumeration value="youtube"/>
     </xs:restriction>
-  </xs:simpleType>-->
+  </xs:simpleType>
 
   <xs:simpleType name="utilityTypes">
     <xs:restriction base="xs:string">
@@ -238,7 +238,6 @@
       <xs:enumeration value="image"/>
       <xs:enumeration value="document"/>
       <xs:enumeration value="plan"/>
-      <xs:enumeration value="youtube"/>
       <xs:enumeration value="detail-logo"/>
     </xs:restriction>
   </xs:simpleType>
