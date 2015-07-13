@@ -239,6 +239,7 @@
       <xs:enumeration value="document"/>
       <xs:enumeration value="plan"/>
       <xs:enumeration value="detail-logo"/>
+      <xs:enumeration value="sales-brochure"/>
     </xs:restriction>
   </xs:simpleType>
   
