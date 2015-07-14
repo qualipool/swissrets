@@ -232,7 +232,8 @@
       
     </xs:restriction>
   </xs:simpleType>
-
+  
+  <!-- Todo: Mimetypes should be defined -->
   <xs:simpleType name="mediaTypes">
     <xs:restriction base="xs:string">
       <xs:enumeration value="image"/>
