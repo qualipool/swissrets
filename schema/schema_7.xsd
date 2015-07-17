@@ -407,7 +407,7 @@
                                 <xs:attribute type="xs:byte" name="frequency" use="optional"/>
                                 <xs:attribute type="xs:string" name="timesegment" use="optional"/>
                                 <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
-                                <xs:attribute type="xs:byte" name="price-integrated" use="optional"/>
+                                <xs:attribute type="xs:byte" name="inclusive" use="optional"/> <!-- determines if is added to offer-price (inclusive = 0) or appart of it (inclusive = 1) -->
                               </xs:extension>
                             </xs:simpleContent>
                           </xs:complexType>
