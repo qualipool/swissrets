@@ -99,6 +99,20 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  
+  
+  <xs:simpleType name="integratedOfferType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="parking-exterior-space"/>
+      <xs:enumeration value="parking-carport"/>
+      <xs:enumeration value="parking-garage-connected"/>
+      <xs:enumeration value="parking-garage-box"/>
+      <xs:enumeration value="parking-garage-underground"/>
+      <xs:enumeration value="parking-house"/>
+      <xs:enumeration value="room-workroom"/>
+      <xs:enumeration value="room-storage-basement"/>
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="categoryTypes">
     <xs:restriction base="xs:string">
@@ -381,6 +395,27 @@
                       </xs:sequence>
                     </xs:complexType>
                   </xs:element>
+                  
+                   <xs:element name="integratedOffers" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="integratedOffer" minOccurs="1" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:simpleContent>
+                              <xs:extension base="xs:short">
+                                <xs:attribute type="integratedOfferType" name="type" use="optional"/>
+                                <xs:attribute type="xs:byte" name="frequency" use="optional"/>
+                                <xs:attribute type="xs:string" name="timesegment" use="optional"/>
+                                <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
+                                <xs:attribute type="xs:byte" name="price-integrated" use="optional"/>
+                              </xs:extension>
+                            </xs:simpleContent>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  
                     <xs:element name="publisherSettings" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
