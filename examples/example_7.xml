@@ -22,7 +22,7 @@
             </extraCosts>
 
             <publisherSettings>
-                <publisherSetting id="PU-3" label="Homegate AG"> <!-- id="homegate" can also be used -->
+                <publisherSetting id="homegate">
                     <image_limit>unlimited</image_limit> <!-- INT or 'unlimited' only publish images up to... missing element = 'unlimited' -->
                     <document_limit>unlimited</document_limit>
                     <plan_limit>unlimited</plan_limit>
@@ -35,7 +35,7 @@
                     </options>
                 </publisherSetting>
 
-                <publisherSetting id="PU-1" label="CasaStation"> <!-- example for the recieving end to handle publishing -->
+                <publisherSetting id="casastation"> <!-- example for the recieving end to handle publishing -->
                     <options>
                         <option key="publish_group">all-free-platforms</option>
                         <option key="publish_group_image_limit">unlimited</option>
@@ -46,7 +46,7 @@
                     </options>
                 </publisherSetting>
 
-                <publisherSetting id="PU-13" label="CasaSync"> <!-- example for publications to a WordPress plugin -->
+                <publisherSetting id="casasync"> <!-- example for publications to a WordPress plugin -->
                     <options>
                        <option key="custom_category_1_slug">something</option>
                        <option key="custom_category_1_label">Something</option>
@@ -167,8 +167,14 @@
                 </inquiryPerson>
             </seller>
             
-            <details>
-                <detail lang="de" id="1A47C-1"> <!-- unique identifier (must be unique within this property)-->
+            <offers>
+                <offer lang="de" id="1A47C-1"> <!-- unique identifier (must be unique within this property)-->
+                    <publishers> <!-- utilized by aggregates to organize publishing -->
+                        <publisher>homegate</publisher>
+                        <publisher>immoscout</publisher>
+                        <publisher>homestreet</publisher>
+                    </publishers>
+
                     <name>The ultimate Test-Object</name><!-- Sales-Name of the property -->
                     <excerpt>A short description of the property.</excerpt><!-- Short description of the property -->
                     
@@ -184,7 +190,7 @@
                     </urls>
 
                     <attachments>
-                        <media type="detail-logo">
+                        <media type="offer-logo">
                             <alt>Projekt Logo</alt>
                             <title>A Project Name</title>
                             <file></file><!-- '/attachment/' is root -->
@@ -255,11 +261,8 @@
                             <summary><![CDATA[Will only take place if reserved, please contact us at: 000 000 00 0]]></summary>
                         </event>
                     </events>
-                </detail>
-                <detail lang="de" id="123kn1j23kb"> <!-- if id="PR-###" otherwise it is considered a exportproviderid -->
-                    <name>No name</name>
-                </detail>
-            </details>
+                </offer>
+            </offers>
         </property>
     </properties>
 </export>

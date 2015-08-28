@@ -217,7 +217,7 @@
       <xs:enumeration value="document"/>
       <xs:enumeration value="plan"/>
       <xs:enumeration value="youtube"/>
-      <xs:enumeration value="detail-logo"/>
+      <xs:enumeration value="offer-logo"/>
     </xs:restriction>
   </xs:simpleType>
   
@@ -491,10 +491,10 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="details" minOccurs="1" maxOccurs="1">
+                    <xs:element name="offers" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="detail" minOccurs="1" maxOccurs="unbounded">
+                          <xs:element name="offer" minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:all>
 
@@ -512,6 +512,13 @@
                                   <xs:complexType>
                                     <xs:sequence>
                                       <xs:element type="fullUrl" name="url" minOccurs="0" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="publishers" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="publisher" minOccurs="0" maxOccurs="unbounded"/>
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
