@@ -93,12 +93,26 @@
   <xs:complexType name="fullUrl">
     <xs:simpleContent>
       <xs:extension base="xs:anyURI">
-        <xs:attribute type="xs:string" name="type" use="optional"/>
+        <xs:attribute type="urlTypes" name="type" use="optional"/>
         <xs:attribute type="xs:string" name="title" use="optional"/>
         <xs:attribute type="xs:string" name="label" use="optional"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  
+  
+  <xs:simpleType name="integratedOfferType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="parking-exterior-space"/>
+      <xs:enumeration value="parking-carport"/>
+      <xs:enumeration value="parking-garage-connected"/>
+      <xs:enumeration value="parking-garage-box"/>
+      <xs:enumeration value="parking-garage-underground"/>
+      <xs:enumeration value="parking-house"/>
+      <xs:enumeration value="room-workroom"/>
+      <xs:enumeration value="room-storage-basement"/>
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="categoryTypes">
     <xs:restriction base="xs:string">
@@ -134,6 +148,14 @@
       <xs:enumeration value="studio"/>
       <xs:enumeration value="house"/>
       <xs:enumeration value="covered-slot"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="urlTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="link"/>
+      <xs:enumeration value="virtual-tour"/>
+      <xs:enumeration value="youtube"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -208,9 +230,24 @@
       <xs:enumeration value="has-swimmingpool"/>
       <xs:enumeration value="is-minergie-general"/>
       <xs:enumeration value="is-minergie-certified"/>
+      
+      <xs:enumeration value="is-sunny"/>
+      <xs:enumeration value="is-quiet"/>
+      <xs:enumeration value="is_projection"/>
+      <xs:enumeration value="has_demolition_property"/>
+      
+      <xs:enumeration value="has-mountain-view"/>
+      <xs:enumeration value="on-a-south-slope"/>
+      <xs:enumeration value="on-a-slope"/>
+      <xs:enumeration value="has-car-port"/>
+      <xs:enumeration value="has-double-garage"/>
+      
+      
+      
     </xs:restriction>
   </xs:simpleType>
-
+  
+  <!-- Todo: Mimetypes should be defined -->
   <xs:simpleType name="mediaTypes">
     <xs:restriction base="xs:string">
       <xs:enumeration value="image"/>
@@ -228,6 +265,8 @@
       <xs:enumeration value="number_of_apartments"/>
       <xs:enumeration value="number_of_parcels"/>
       <xs:enumeration value="number_of_rooms"/>
+      <xs:enumeration value="number_of_bathrooms"/>
+      
       <xs:enumeration value="distance_kindergarten"/>
       <xs:enumeration value="distance_primary_school"/> 
       <xs:enumeration value="distance_high_school"/> 
@@ -356,6 +395,27 @@
                       </xs:sequence>
                     </xs:complexType>
                   </xs:element>
+                  
+                   <xs:element name="integratedOffers" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="integratedOffer" minOccurs="1" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:simpleContent>
+                              <xs:extension base="xs:short">
+                                <xs:attribute type="integratedOfferType" name="type" use="optional"/>
+                                <xs:attribute type="xs:byte" name="frequency" use="optional"/>
+                                <xs:attribute type="xs:string" name="timesegment" use="optional"/>
+                                <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
+                                <xs:attribute type="xs:byte" name="inclusive" use="optional"/> <!-- determines if is added to offer-price (inclusive = 0) or appart of it (inclusive = 1) -->
+                              </xs:extension>
+                            </xs:simpleContent>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  
                     <xs:element name="publisherSettings" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
