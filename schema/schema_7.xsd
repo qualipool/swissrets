@@ -291,6 +291,17 @@
       <xs:enumeration value="area_nwf"/> <!-- Nettowohnfläche -->
       
       <!-- SIA 416 -->
+      <!-- Flächen
+      ┌───────────────────────────────────────────────┐
+      │                       GF                      │ Geschossfläche
+      ├───────────────────────────────┰───────────────┧
+      │              NGF              ┃       KF      ┃ Nettogeschossfläche + Konstruktionsfläche
+      ├───────────────┬───────┬───────╂───────┬───────┨
+      │       NF      │  VF   │  FF   ┃  KFT  │  KFN  ┃ (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
+      ├───────┬───────┼───────┴───────┺━━━━━━━┷━━━━━━━┛
+      │  NNF  │  HNF  │ Neben + Hauptnutzfläche
+      └───────┴───────┘
+      -->
       <xs:enumeration value="area_sia_gf"/> <!-- (Brutto) Geschossfläche -->
       <xs:enumeration value="area_sia_ngf"/> <!-- Nettogeschossfläche -->
       <xs:enumeration value="area_sia_kf"/> <!-- Konstruktionsfläche -->
@@ -301,6 +312,56 @@
       <xs:enumeration value="area_sia_kfn"/> <!-- Konstruktionsfläche nicht Tragend -->
       <xs:enumeration value="area_sia_hnf"/> <!-- Hauptnutzfläche -->
       <xs:enumeration value="area_sia_nnf"/> <!-- Nebennutzfläche -->
+      
+      <!-- Ausenflächen
+      ┌───────────────────────────────────────────────┐
+      │                      AGF                      │ Aussen-Geschossfläche
+      ├───────────────────────────────┰───────────────┧
+      │             ANGF              ┃      AKF      ┃ Aussen-Nettogeschossfläche + Aussen-Konstruktionsfläche
+      ├───────────────┬───────┬───────╂───────┬───────┨
+      │      ANF      │  AVF  │  AFF  ┃  AKFT │ AKFN  ┃ Aussen-* (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
+      └───────────────┴───────┴───────┺━━━━━━━┷━━━━━━━┛
+      -->
+      <xs:enumeration value="area_sia_agf"/>
+      <xs:enumeration value="area_sia_angf"/>
+      <xs:enumeration value="area_sia_akf"/>
+      <xs:enumeration value="area_sia_anf"/>
+      <xs:enumeration value="area_sia_avf"/>
+      <xs:enumeration value="area_sia_aff"/>
+      <xs:enumeration value="area_sia_akft"/>
+      <xs:enumeration value="area_sia_akfn"/>
+      
+      <!-- Volumen
+      ┌───────────────────────────────────────────────┐
+      │                      GV                       │ Gebäudevolumen
+      ├───────────────────────────────┬───────────────┤
+      │             ANGV              │      AKV      │ Nettogebäudevolumen + Konstruktions-Volumen
+      ├───────────────┬───────┬───────┼───────────────┘
+      │      ANV      │  AVV  │  AFV  │   Nutzvolumen + Verkehrsvolumen + Funktionsvolumen
+      └───────────────┴───────┴───────┘
+      -->
+      <xs:enumeration value="area_sia_gv"/>
+      <xs:enumeration value="area_sia_angv"/>
+      <xs:enumeration value="area_sia_akv"/>
+      <xs:enumeration value="area_sia_anv"/>
+      <xs:enumeration value="area_sia_avv"/>
+      <xs:enumeration value="area_sia_afv"/>
+      
+      <!-- 
+      ┌───────────────────────────────────────────────┐
+      │                      GSF                      │ Grundstückfläche
+      ├───────────────────────────────┬───────────────┤
+      │               UF              │      GGF      │ Umgebungsfläche + Gebäudegrundfläche
+      ├───────────────┬───────────────┼───────────────┘
+      │      BUF      │      UUF      │ Bearbeitete Umgebungsfläche + Unbearbeitete Umgebungsfläche
+      └───────────────┴───────────────┘
+      -->
+      <xs:enumeration value="area_sia_gsf"/> 
+      <xs:enumeration value="area_sia_uf"/>
+      <xs:enumeration value="area_sia_ggf"/>
+      <xs:enumeration value="area_sia_buf"/>
+      <xs:enumeration value="area_sia_uuf"/>
+      
       
       <!-- DIN 277 -->
       <!--<xs:enumeration value="area_din_bgf"/>-->
@@ -490,14 +551,14 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="categories" minOccurs="1" maxOccurs="1">
+                    <xs:element name="categories" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element type="categoryTypes" name="category" minOccurs="1" maxOccurs="unbounded"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="utilities" minOccurs="1" maxOccurs="1">
+                    <xs:element name="utilities" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element type="utilityTypes" name="utility" minOccurs="1" maxOccurs="unbounded"/>
@@ -551,7 +612,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="offers" minOccurs="1" maxOccurs="1">
+                    <xs:element name="offers" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="offer" minOccurs="1" maxOccurs="unbounded">
