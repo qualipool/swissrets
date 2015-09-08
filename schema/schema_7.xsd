@@ -550,7 +550,7 @@
 
                     <xs:element name="seller" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
-                        <xs:sequence>
+                        <xs:all>
                           <xs:element name="organization" minOccurs="0" maxOccurs="1">
                             <xs:complexType>
                               <xs:all>
@@ -577,7 +577,7 @@
                           <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1"/>
                           <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1"/>
                           <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1"/>
-                        </xs:sequence>
+                        </xs:all>
                       </xs:complexType>
                     </xs:element>
 
@@ -633,6 +633,7 @@
                                               </xs:complexType>
                                             </xs:element>
                                           </xs:all>
+                                          <xs:attribute type="xs:string" name="id" use="required"/>
                                         </xs:complexType>
                                       </xs:element>
                                     </xs:sequence>
