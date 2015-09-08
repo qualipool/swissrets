@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
+  
+  <!-- TYPE DEFFINITIONS START HERE -->
   <xs:complexType name="person">
     <xs:all>
       <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1"/>
@@ -407,7 +408,8 @@
     </xs:restriction> 
   </xs:simpleType> 
 
-
+  
+  <!-- MAIN STRUCTURE STARTS HERE -->
   <xs:element name="export">
     <xs:complexType>
       <xs:all>
@@ -437,98 +439,59 @@
                     <xs:element type="price" name="netPrice" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="price" name="grossPrice" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="extraCosts" minOccurs="0" maxOccurs="1">
-                    <xs:complexType>
-                      <xs:sequence>
-                        <xs:element name="extraCost" minOccurs="1" maxOccurs="unbounded">
-                          <xs:complexType>
-                            <xs:simpleContent>
-                              <xs:extension base="xs:short">
-                                <xs:attribute type="xs:string" name="key" use="optional"/>
-                                <xs:attribute type="xs:byte" name="frequency" use="optional"/>
-                                <xs:attribute type="xs:string" name="timesegment" use="optional"/>
-                                <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
-                                <xs:attribute type="xs:string" name="type" use="optional"/>
-                                <xs:attribute type="xs:string" name="title" use="optional"/>
-                              </xs:extension>
-                            </xs:simpleContent>
-                          </xs:complexType>
-                        </xs:element>
-                      </xs:sequence>
-                    </xs:complexType>
-                  </xs:element>
-                  
-                   <xs:element name="integratedOffers" minOccurs="0" maxOccurs="1">
-                    <xs:complexType>
-                      <xs:sequence>
-                        <xs:element name="integratedOffer" minOccurs="1" maxOccurs="unbounded">
-                          <xs:complexType>
-                            <xs:simpleContent>
-                              <xs:extension base="xs:short">
-                                <xs:attribute type="integratedOfferType" name="type" use="optional"/>
-                                <xs:attribute type="xs:byte" name="frequency" use="optional"/>
-                                <xs:attribute type="xs:string" name="timesegment" use="optional"/>
-                                <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
-                                <xs:attribute type="xs:byte" name="inclusive" use="optional"/> <!-- determines if is added to offer-price (inclusive = 0) or appart of it (inclusive = 1) -->
-                              </xs:extension>
-                            </xs:simpleContent>
-                          </xs:complexType>
-                        </xs:element>
-                      </xs:sequence>
-                    </xs:complexType>
-                  </xs:element>
-                  
-                    <xs:element name="publisherSettings" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="publisherSetting" minOccurs="0" maxOccurs="unbounded">
+                          <xs:element name="extraCost" minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
-                              <xs:all>
-                                <xs:element type="xs:string" name="image_limit" minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="document_limit" minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="plan_limit" minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="hide_address" minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="hide_street" minOccurs="0" maxOccurs="1"/>
-                                <xs:element name="options" minOccurs="0" maxOccurs="1">
-                                  <xs:complexType mixed="true">
-                                    <xs:sequence>
-                                      <xs:element name="option" maxOccurs="unbounded" minOccurs="1">
-                                      <xs:complexType>
-                                      <xs:simpleContent>
-                                      <xs:extension base="xs:string">
-                                      <xs:attribute type="xs:string" name="key" use="optional"/>
-                                      </xs:extension>
-                                      </xs:simpleContent>
-                                      </xs:complexType>
-                                      </xs:element>
-                                    </xs:sequence>
-                                  </xs:complexType>
-                                </xs:element>
-                              </xs:all>
-                              <xs:attribute type="xs:string" name="id" use="required"/>
-                              <xs:attribute type="xs:string" name="label" use="optional"/>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:short">
+                                  <xs:attribute type="xs:string" name="key" use="optional"/>
+                                  <xs:attribute type="xs:byte" name="frequency" use="optional"/>
+                                  <xs:attribute type="xs:string" name="timesegment" use="optional"/>
+                                  <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
+                                  <xs:attribute type="xs:string" name="type" use="optional"/>
+                                  <xs:attribute type="xs:string" name="title" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+                  
+                    <xs:element name="integratedOffers" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="integratedOffer" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:short">
+                                  <xs:attribute type="integratedOfferType" name="type" use="optional"/>
+                                  <xs:attribute type="xs:byte" name="frequency" use="optional"/>
+                                  <xs:attribute type="xs:string" name="timesegment" use="optional"/>
+                                  <xs:attribute type="xs:string" name="propertysegment" use="optional"/>
+                                  <xs:attribute type="xs:byte" name="inclusive" use="optional"/> <!-- determines if is added to offer-price (inclusive = 0) or appart of it (inclusive = 1) -->
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    
                     <xs:element name="address" type="address" minOccurs="1" maxOccurs="1"/>
+
                     <xs:element name="softwareInformation" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
-                        <xs:sequence>
-                          <xs:element type="xs:string" name="lastUser" minOccurs="0" maxOccurs="1"/>
-                          <xs:element type="xs:dateTime" name="lastUpdate" minOccurs="1" maxOccurs="1"/>
-                          <xs:element type="xs:byte" name="updateIteration" minOccurs="0" maxOccurs="1"/>
-                          <xs:element type="xs:dateTime" name="creation" minOccurs="0" maxOccurs="1"/>
-                        </xs:sequence>
-                      </xs:complexType>
+                          <xs:sequence>
+                            <xs:element type="xs:string" name="lastUser" minOccurs="0" maxOccurs="1"/>
+                            <xs:element type="xs:dateTime" name="lastUpdate" minOccurs="1" maxOccurs="1"/>
+                            <xs:element type="xs:byte" name="updateIteration" minOccurs="0" maxOccurs="1"/>
+                            <xs:element type="xs:dateTime" name="creation" minOccurs="0" maxOccurs="1"/>
+                          </xs:sequence>
+                        </xs:complexType>
                     </xs:element>
-                    <xs:element name="providerInformation" minOccurs="0" maxOccurs="1">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element type="xs:boolean" name="public" minOccurs="0" maxOccurs="1"/>
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
+
                     <xs:element name="features" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
@@ -536,6 +499,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+
                     <xs:element name="numericValues" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
@@ -551,6 +515,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+
                     <xs:element name="categories" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
@@ -558,6 +523,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+
                     <xs:element name="utilities" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
@@ -565,6 +531,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+
                     <xs:element name="relations" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
@@ -580,6 +547,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+
                     <xs:element name="seller" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
@@ -612,13 +580,13 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+
                     <xs:element name="offers" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="offer" minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:all>
-
                                 <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1"/>
                                 <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1"/>
                                 
@@ -629,6 +597,7 @@
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
+
                                 <xs:element name="urls" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
@@ -636,13 +605,40 @@
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
+
                                 <xs:element name="publishers" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element type="xs:string" name="publisher" minOccurs="0" maxOccurs="unbounded"/>
+                                      <xs:element name="publisher" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element type="xs:string" name="image_limit" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element type="xs:string" name="document_limit" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element type="xs:string" name="plan_limit" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element type="xs:string" name="hide_address" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element type="xs:string" name="hide_street" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element name="options" minOccurs="0" maxOccurs="1">
+                                              <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                  <xs:element name="option" maxOccurs="unbounded" minOccurs="1">
+                                                  <xs:complexType>
+                                                  <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                  <xs:attribute type="xs:string" name="key" use="optional"/>
+                                                  </xs:extension>
+                                                  </xs:simpleContent>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
+
                                 <xs:element name="descriptions" maxOccurs="1" minOccurs="0">
                                   <xs:complexType>
                                     <xs:sequence>
@@ -658,6 +654,7 @@
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
+
                                 <xs:element name="attachments" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
@@ -684,8 +681,9 @@
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
-                                <xs:element type="xs:string" name="visitInformation"
-                                        minOccurs="0" maxOccurs="1"/>
+
+                                <xs:element type="xs:string" name="visitInformation" minOccurs="0" maxOccurs="1"/>
+
                                 <xs:element name="events" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
@@ -709,6 +707,7 @@
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
+
                               </xs:all>
                               <xs:attribute type="xs:string" name="lang" use="required"/>
                               <xs:attribute type="xs:string" name="id" use="optional"/>
