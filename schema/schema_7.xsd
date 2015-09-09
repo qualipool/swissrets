@@ -666,9 +666,9 @@
                                               minOccurs="0"/>
                                             <xs:element type="xs:string" name="title" maxOccurs="1"
                                               minOccurs="0"/>
-                                            <xs:element type="xs:string" name="file" maxOccurs="1"
+                                            <xs:element type="xs:anyURI" name="file" maxOccurs="1"
                                               minOccurs="0"/>
-                                            <xs:element type="xs:string" name="url" maxOccurs="1"
+                                            <xs:element type="xs:anyURI" name="url" maxOccurs="1"
                                               minOccurs="0"/>
                                             <xs:element type="xs:string" name="caption" default=""
                                               maxOccurs="1" minOccurs="0"/>
