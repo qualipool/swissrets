@@ -519,7 +519,7 @@
                     <xs:element name="categories" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element type="categoryTypes" name="category" minOccurs="1" maxOccurs="unbounded"/>
+                          <xs:element type="categoryTypes" name="category" minOccurs="1" maxOccurs="3"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -527,7 +527,7 @@
                     <xs:element name="utilities" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element type="utilityTypes" name="utility" minOccurs="1" maxOccurs="unbounded"/>
+                          <xs:element type="utilityTypes" name="utility" minOccurs="1" maxOccurs="3"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
