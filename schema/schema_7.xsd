@@ -341,12 +341,12 @@
       │      ANV      │  AVV  │  AFV  │   Nutzvolumen + Verkehrsvolumen + Funktionsvolumen
       └───────────────┴───────┴───────┘
       -->
-      <xs:enumeration value="area_sia_gv"/>
-      <xs:enumeration value="area_sia_angv"/>
-      <xs:enumeration value="area_sia_akv"/>
-      <xs:enumeration value="area_sia_anv"/>
-      <xs:enumeration value="area_sia_avv"/>
-      <xs:enumeration value="area_sia_afv"/>
+      <xs:enumeration value="volume_sia_gv"/>
+      <xs:enumeration value="volume_sia_angv"/>
+      <xs:enumeration value="volume_sia_akv"/>
+      <xs:enumeration value="volume_sia_anv"/>
+      <xs:enumeration value="volume_sia_avv"/>
+      <xs:enumeration value="volume_sia_afv"/>
       
       <!-- 
       ┌───────────────────────────────────────────────┐
