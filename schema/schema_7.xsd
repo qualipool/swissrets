@@ -612,11 +612,6 @@
                                       <xs:element name="publisher" minOccurs="1" maxOccurs="unbounded">
                                         <xs:complexType>
                                           <xs:all>
-                                            <xs:element type="xs:string" name="image_limit" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element type="xs:string" name="document_limit" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element type="xs:string" name="plan_limit" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element type="xs:string" name="hide_address" minOccurs="0" maxOccurs="1"/>
-                                            <xs:element type="xs:string" name="hide_street" minOccurs="0" maxOccurs="1"/>
                                             <xs:element name="options" minOccurs="0" maxOccurs="1">
                                               <xs:complexType mixed="true">
                                                 <xs:sequence>
@@ -625,6 +620,21 @@
                                                   <xs:simpleContent>
                                                   <xs:extension base="xs:string">
                                                   <xs:attribute type="xs:string" name="key" use="optional"/>
+                                                  </xs:extension>
+                                                  </xs:simpleContent>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="channels" minOccurs="0" maxOccurs="1">
+                                              <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                  <xs:element name="channel" maxOccurs="unbounded" minOccurs="1">
+                                                  <xs:complexType>
+                                                  <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                    <xs:attribute type="xs:dateTime" name="expiration" use="optional"/>
                                                   </xs:extension>
                                                   </xs:simpleContent>
                                                   </xs:complexType>
