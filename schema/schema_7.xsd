@@ -684,6 +684,8 @@
                                               maxOccurs="1" minOccurs="0"/>
                                             <xs:element type="xs:string" name="description"
                                               maxOccurs="1" minOccurs="0"/>
+                                              <xs:element type="xs:string" name="publication" maxOccurs="1"
+                                              minOccurs="0"/>
                                           </xs:all>
                                           <xs:attribute type="mediaTypes" name="type" use="required"
                                           />
