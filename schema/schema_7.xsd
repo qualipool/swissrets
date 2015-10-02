@@ -256,6 +256,7 @@
       <xs:enumeration value="plan"/>
       <xs:enumeration value="youtube"/>
       <xs:enumeration value="offer-logo"/>
+      <xs:enumeration value="sales-brochure"/>
     </xs:restriction>
   </xs:simpleType>
   
