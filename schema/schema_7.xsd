@@ -25,7 +25,7 @@
       <xs:element type="xs:string" name="postalCode" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:byte" name="postOfficeBoxNumber" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:string" name="street" minOccurs="0" maxOccurs="1"/>
-      <xs:element type="xs:short" name="streetNumber" minOccurs="0" maxOccurs="1"/>
+      <xs:element type="xs:string" name="streetNumber" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:byte" name="subunit" minOccurs="0" maxOccurs="1"/>
       <xs:element name="geo" minOccurs="0" maxOccurs="1">
         <xs:complexType>
