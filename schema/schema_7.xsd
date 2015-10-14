@@ -466,7 +466,7 @@
                           <xs:element name="integratedOffer" minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:simpleContent>
-                                <xs:extension base="xsd:unsignedInt">
+                                <xs:extension base="xs:unsignedInt">
                                   <xs:attribute type="integratedOfferType" name="type" use="optional"/>
                                   <xs:attribute type="xs:byte" name="frequency" use="optional"/>
                                   <xs:attribute type="xs:string" name="timesegment" use="optional"/>
