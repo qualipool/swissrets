@@ -386,7 +386,7 @@
       <xs:enumeration value="year_last_renovated"/>
       <xs:enumeration value="ceiling_height"/>
       <xs:enumeration value="hall_height"/>
-      <xs:enumeration value="maximal_floor_loading"/> <!-- m2 -->
+      <xs:enumeration value="maximal_floor_loading"/> <!-- kg -->
       <xs:enumeration value="carrying_capacity_crane"/> <!-- depricated -->
       <xs:enumeration value="carrying_capacity_elevator"/>
 
