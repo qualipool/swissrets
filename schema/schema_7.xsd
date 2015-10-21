@@ -287,6 +287,7 @@
       <xs:enumeration value="distance_shop"/>
       <xs:enumeration value="distance_motorway"/> <!--freeway???-->
       <xs:enumeration value="distance_airport"/>
+      <xs:enumeration value="distance_tramway"/>
       <xs:enumeration value="max_elevator_weight"/>
       
       <xs:enumeration value="area_property_land"/>
