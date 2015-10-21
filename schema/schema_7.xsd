@@ -243,6 +243,7 @@
       <xs:enumeration value="on-a-slope"/>
       <xs:enumeration value="has-car-port"/>
       <xs:enumeration value="has-double-garage"/>
+      <xs:enumeration value="on-even-ground"/>
       
       
       
