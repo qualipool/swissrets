@@ -111,6 +111,7 @@
       <xs:enumeration value="parking-garage-box"/>
       <xs:enumeration value="parking-garage-underground"/>
       <xs:enumeration value="parking-house"/>
+      <xs:enumeration value="parking-duplex"/>
       <xs:enumeration value="room-workroom"/>
       <xs:enumeration value="room-storage-basement"/>
     </xs:restriction>
