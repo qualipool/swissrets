@@ -14,7 +14,6 @@
       <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:string" name="gender" minOccurs="0" maxOccurs="1"/>
       <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1"/>
-      <xs:attribute type="xs:string" name="id" use="optional"/>
     </xs:all>
   </xs:complexType>
   
@@ -579,6 +578,7 @@
                                     </xs:simpleContent>
                                   </xs:complexType>
                                 </xs:element>
+                                <xs:attribute type="xs:string" name="id" use="optional"/>
                               </xs:all>
                             </xs:complexType>
                           </xs:element>
