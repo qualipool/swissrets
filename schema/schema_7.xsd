@@ -437,7 +437,7 @@
                   <xs:all>
                     <xs:element type="xs:string" name="zoneTypes" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1"/>
-                    <xs:element type="xs:string" name="referencename="id" minOccurs="0" maxOccurs="1"/>
+                    <xs:element type="xs:string" name="referenceId" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="xs:string" name="type" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="availability" name="availability" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="xs:dateTime" name="start" minOccurs="0" maxOccurs="1"/>
