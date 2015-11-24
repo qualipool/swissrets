@@ -2,7 +2,7 @@ Existierend Eigenschaften
 ======================
 
 |slug | de | Ursprung | Notizen |
-|---|---|---|--|
+|---|---|---|---|
 |has-elevator||IDX||
 |has-nice-view||||
 |has-fireplace||IDX|Gemeint ist chemineé|
