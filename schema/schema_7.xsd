@@ -579,6 +579,7 @@
                                   </xs:complexType>
                                 </xs:element>
                               </xs:all>
+                              <xs:attribute type="xs:string" name="id" use="optional"/>
                             </xs:complexType>
                           </xs:element>
                           <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1"/>
