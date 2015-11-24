@@ -45,7 +45,7 @@ Kategorie-Kandidaten
 |office| Büro|IDX & OpenImmo|
 |office-space| Bürofläche|OpenImmo|
 |exhibition-space| AUSSTELLUNGSFLAECHE|OpenImmo|
-|retail| einzelhandel|OpenImmo|
+|retail| Einzelhandel|OpenImmo|
 |bed-and-breakfast| Pension|OpenImmo|
 |hotel| Hotel|IDX & OpenImmo|
 |warehouse| Lagergebäude|OpenImmo|
@@ -60,14 +60,14 @@ Nutzungsarten
 
 |slug | de | Notizen |
 |---|---|---|
-|commercial|||
-|gastronomy|||
-|vacation|||
-|agricultural|||
-|industrial|||
-|residential|||
-|storage|||
-|parking|||
+|commercial|Handel/Gewerbe||
+|gastronomy|Gastronomy||
+|vacation|Ferien||
+|agricultural|Agrikultur||
+|industrial|Industry||
+|residential|Wohnen||
+|storage|Lagern||
+|parking|Parken||
 |building|Bauen|Entfernen da `building-land` das einzige ist das unter dieser Nutzungsart wäre?|
 
 Nutzungsart-Kandidaten
