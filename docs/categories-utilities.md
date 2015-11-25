@@ -43,6 +43,7 @@ Kategorie-Kandidaten
 |slug | de | Ursprung |
 |---|---|---|
 |flat| Etage|OpenImmo|
+|ground-floor-flat| Erdgeschoss|OpenImmo|
 |office| Büro|IDX & OpenImmo|
 |office-space| Bürofläche|OpenImmo|
 |exhibition-space| AUSSTELLUNGSFLAECHE|OpenImmo|
