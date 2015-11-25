@@ -42,6 +42,7 @@ Kategorie-Kandidaten
 
 |slug | de | Ursprung |
 |---|---|---|
+|flat| Etage|OpenImmo|
 |office| Büro|IDX & OpenImmo|
 |office-space| Bürofläche|OpenImmo|
 |exhibition-space| AUSSTELLUNGSFLAECHE|OpenImmo|
