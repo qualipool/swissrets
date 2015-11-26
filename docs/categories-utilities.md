@@ -55,6 +55,12 @@ Kategorie-Kandidaten
 |---|---|---|
 |maisonette|||
 |penthouse|||
+|restaurant|||
+|rustico|||
+|granny-flat|||
+|earthen-house|||
+
+
 
 
 Nutzungsarten
