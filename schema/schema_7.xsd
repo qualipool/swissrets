@@ -151,6 +151,20 @@
       <xs:enumeration value="studio"/>
       <xs:enumeration value="house"/>
       <xs:enumeration value="covered-slot"/>
+      
+      <xs:enumeration value="office"/>
+      <xs:enumeration value="flat"/>
+      <xs:enumeration value="exhibition-space"/>
+      <xs:enumeration value="retail"/>
+      <xs:enumeration value="bed-and-breakfast"/>
+      <xs:enumeration value="hotel"/>
+      <xs:enumeration value="warehouse"/>
+      <xs:enumeration value="workshop"/>
+      <xs:enumeration value="car-park"/>
+      <xs:enumeration value="bungalow"/>
+      <xs:enumeration value="castle"/>
+      <xs:enumeration value="fuel-station"/>
+      <xs:enumeration value="cafe-bar"/>
     </xs:restriction>
   </xs:simpleType>
   
@@ -173,28 +187,7 @@
       <xs:enumeration value="storage"/>
       <xs:enumeration value="parking"/>
       <xs:enumeration value="building"/>
-
-      <xs:enumeration value="advertising-area"/>
-      <xs:enumeration value="arcade"/>
-      <xs:enumeration value="atelier"/>
-      <xs:enumeration value="bakery"/>
-      <xs:enumeration value="bar"/>
-      <xs:enumeration value="butcher"/>
-      <xs:enumeration value="café"/>
-      <xs:enumeration value="casino"/>
-      <xs:enumeration value="cheese-factory"/>
-      <xs:enumeration value="club/disco"/>
-      <xs:enumeration value="fuel-station"/>
-      <xs:enumeration value="gardening"/>
-      <xs:enumeration value="hairdresser"/>
-      <xs:enumeration value="kiosk"/>
-      <xs:enumeration value="movie-theater"/>
-      <xs:enumeration value="office"/>
-      <xs:enumeration value="practice"/>
-      <xs:enumeration value="restaurant"/>
-      <xs:enumeration value="shop"/>
-      <xs:enumeration value="shopping-centre"/>
-      <xs:enumeration value="hotel"/>
+      <xs:enumeration value="investment"/>
     </xs:restriction>
   </xs:simpleType>
 
