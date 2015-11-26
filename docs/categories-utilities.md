@@ -34,20 +34,10 @@ Kategorien
 |chalet | | |
 |studio | | |
 |covered-slot | | |
-
-
-
-Kategorie-Kandidaten
-====================
-
-|slug | de | Ursprung |
-|---|---|---|
+|office| Büro/Bürofläche|IDX & OpenImmo|
 |flat| Etage|OpenImmo|
-|ground-floor-flat| Erdgeschoss|OpenImmo|
-|office| Büro|IDX & OpenImmo|
-|office-space| Bürofläche|OpenImmo|
 |exhibition-space| AUSSTELLUNGSFLAECHE|OpenImmo|
-|retail| Einzelhandel|OpenImmo|
+|retail| Einzelhandel/Ladenlokal |OpenImmo|
 |bed-and-breakfast| Pension|OpenImmo|
 |hotel| Hotel|IDX & OpenImmo|
 |warehouse| Lagergebäude|OpenImmo|
@@ -55,6 +45,17 @@ Kategorie-Kandidaten
 |car-park| Parkhaus|OpenImmo|
 |bungalow| Bungalow|OpenImmo|
 |castle| Schloss|OpenImmo|
+|fuel-station| Tankstelle|OpenImmo|
+|cafe-bar|Café/Bar|OpenImmo|
+
+Kategorie-Kandidaten
+====================
+
+|slug | de | Ursprung |
+|---|---|---|
+
+
+
 
 
 Nutzungsarten
@@ -71,13 +72,14 @@ Nutzungsarten
 |storage|Lagern||
 |parking|Parken||
 |building|Bauen|Entfernen da `building-land` das einzige ist das unter dieser Nutzungsart wäre?|
+|investment|Renditeobjekt|OpenImmo|
 
 Nutzungsart-Kandidaten
 ========================
 
 |slug | de | Notizen |
 |---|---|---|
-|investment|Renditeobjekt|OpenImmo|
+
 
 
 Unbekannt oder unsicher OpenImmo Kandidaten
@@ -96,7 +98,6 @@ Unbekannt oder unsicher OpenImmo Kandidaten
 * 'land_und_forstwirtschaft_SCHEUNEN'                           
 * 'land_und_forstwirtschaft_REITERHOEFE'                        
 * 'land_und_forstwirtschaft_SONSTIGE_LANDWIRTSCHAFTSIMMOBILIEN' 
-* 'sonstige_TANKSTELLE'
 * 'sonstige_SONSTIGE' ^^
 * 'freizeitimmobilie_gewerblich_'                             
 * 'freizeitimmobilie_gewerblich_SPORTANLAGEN'                
@@ -123,20 +124,13 @@ Unbekannt oder unsicher IDX Kandidaten
 * arcade
 * atelier
 * bakery
-* bar
 * butcher
-* café
-* casino
-* cheese-factory
+* ~~~casino~~~
+* ~~~cheese-factory~~~
 * club/disco
-* fuel-station
 * gardening
 * hairdresser
 * kiosk
 * movie-theater
-* office • **Neue Kategorie**
 * practice
 * restaurant **WICHTIG? Neue Kategorie**
-* shop • **Neue Kategorie "retail"**
-* shopping-centre • **Neue Kategorie "retail"**
-* hotel • **Neue Kategorie**
