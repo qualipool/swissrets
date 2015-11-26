@@ -165,6 +165,9 @@
       <xs:enumeration value="castle"/>
       <xs:enumeration value="fuel-station"/>
       <xs:enumeration value="cafe-bar"/>
+      <xs:enumeration value="cafe-bar"/>
+      <xs:enumeration value="garden-apartment"/>
+      
     </xs:restriction>
   </xs:simpleType>
   
