@@ -149,7 +149,6 @@
       <xs:enumeration value="villa"/>
       <xs:enumeration value="chalet"/>
       <xs:enumeration value="studio"/>
-      <xs:enumeration value="house"/>
       <xs:enumeration value="covered-slot"/>
       
       <xs:enumeration value="office"/>
@@ -164,7 +163,6 @@
       <xs:enumeration value="bungalow"/>
       <xs:enumeration value="castle"/>
       <xs:enumeration value="fuel-station"/>
-      <xs:enumeration value="cafe-bar"/>
       <xs:enumeration value="cafe-bar"/>
       <xs:enumeration value="garden-apartment"/>
       
