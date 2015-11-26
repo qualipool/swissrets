@@ -53,9 +53,8 @@ Kategorie-Kandidaten
 
 |slug | de | Ursprung |
 |---|---|---|
-
-
-
+|maisonette|||
+|penthouse|||
 
 
 Nutzungsarten
