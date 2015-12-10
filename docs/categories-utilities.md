@@ -60,6 +60,8 @@ Kategorie-Kandidaten
 |granny-flat||OpenImmo|
 |earthen-house||OpenImmo|
 |hobby-room||IDX|
+|covered-bike-space||IDX|
+
 
 
 
