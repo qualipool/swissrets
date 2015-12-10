@@ -53,13 +53,13 @@ Kategorie-Kandidaten
 
 |slug | de | Ursprung |
 |---|---|---|
-|maisonette|||
-|penthouse|||
-|restaurant|||
-|rustico|||
-|granny-flat|||
-|earthen-house|||
-|hobby-room|||
+|maisonette||OpenImmo|
+|penthouse||OpenImmo|
+|restaurant||IDX & OpenImmo|
+|rustico||OpenImmo|
+|granny-flat||OpenImmo|
+|earthen-house||OpenImmo|
+|hobby-room||IDX|
 
 
 
