@@ -59,6 +59,8 @@ Kategorie-Kandidaten
 |rustico|||
 |granny-flat|||
 |earthen-house|||
+|hobby-room|||
+
 
 
 
