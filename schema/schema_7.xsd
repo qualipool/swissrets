@@ -431,7 +431,10 @@
                   <xs:all>
                     <xs:element type="xs:string" name="zoneTypes" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1"/>
-                    <xs:element type="xs:string" name="referenceId" minOccurs="0" maxOccurs="1"/>
+                    <!-- referenceId can be used to track the original creation id (this should usualy be unique to the property) -->
+                    <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1"/>
+                    <!-- visualReferenceId should only be used for presentational purposes publishers tend to present the referenceId if this one is missing -->
+                    <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="xs:string" name="type" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="availability" name="availability" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="xs:dateTime" name="start" minOccurs="0" maxOccurs="1"/>
@@ -725,6 +728,7 @@
 
                               </xs:all>
                               <xs:attribute type="xs:string" name="lang" use="required"/>
+                              <!-- offer->id is used for machine-identification for the individual offer/languages this needs to be unique -->
                               <xs:attribute type="xs:string" name="id" use="optional"/>
                             </xs:complexType>
                           </xs:element>
@@ -732,6 +736,7 @@
                       </xs:complexType>
                     </xs:element>
                   </xs:all>
+                  <!-- this ID needs to be unique and represents the id from the exporter (this can be the same as referenceId if the exporter is the original creator) -->
                   <xs:attribute type="xs:string" name="id" use="required"/>
                   <xs:attribute type="xs:integer" name="layer" use="optional"/>
                   <xs:attribute type="xs:string" name="parent" use="optional"/>
