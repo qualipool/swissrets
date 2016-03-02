@@ -5,17 +5,26 @@ CasaXML is a swiss real estate standard that aims to solve the age old data-tran
 Although CasaXML is currently within the suggestion stage, there will like be very little changes post suggestion version 7.
 
 #Structure
+
+The XML should always contain the full representation of a companies portfolio.
+
+The XML may contain `<projects>` and/or `<properties>`. The omission of these tags indicate that the information is **NOT SPECIFIED** and should thereby be **ignored**. A empty (but present) `<projects>` of `<properties>` tag indicates that there are no projects/properties available and any existing properties/projects should therefore be **DELETED**.
+
+##Relational map (Projects)
 ```
-Relational map (Projects)
-=========================
 projects 
 	< details 
 		< descriptions
 	< units 
+		- property
 		< details 
+		    < descriptions
 		< properties
--->
+
 ```
+
+##Example XML structure (Projects)
+
 ```
 <export>
 	<projects>
@@ -35,9 +44,14 @@ projects
 			<units>
 				<unit>
 					<referenceId>unitRef1</referenceId>
+					<property xlink:type="resource" xlink:href="#456" />
 					<details>
 						<detail lang="de">
 							<name>Gebäude 1</name>
+							<descriptions>
+								<description title="Beschreibung"></description>
+								<description title="Lage"></description>
+							</descriptions>
 						</detail>
 					</details>
 					<properties>
@@ -52,9 +66,9 @@ projects
 </export>
 ```
 
+##Relational map (Properties)
+
 ```
-Relational map (Properties)
-===========================
 properties 
 	< extraCosts
 	< integratedOffers
@@ -81,6 +95,9 @@ properties
 		< attachments
 		< events
 ```
+
+##Example XML structure (Properties)
+
 ```
 <export>
 	<properties>
