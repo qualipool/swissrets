@@ -25,7 +25,7 @@ projects
 
 ##Example XML structure (Projects)
 
-```
+```xml
 <export>
 	<projects>
 		<project id="project1">
@@ -98,7 +98,7 @@ properties
 
 ##Example XML structure (Properties)
 
-```
+```xml
 <export>
 	<properties>
 		<property id="123">
