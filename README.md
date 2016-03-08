@@ -37,7 +37,7 @@ projects
 						<description title="Beschreibung"></description>
 						<description title="Lage"></description>
 					</descriptions>
-					<!-- attachments? -->
+					<!-- attachments -->
 
 				</detail>
 			</details>
@@ -111,11 +111,15 @@ properties
 			<netPrice></netPrice>
 			<grossPrice></grossPrice>
 			<features>
-				<feature></feature>
+				<feature>has-nice-view</feature>
+                <feature>has-cabletv</feature>
+                <feature>has-parking</feature>
 				<!-- ... -->
 			</features>
 			<numericValues>
-				<numericValue></numericValue>
+				<value key="number_of_apartments">3</value>
+                <value key="volume_gva">3432</value>
+                <value key="area_sia_gsf">4350</value>
 				<!-- ... -->
 			</numericValues>
 			<categories>
