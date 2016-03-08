@@ -103,9 +103,38 @@ properties
 	<properties>
 		<property id="123">
 			<referenceId>propertyRef123</referenceId>
+			<visualReferenceId>visualRef123</visualReferenceId>
+			<egit>abc123</egit>
+			<ewit>bcd234</ewit>
+			<availability>available</availability>
+			<price></price>
+			<netPrice></netPrice>
+			<grossPrice></grossPrice>
+			<features>
+				<feature></feature>
+				<!-- ... -->
+			</features>
+			<numericValues>
+				<numericValue></numericValue>
+				<!-- ... -->
+			</numericValues>
+			<categories>
+				<category>penthouse</category>
+			</categories>
+			<utilities>
+				<utility>residential</utility>
+			</utilities>
+			<seller />
 			<!-- ... -->
 			<offers>
-				<offer id="123de" lang="de"><!-- ... --></offer>
+				<offer id="123de" lang="de">
+					<name></name>
+					<excerpt></excerpt>
+					<urls />
+					<descriptions />
+					<attachments />
+					<!-- ... -->
+				</offer>
 				<offer id="123fr" lang="fr"><!-- ... --></offer>
 				<offer id="123it" lang="it"><!-- ... --></offer>
 			</offers>
