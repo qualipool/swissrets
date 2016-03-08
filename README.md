@@ -107,9 +107,9 @@ properties
 			<egit>abc123</egit>
 			<ewit>bcd234</ewit>
 			<availability>available</availability>
-			<price></price>
-			<netPrice></netPrice>
-			<grossPrice></grossPrice>
+			<type>rent</type>
+			<netPrice>1200</netPrice>
+			<grossPrice>1450</grossPrice>
 			<features>
 				<feature>has-nice-view</feature>
                 <feature>has-cabletv</feature>
