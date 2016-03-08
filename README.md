@@ -104,8 +104,10 @@ properties
 		<property id="123">
 			<referenceId>propertyRef123</referenceId>
 			<visualReferenceId>visualRef123</visualReferenceId>
-			<egid>abc123</egid>
-			<ewid>bcd234</ewid>
+			<bfs>
+				<egid>abc123</egid>
+				<ewid>bcd234</ewid>
+			</bfs>
 			<availability>available</availability>
 			<type>rent</type>
 			<netPrice>1200</netPrice>
