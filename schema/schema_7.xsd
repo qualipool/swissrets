@@ -167,6 +167,7 @@
       <xs:enumeration value="garden-apartment"/>
       
       <xs:enumeration value="maisonette"/>
+      <xs:enumeration value="rusitco"/>
       
       
     </xs:restriction>
