@@ -171,7 +171,9 @@ properties
 
 Will not be defined by this standard to date, but the representation would/could* be as follows.
 
-## Example offer response GET (HAL)
+## Example offer GET COLLECTION response (HAL)
+
+```GET {API_URL}/offer?param1=foo&param2=bar```
 
 ```json
 {
@@ -275,6 +277,8 @@ Will not be defined by this standard to date, but the representation would/could
 ```
 
 ## Example property response GET (HAL)
+
+```GET {API_URL}/property/1```
 
 ```json
 {
