@@ -101,7 +101,7 @@ properties
 ```xml
 <export>
 	<properties>
-		<property id="123">
+		<property id="property123">
 			<referenceId>propertyRef123</referenceId>
 			<visualReferenceId>visualRef123</visualReferenceId>
 			<bfs>
@@ -133,7 +133,7 @@ properties
 			<seller />
 			<!-- ... -->
 			<offers>
-				<offer id="123de" lang="de">
+				<offer id="offer123de" lang="de">
 					<name></name>
 					<excerpt></excerpt>
 					<urls />
@@ -141,28 +141,136 @@ properties
 					<attachments />
 					<!-- ... -->
 				</offer>
-				<offer id="123fr" lang="fr"><!-- ... --></offer>
-				<offer id="123it" lang="it"><!-- ... --></offer>
+				<offer id="offer123fr" lang="fr"><!-- ... --></offer>
+				<offer id="offer123it" lang="it"><!-- ... --></offer>
 			</offers>
 		</property>
-		<property id="234">
+		<property id="property234">
 			<referenceId>propertyRef234</referenceId>
 			<!-- ... -->
 			<offers>
-				<offer id="234de" lang="de"><!-- ... --></offer>
-				<offer id="234fr" lang="fr"><!-- ... --></offer>
-				<offer id="234it" lang="it"><!-- ... --></offer>
+				<offer id="offer234de" lang="de"><!-- ... --></offer>
+				<offer id="offer234fr" lang="fr"><!-- ... --></offer>
+				<offer id="offer234it" lang="it"><!-- ... --></offer>
 			</offers>
 		</property>
-		<property id="345">
+		<property id="property345">
 			<referenceId>propertyRef345</referenceId>
 			<!-- ... -->
 			<offers>
-				<offer id="345de" lang="de"></offer>
-				<offer id="345fr" lang="fr"></offer>
-				<offer id="345it" lang="it"></offer>
+				<offer id="offer345de" lang="de"></offer>
+				<offer id="offer345fr" lang="fr"></offer>
+				<offer id="offer345it" lang="it"></offer>
 			</offers>
 		</property>
 	</properties>
 </export>
+
+
+#Resful JSON representation (HAL)
+Will not be defined by this standard to date, but the representation would/could* be as follows.
+
+
+## offer response
+## offer response
 ```
+{
+  "count": 1,
+  "total": 1,
+  "collectionTotal": 46,
+  "_links": {
+    "self": {
+      "href": "{API_URL}/offer?provider={customer_id}&page=1"
+    },
+    "first": {
+      "href": "{API_URL}/offer?provider={customer_id}"
+    },
+    "last": {
+      "href": "{API_URL}/offer?provider={customer_id}&page=1"
+    }
+  },
+  "_embedded": {
+    "offer": [
+      {
+        "id": 1,
+        "contentChanged": null,
+        "status": "active",
+        "excerpt": "Excerpt description",
+        "name": "Name of offer",
+        "lang": "de",
+        "urls": {},
+        "_embedded": {
+          "property": {PROPERTY RESPONSE}
+          "offer_medias": [
+            {
+              "id": 1,
+              "alt": "alternate text",
+              "title": "",
+              "caption": "",
+              "description": "",
+              "type": "image",
+              "flagged": null,
+              "rank": 1,
+              "_embedded": {
+                "media": {
+                  "id": 1,
+                  "file": null,
+                  "size": "188368",
+                  "mimeType": "image/jpeg",
+                  "sq": "/media-thumb/provider-1006/property-1/0000974-72x72_C.png", //example of rendered resultset from API provider
+                  "xl": "/media-thumb/provider-1006/property-1/0000974-1300x800_F.jpg",
+                  "lg": "/media-thumb/provider-1006/property-1/0000974-1024x768_F.jpg",
+                  "md": "/media-thumb/provider-1006/property-1/0000974-500x375_C.jpg",
+                  "sm": "/media-thumb/provider-1006/property-1/0000974-240x180_C.png",
+                  "xs": "/media-thumb/provider-1006/property-1/0000974-100x72_C.png",
+                  "updated": {
+                    "date": "2016-03-04 13:57:20.000000",
+                    "timezone_type": 3,
+                    "timezone": "Europe/Zurich"
+                  },
+                  "flags": {},
+                  "_links": []
+                }
+              },
+              "_links": []
+            },
+          ],
+          "featuredImage": {
+            "id": 1,
+            "file": null,
+            "size": "188368",
+            "mimeType": "image/jpeg",
+            "sq": "/media-thumb/provider-1006/property-1/0000974-72x72_C.png",
+            "xl": "/media-thumb/provider-1006/property-1/0000974-1300x800_F.jpg",
+            "lg": "/media-thumb/provider-1006/property-1/0000974-1024x768_F.jpg",
+            "md": "/media-thumb/provider-1006/property-1/0000974-500x375_C.jpg",
+            "sm": "/media-thumb/provider-1006/property-1/0000974-240x180_C.png",
+            "xs": "/media-thumb/provider-1006/property-1/0000974-100x72_C.png",
+            "updated": {
+              "date": "2016-03-04 13:57:20.000000",
+              "timezone_type": 3,
+              "timezone": "Europe/Zurich"
+            },
+            "flags": {},
+            "_links": []
+          },
+          "descriptions": [
+            {
+              "id": 1,
+              "text": "Beschribung in plain text\n\n\n",
+              "html": "<p>Beschreibung in html</p>", //Example content sanitation
+              "title": "Beschreibung"
+            }
+          ]
+        },
+        "_links": []
+      }
+    ]
+  },
+  "page_count": 1,
+  "page_size": 15,
+  "total_items": 1,
+  "page": 1
+}
+```
+
