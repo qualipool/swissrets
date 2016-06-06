@@ -307,6 +307,7 @@ Will not be defined by this standard to date, but the representation would/could
   "gross_price_property_segment": "all",
   "visual_reference_id": null,
   "last_import_hash": "a2ddc556a5fc9c472f8c18169aa374df",
+  "features": ["has-cabletv","has-elevator", "has-parking"],
   "property_utilities": { ... Abreviated ...},
   "extracosts": { ... Abreviated ...},
   "_embedded": {
@@ -328,20 +329,6 @@ Will not be defined by this standard to date, but the representation would/could
       {
         "id": 1,
         "category_id": "apartment"
-      }
-    ],
-    "features": [
-      {
-        "id": 1,
-        "key": "has-cabletv",
-      },
-      {
-        "id": 2,
-        "key": "has-elevator",
-      },
-      {
-        "id": 3,
-        "key": "has-parking",
       }
     ],
     "numeric_values": [
