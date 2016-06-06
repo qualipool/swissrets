@@ -167,12 +167,12 @@ properties
 </export>
 
 
-#Resful JSON representation (HAL)
+#Resful JSON representation
+
 Will not be defined by this standard to date, but the representation would/could* be as follows.
 
+## Example offer response GET (HAL)
 
-## offer response
-## offer response
 ```
 {
   "count": 1,
@@ -200,7 +200,7 @@ Will not be defined by this standard to date, but the representation would/could
         "lang": "de",
         "urls": {},
         "_embedded": {
-          "property": {PROPERTY RESPONSE}
+          "property": { ... property response truncated for readability (see property resoponse example) ... }
           "offer_medias": [
             {
               "id": 1,
@@ -271,6 +271,245 @@ Will not be defined by this standard to date, but the representation would/could
   "page_size": 15,
   "total_items": 1,
   "page": 1
+}
+```
+
+## Example property response GET (HAL)
+
+```
+{
+  "id": 1,
+  "modified": {
+    "date": "2015-05-20 13:47:55.000000",
+    "timezone_type": 3,
+    "timezone": "Europe/Zurich"
+  },
+  "status": "active",
+  "type": "buy",
+  "availability": "active",
+  "availability_title": null,
+  "start": {
+    "date": "2015-09-01 00:00:00.000000",
+    "timezone_type": 3,
+    "timezone": "Europe/Zurich"
+  },
+  "price_currency": "CHF",
+  "price": 2380000,
+  "price_property_segment": "all",
+  "net_price": null,
+  "net_price_time_segment": "infinite",
+  "net_price_property_segment": "all",
+  "gross_price": null,
+  "gross_price_time_segment": "infinite",
+  "gross_price_property_segment": "all",
+  "visual_reference_id": null,
+  "last_import_hash": "a2ddc556a5fc9c472f8c18169aa374df",
+  "property_utilities": { ... Abreviated ...},
+  "extracosts": { ... Abreviated ...},
+  "_embedded": {
+    "address": {
+      "id": 2,
+      "country": "CH",
+      "locality": "Kilchberg ZH",
+      "region": "ZH",
+      "postal_code": 8802,
+      "post_office_box_number": null,
+      "street": "",
+      "street_number": null,
+      "street_addition": null,
+      "subunit": null,
+      "lat": "47.3198115",
+      "lng": "8.5414899",
+    },
+    "property_categories": [
+      {
+        "id": 1,
+        "category_id": "apartment"
+      }
+    ],
+    "features": [
+      {
+        "id": 1,
+        "key": "has-cabletv",
+      },
+      {
+        "id": 2,
+        "key": "has-elevator",
+      },
+      {
+        "id": 3,
+        "key": "has-parking",
+      },
+      {
+        "id": 4,
+        "key": "has-garage",
+      },
+      {
+        "id": 5,
+        "key": "has-balcony",
+      },
+      {
+        "id": 6,
+        "key": "has-isdn",
+      },
+      {
+        "id": 7,
+        "key": "is-wheelchair-accessible",
+      },
+      {
+        "id": 8,
+        "key": "is-new",
+      },
+      {
+        "id": 9,
+        "key": "is-minergie-general",
+      }
+    ],
+    "numeric_values": [
+      {
+        "id": 1,
+        "key": "number_of_rooms",
+        "value": 4.5,
+      },
+      {
+        "id": 2,
+        "key": "area_nwf",
+        "value": 161,
+      },
+      {
+        "id": 3,
+        "key": "year_built",
+        "value": 2014,
+      },
+      {
+        "id": 4,
+        "key": "distance_public_transport",
+        "value": 250,
+      },
+      {
+        "id": 5,
+        "key": "distance_shop",
+        "value": 700,
+      },
+      {
+        "id": 6,
+        "key": "distance_kindergarten",
+        "value": 750,
+      },
+      {
+        "id": 7,
+        "key": "distance_primary_school",
+        "value": 800,
+      },
+      {
+        "id": 8,
+        "key": "distance_high_school",
+        "value": 550,
+      },
+      {
+        "id": 9,
+        "key": "distance_motorway",
+        "value": 1600,
+      }
+    ],
+    "offers": [ ... abreviated for readability (see offer response example) ... ],
+    "organization": {
+      "id": 1071,
+      "slug": "immo-ag",
+      "displayName": "Immo AG",
+      "addition": "",
+      "lang": null,
+      "email": "email@domain.ch",
+      "phone": "+00 00 000 00 00",
+      "mobile": "+00 00 000 00 00",
+      "fax": "",
+      "website_url": "",
+      "website_label": "",
+      "website_title": "",
+      "note": null,
+      "_embedded": {
+        "postalAddress": {
+          "id": 1,
+          "country": "CH",
+          "locality": "Zürich",
+          "region": null,
+          "postal_code": 8038,
+          "post_office_box_number": null,
+          "street": "Seestrasse 455b",
+          "street_number": null,
+          "street_addition": null,
+          "subunit": null,
+          "lat": "47.340223",
+          "lng": "8.537714",
+        }
+      },
+    },
+    "visitPerson": {
+      "id": 1070,
+      "slug": null,
+      "displayName": "Max Muster",
+      "addition": null,
+      "firstName": "Max",
+      "lastName": "Muster",
+      "gender": "",
+      "lang": null,
+      "email": "",
+      "phone": "+00 00 000 00 00",
+      "mobile": "",
+      "fax": "",
+      "DOB": null,
+      "website_url": null,
+      "website_label": null,
+      "website_title": null,
+      "function": "",
+      "note": "Für allfällige Fragen stehen wir Ihnen gerne zur Verfügung.",
+      "postalAddress": null,
+    },
+    "inquiryPerson": {
+      "id": 1069,
+      "type": "person",
+      "slug": null,
+      "displayName": "Jane Muster",
+      "addition": null,
+      "firstName": "Frau",
+      "lastName": "Constancia",
+      "gender": 2,
+      "lang": null,
+      "email": "person@domain.ch",
+      "phone": "",
+      "mobile": "",
+      "fax": "",
+      "DOB": null,
+      "website_url": null,
+      "website_label": null,
+      "website_title": null,
+      "function": "",
+      "note": "",
+      "postalAddress": null,
+    },
+    "viewPerson": {
+      "id": 1188,
+      "type": "person",
+      "slug": null,
+      "displayName": "Another Person",
+      "addition": null,
+      "firstName": "Another",
+      "lastName": "Person",
+      "gender": "",
+      "lang": null,
+      "email": "another.person@domain.ch",
+      "phone": "+00 00 000 00 00",
+      "mobile": "+00 00 000 00 00",
+      "fax": "",
+      "DOB": null,
+      "website_url": null,
+      "website_label": null,
+      "website_title": null,
+      "function": "",
+      "note": "",
+      "postalAddress": null,
+    }
+  },
 }
 ```
 
