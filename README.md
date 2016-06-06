@@ -287,7 +287,6 @@ Will not be defined by this standard to date, but the representation would/could
   "status": "active",
   "type": "buy",
   "availability": "active",
-  "availability_title": null,
   "start": {
     "date": "2015-09-01 00:00:00.000000",
     "timezone_type": 3,
