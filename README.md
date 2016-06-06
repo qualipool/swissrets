@@ -173,7 +173,7 @@ Will not be defined by this standard to date, but the representation would/could
 
 ## Example offer response GET (HAL)
 
-```
+```json
 {
   "count": 1,
   "total": 1,
@@ -200,7 +200,7 @@ Will not be defined by this standard to date, but the representation would/could
         "lang": "de",
         "urls": {},
         "_embedded": {
-          "property": { ... property response truncated for readability (see property resoponse example) ... }
+          "property": { ... property response truncated for readability (see property response example) ... },
           "offer_medias": [
             {
               "id": 1,
@@ -276,7 +276,7 @@ Will not be defined by this standard to date, but the representation would/could
 
 ## Example property response GET (HAL)
 
-```
+```json
 {
   "id": 1,
   "modified": {
