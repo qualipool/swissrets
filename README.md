@@ -342,30 +342,6 @@ Will not be defined by this standard to date, but the representation would/could
       {
         "id": 3,
         "key": "has-parking",
-      },
-      {
-        "id": 4,
-        "key": "has-garage",
-      },
-      {
-        "id": 5,
-        "key": "has-balcony",
-      },
-      {
-        "id": 6,
-        "key": "has-isdn",
-      },
-      {
-        "id": 7,
-        "key": "is-wheelchair-accessible",
-      },
-      {
-        "id": 8,
-        "key": "is-new",
-      },
-      {
-        "id": 9,
-        "key": "is-minergie-general",
       }
     ],
     "numeric_values": [
@@ -383,36 +359,6 @@ Will not be defined by this standard to date, but the representation would/could
         "id": 3,
         "key": "year_built",
         "value": 2014,
-      },
-      {
-        "id": 4,
-        "key": "distance_public_transport",
-        "value": 250,
-      },
-      {
-        "id": 5,
-        "key": "distance_shop",
-        "value": 700,
-      },
-      {
-        "id": 6,
-        "key": "distance_kindergarten",
-        "value": 750,
-      },
-      {
-        "id": 7,
-        "key": "distance_primary_school",
-        "value": 800,
-      },
-      {
-        "id": 8,
-        "key": "distance_high_school",
-        "value": 550,
-      },
-      {
-        "id": 9,
-        "key": "distance_motorway",
-        "value": 1600,
       }
     ],
     "offers": [ ... abreviated for readability (see offer response example) ... ],
