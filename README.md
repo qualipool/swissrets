@@ -55,9 +55,9 @@ projects
 						</detail>
 					</details>
 					<properties>
-						<property xlink:type="resource" xlink:href="#123" />
-						<property xlink:type="resource" xlink:href="#234" />
-						<property xlink:type="resource" xlink:href="#345" />
+						<propertyRef>property_123</propertyRef>
+						<propertyRef>property_234</propertyRef>
+						<propertyRef>property_345</propertyRef>
 					</properties>
 				</unit>
 			</units>
