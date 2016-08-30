@@ -103,21 +103,21 @@
             <numericValues>
                 <value key="number_of_apartments">3</value>
                 
-                <value key="floor"></value>
-                <value key="number_of_floors"></value>
-                <value key="number_of_apartments"></value>
-                <value key="number_of_parcels"></value>
-                <value key="number_of_rooms"></value>
-                <value key="number_of_bathrooms"></value>
+                <value key="floor">2</value>
+                <value key="number_of_floors">4</value>
+                <value key="number_of_apartments">2</value>
+                <value key="number_of_parcels">2</value>
+                <value key="number_of_rooms">4.5</value>
+                <value key="number_of_bathrooms">2</value>
 
-                <value key="distance_kindergarten"></value>
-                <value key="distance_primary_school"></value> 
-                <value key="distance_high_school"></value> 
-                <value key="distance_college_university"></value> 
-                <value key="distance_bus_stop"></value>
-                <value key="distance_train_station"></value>
-                <value key="distance_post"></value>
-                <value key="distance_bank"></value>
+                <value key="distance_kindergarten">200</value>
+                <value key="distance_primary_school">2000</value> 
+                <value key="distance_high_school">1800</value> 
+                <value key="distance_college_university">300</value> 
+                <value key="distance_bus_stop">500</value>
+                <value key="distance_train_station">400</value>
+                <value key="distance_post">5400</value>
+                <value key="distance_bank">6900</value>
                 <value key="distance_cable_railway_station"></value>
                 <value key="distance_boat_dock"></value>
                 <value key="distance_public_transport"></value> <!-- depricated -->
@@ -128,11 +128,11 @@
                 <value key="max_elevator_weight"></value>
 
                 <value key="area_property_land"></value>
-                <value key="property_land_price"></value>
+                <value key="property_land_price">250000</value>
 
                 <!-- Pseudo Norm -->
-                <value key="area_bwf"></value> <!-- Bruttowohnfläche -->
-                <value key="area_nwf"></value> <!-- Nettowohnfläche -->
+                <value key="area_bwf">120</value> <!-- Bruttowohnfläche -->
+                <value key="area_nwf">100</value> <!-- Nettowohnfläche -->
 
                 <!-- SIA 416 -->
                 <!-- Flächen
@@ -146,16 +146,16 @@
                 │  NNF  │  HNF  │ Neben + Hauptnutzfläche
                 └───────┴───────┘
                 -->
-                <value key="area_sia_gf"></value> <!-- (Brutto) Geschossfläche -->
-                <value key="area_sia_ngf"></value> <!-- Nettogeschossfläche -->
-                <value key="area_sia_kf"></value> <!-- Konstruktionsfläche -->
-                <value key="area_sia_nf"></value> <!-- Nutzfläche -->
-                <value key="area_sia_vf"></value> <!-- Verkehrsfläche -->
-                <value key="area_sia_ff"></value> <!-- Funktionsfläche -->
-                <value key="area_sia_kft"></value> <!-- Konstruktionsfläche Tragend -->
-                <value key="area_sia_kfn"></value> <!-- Konstruktionsfläche nicht Tragend -->
-                <value key="area_sia_hnf"></value> <!-- Hauptnutzfläche -->
-                <value key="area_sia_nnf"></value> <!-- Nebennutzfläche -->
+                <value key="area_sia_gf">200</value> <!-- (Brutto) Geschossfläche -->
+                <value key="area_sia_ngf">170</value> <!-- Nettogeschossfläche -->
+                <value key="area_sia_kf">30</value> <!-- Konstruktionsfläche -->
+                <value key="area_sia_nf">80</value> <!-- Nutzfläche -->
+                <value key="area_sia_vf">30</value> <!-- Verkehrsfläche -->
+                <value key="area_sia_ff">60</value> <!-- Funktionsfläche -->
+                <value key="area_sia_kft">15</value> <!-- Konstruktionsfläche Tragend -->
+                <value key="area_sia_kfn">15</value> <!-- Konstruktionsfläche nicht Tragend -->
+                <value key="area_sia_hnf">40</value> <!-- Hauptnutzfläche -->
+                <value key="area_sia_nnf">40</value> <!-- Nebennutzfläche -->
 
                 <!-- Ausenflächen
                 ┌───────────────────────────────────────────────┐
@@ -166,14 +166,14 @@
                 │      ANF      │  AVF  │  AFF  ┃  AKFT │ AKFN  ┃ Aussen-* (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
                 └───────────────┴───────┴───────┺━━━━━━━┷━━━━━━━┛
                 -->
-                <value key="area_sia_agf"></value>
-                <value key="area_sia_angf"></value>
-                <value key="area_sia_akf"></value>
-                <value key="area_sia_anf"></value>
-                <value key="area_sia_avf"></value>
-                <value key="area_sia_aff"></value>
-                <value key="area_sia_akft"></value>
-                <value key="area_sia_akfn"></value>
+                <value key="area_sia_agf">400</value>
+                <value key="area_sia_angf">300</value>
+                <value key="area_sia_akf">100</value>
+                <value key="area_sia_anf">150</value>
+                <value key="area_sia_avf">75</value>
+                <value key="area_sia_aff">75</value>
+                <value key="area_sia_akft">50</value>
+                <value key="area_sia_akfn">50</value>
 
                 <!-- Volumen
                 ┌───────────────────────────────────────────────┐
@@ -184,12 +184,12 @@
                 │      ANV      │  AVV  │  AFV  │   Nutzvolumen + Verkehrsvolumen + Funktionsvolumen
                 └───────────────┴───────┴───────┘
                 -->
-                <value key="volume_sia_gv"></value>
-                <value key="volume_sia_angv"></value>
-                <value key="volume_sia_akv"></value>
-                <value key="volume_sia_anv"></value>
-                <value key="volume_sia_avv"></value>
-                <value key="volume_sia_afv"></value>
+                <value key="volume_sia_gv">600</value>
+                <value key="volume_sia_angv">500</value>
+                <value key="volume_sia_akv">100</value>
+                <value key="volume_sia_anv">250</value>
+                <value key="volume_sia_avv">125</value>
+                <value key="volume_sia_afv">125</value>
 
                 <!-- 
                 ┌───────────────────────────────────────────────┐
@@ -324,9 +324,9 @@
                 </organization>
                 <viewPerson>
                     <function>Sales</function>
-                    <givenName>Urs</givenName>
-                    <familyName>Witwer</familyName>
-                    <email>urs.witwer@casasoft.ch</email>
+                    <givenName>Sandra</givenName>
+                    <familyName>Musterina</familyName>
+                    <email>sandra-musterina@casasoft.ch</email>
                     <fax></fax>
                     <phone>+41 71 686 94 91</phone>
                     <mobile></mobile>
