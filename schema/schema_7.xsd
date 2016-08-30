@@ -107,6 +107,7 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="parking-exterior-space"/>
       <xs:enumeration value="parking-carport"/>
+      <xs:enumeration value="parking-garage"/>
       <xs:enumeration value="parking-garage-connected"/>
       <xs:enumeration value="parking-garage-box"/>
       <xs:enumeration value="parking-garage-underground"/>

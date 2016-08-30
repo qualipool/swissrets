@@ -55,9 +55,9 @@ projects
 						</detail>
 					</details>
 					<properties>
-						<property xlink:type="resource" xlink:href="#123" />
-						<property xlink:type="resource" xlink:href="#234" />
-						<property xlink:type="resource" xlink:href="#345" />
+						<propertyRef>property_123</propertyRef>
+						<propertyRef>property_234</propertyRef>
+						<propertyRef>property_345</propertyRef>
 					</properties>
 				</unit>
 			</units>
@@ -101,7 +101,7 @@ properties
 ```xml
 <export>
 	<properties>
-		<property id="123">
+		<property id="property123">
 			<referenceId>propertyRef123</referenceId>
 			<visualReferenceId>visualRef123</visualReferenceId>
 			<bfs>
@@ -133,7 +133,7 @@ properties
 			<seller />
 			<!-- ... -->
 			<offers>
-				<offer id="123de" lang="de">
+				<offer id="offer123de" lang="de">
 					<name></name>
 					<excerpt></excerpt>
 					<urls />
@@ -141,28 +141,311 @@ properties
 					<attachments />
 					<!-- ... -->
 				</offer>
-				<offer id="123fr" lang="fr"><!-- ... --></offer>
-				<offer id="123it" lang="it"><!-- ... --></offer>
+				<offer id="offer123fr" lang="fr"><!-- ... --></offer>
+				<offer id="offer123it" lang="it"><!-- ... --></offer>
 			</offers>
 		</property>
-		<property id="234">
+		<property id="property234">
 			<referenceId>propertyRef234</referenceId>
 			<!-- ... -->
 			<offers>
-				<offer id="234de" lang="de"><!-- ... --></offer>
-				<offer id="234fr" lang="fr"><!-- ... --></offer>
-				<offer id="234it" lang="it"><!-- ... --></offer>
+				<offer id="offer234de" lang="de"><!-- ... --></offer>
+				<offer id="offer234fr" lang="fr"><!-- ... --></offer>
+				<offer id="offer234it" lang="it"><!-- ... --></offer>
 			</offers>
 		</property>
-		<property id="345">
+		<property id="property345">
 			<referenceId>propertyRef345</referenceId>
 			<!-- ... -->
 			<offers>
-				<offer id="345de" lang="de"></offer>
-				<offer id="345fr" lang="fr"></offer>
-				<offer id="345it" lang="it"></offer>
+				<offer id="offer345de" lang="de"></offer>
+				<offer id="offer345fr" lang="fr"></offer>
+				<offer id="offer345it" lang="it"></offer>
 			</offers>
 		</property>
 	</properties>
 </export>
 ```
+
+#Resful JSON representation
+
+Will not be defined by this standard to date, but the representation would/could* be as follows.
+
+## Example offer GET COLLECTION response (HAL)
+
+```GET {API_URL}/offer?param1=foo&param2=bar```
+
+```json
+{
+  "count": 1,
+  "total": 1,
+  "collectionTotal": 46,
+  "_links": {
+    "self": {
+      "href": "{API_URL}/offer?provider={customer_id}&page=1"
+    },
+    "first": {
+      "href": "{API_URL}/offer?provider={customer_id}"
+    },
+    "last": {
+      "href": "{API_URL}/offer?provider={customer_id}&page=1"
+    }
+  },
+  "_embedded": {
+    "offer": [
+      {
+        "id": 1,
+        "contentChanged": null,
+        "status": "active",
+        "excerpt": "Excerpt description",
+        "name": "Name of offer",
+        "lang": "de",
+        "urls": {},
+        "_embedded": {
+          "property": { ... property response truncated for readability (see property response example) ... },
+          "offer_medias": [
+            {
+              "id": 1,
+              "alt": "alternate text",
+              "title": "",
+              "caption": "",
+              "description": "",
+              "type": "image",
+              "flagged": null,
+              "rank": 1,
+              "_embedded": {
+                "media": {
+                  "id": 1,
+                  "file": null,
+                  "size": "188368",
+                  "mimeType": "image/jpeg",
+                  "sq": "/media-thumb/provider-1006/property-1/0000974-72x72_C.png", //example of rendered resultset from API provider
+                  "xl": "/media-thumb/provider-1006/property-1/0000974-1300x800_F.jpg",
+                  "lg": "/media-thumb/provider-1006/property-1/0000974-1024x768_F.jpg",
+                  "md": "/media-thumb/provider-1006/property-1/0000974-500x375_C.jpg",
+                  "sm": "/media-thumb/provider-1006/property-1/0000974-240x180_C.png",
+                  "xs": "/media-thumb/provider-1006/property-1/0000974-100x72_C.png",
+                  "updated": {
+                    "date": "2016-03-04 13:57:20.000000",
+                    "timezone_type": 3,
+                    "timezone": "Europe/Zurich"
+                  },
+                  "flags": {},
+                  "_links": []
+                }
+              },
+              "_links": []
+            },
+          ],
+          "featuredImage": {
+            "id": 1,
+            "file": null,
+            "size": "188368",
+            "mimeType": "image/jpeg",
+            "sq": "/media-thumb/provider-1006/property-1/0000974-72x72_C.png",
+            "xl": "/media-thumb/provider-1006/property-1/0000974-1300x800_F.jpg",
+            "lg": "/media-thumb/provider-1006/property-1/0000974-1024x768_F.jpg",
+            "md": "/media-thumb/provider-1006/property-1/0000974-500x375_C.jpg",
+            "sm": "/media-thumb/provider-1006/property-1/0000974-240x180_C.png",
+            "xs": "/media-thumb/provider-1006/property-1/0000974-100x72_C.png",
+            "updated": {
+              "date": "2016-03-04 13:57:20.000000",
+              "timezone_type": 3,
+              "timezone": "Europe/Zurich"
+            },
+            "flags": {},
+            "_links": []
+          },
+          "descriptions": [
+            {
+              "id": 1,
+              "text": "Beschribung in plain text\n\n\n",
+              "html": "<p>Beschreibung in html</p>", //Example content sanitation
+              "title": "Beschreibung"
+            }
+          ]
+        },
+        "_links": []
+      }
+    ]
+  },
+  "page_count": 1,
+  "page_size": 15,
+  "total_items": 1,
+  "page": 1
+}
+```
+
+## Example property response GET (HAL)
+
+```GET {API_URL}/property/1```
+
+```json
+{
+  "id": 1,
+  "modified": {
+    "date": "2015-05-20 13:47:55.000000",
+    "timezone_type": 3,
+    "timezone": "Europe/Zurich"
+  },
+  "status": "active",
+  "type": "buy",
+  "availability": "active",
+  "start": {
+    "date": "2015-09-01 00:00:00.000000",
+    "timezone_type": 3,
+    "timezone": "Europe/Zurich"
+  },
+  "price_currency": "CHF",
+  "price": 2380000,
+  "price_property_segment": "all",
+  "net_price": null,
+  "net_price_time_segment": "infinite",
+  "net_price_property_segment": "all",
+  "gross_price": null,
+  "gross_price_time_segment": "infinite",
+  "gross_price_property_segment": "all",
+  "visual_reference_id": null,
+  "last_import_hash": "a2ddc556a5fc9c472f8c18169aa374df",
+  "features": ["has-cabletv","has-elevator", "has-parking"],
+  "property_utilities": { ... Abreviated ...},
+  "extracosts": { ... Abreviated ...},
+  "_embedded": {
+    "address": {
+      "id": 2,
+      "country": "CH",
+      "locality": "Kilchberg ZH",
+      "region": "ZH",
+      "postal_code": 8802,
+      "post_office_box_number": null,
+      "street": "",
+      "street_number": null,
+      "street_addition": null,
+      "subunit": null,
+      "lat": "47.3198115",
+      "lng": "8.5414899",
+    },
+    "property_categories": [
+      {
+        "id": 1,
+        "category_id": "apartment"
+      }
+    ],
+    "numeric_values": [
+      {
+        "id": 1,
+        "key": "number_of_rooms",
+        "value": 4.5,
+      },
+      {
+        "id": 2,
+        "key": "area_nwf",
+        "value": 161,
+      },
+      {
+        "id": 3,
+        "key": "year_built",
+        "value": 2014,
+      }
+    ],
+    "offers": [ ... abreviated for readability (see offer response example) ... ],
+    "organization": {
+      "id": 1071,
+      "slug": "immo-ag",
+      "displayName": "Immo AG",
+      "addition": "",
+      "lang": null,
+      "email": "email@domain.ch",
+      "phone": "+00 00 000 00 00",
+      "mobile": "+00 00 000 00 00",
+      "fax": "",
+      "website_url": "",
+      "website_label": "",
+      "website_title": "",
+      "note": null,
+      "_embedded": {
+        "postalAddress": {
+          "id": 1,
+          "country": "CH",
+          "locality": "Zürich",
+          "region": null,
+          "postal_code": 8038,
+          "post_office_box_number": null,
+          "street": "Seestrasse 455b",
+          "street_number": null,
+          "street_addition": null,
+          "subunit": null,
+          "lat": "47.340223",
+          "lng": "8.537714",
+        }
+      },
+    },
+    "visitPerson": {
+      "id": 1070,
+      "slug": null,
+      "displayName": "Max Muster",
+      "addition": null,
+      "firstName": "Max",
+      "lastName": "Muster",
+      "gender": "",
+      "lang": null,
+      "email": "",
+      "phone": "+00 00 000 00 00",
+      "mobile": "",
+      "fax": "",
+      "DOB": null,
+      "website_url": null,
+      "website_label": null,
+      "website_title": null,
+      "function": "",
+      "note": "Für allfällige Fragen stehen wir Ihnen gerne zur Verfügung.",
+      "postalAddress": null,
+    },
+    "inquiryPerson": {
+      "id": 1069,
+      "type": "person",
+      "slug": null,
+      "displayName": "Jane Muster",
+      "addition": null,
+      "firstName": "Frau",
+      "lastName": "Constancia",
+      "gender": 2,
+      "lang": null,
+      "email": "person@domain.ch",
+      "phone": "",
+      "mobile": "",
+      "fax": "",
+      "DOB": null,
+      "website_url": null,
+      "website_label": null,
+      "website_title": null,
+      "function": "",
+      "note": "",
+      "postalAddress": null,
+    },
+    "viewPerson": {
+      "id": 1188,
+      "type": "person",
+      "slug": null,
+      "displayName": "Another Person",
+      "addition": null,
+      "firstName": "Another",
+      "lastName": "Person",
+      "gender": "",
+      "lang": null,
+      "email": "another.person@domain.ch",
+      "phone": "+00 00 000 00 00",
+      "mobile": "+00 00 000 00 00",
+      "fax": "",
+      "DOB": null,
+      "website_url": null,
+      "website_label": null,
+      "website_title": null,
+      "function": "",
+      "note": "",
+      "postalAddress": null,
+    }
+  },
+}
+```
+
