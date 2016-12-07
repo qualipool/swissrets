@@ -57,6 +57,7 @@
           <xs:simpleType>
             <xs:restriction base="xs:string">
               <xs:enumeration value="infinite"></xs:enumeration>
+              <xs:enumeration value="d"></xs:enumeration>
               <xs:enumeration value="w"></xs:enumeration>
               <xs:enumeration value="m"></xs:enumeration>
               <xs:enumeration value="y"></xs:enumeration>
