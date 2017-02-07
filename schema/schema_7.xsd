@@ -247,7 +247,8 @@
       <xs:enumeration value="has-double-car-port"/>
       <xs:enumeration value="has-double-garage"/>
       <xs:enumeration value="on-even-ground"/>
-      
+      <xs:enumeration value="has-rental-deposit-guarantee"/>
+
       
       
     </xs:restriction>
@@ -394,9 +395,9 @@
       <xs:enumeration value="maximal_floor_loading"/> <!-- kg -->
       <xs:enumeration value="carrying_capacity_crane"/> <!-- depricated -->
       <xs:enumeration value="carrying_capacity_elevator"/>
+      
+      <xs:enumeration value="rental_deposit"/>
 
-
-    
     </xs:restriction>
   </xs:simpleType>
 
