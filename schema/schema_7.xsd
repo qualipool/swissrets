@@ -33,6 +33,7 @@
           <xs:all>
             <xs:element type="xs:float" name="latitude" minOccurs="1" maxOccurs="1"/>
             <xs:element type="xs:float" name="longitude" minOccurs="1" maxOccurs="1"/>
+             <xs:element type="xs:float" name="elevation" minOccurs="0" maxOccurs="1"/>
           </xs:all>
         </xs:complexType>
       </xs:element>
