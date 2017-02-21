@@ -416,7 +416,13 @@
       <xs:pattern value="[^@]+@[^\.]+\..+"/> 
     </xs:restriction> 
   </xs:simpleType> 
-
+  
+  <xs:simpleType name="rentalDepositProviders">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="eurokaution"/>
+      <xs:enumeration value="adunokaution"/>
+    </xs:restriction>
+  </xs:simpleType>
   
   <!-- MAIN STRUCTURE STARTS HERE -->
   <xs:element name="export">
@@ -633,6 +639,21 @@
                           <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1"/>
                           <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1"/>
                         </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <xs:element name="rentalDepositProviders" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="rentalDepositProvider" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element type="xs:string" name="autocalc" minOccurs="0" maxOccurs="1"/>
+                              </xs:all>
+                              <xs:attribute type="rentalDepositProvider" name="provider" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
                       </xs:complexType>
                     </xs:element>
 
