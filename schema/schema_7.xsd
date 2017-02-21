@@ -650,7 +650,7 @@
                               <xs:all>
                                 <xs:element type="xs:string" name="autocalc" minOccurs="0" maxOccurs="1"/>
                               </xs:all>
-                              <xs:attribute type="rentalDepositProvider" name="provider" use="required"/>
+                              <xs:attribute type="rentalDepositProviders" name="provider" use="required"/>
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
