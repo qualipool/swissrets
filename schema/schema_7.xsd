@@ -648,7 +648,7 @@
                           <xs:element name="rentalDepositProvider" minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:all>
-                                <xs:element type="xs:string" name="autocalc" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="calculation" minOccurs="0" maxOccurs="1"/>
                               </xs:all>
                               <xs:attribute type="rentalDepositProviders" name="provider" use="required"/>
                             </xs:complexType>
