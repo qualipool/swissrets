@@ -421,6 +421,8 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="eurokaution"/>
       <xs:enumeration value="adunokaution"/>
+      <xs:enumeration value="firstcaution"/>
+      <xs:enumeration value="swisscaution"/>
     </xs:restriction>
   </xs:simpleType>
   
