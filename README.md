@@ -1,8 +1,8 @@
-CasaXML
+SwissRETS
 ========
-CasaXML is a swiss real estate standard that aims to solve the age old data-tranfer between reale state softwares and respective online services.
+SwissRETS is a swiss real estate transfer standard that aims to solve the age old data-tranfer between reale state softwares and respective online services.
 
-Although CasaXML is currently within the suggestion stage, there will like be very little changes post suggestion version 7.
+Although SwissRETS is currently within the suggestion stage, there will like be very little changes post suggestion version 7.
 
 #Structure
 
