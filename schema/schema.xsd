@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  
+
   <!-- TYPE DEFFINITIONS START HERE -->
   <xs:complexType name="person">
     <xs:all>
@@ -16,7 +16,7 @@
       <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1"/>
     </xs:all>
   </xs:complexType>
-  
+
   <xs:complexType name="address">
     <xs:all>
       <xs:element type="countryCodeType" name="country" minOccurs="1" maxOccurs="1"/>
@@ -103,8 +103,8 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  
-  
+
+
   <xs:simpleType name="integratedOfferType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="parking-exterior-space"/>
@@ -153,7 +153,7 @@
       <xs:enumeration value="chalet"/>
       <xs:enumeration value="studio"/>
       <xs:enumeration value="covered-slot"/>
-      
+
       <xs:enumeration value="office"/>
       <xs:enumeration value="flat"/>
       <xs:enumeration value="exhibition-space"/>
@@ -168,14 +168,14 @@
       <xs:enumeration value="fuel-station"/>
       <xs:enumeration value="cafe-bar"/>
       <xs:enumeration value="garden-apartment"/>
-      
+
       <xs:enumeration value="maisonette"/>
       <xs:enumeration value="rusitco"/>
-      
-      
+
+
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:simpleType name="urlTypes">
     <xs:restriction base="xs:string">
       <xs:enumeration value="link"/>
@@ -235,12 +235,12 @@
       <xs:enumeration value="has-swimmingpool"/>
       <xs:enumeration value="is-minergie-general"/>
       <xs:enumeration value="is-minergie-certified"/>
-      
+
       <xs:enumeration value="is-sunny"/>
       <xs:enumeration value="is-quiet"/>
       <xs:enumeration value="is_projection"/>
       <xs:enumeration value="has_demolition_property"/>
-      
+
       <xs:enumeration value="has-mountain-view"/>
       <xs:enumeration value="has-lake-view"/>
       <xs:enumeration value="on-a-south-slope"/>
@@ -251,11 +251,11 @@
       <xs:enumeration value="on-even-ground"/>
       <xs:enumeration value="has-rental-deposit-guarantee"/>
 
-      
-      
+
+
     </xs:restriction>
   </xs:simpleType>
-  
+
   <!-- Todo: Mimetypes should be defined -->
   <xs:simpleType name="mediaTypes">
     <xs:restriction base="xs:string">
@@ -267,7 +267,7 @@
       <xs:enumeration value="sales-brochure"/>
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:simpleType name="numericValuekeys">
     <xs:restriction base="xs:string">
       <xs:enumeration value="floor"/>
@@ -276,11 +276,11 @@
       <xs:enumeration value="number_of_parcels"/>
       <xs:enumeration value="number_of_rooms"/>
       <xs:enumeration value="number_of_bathrooms"/>
-      
+
       <xs:enumeration value="distance_kindergarten"/>
-      <xs:enumeration value="distance_primary_school"/> 
-      <xs:enumeration value="distance_high_school"/> 
-      <xs:enumeration value="distance_college_university"/> 
+      <xs:enumeration value="distance_primary_school"/>
+      <xs:enumeration value="distance_high_school"/>
+      <xs:enumeration value="distance_college_university"/>
       <xs:enumeration value="distance_bus_stop"/>
       <xs:enumeration value="distance_train_station"/>
       <xs:enumeration value="distance_post"/>
@@ -293,14 +293,14 @@
       <xs:enumeration value="distance_airport"/>
       <xs:enumeration value="distance_tramway"/>
       <xs:enumeration value="max_elevator_weight"/>
-      
+
       <xs:enumeration value="area_property_land"/>
       <xs:enumeration value="property_land_price"/>
 
       <!-- Pseudo Norm -->
       <xs:enumeration value="area_bwf"/> <!-- Bruttowohnfläche -->
       <xs:enumeration value="area_nwf"/> <!-- Nettowohnfläche -->
-      
+
       <!-- SIA 416 -->
       <!-- Flächen
       ┌───────────────────────────────────────────────┐
@@ -323,7 +323,7 @@
       <xs:enumeration value="area_sia_kfn"/> <!-- Konstruktionsfläche nicht Tragend -->
       <xs:enumeration value="area_sia_hnf"/> <!-- Hauptnutzfläche -->
       <xs:enumeration value="area_sia_nnf"/> <!-- Nebennutzfläche -->
-      
+
       <!-- Ausenflächen
       ┌───────────────────────────────────────────────┐
       │                      AGF                      │ Aussen-Geschossfläche
@@ -341,7 +341,7 @@
       <xs:enumeration value="area_sia_aff"/>
       <xs:enumeration value="area_sia_akft"/>
       <xs:enumeration value="area_sia_akfn"/>
-      
+
       <!-- Volumen
       ┌───────────────────────────────────────────────┐
       │                      GV                       │ Gebäudevolumen
@@ -357,8 +357,8 @@
       <xs:enumeration value="volume_sia_anv"/>
       <xs:enumeration value="volume_sia_avv"/>
       <xs:enumeration value="volume_sia_afv"/>
-      
-      <!-- 
+
+      <!--
       ┌───────────────────────────────────────────────┐
       │                      GSF                      │ Grundstückfläche
       ├───────────────────────────────┬───────────────┤
@@ -367,13 +367,13 @@
       │      BUF      │      UUF      │ Bearbeitete Umgebungsfläche + Unbearbeitete Umgebungsfläche
       └───────────────┴───────────────┘
       -->
-      <xs:enumeration value="area_sia_gsf"/> 
+      <xs:enumeration value="area_sia_gsf"/>
       <xs:enumeration value="area_sia_uf"/>
       <xs:enumeration value="area_sia_ggf"/>
       <xs:enumeration value="area_sia_buf"/>
       <xs:enumeration value="area_sia_uuf"/>
-      
-      
+
+
       <!-- DIN 277 -->
       <!--<xs:enumeration value="area_din_bgf"/>-->
       <!--<xs:enumeration value="area_din_kgf"/>-->
@@ -381,15 +381,15 @@
       <!--<xs:enumeration value="area_din_nf"/>-->
       <!--<xs:enumeration value="area_din_tf"/>-->
       <!--<xs:enumeration value="area_din_vf"/>-->
-      
+
       <xs:enumeration value="volume_gva"/> <!-- Gebäudekubatur GVA (prefered) -->
       <xs:enumeration value="volume_sia"/> <!-- Gebäudekubatur SIA -->
 
-      
+
       <xs:enumeration value="gross_premium"/> <!-- Bruttorendite -->
       <xs:enumeration value="utilization_number"/> <!--Ausnützungsziffer-->
       <xs:enumeration value="construction_utilization_number"/> <!--Ausnützungsziffer (bau)-->
-      
+
       <xs:enumeration value="year_built"/>
       <xs:enumeration value="year_last_renovated"/>
       <xs:enumeration value="ceiling_height"/>
@@ -397,7 +397,7 @@
       <xs:enumeration value="maximal_floor_loading"/> <!-- kg -->
       <xs:enumeration value="carrying_capacity_crane"/> <!-- depricated -->
       <xs:enumeration value="carrying_capacity_elevator"/>
-      
+
       <xs:enumeration value="rental_deposit"/>
 
     </xs:restriction>
@@ -412,12 +412,12 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="emailAddress"> 
-    <xs:restriction base="xs:string"> 
-      <xs:pattern value="[^@]+@[^\.]+\..+"/> 
-    </xs:restriction> 
-  </xs:simpleType> 
-  
+  <xs:simpleType name="emailAddress">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[^@]+@[^\.]+\..+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="rentalDepositProviders">
     <xs:restriction base="xs:string">
       <xs:enumeration value="adunokaution"/>
@@ -425,7 +425,7 @@
       <xs:enumeration value="swisscaution"/>
     </xs:restriction>
   </xs:simpleType>
-  
+
   <!-- MAIN STRUCTURE STARTS HERE -->
   <xs:element name="export">
     <xs:complexType>
@@ -439,7 +439,7 @@
             </xs:all>
           </xs:complexType>
         </xs:element>
-  
+
         <!-- projects -->
         <xs:element name="projects" maxOccurs="1" minOccurs="0">
           <xs:complexType>
@@ -520,7 +520,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                  
+
                     <xs:element name="integratedOffers" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
@@ -540,7 +540,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    
+
                     <xs:element name="address" type="address" minOccurs="1" maxOccurs="1"/>
 
                     <xs:element name="softwareInformation" minOccurs="1" maxOccurs="1">
@@ -643,7 +643,7 @@
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
-                    
+
                     <xs:element name="rentalDepositProviders" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
@@ -667,7 +667,7 @@
                               <xs:all>
                                 <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1"/>
                                 <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1"/>
-                                
+
                                 <xs:element name="tags" maxOccurs="1" minOccurs="0">
                                   <xs:complexType>
                                     <xs:sequence>
