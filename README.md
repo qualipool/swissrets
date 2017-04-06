@@ -9,7 +9,7 @@ RoadMap
 
 | Date          | Goal               |
 | ------------- |------------------: |
-| End of April  | Schema version 1.0 |
+| ...  | ...|
 
 
 Structure
