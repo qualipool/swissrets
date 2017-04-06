@@ -262,7 +262,6 @@
       <xs:enumeration value="image"/>
       <xs:enumeration value="document"/>
       <xs:enumeration value="plan"/>
-      <xs:enumeration value="youtube"/>
       <xs:enumeration value="offer-logo"/>
       <xs:enumeration value="sales-brochure"/>
     </xs:restriction>
