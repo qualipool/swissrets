@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsd" href="https://github.com/CasasoftCH/CasaXML/raw/master/schema/schema_7.xsd"?>
+<?xml-stylesheet type="text/xsd" href="https://raw.githubusercontent.com/qualipool/swissrets/master/schema/schema.xsd"?>
 <export>
     <exportInformation>
         <exporter>CasaGateway</exporter>
@@ -102,7 +102,7 @@
             </features>
             <numericValues>
                 <value key="number_of_apartments">3</value>
-                
+
                 <value key="floor">2</value>
                 <value key="number_of_floors">4</value>
                 <value key="number_of_apartments">2</value>
@@ -111,9 +111,9 @@
                 <value key="number_of_bathrooms">2</value>
 
                 <value key="distance_kindergarten">200</value>
-                <value key="distance_primary_school">2000</value> 
-                <value key="distance_high_school">1800</value> 
-                <value key="distance_college_university">300</value> 
+                <value key="distance_primary_school">2000</value>
+                <value key="distance_high_school">1800</value>
+                <value key="distance_college_university">300</value>
                 <value key="distance_bus_stop">500</value>
                 <value key="distance_train_station">400</value>
                 <value key="distance_post">5400</value>
@@ -191,7 +191,7 @@
                 <value key="volume_sia_avv">125</value>
                 <value key="volume_sia_afv">125</value>
 
-                <!-- 
+                <!--
                 ┌───────────────────────────────────────────────┐
                 │                      GSF                      │ Grundstückfläche
                 ├───────────────────────────────┬───────────────┤
@@ -200,7 +200,7 @@
                 │      BUF      │      UUF      │ Bearbeitete Umgebungsfläche + Unbearbeitete Umgebungsfläche
                 └───────────────┴───────────────┘
                 -->
-                <value key="area_sia_gsf"></value> 
+                <value key="area_sia_gsf"></value>
                 <value key="area_sia_uf"></value>
                 <value key="area_sia_ggf"></value>
                 <value key="area_sia_buf"></value>
