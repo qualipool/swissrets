@@ -2,28 +2,40 @@ SwissRETS
 ========
 SwissRETS is a swiss real estate transfer standard that aims to solve the age old data-tranfer between reale state softwares and respective online services.
 
-Although SwissRETS is currently within the suggestion stage, there will like be very little changes post suggestion version 7.
+SwissRETS is currently within the suggestion stage.
 
-#Structure
+RoadMap
+-------
+
+| Date          | Goal               |
+| ------------- |------------------: |
+| End of April  | Schema version 1.0 |
+
+
+Structure
+---------
 
 The XML should always contain the full representation of a companies portfolio.
 
 The XML may contain `<projects>` and/or `<properties>`. The omission of these tags indicate that the information is **NOT SPECIFIED** and should thereby be **ignored**. A empty (but present) `<projects>` of `<properties>` tag indicates that there are no projects/properties available and any existing properties/projects should therefore be **DELETED**.
 
-##Relational map (Projects)
+Relational map (Projects)
+---------
+
 ```
-projects 
-	< details 
+projects
+	< details
 		< descriptions
-	< units 
+	< units
 		- property
-		< details 
+		< details
 		    < descriptions
 		< properties
 
 ```
 
-##Example XML structure (Projects)
+Example XML structure (Projects)
+---------
 
 ```xml
 <export>
@@ -66,10 +78,11 @@ projects
 </export>
 ```
 
-##Relational map (Properties)
+Relational map (Properties)
+---------
 
 ```
-properties 
+properties
 	< extraCosts
 	< integratedOffers
 	– address
@@ -96,7 +109,8 @@ properties
 		< events
 ```
 
-##Example XML structure (Properties)
+Example XML structure (Properties)
+---------
 
 ```xml
 <export>
@@ -167,11 +181,13 @@ properties
 </export>
 ```
 
-#Resful JSON representation
+Resful JSON representation
+=============
 
 Will not be defined by this standard to date, but the representation would/could* be as follows.
 
-## Example offer GET COLLECTION response (HAL)
+Example offer GET COLLECTION response (HAL)
+--------------------------------------------
 
 ```GET {API_URL}/offer?param1=foo&param2=bar```
 
@@ -276,7 +292,8 @@ Will not be defined by this standard to date, but the representation would/could
 }
 ```
 
-## Example property response GET (HAL)
+Example property response GET (HAL)
+------------------------------------
 
 ```GET {API_URL}/property/1```
 
@@ -448,4 +465,3 @@ Will not be defined by this standard to date, but the representation would/could
   },
 }
 ```
-
