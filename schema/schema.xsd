@@ -78,6 +78,34 @@
     </xs:simpleContent>
   </xs:complexType>
 
+  <xs:complexType name="priceRange">
+    <xs:all>
+      <xs:element type="xs:positiveInteger" name="from" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "from" needs to be smaller than "to"
+            </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:positiveInteger" name="to" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                "to" needs to be larger than "from"
+            </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+    <xs:attribute name="propertysegment" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="all"></xs:enumeration>
+          <xs:enumeration value="m2"></xs:enumeration>
+          <xs:enumeration value="km2"></xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
   <xs:simpleType name="currencyCodeType">
     <xs:restriction base="xs:string">
       <xs:minLength value="3"/>
@@ -497,6 +525,7 @@
                     <xs:element type="xs:dateTime" name="start" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="currencyCodeType" name="priceCurrency" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="price" name="price" minOccurs="0" maxOccurs="1"/>
+                    <xs:element type="priceRange" name="priceRange" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="price" name="netPrice" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="price" name="grossPrice" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="extraCosts" minOccurs="0" maxOccurs="1">
