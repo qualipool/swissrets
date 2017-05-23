@@ -210,6 +210,7 @@
       <xs:enumeration value="virtual-tour"/>
       <xs:enumeration value="youtube"/>
       <xs:enumeration value="archilogic"/>
+      <xs:enumeration value="emonitor"/>
     </xs:restriction>
   </xs:simpleType>
 
