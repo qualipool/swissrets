@@ -279,6 +279,8 @@
       <xs:enumeration value="has-double-garage"/>
       <xs:enumeration value="on-even-ground"/>
       <xs:enumeration value="has-rental-deposit-guarantee"/>
+      
+      <xs:enumeration value="is-non-smoking"/>
 
 
 
