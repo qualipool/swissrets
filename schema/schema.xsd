@@ -257,7 +257,7 @@
       <xs:enumeration value="has-connected-building-land"/>
       <xs:enumeration value="has-gardenhouse"/>
       <xs:enumeration value="has-raised-ground-floor"/>
-      <xs:enumeration value="is-new"/>
+      <xs:enumeration value="is-new"/> <!-- Neuwertig -->
       <xs:enumeration value="is-old"/>
       <xs:enumeration value="has-building-law-restrictions"/>
       <xs:enumeration value="is-under-roof"/>
@@ -267,7 +267,7 @@
 
       <xs:enumeration value="is-sunny"/>
       <xs:enumeration value="is-quiet"/>
-      <xs:enumeration value="is_projection"/>
+      <xs:enumeration value="is_projection"/> <!-- Projektiert -->
       <xs:enumeration value="has_demolition_property"/>
 
       <xs:enumeration value="has-mountain-view"/>
@@ -279,10 +279,20 @@
       <xs:enumeration value="has-double-garage"/>
       <xs:enumeration value="on-even-ground"/>
       <xs:enumeration value="has-rental-deposit-guarantee"/>
-      
+
       <xs:enumeration value="is-non-smoking"/>
 
-
+      <xs:enumeration value="is-demolition-property"/> <!--Abbruchobjekt-->
+      <xs:enumeration value="is-dilapidated"/> <!--Baufällig-->
+      <xs:enumeration value="is-gutted"/> <!-- Entkernt -->
+      <xs:enumeration value="is-first-time-occupancy"/> <!-- Erstbezug -->
+      <xs:enumeration value="is-well-tended"/> <!-- Gepflegt -->
+      <xs:enumeration value="is-modernized"/> <!-- Modernisiert -->
+      <xs:enumeration value="is-renovation-indigent"/> <!-- Renovationsbedürftig -->
+      <xs:enumeration value="is-shell-construction"/> <!-- Rohbau -->
+      <xs:enumeration value="is-partially-renovation-indigent"/> <!-- Teils renovationsbedürftig -->
+      <xs:enumeration value="is-partially-refurbished"/> <!-- Teilsaniert -->
+      <xs:enumeration value="is-refurbished"/> <!-- Vollsaniert -->
 
     </xs:restriction>
   </xs:simpleType>
