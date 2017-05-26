@@ -280,8 +280,7 @@
       <xs:enumeration value="on-even-ground"/>
       <xs:enumeration value="has-rental-deposit-guarantee"/>
 
-      <xs:enumeration value="is-non-smoking"/>
-
+      <xs:enumeration value="is-non-smoking"/> <!-- Nichtraucher -->
       <xs:enumeration value="is-demolition-property"/> <!--Abbruchobjekt-->
       <xs:enumeration value="is-dilapidated"/> <!--Baufällig-->
       <xs:enumeration value="is-gutted"/> <!-- Entkernt -->
