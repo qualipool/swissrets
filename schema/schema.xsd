@@ -199,6 +199,7 @@
 
       <xs:enumeration value="maisonette"/>
       <xs:enumeration value="rustico"/>
+      <xs:enumeration value="retail-space"/>
 
 
     </xs:restriction>
