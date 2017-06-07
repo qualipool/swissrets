@@ -181,7 +181,6 @@
       <xs:enumeration value="chalet"/>
       <xs:enumeration value="studio"/>
       <xs:enumeration value="covered-slot"/>
-
       <xs:enumeration value="office"/>
       <xs:enumeration value="flat"/>
       <xs:enumeration value="exhibition-space"/>
@@ -196,12 +195,36 @@
       <xs:enumeration value="fuel-station"/>
       <xs:enumeration value="cafe-bar"/>
       <xs:enumeration value="garden-apartment"/>
-
       <xs:enumeration value="maisonette"/>
       <xs:enumeration value="rustico"/>
       <xs:enumeration value="retail-space"/>
 
-
+    	<xs:enumeration value="boat-dry-dock"/><!--'Boot Hallenplatz','Boat dry dock','Halle à bâteaux','Posteggio barca interno', -->
+    	<xs:enumeration value="alottmen-garden"/><!--'Schrebergarten','Alottment garden','Jardin familial','Orto',-->
+    	<xs:enumeration value="squash-badminton"/><!--'Squash / Badminton','Squash / Badminton','Squash / Badminton','Squash / Badminton',-->
+    	<xs:enumeration value="indoor-tennis-court"/><!--'Tennishalle','Indoor tennis courts','Halle de tennis','Campo da tennis interno',-->
+    	<xs:enumeration value="tennis-court"/><!--'Tennisplatz','Tennis court','Place de tennis','Campo da tennis esterno',-->
+    	<xs:enumeration value="sports-hall"/><!--'Sportanlage','Sports hall','Installation sportive','Impianto sportivo',-->
+    	<xs:enumeration value="campground"/><!--'Camping- / Zeltplatz','Campground / Tent camping','Camping / Terrain campement','Campeggio',-->
+    	<xs:enumeration value="outdoor-swimming-pool"/><!--'Freibad','Outdoor swimming pool','Piscine découverte','Piscina esterna',-->
+    	<xs:enumeration value="indoor-swimming-pool"/><!--'Hallenbad','Indoor swimming pool','Piscine couverte','Piscina coperta',-->
+    	<xs:enumeration value="golf-course"/><!--'Golfplatz','Golf course','Terrain de golf','Campo da golf',-->
+    	<xs:enumeration value="hospital"/><!--'Krankenhaus','Hospital','Etablissement hospitalier','Ospedale',-->
+    	<xs:enumeration value="mini-golf-course"/><!--'Minigolfplatz','Mini-golf course','Minigolf','Campo da minigolf',-->
+      <xs:enumeration value="nursing-home"/><!--'Pflegeheim','nursing home','Home de soins','Casa di cura',-->
+    	<xs:enumeration value="riding-hall"/><!--'Reithalle','Riding hall','Halle d\'équitation','Maneggio',-->
+    	<xs:enumeration value="sanatorium"/><!--'Sanatorium','Sanatorium','Sanatorium','Sanatorio',-->
+    	<xs:enumeration value="sauna"/><!--'Sauna','Sauna','Sauna','Sauna',-->
+    	<xs:enumeration value="solarium"/><!--'Solarium','Solarium','Solarium','Solario',-->
+    	<xs:enumeration value="old-age-home"/><!--'Altersheim','Old-age home','Home pour personnes âgées','Casa di riposo',-->
+    	<xs:enumeration value="home"/><!--'Heim','Home','Home','Istituto',-->
+    	<xs:enumeration value="display-window"/><!--'Schaufenster','Display window','Vitrine','Vetrina',-->
+    	<xs:enumeration value="granny-flat"/><!--'Stöckli','Granny flat','Dépendance','Stöckli',-->
+    	<xs:enumeration value="boat-landing-stage"/><!--'Boot Stegplatz','Boat landing stage','Place extérieure à bâteaux','Attracco barca esteriore',-->
+    	<xs:enumeration value="horse-box"/><!--'Stallboxe','Horse box','Box d\'écurie','Box in stalla',-->
+    	<xs:enumeration value="boat-mooring"/><!--'Boot Bojenplatz','Boat mooring','Place à bâteau balisée','Attracco barca (boa)',-->
+    	<xs:enumeration value="cellar-compartment"/><!--'Kellerabteil','Cellar compartment','Cave','Scomparto cantina',-->
+    	<xs:enumeration value="attic-compartment"/><!--'Estrichabteil','Attic compartment','Grenier','Scomparto soffitta',-->
     </xs:restriction>
   </xs:simpleType>
 
