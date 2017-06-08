@@ -317,6 +317,13 @@
       <xs:enumeration value="is-partially-refurbished"/> <!-- Teilsaniert -->
       <xs:enumeration value="is-refurbished"/> <!-- Vollsaniert -->
 
+      <xs:enumeration value="has-washing-machine"/> <!-- Waschmaschine -->
+      <xs:enumeration value="has-tumbler"/> <!-- Tumbler -->
+      <xs:enumeration value="has-kachelofen"/> <!-- Kachelofen -->
+      <xs:enumeration value="is-only-allowed-as-primary-residency"/> <!-- Erstwohnung -->
+      <xs:enumeration value="is-allowed-as-secondary-residency"/> <!-- Zweitwohnung -->
+      <xs:enumeration value="has-foreign-quota"/> <!-- Ausländerkontingent -->
+
     </xs:restriction>
   </xs:simpleType>
 
