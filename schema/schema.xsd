@@ -231,6 +231,7 @@
   <xs:simpleType name="urlTypes">
     <xs:restriction base="xs:string">
       <xs:enumeration value="link"/>
+      <xs:enumeration value="direct-link"/><!-- use as replacement link. Aka. a custom Endpoint webpage instead of a generated single/data view. -->
       <xs:enumeration value="virtual-tour"/>
       <xs:enumeration value="youtube"/>
       <xs:enumeration value="archilogic"/>
