@@ -228,13 +228,14 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <!-- Url types define the usage and implementation of a url. It should not describe the url itself. -->
   <xs:simpleType name="urlTypes">
     <xs:restriction base="xs:string">
       <xs:enumeration value="link"/><!-- a genneric link for display and hrefing. -->
       <xs:enumeration value="direct-link"/><!-- use as replacement link. Aka. a custom Endpoint webpage instead of a generated single/data view. -->
-      <xs:enumeration value="virtual-tour"/><!-- to embed -->
-      <xs:enumeration value="youtube"/><!-- to embed -->
-      <xs:enumeration value="archilogic"/><!-- to embed -->
+      <xs:enumeration value="virtual-tour"/><!-- to embed specificaly (usualy iframe) -->
+      <xs:enumeration value="youtube"/><!-- to embed specificaly with youtube api -->
+      <xs:enumeration value="archilogic"/><!-- to embed specificaly with archilogic api -->
       <xs:enumeration value="emonitor"/>
     </xs:restriction>
   </xs:simpleType>
