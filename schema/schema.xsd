@@ -230,11 +230,11 @@
 
   <xs:simpleType name="urlTypes">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="link"/>
+      <xs:enumeration value="link"/><!-- a genneric link for display and hrefing. -->
       <xs:enumeration value="direct-link"/><!-- use as replacement link. Aka. a custom Endpoint webpage instead of a generated single/data view. -->
-      <xs:enumeration value="virtual-tour"/>
-      <xs:enumeration value="youtube"/>
-      <xs:enumeration value="archilogic"/>
+      <xs:enumeration value="virtual-tour"/><!-- to embed -->
+      <xs:enumeration value="youtube"/><!-- to embed -->
+      <xs:enumeration value="archilogic"/><!-- to embed -->
       <xs:enumeration value="emonitor"/>
     </xs:restriction>
   </xs:simpleType>
