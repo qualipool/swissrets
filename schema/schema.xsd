@@ -315,6 +315,7 @@
       <xs:enumeration value="is-modernized"/> <!-- Modernisiert -->
       <xs:enumeration value="is-renovation-indigent"/> <!-- Renovationsbedürftig -->
       <xs:enumeration value="is-shell-construction"/> <!-- Rohbau -->
+      <xs:enumeration value="is-new-construction"/> <!-- Neubau -->
       <xs:enumeration value="is-partially-renovation-indigent"/> <!-- Teils renovationsbedürftig -->
       <xs:enumeration value="is-partially-refurbished"/> <!-- Teilsaniert -->
       <xs:enumeration value="is-refurbished"/> <!-- Vollsaniert -->
