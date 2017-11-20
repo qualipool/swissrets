@@ -225,6 +225,9 @@
     	<xs:enumeration value="boat-mooring"/><!--'Boot Bojenplatz','Boat mooring','Place à bâteau balisée','Attracco barca (boa)',-->
     	<xs:enumeration value="cellar-compartment"/><!--'Kellerabteil','Cellar compartment','Cave','Scomparto cantina',-->
     	<xs:enumeration value="attic-compartment"/><!--'Estrichabteil','Attic compartment','Grenier','Scomparto soffitta',-->
+      
+      <xs:enumeration value="house-part"/>
+      
     </xs:restriction>
   </xs:simpleType>
 
