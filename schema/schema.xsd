@@ -227,6 +227,7 @@
     	<xs:enumeration value="attic-compartment"/><!--'Estrichabteil','Attic compartment','Grenier','Scomparto soffitta',-->
       
       <xs:enumeration value="house-part"/>
+      <xs:enumeration value="residential-commercial-building"/><!--'Wohn- / Geschäftshaus','Imm.com.& hab.','Immob.com. e abitativo','Living / commercial building',-->
       
     </xs:restriction>
   </xs:simpleType>
@@ -245,7 +246,8 @@
 
   <xs:simpleType name="utilityTypes">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="commercial"/>
+      <xs:enumeration value="
+"/>
       <xs:enumeration value="gastronomy"/>
       <xs:enumeration value="vacation"/>
       <xs:enumeration value="agricultural"/>
