@@ -228,6 +228,9 @@
       
       <xs:enumeration value="house-part"/>
       <xs:enumeration value="residential-commercial-building"/><!--'Wohn- / Geschäftshaus','Imm.com.& hab.','Immob.com. e abitativo','Living / commercial building',-->
+
+      <xs:enumeration value="engadine-house"/><!-- Engadine house, 'Engadinerhaus', Casa engadinese -->
+
       
     </xs:restriction>
   </xs:simpleType>
