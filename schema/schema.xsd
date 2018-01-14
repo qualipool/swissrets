@@ -50,6 +50,13 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="propertyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="rent"/>
+      <xs:enumeration value="buy"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:complexType name="price">
     <xs:simpleContent>
       <xs:extension base="xs:positiveInteger">
@@ -537,7 +544,7 @@
                             <xs:complexType>
                               <xs:all>
                                 <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1"/>
-                                <xs:element name="properties" maxOccurs="0" minOccurs="1">
+                                <xs:element name="properties" maxOccurs="1" minOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
                                       <!-- <xs:element name="propertyRef" maxOccurs="unbounded" minOccurs="1" type="xs:IDREF" /> -->
@@ -562,7 +569,7 @@
         </xs:element>
 
         <!-- properties -->
-        <xs:element name="properties" maxOccurs="1" minOccurs="1">
+        <xs:element name="properties" maxOccurs="1" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="property" maxOccurs="unbounded" minOccurs="0">
@@ -574,7 +581,7 @@
                     <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1"/>
                     <!-- visualReferenceId should only be used for presentational purposes publishers tend to present the referenceId if this one is missing -->
                     <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1"/>
-                    <xs:element type="xs:string" name="type" minOccurs="1" maxOccurs="1"/>
+                    <xs:element type="propertyType" name="type" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="availability" name="availability" minOccurs="1" maxOccurs="1"/>
                     <xs:element type="xs:dateTime" name="start" minOccurs="0" maxOccurs="1"/>
                     <xs:element type="currencyCodeType" name="priceCurrency" minOccurs="1" maxOccurs="1"/>
