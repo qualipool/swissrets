@@ -1,0 +1,12 @@
+
+<xml-edita-project name="SWISSRETS">
+    <properties></properties>
+    <entries>
+        <group name="XML Documents"></group>
+        <group name="XML W3C Schemas"></group>
+        <group name="XSL Templates"></group>
+        <group name="XHTML Files"></group>
+        <file url="schema/schema.xsd" last-read-time="1516094766.313935" last-write-time="1516094841.938276"></file>
+    </entries>
+    <transformation-properties-entries></transformation-properties-entries>
+</xml-edita-project>

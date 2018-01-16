@@ -427,7 +427,6 @@
             <xs:enumeration value="area_nwf"></xs:enumeration>
             <!-- Nettowohnfläche -->
             <!-- SIA 416 -->
-
             <xs:enumeration value="area_sia_gf"></xs:enumeration>
             <!-- (Brutto) Geschossfläche -->
             <xs:enumeration value="area_sia_ngf"></xs:enumeration>
@@ -448,7 +447,6 @@
             <!-- Hauptnutzfläche -->
             <xs:enumeration value="area_sia_nnf"></xs:enumeration>
             <!-- Nebennutzfläche -->
-
             <xs:enumeration value="area_sia_agf"></xs:enumeration>
             <xs:enumeration value="area_sia_angf"></xs:enumeration>
             <xs:enumeration value="area_sia_akf"></xs:enumeration>
@@ -457,14 +455,12 @@
             <xs:enumeration value="area_sia_aff"></xs:enumeration>
             <xs:enumeration value="area_sia_akft"></xs:enumeration>
             <xs:enumeration value="area_sia_akfn"></xs:enumeration>
-
             <xs:enumeration value="volume_sia_gv"></xs:enumeration>
             <xs:enumeration value="volume_sia_angv"></xs:enumeration>
             <xs:enumeration value="volume_sia_akv"></xs:enumeration>
             <xs:enumeration value="volume_sia_anv"></xs:enumeration>
             <xs:enumeration value="volume_sia_avv"></xs:enumeration>
             <xs:enumeration value="volume_sia_afv"></xs:enumeration>
-
             <xs:enumeration value="area_sia_gsf"></xs:enumeration>
             <xs:enumeration value="area_sia_uf"></xs:enumeration>
             <xs:enumeration value="area_sia_ggf"></xs:enumeration>
