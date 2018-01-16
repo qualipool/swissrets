@@ -144,6 +144,7 @@
             <xs:enumeration value="parking-garage-underground"></xs:enumeration>
             <xs:enumeration value="parking-house"></xs:enumeration>
             <xs:enumeration value="parking-duplex"></xs:enumeration>
+            <xs:enumeration value="parking-double-garage"></xs:enumeration>
             <xs:enumeration value="room-workroom"></xs:enumeration>
             <xs:enumeration value="room-storage-basement"></xs:enumeration>
         </xs:restriction>
@@ -379,6 +380,7 @@
             <!-- Zweitwohnung -->
             <xs:enumeration value="has-foreign-quota"></xs:enumeration>
             <!-- Ausländerkontingent -->
+            <xs:enumeration value="is-ground-floor"></xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     <!-- Todo: Mimetypes should be defined -->
