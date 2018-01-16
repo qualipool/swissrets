@@ -495,14 +495,6 @@
             <xs:enumeration value="rental_deposit"></xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
-    <xs:simpleType name="relationkeys">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="closeProximity"></xs:enumeration>
-            <xs:enumeration value="child"></xs:enumeration>
-            <xs:enumeration value="parent"></xs:enumeration>
-            <xs:enumeration value="similar"></xs:enumeration>
-        </xs:restriction>
-    </xs:simpleType>
     <xs:simpleType name="emailAddress">
         <xs:restriction base="xs:string">
             <xs:pattern value="[^@]+@[^\.]+\..+"></xs:pattern>
@@ -515,11 +507,10 @@
             <xs:enumeration value="swisscaution"></xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
-    <!-- MAIN STRUCTURE STARTS HERE -->
     <xs:element name="export">
         <xs:complexType>
             <xs:all>
-                <xs:element name="exportInformation" maxOccurs="1" minOccurs="1">
+                <xs:element name="exportInformation" maxOccurs="1" minOccurs="0">
                     <xs:complexType>
                         <xs:all>
                             <xs:element type="xs:string" name="exporter" minOccurs="0" maxOccurs="1"></xs:element>
@@ -528,11 +519,10 @@
                         </xs:all>
                     </xs:complexType>
                 </xs:element>
-                <!-- projects -->
                 <xs:element name="projects" maxOccurs="1" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="project" maxOccurs="unbounded" minOccurs="1">
+                            <xs:element name="project" maxOccurs="unbounded" minOccurs="0">
                                 <xs:complexType>
                                     <xs:all>
                                         <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1"></xs:element>
@@ -547,7 +537,7 @@
                                                                     <xs:complexType>
                                                                         <xs:sequence>
                                                                             <!-- <xs:element name="propertyRef" maxOccurs="unbounded" minOccurs="1" type="xs:IDREF" /> -->
-                                                                            <xs:element name="propertyRef" maxOccurs="unbounded" minOccurs="1" type="xs:string"></xs:element>
+                                                                            <xs:element maxOccurs="unbounded" minOccurs="1" type="xs:string" name="propertyRef"></xs:element>
                                                                         </xs:sequence>
                                                                     </xs:complexType>
                                                                 </xs:element>
@@ -565,19 +555,30 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <!-- properties -->
                 <xs:element name="properties" maxOccurs="1" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation></xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
+                            <xs:annotation>
+                                <xs:documentation>Order of properties is relevant. Custom sorting can be defined by provider.</xs:documentation>
+                            </xs:annotation>
                             <xs:element name="property" maxOccurs="unbounded" minOccurs="0">
                                 <xs:complexType>
                                     <xs:all>
                                         <xs:element type="xs:string" name="zoneTypes" minOccurs="0" maxOccurs="1"></xs:element>
                                         <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1"></xs:element>
-                                        <!-- referenceId can be used to track the original creation id (this should usualy be unique to the property) -->
-                                        <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1"></xs:element>
-                                        <!-- visualReferenceId should only be used for presentational purposes publishers tend to present the referenceId if this one is missing -->
-                                        <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1"></xs:element>
+                                        <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation> Can be used to track the original creation id (this should usualy be unique to the property) </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation> Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
                                         <xs:element type="propertyType" name="type" minOccurs="1" maxOccurs="1"></xs:element>
                                         <xs:element type="availability" name="availability" minOccurs="1" maxOccurs="1"></xs:element>
                                         <xs:element type="xs:dateTime" name="start" minOccurs="0" maxOccurs="1"></xs:element>
@@ -617,8 +618,11 @@
                                                                     <xs:attribute type="xs:byte" name="frequency" use="optional"></xs:attribute>
                                                                     <xs:attribute type="xs:string" name="timesegment" use="optional"></xs:attribute>
                                                                     <xs:attribute type="xs:string" name="propertysegment" use="optional"></xs:attribute>
-                                                                    <xs:attribute type="xs:byte" name="inclusive" use="optional"></xs:attribute>
-                                                                    <!-- determines if is added to offer-price (inclusive = 0) or appart of it (inclusive = 1) -->
+                                                                    <xs:attribute type="xs:byte" name="inclusive" use="optional">
+                                                                        <xs:annotation>
+                                                                            <xs:documentation>determines if is added to offer-price (inclusive = 0) or appart of it (inclusive = 1) </xs:documentation>
+                                                                        </xs:annotation>
+                                                                    </xs:attribute>
                                                                 </xs:extension>
                                                             </xs:simpleContent>
                                                         </xs:complexType>
@@ -629,12 +633,12 @@
                                         <xs:element name="address" type="address" minOccurs="1" maxOccurs="1"></xs:element>
                                         <xs:element name="softwareInformation" minOccurs="1" maxOccurs="1">
                                             <xs:complexType>
-                                                <xs:sequence>
+                                                <xs:all>
                                                     <xs:element type="xs:string" name="lastUser" minOccurs="0" maxOccurs="1"></xs:element>
-                                                    <xs:element type="xs:dateTime" name="lastUpdate" minOccurs="1" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:dateTime" name="lastUpdate" minOccurs="0" maxOccurs="1"></xs:element>
                                                     <xs:element type="xs:byte" name="updateIteration" minOccurs="0" maxOccurs="1"></xs:element>
                                                     <xs:element type="xs:dateTime" name="creation" minOccurs="0" maxOccurs="1"></xs:element>
-                                                </xs:sequence>
+                                                </xs:all>
                                             </xs:complexType>
                                         </xs:element>
                                         <xs:element name="features" minOccurs="0" maxOccurs="1">
@@ -702,6 +706,9 @@ Grundstückfläche
                                         <xs:element name="categories" minOccurs="0" maxOccurs="1">
                                             <xs:complexType>
                                                 <xs:sequence>
+                                                    <xs:annotation>
+                                                        <xs:documentation>Order represents (least specific) to (most specific). For example house, single-house, rustico</xs:documentation>
+                                                    </xs:annotation>
                                                     <xs:element type="categoryTypes" name="category" minOccurs="1" maxOccurs="3"></xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
@@ -775,9 +782,15 @@ Grundstückfläche
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
-                                        <xs:element name="offers" minOccurs="0" maxOccurs="1">
+                                        <xs:element name="offers" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation></xs:documentation>
+                                            </xs:annotation>
                                             <xs:complexType>
                                                 <xs:sequence>
+                                                    <xs:annotation>
+                                                        <xs:documentation>Order is relevant. First offer is considered to be the main language etc.</xs:documentation>
+                                                    </xs:annotation>
                                                     <xs:element name="offer" minOccurs="1" maxOccurs="unbounded">
                                                         <xs:complexType>
                                                             <xs:all>
@@ -896,18 +909,24 @@ Grundstückfläche
                                                                 </xs:element>
                                                             </xs:all>
                                                             <xs:attribute type="xs:string" name="lang" use="required"></xs:attribute>
-                                                            <!-- offer->id is used for machine-identification for the individual offer/languages this needs to be unique -->
                                                             <!-- <xs:attribute type="xs:ID" name="id" use="optional"/> -->
-                                                            <xs:attribute type="xs:string" name="id" use="optional"></xs:attribute>
+                                                            <xs:attribute type="xs:string" name="id" use="optional">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>Is used for machine-identification for the individual offer/languages this needs to be unique</xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:attribute>
                                                         </xs:complexType>
                                                     </xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:all>
-                                    <!-- this ID needs to be unique and represents the id from the exporter (this can be the same as referenceId if the exporter is the original creator) -->
                                     <!-- <xs:attribute type="xs:ID" name="id" use="required"/> -->
-                                    <xs:attribute type="xs:string" name="id" use="required"></xs:attribute>
+                                    <xs:attribute type="xs:string" name="id" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as referenceId if the exporter is the original creator)</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
