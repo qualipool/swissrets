@@ -60,7 +60,7 @@
         </xs:annotation>
         <xs:simpleContent>
             <xs:extension base="xs:positiveInteger">
-                <xs:attribute type="xs:positiveInteger" name="frequency" use="optional"></xs:attribute>
+                <xs:attribute type="xs:positiveInteger" name="frequency" use="optional" default="1"></xs:attribute>
                 <xs:attribute name="timesegment" use="optional">
                     <xs:simpleType>
                         <xs:restriction base="xs:string">
@@ -72,7 +72,7 @@
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:attribute>
-                <xs:attribute name="propertysegment" use="optional">
+                <xs:attribute name="propertysegment" use="optional" default="all">
                     <xs:simpleType>
                         <xs:restriction base="xs:string">
                             <xs:enumeration value="all"></xs:enumeration>
@@ -261,8 +261,10 @@
             <!-- Engadine house, 'Engadinerhaus', Casa engadinese -->
         </xs:restriction>
     </xs:simpleType>
-    <!-- Url types define the usage and implementation of a url. It should not describe the url itself. -->
     <xs:simpleType name="urlTypes">
+        <xs:annotation>
+            <xs:documentation>Url types define the usage and implementation of a url. It should not describe the url itself. </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:enumeration value="link"></xs:enumeration>
             <!-- a genneric link for display and hrefing. -->
@@ -717,21 +719,6 @@ Grundstückfläche
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element type="utilityTypes" name="utility" minOccurs="1" maxOccurs="3"></xs:element>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                        <xs:element name="relations" minOccurs="0" maxOccurs="1">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="relation" maxOccurs="unbounded" minOccurs="0">
-                                                        <xs:complexType>
-                                                            <xs:simpleContent>
-                                                                <xs:extension base="xs:string">
-                                                                    <xs:attribute type="relationkeys" name="key" use="required"></xs:attribute>
-                                                                </xs:extension>
-                                                            </xs:simpleContent>
-                                                        </xs:complexType>
-                                                    </xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
