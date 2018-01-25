@@ -259,6 +259,8 @@
             <!--'Wohn- / Geschäftshaus','Imm.com.& hab.','Immob.com. e abitativo','Living / commercial building',-->
             <xs:enumeration value="engadine-house"></xs:enumeration>
             <!-- Engadine house, 'Engadinerhaus', Casa engadinese -->
+            <xs:enumeration value="patrician-house"></xs:enumeration>
+            <!-- Patrician house, 'Patrizierhaus', Palazzo patrizio -->
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="urlTypes">
