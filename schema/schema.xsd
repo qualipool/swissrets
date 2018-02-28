@@ -261,6 +261,8 @@
             <!-- Engadine house, 'Engadinerhaus', Casa engadinese -->
             <xs:enumeration value="patrician-house"></xs:enumeration>
             <!-- Patrician house, 'Patrizierhaus', Palazzo patrizio -->
+            <xs:enumeration value="hobby-room"></xs:enumeration>
+
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="urlTypes">
