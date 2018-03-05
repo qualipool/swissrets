@@ -285,7 +285,7 @@
     </xs:simpleType>
     <xs:simpleType name="utilityTypes">
         <xs:restriction base="xs:string">
-            <xs:enumeration value=" "></xs:enumeration>
+            <xs:enumeration value="commercial"></xs:enumeration>
             <xs:enumeration value="gastronomy"></xs:enumeration>
             <xs:enumeration value="vacation"></xs:enumeration>
             <xs:enumeration value="agricultural"></xs:enumeration>
