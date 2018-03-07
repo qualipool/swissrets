@@ -387,7 +387,6 @@
             <xs:enumeration value="has-foreign-quota"></xs:enumeration>
             <!-- Ausländerkontingent -->
             <xs:enumeration value="is-ground-floor"></xs:enumeration>
-            <xs:enumeration value="is-raised-ground-floor"></xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     <!-- Todo: Mimetypes should be defined -->
