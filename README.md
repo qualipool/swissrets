@@ -4,79 +4,12 @@ SwissRETS is a swiss real estate transfer standard that aims to solve the age ol
 
 SwissRETS is currently within the suggestion stage.
 
-RoadMap
--------
-
-| Date          | Goal               |
-| ------------- |------------------: |
-| ...  | ...|
-
-
 Structure
 ---------
 
 The XML should always contain the full representation of a companies portfolio.
 
 The XML may contain `<projects>` and/or `<properties>`. The omission of these tags indicate that the information is **NOT SPECIFIED** and should thereby be **ignored**. A empty (but present) `<projects>` of `<properties>` tag indicates that there are no projects/properties available and any existing properties/projects should therefore be **DELETED**.
-
-Relational map (Projects)
----------
-
-```
-projects
-	< details
-		< descriptions
-	< units
-		- property
-		< details
-		    < descriptions
-		< properties
-
-```
-
-Example XML structure (Projects)
----------
-
-```xml
-<export>
-	<projects>
-		<project id="project1">
-			<referenceId>projectRef1</referenceId>
-			<details>
-				<detail lang="de">
-					<name>Neubaubrojekt</name>
-					<descriptions>
-						<description title="Beschreibung"></description>
-						<description title="Lage"></description>
-					</descriptions>
-					<!-- attachments -->
-
-				</detail>
-			</details>
-			<units>
-				<unit>
-					<referenceId>unitRef1</referenceId>
-					<property xlink:type="resource" xlink:href="#456" />
-					<details>
-						<detail lang="de">
-							<name>Gebäude 1</name>
-							<descriptions>
-								<description title="Beschreibung"></description>
-								<description title="Lage"></description>
-							</descriptions>
-						</detail>
-					</details>
-					<properties>
-						<propertyRef>property_123</propertyRef>
-						<propertyRef>property_234</propertyRef>
-						<propertyRef>property_345</propertyRef>
-					</properties>
-				</unit>
-			</units>
-		</project>
-	</projects>
-</export>
-```
 
 Relational map (Properties)
 ---------
@@ -180,6 +113,66 @@ Example XML structure (Properties)
 	</properties>
 </export>
 ```
+
+Relational map (Projects)
+---------
+
+```
+projects
+	< details
+		< descriptions
+	< units
+		- property
+		< details
+		    < descriptions
+		< properties
+
+```
+
+Example XML structure (Projects)
+---------
+
+```xml
+<export>
+	<projects>
+		<project id="project1">
+			<referenceId>projectRef1</referenceId>
+			<details>
+				<detail lang="de">
+					<name>Neubaubrojekt</name>
+					<descriptions>
+						<description title="Beschreibung"></description>
+						<description title="Lage"></description>
+					</descriptions>
+					<!-- attachments -->
+
+				</detail>
+			</details>
+			<units>
+				<unit>
+					<referenceId>unitRef1</referenceId>
+					<property xlink:type="resource" xlink:href="#456" />
+					<details>
+						<detail lang="de">
+							<name>Gebäude 1</name>
+							<descriptions>
+								<description title="Beschreibung"></description>
+								<description title="Lage"></description>
+							</descriptions>
+						</detail>
+					</details>
+					<properties>
+						<propertyRef>property_123</propertyRef>
+						<propertyRef>property_234</propertyRef>
+						<propertyRef>property_345</propertyRef>
+					</properties>
+				</unit>
+			</units>
+		</project>
+	</projects>
+</export>
+```
+
 
 Resful JSON representation
 =============
