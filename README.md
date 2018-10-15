@@ -174,7 +174,7 @@ Example XML structure (Projects)
 ```
 
 
-Resful JSON representation
+Restful JSON representation
 =============
 
 Will not be defined by this standard to date, but the representation would/could* be as follows.
