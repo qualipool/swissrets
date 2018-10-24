@@ -17,6 +17,7 @@ jobs:
         - template=/tmp/$(basename $0)_$(date --rfc-3339=date)__$$__XXXXXXXX
         - template="$(echo -n "$template" | tr ' ' '_')"
         - file=$(mktemp -u $template)
+        - echo "saving remote schema in $file"
         - curl https://www.w3.org/2001/XMLSchema.xsd > $file
         - xmllint --noout --schema $file ./schema/schema.xsd
 
