@@ -1,3 +1,4 @@
+language: minimal
 os: linux
 dist: trusty
 group: stable
@@ -8,11 +9,9 @@ addons:
 jobs:  
   include:
     - stage: System info
-      language: minimal
       script: xmllint --version
 
     - stage: Schema validation
-      language: minimal
       script:
         - template=/tmp/$(basename $0)_$(date --rfc-3339=date)__$$__XXXXXXXX
         - template="$(echo -n "$template" | tr ' ' '_')"
@@ -22,5 +21,4 @@ jobs:
         - xmllint --noout --schema $file ./schema/schema.xsd
 
     - stage: Example validation
-      language: minimal
       script: xmllint --noout --schema ./schema/schema.xsd ./docs/example.xml
