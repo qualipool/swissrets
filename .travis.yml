@@ -12,9 +12,10 @@ jobs:
       script: xmllint --version
 
     - stage: Schema validation
-      script: curl https://www.w3.org/2001/XMLSchema.xsd > _tmp.xsd
-    - script: xmllint --noout --schema _tmp.xsd ./schema/schema.xsd
-    - script: rm _tmp.xsd
+      script:
+        - curl https://www.w3.org/2001/XMLSchema.xsd > _tmp.xsd
+        - xmllint --noout --schema _tmp.xsd ./schema/schema.xsd
+        - rm _tmp.xsd
 
     - stage: Example validation
       script: xmllint --noout --schema ./schema/schema.xsd ./docs/example.xml
