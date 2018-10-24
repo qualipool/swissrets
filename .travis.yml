@@ -1,0 +1,7 @@
+addons:
+  apt:
+    packages:
+      # Needed for `xmllint`.
+      - libxml2-utils
+script:
+  - which xmllint
