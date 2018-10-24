@@ -1,7 +1,10 @@
+os: linux
+dist: trusty
+group: stable
+language: java
 addons:
   apt:
     packages:
-      # Needed for `xmllint`.
-      - libxml2-utils
+      - libxml2-utils # for `xmllint`.
 script:
   - which xmllint
