@@ -8,4 +8,4 @@ addons:
       - libxml2-utils # for `xmllint`.
 script:
   - xmllint --version
-  - xmllint --noout --schema ./schema/schema.xsd ./examples/example.xml
+  - xmllint --noout --schema ./schema/schema.xsd ./docs/example.xml
