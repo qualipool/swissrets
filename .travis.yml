@@ -14,9 +14,11 @@ jobs:
     - stage: Schema validation
       language: generic
       script:
-        - curl https://www.w3.org/2001/XMLSchema.xsd > _tmp.xsd
-        - xmllint --noout --schema _tmp.xsd ./schema/schema.xsd
-        - rm _tmp.xsd
+        - template=/tmp/$(basename $0)_$(date --rfc-3339=date)__$$__XXXXXXXX
+        - template="$(echo -n "$template" | tr ' ' '_')"
+        - file=$(mktemp -u $template)
+        - curl https://www.w3.org/2001/XMLSchema.xsd > $file
+        - xmllint --noout --schema $file ./schema/schema.xsd
 
     - stage: Example validation
       language: generic
