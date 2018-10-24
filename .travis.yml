@@ -7,4 +7,5 @@ addons:
     packages:
       - libxml2-utils # for `xmllint`.
 script:
-  - which xmllint
+  - xmllint --version
+  - xmllint --noout --schema ./schema/schema.xsd ./examples/example.xml
