@@ -8,5 +8,5 @@ addons:
       - libxml2-utils # for `xmllint`.
 script:
   - xmllint --version
-  - xmllint --noout --dtdvalid https://www.w3.org/2009/XMLSchema/XMLSchema.dtd file.xml
+  - xmllint --noout --dtdvalid https://www.w3.org/2009/XMLSchema/XMLSchema.dtd ./schema/schema.xsd
   - xmllint --noout --schema ./schema/schema.xsd ./docs/example.xml
