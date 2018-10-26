@@ -7,13 +7,13 @@ Choose one
 - [ ] Major (breaking change, existing implementations will fail)
 
 ## Generall things to consider 
-- [ ] I have read the [**CONTRIBUTING.md**](/CONTRIBUTING.md) document.
+- [ ] I have read the [**CONTRIBUTING.md**](https://github.com/qualipool/swissrets/blob/master/CONTRIBUTING.md) document.
 - [ ] If my change requires documentation, I added it already.
 - [ ] I have added tests to cover all my changes.
 - [ ] All new and existing tests pass.
 
-## List of issues to close after this PR
-- #xyz
+## List of issues related to this PR
+- #3
 - #xyz
 
 ## Summary
