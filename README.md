@@ -6,6 +6,13 @@ SwissRETS is a swiss real estate transfer standard that aims to solve the age ol
 
 SwissRETS is currently within the suggestion stage.
 
+Documentation
+-------------
+
+Please refer to the docuentation for further infos.
+
+https://github.com/qualipool/swissrets/wiki
+
 Structure
 ---------
 
