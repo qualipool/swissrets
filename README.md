@@ -1,4 +1,6 @@
-SwissRETS
+![build status](https://travis-ci.com/Scout24-CH/swissrets.svg?branch=master)
+
+wissRETS
 ========
 SwissRETS is a swiss real estate transfer standard that aims to solve the age old data-tranfer between reale state softwares and respective online services.
 

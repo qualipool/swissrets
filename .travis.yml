@@ -1,0 +1,24 @@
+language: minimal
+os: linux
+dist: trusty
+group: stable
+addons:
+  apt:
+    packages:
+      - libxml2-utils # for `xmllint`.
+jobs:  
+  include:
+    - stage: System info
+      script: xmllint --version
+
+    - stage: Schema validation
+      script:
+        - template=/tmp/$(basename $0)_$(date --rfc-3339=date)__$$__XXXXXXXX
+        - template="$(echo -n "$template" | tr ' ' '_')"
+        - file=$(mktemp -u $template)
+        - echo "saving remote schema in $file"
+        - curl https://www.w3.org/2001/XMLSchema.xsd > $file
+        - xmllint --noout --schema $file ./schema/schema.xsd
+
+    - stage: Example validation
+      script: xmllint --noout --schema ./schema/schema.xsd ./docs/example.xml
