@@ -9,5 +9,10 @@ Just use English
 
 Please use issue and pull-request templates which are inserted automatically, to avoid rejection.
 
+## Before you start (work in progress)
+- Editorconfig
+- Node 10
+
+
 ## TODO
 - add all contributing stuff here

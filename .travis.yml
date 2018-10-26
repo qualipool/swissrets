@@ -1,12 +1,15 @@
-language: minimal
+language: node_js
+node_js:
+  - '10'
 os: linux
 dist: trusty
 group: stable
+cache: npm
 addons:
   apt:
     packages:
       - libxml2-utils # for `xmllint`.
-jobs:  
+jobs:
   include:
     - stage: System info
       script: xmllint --version

@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "node/scripts/test.js"
+    "test": "node tests/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/qualipool/swissrets/issues"
   },
-  "homepage": "https://github.com/qualipool/swissrets#readme"
+  "homepage": "https://github.com/qualipool/swissrets#readme",
+  "devDependencies": {
+    "globby": "^8.0.1",
+    "xmllint": "^0.1.1"
+  }
 }
