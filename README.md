@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/Scout24-CH/swissrets.svg?branch=master)](https://travis-ci.com/Scout24-CH/swissrets)
+[![Build Status](https://travis-ci.com/qualipool/swissrets.svg?branch=master)](https://travis-ci.com/qualipool/swissrets)
 
 SwissRETS
 =========
