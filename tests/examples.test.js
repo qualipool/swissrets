@@ -9,4 +9,5 @@ const fn = () => {
   })
   console.log(result)
 }
+
 module.exports = fn
