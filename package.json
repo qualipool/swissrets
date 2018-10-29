@@ -29,6 +29,8 @@
   "homepage": "https://github.com/qualipool/swissrets#readme",
   "devDependencies": {
     "globby": "^8.0.1",
+    "node-fetch": "^2.2.0",
     "xmllint": "^0.1.1"
-  }
+  },
+  "dependencies": {}
 }
