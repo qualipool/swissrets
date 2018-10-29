@@ -1,7 +1,7 @@
 {
   "name": "swissrets",
   "version": "0.0.1",
-  "description": "[![Build Status](https://travis-ci.com/Scout24-CH/swissrets.svg?branch=master)](https://travis-ci.com/Scout24-CH/swissrets)",
+  "description": "A swiss real estate transfer standard.",
   "main": "node/index.js",
   "directories": {
     "doc": "docs"
