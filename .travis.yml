@@ -10,4 +10,4 @@ addons:
     packages:
       - libxml2-utils # for `xmllint`.
 script:
-  - npm run test
+  - npm run test -s
