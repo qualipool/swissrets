@@ -21,10 +21,10 @@ const buffersToString = (buffers, trim) => {
     : str
 }
 
-const getResult = ({ stdout, stderr, command, args, trim, ...bareResult }) => resolveTo === 'string'
-  ? stdout
+const getResult = ({ stdout, stderr, command, args, trim, resolveTo, ...rest }) => resolveTo === 'string'
+  ? buffersToString(stdout, trim)
   : {
-    ...bareResult,
+    ...rest,
     command: `${command} ${args.join(' ')}`,
     stdout: buffersToString(stdout, trim),
     stderr: buffersToString(stderr, trim)
@@ -32,7 +32,10 @@ const getResult = ({ stdout, stderr, command, args, trim, ...bareResult }) => re
 
 const error = bareResult => {
   const err = new Error(`Process exited with code ${bareResult.code}`)
-  err.result = getResult(bareResult)
+  err.result = getResult({
+    ...bareResult,
+    resolveTo: 'object'
+  })
   return err
 }
 

@@ -1,7 +1,7 @@
 const exec = require('./exec')
-const prettyError = require('./prettyError')
+const log = require('./log')
 
 module.exports = {
   exec,
-  prettyError
+  log
 }
