@@ -1,6 +1,6 @@
 ---
 name: Question
-about: Feel free to ask something
+about: Ask something
 
 ---
 
