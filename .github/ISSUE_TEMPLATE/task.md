@@ -1,6 +1,6 @@
 ---
 name: Task
-about: Use it for TODOs, like a Post-it or a reminder. Only for non technical stuff.
+about: For TODOs and reminders, like a Post-it. Only for non technical stuff.
 
 ---
 
