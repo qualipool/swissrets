@@ -17,10 +17,10 @@ Thank you for contributing SwissRETS
 3. Increase the version number according to [semver](http://semver.org/) using `npm version patch|minor|major`
 4. A maintainer will then take care about merging the pull request.
 
-## Developing
+## Developing - before you start
+
 You're very welcome to fork the project and send pull requests.
 
-### Before you start
 - Use an editor that supports [Editorconfig](https://editorconfig.org/) or install the plugin
 - Install [Node >8](https://nodejs.org/en/download/)
 - Install xmllint
@@ -31,7 +31,7 @@ You're very welcome to fork the project and send pull requests.
   - Hit the **Fork** button on [qualipool/swissrets](https://github.com/qualipool/swissrets) - top right corner
   - Clone it locally
 
-### Coding priciples
+## Coding priciples
 _Mainly targeting the ./schema/schema.xsd_  
 
 ----
@@ -42,20 +42,20 @@ _Mainly targeting the ./schema/schema.xsd_
 
 While we strive for all three, if we have conflicts, this list acts as priorities.
 
-#### Consistency
+### Consistency
 SwissRETS should be predictable. To achieve this, we follow this list
 - Solve the same things the same way
 - Have clear naming rules (TODO: add link)
 - Take time to refactor inconsistencies
 
-#### Cleanness
+### Cleanness
 SwissRETS should be tidy and clean
 - Use real english words to name things
 - No abbrevations
 - Proper indentation (4 spaces)
 - Use syntax checks
 
-#### Ease of use
+### Ease of use
 SwissRETS should be easy to use
 - We try to have as little documentation as necessary
 - Try to write selfspeaking code, to avoid documentation
