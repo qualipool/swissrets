@@ -35,9 +35,9 @@ You're very welcome to fork the project and send pull requests.
 _Mainly targeting the ./schema/schema.xsd_  
 
 ----
-1. ## Consistency
-2. ## Cleanness
-3. ## Ease of use
+1. **Consistency**
+2. **Cleanness**
+3. **Ease of use**
 ----
 
 While we strive for all three, if we have conflicts, this list acts as priorities.
