@@ -1,0 +1,35 @@
+{
+  "name": "swissrets",
+  "version": "0.0.1",
+  "description": "A swiss real estate transfer standard.",
+  "main": "node/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qualipool/swissrets.git"
+  },
+  "keywords": [
+    "swissrets",
+    "xml-structure",
+    "xml",
+    "standard",
+    "switzerland",
+    "realestatestandards"
+  ],
+  "author": "Vereinigung Qualipool <hello@qualipool.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qualipool/swissrets/issues"
+  },
+  "homepage": "https://github.com/qualipool/swissrets#readme",
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "globby": "^8.0.1"
+  },
+  "dependencies": {}
+}

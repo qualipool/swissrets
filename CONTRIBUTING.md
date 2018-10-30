@@ -59,4 +59,3 @@ SwissRETS should be tidy and clean
 SwissRETS should be easy to use
 - We try to have as little documentation as necessary
 - Try to write selfspeaking code, to avoid documentation
-

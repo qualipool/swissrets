@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsd" href="https://raw.githubusercontent.com/qualipool/swissrets/master/schema/schema.xsd"?>
+<export>
+    <exportInformation>
+        <exporter>CasaGateway</exporter>
+        <exportDate>2016-08-30T10:01:25+02:00</exportDate>
+        <exportIteration>123</exportIteration>
+    </exportInformation>
+    <properties>
+        <property id="property123">
+            <zoneTypes></zoneTypes>
+            <parcelNumbers></parcelNumbers>
+            <referenceId>propertyRef123</referenceId> <!-- referenceId can be used to track the original creation id (this should usualy be unique to the property) -->
+            <visualReferenceId>visualRef123</visualReferenceId> <!-- visualReferenceId should only be used for presentational purposes publishers tend to present the referenceId if this one is missing -->
+            <type>rent</type> <!-- rent/buy -->
+            <availability>available</availability> <!-- reserved / active / taken / reference / private -->
+            <start></start> <!-- datetime -->
+            <priceCurrency>CHF</priceCurrency>
+            <!-- <price>1000000</price> -->
+            <netPrice>1200</netPrice>
+            <grossPrice>1450</grossPrice>
+            <bfs>
+                <egid>abc123</egid>
+                <ewid>bcd234</ewid>
+            </bfs>
+            <extraCosts>
+                <extraCost key="" frequency="" timesegment="" propertysegment="" type="" title=""></extraCost>
+            </extraCosts>
+            <integratedOffers>
+                <integratedOffer integratedOfferType="" frequency="" timesegment="" propertysegment="" inclusive=""></integratedOffer> <!-- determines if is added to offer-price (inclusive = 0) or appart of it (inclusive = 1) -->
+            </integratedOffers>
+            <address>
+                <country>CH</country>
+                <locality>Bottighofen</locality>
+                <region>TG</region>
+                <postalCode>8598</postalCode>
+                <postOfficeBoxNumber>Postfach 123</postOfficeBoxNumber>
+                <street>Müligässli</street>
+                <streetNumber>1</streetNumber>
+                <streetAddition>Ganz open</streetAddition>
+                <subunit></subunit>
+                <geo>
+                    <latitude>47.639497</latitude>
+                    <longitude>9.211276</longitude>
+                </geo>
+            </address>
+            <softwareInformation>
+                <lastUser>someuser</lastUser>
+                <lastUpdate></lastUpdate>
+                <updateIteration></updateIteration>
+                <creation></creation>
+            </softwareInformation>
+            <features>
+                <feature>has-nice-view</feature>
+                <feature>has-elevator</feature>
+                <feature>has-nice-view</feature>
+                <feature>has-fireplace</feature>
+                <feature>has-cabletv</feature>
+                <feature>has-elevator</feature>
+                <feature>is-child-friendly</feature>
+                <feature>has-parking</feature>
+                <feature>has-garage</feature>
+                <feature>has-balcony</feature>
+                <feature>has-isdn</feature> <!-- depricated -->
+                <feature>is-wheelchair-accessible</feature>
+                <feature>is-animal-friendly</feature>
+                <feature>has-ramp</feature>
+                <feature>has-lifting-platform</feature>
+                <feature>has-railway-terminal</feature>
+                <feature>has-restrooms</feature>
+                <feature>has-water-supply</feature>
+                <feature>has-sewage-supply</feature>
+                <feature>has-power-supply</feature>
+                <feature>has-gas-supply</feature>
+                <feature>has-flat-sharing-community</feature>
+                <feature>is-corner-house</feature>
+                <feature>is-middle-house</feature>
+                <feature>has-connected-building-land</feature>
+                <feature>has-gardenhouse</feature>
+                <feature>has-raised-ground-floor</feature>
+                <feature>is-new</feature>
+                <feature>is-old</feature>
+                <feature>has-building-law-restrictions</feature>
+                <feature>is-under-roof</feature>
+                <feature>has-swimmingpool</feature>
+                <feature>is-minergie-general</feature>
+                <feature>is-minergie-certified</feature>
+
+                <feature>is-sunny</feature>
+                <feature>is-quiet</feature>
+                <feature>is_projection</feature>
+                <feature>has_demolition_property</feature>
+
+                <feature>has-mountain-view</feature>
+                <feature>has-lake-view</feature>
+                <feature>on-a-south-slope</feature>
+                <feature>on-a-slope</feature>
+                <feature>has-car-port</feature>
+                <feature>has-double-car-port</feature>
+                <feature>has-double-garage</feature>
+                <feature>on-even-ground</feature>
+            </features>
+            <numericValues>
+                <value key="number_of_apartments">3</value>
+
+                <value key="floor">2</value>
+                <value key="number_of_floors">4</value>
+                <value key="number_of_apartments">2</value>
+                <value key="number_of_parcels">2</value>
+                <value key="number_of_rooms">4.5</value>
+                <value key="number_of_bathrooms">2</value>
+
+                <value key="distance_kindergarten">200</value>
+                <value key="distance_primary_school">2000</value>
+                <value key="distance_high_school">1800</value>
+                <value key="distance_college_university">300</value>
+                <value key="distance_bus_stop">500</value>
+                <value key="distance_train_station">400</value>
+                <value key="distance_post">5400</value>
+                <value key="distance_bank">6900</value>
+                <value key="distance_cable_railway_station"></value>
+                <value key="distance_boat_dock"></value>
+                <value key="distance_public_transport"></value> <!-- depricated -->
+                <value key="distance_shop"></value>
+                <value key="distance_motorway"></value> <!--freeway???-->
+                <value key="distance_airport"></value>
+                <value key="distance_tramway"></value>
+                <value key="max_elevator_weight"></value>
+
+                <value key="area_property_land"></value>
+                <value key="property_land_price">250000</value>
+
+                <!-- Pseudo Norm -->
+                <value key="area_bwf">120</value> <!-- Bruttowohnfläche -->
+                <value key="area_nwf">100</value> <!-- Nettowohnfläche -->
+
+                <!-- SIA 416 -->
+                <!-- Flächen
+                ┌───────────────────────────────────────────────┐
+                │                       GF                      │ Geschossfläche
+                ├───────────────────────────────┰───────────────┧
+                │              NGF              ┃       KF      ┃ Nettogeschossfläche + Konstruktionsfläche
+                ├───────────────┬───────┬───────╂───────┬───────┨
+                │       NF      │  VF   │  FF   ┃  KFT  │  KFN  ┃ (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
+                ├───────┬───────┼───────┴───────┺━━━━━━━┷━━━━━━━┛
+                │  NNF  │  HNF  │ Neben + Hauptnutzfläche
+                └───────┴───────┘
+                -->
+                <value key="area_sia_gf">200</value> <!-- (Brutto) Geschossfläche -->
+                <value key="area_sia_ngf">170</value> <!-- Nettogeschossfläche -->
+                <value key="area_sia_kf">30</value> <!-- Konstruktionsfläche -->
+                <value key="area_sia_nf">80</value> <!-- Nutzfläche -->
+                <value key="area_sia_vf">30</value> <!-- Verkehrsfläche -->
+                <value key="area_sia_ff">60</value> <!-- Funktionsfläche -->
+                <value key="area_sia_kft">15</value> <!-- Konstruktionsfläche Tragend -->
+                <value key="area_sia_kfn">15</value> <!-- Konstruktionsfläche nicht Tragend -->
+                <value key="area_sia_hnf">40</value> <!-- Hauptnutzfläche -->
+                <value key="area_sia_nnf">40</value> <!-- Nebennutzfläche -->
+
+                <!-- Ausenflächen
+                ┌───────────────────────────────────────────────┐
+                │                      AGF                      │ Aussen-Geschossfläche
+                ├───────────────────────────────┰───────────────┧
+                │             ANGF              ┃      AKF      ┃ Aussen-Nettogeschossfläche + Aussen-Konstruktionsfläche
+                ├───────────────┬───────┬───────╂───────┬───────┨
+                │      ANF      │  AVF  │  AFF  ┃  AKFT │ AKFN  ┃ Aussen-* (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
+                └───────────────┴───────┴───────┺━━━━━━━┷━━━━━━━┛
+                -->
+                <value key="area_sia_agf">400</value>
+                <value key="area_sia_angf">300</value>
+                <value key="area_sia_akf">100</value>
+                <value key="area_sia_anf">150</value>
+                <value key="area_sia_avf">75</value>
+                <value key="area_sia_aff">75</value>
+                <value key="area_sia_akft">50</value>
+                <value key="area_sia_akfn">50</value>
+
+                <!-- Volumen
+                ┌───────────────────────────────────────────────┐
+                │                      GV                       │ Gebäudevolumen
+                ├───────────────────────────────┬───────────────┤
+                │             ANGV              │      AKV      │ Nettogebäudevolumen + Konstruktions-Volumen
+                ├───────────────┬───────┬───────┼───────────────┘
+                │      ANV      │  AVV  │  AFV  │   Nutzvolumen + Verkehrsvolumen + Funktionsvolumen
+                └───────────────┴───────┴───────┘
+                -->
+                <value key="volume_sia_gv">600</value>
+                <value key="volume_sia_angv">500</value>
+                <value key="volume_sia_akv">100</value>
+                <value key="volume_sia_anv">250</value>
+                <value key="volume_sia_avv">125</value>
+                <value key="volume_sia_afv">125</value>
+
+                <!--
+                ┌───────────────────────────────────────────────┐
+                │                      GSF                      │ Grundstückfläche
+                ├───────────────────────────────┬───────────────┤
+                │               UF              │      GGF      │ Umgebungsfläche + Gebäudegrundfläche
+                ├───────────────┬───────────────┼───────────────┘
+                │      BUF      │      UUF      │ Bearbeitete Umgebungsfläche + Unbearbeitete Umgebungsfläche
+                └───────────────┴───────────────┘
+                -->
+                <value key="area_sia_gsf"></value>
+                <value key="area_sia_uf"></value>
+                <value key="area_sia_ggf"></value>
+                <value key="area_sia_buf"></value>
+                <value key="area_sia_uuf"></value>
+
+
+                <!-- DIN 277 -->
+                <!--<value key="area_din_bgf"></value>-->
+                <!--<value key="area_din_kgf"></value>-->
+                <!--<value key="area_din_ngf"></value>-->
+                <!--<value key="area_din_nf"></value>-->
+                <!--<value key="area_din_tf"></value>-->
+                <!--<value key="area_din_vf"></value>-->
+
+                <value key="volume_gva"></value> <!-- Gebäudekubatur GVA (prefered) -->
+                <value key="volume_sia"></value> <!-- Gebäudekubatur SIA -->
+
+
+                <value key="gross_premium"></value> <!-- Bruttorendite -->
+                <value key="utilization_number"></value> <!--Ausnützungsziffer-->
+                <value key="construction_utilization_number"></value> <!--Ausnützungsziffer (bau)-->
+
+                <value key="year_built"></value>
+                <value key="year_last_renovated"></value>
+                <value key="ceiling_height"></value>
+                <value key="hall_height"></value>
+                <value key="maximal_floor_loading"></value> <!-- kg -->
+                <value key="carrying_capacity_crane"></value> <!-- depricated -->
+                <value key="carrying_capacity_elevator"></value>
+            </numericValues>
+            <categories>
+                <category>penthouse</category>
+                <category>apartment</category>
+                <category>attic-flat</category>
+                <category>bachelor-flat</category>
+                <category>bifamiliar-house</category>
+                <category>building-land</category>
+                <category>double-garage</category>
+                <category>duplex</category>
+                <category>factory</category>
+                <category>farm</category>
+                <category>farm-house</category>
+                <category>furnished-flat</category>
+                <category>garage</category>
+                <category>house</category>
+                <category>loft</category>
+                <category>mountain-farm</category>
+                <category>multiple-dwelling</category>
+                <category>open-slot</category>
+                <category>parking-space</category>
+                <category>plot</category>
+                <category>roof-flat</category>
+                <category>row-house</category>
+                <category>single-garage</category>
+                <category>single-house</category>
+                <category>single-room</category>
+                <category>terrace-flat</category>
+                <category>terrace-house</category>
+                <category>underground-slot</category>
+                <category>villa</category>
+                <category>chalet</category>
+                <category>studio</category>
+                <category>covered-slot</category>
+
+                <category>office</category>
+                <category>flat</category>
+                <category>exhibition-space</category>
+                <category>retail</category>
+                <category>bed-and-breakfast</category>
+                <category>hotel</category>
+                <category>warehouse</category>
+                <category>workshop</category>
+                <category>car-park</category>
+                <category>bungalow</category>
+                <category>castle</category>
+                <category>fuel-station</category>
+                <category>cafe-bar</category>
+                <category>garden-apartment</category>
+
+                <category>maisonette</category>
+                <category>rusitco</category>
+            </categories>
+            <utilities>
+                <utility>residential</utility>
+                <utility>commercial</utility>
+                <utility>gastronomy</utility>
+                <utility>vacation</utility>
+                <utility>agricultural</utility>
+                <utility>industrial</utility>
+                <utility>residential</utility>
+                <utility>storage</utility>
+                <utility>parking</utility>
+                <utility>building</utility>
+                <utility>investment</utility>
+            </utilities>
+            <relations></relations>
+            <seller>
+                <organization id="">
+                    <address>
+                        <country>CH</country>
+                        <locality>Bottighofen</locality>
+                        <region>TG</region>
+                        <postalCode>8598</postalCode>
+                        <postOfficeBoxNumber>Postfach 123</postOfficeBoxNumber>
+                        <street>Müligässli</street>
+                        <streetNumber>1</streetNumber>
+                        <streetAddition>Ganz open</streetAddition>
+                        <subunit></subunit>
+                        <geo>
+                            <latitude>47.639497</latitude>
+                            <longitude>9.211276</longitude>
+                        </geo>
+                    </address>
+                    <legalName>Casasoft AG</legalName>
+                    <brand>Bottighofen</brand>
+                    <email>info@casasoft.ch</email>
+                    <emailRem>casasoft@remcat.ch</emailRem>
+                    <fax>no</fax>
+                    <phone>+41 71 686 94 94</phone>
+                    <website title="Casasoft AG Website" label="Casasoft AG">https://casasoft.ch</website>
+                </organization>
+                <viewPerson>
+                    <function>Sales</function>
+                    <givenName>Sandra</givenName>
+                    <familyName>Musterina</familyName>
+                    <email>sandra-musterina@casasoft.ch</email>
+                    <fax></fax>
+                    <phone>+41 71 686 94 91</phone>
+                    <mobile></mobile>
+                    <gender>1</gender> <!-- 1 = male, 2 = female -->
+                    <note></note>
+                </viewPerson>
+                <visitPerson>
+                    <function>Homeowner</function>
+                    <givenName>Max</givenName>
+                    <familyName>Muster</familyName>
+                    <email>max.muster@hotmail.com</email>
+                    <fax></fax>
+                    <phone></phone>
+                    <mobile></mobile>
+                    <gender></gender>
+                    <note></note>
+                </visitPerson>
+                <inquiryPerson>
+                    <function>Inquiry Manager</function>
+                    <givenName>Jeremias</givenName>
+                    <familyName>Nater</familyName>
+                    <email></email>
+                    <fax></fax>
+                    <phone></phone>
+                    <mobile></mobile>
+                    <gender></gender>
+                    <note></note>
+                </inquiryPerson>
+            </seller>
+            <offers>
+                <offer id="offer123de" lang="de">
+                    <name>Einfacher Vermarktungstitel</name>
+                    <excerpt>Kurzfassung des Angebots</excerpt>
+                    <tags>
+                        <tag>foo</tag>
+                        <tag>bar</tag>
+                    </tags>
+                    <urls>
+                        <url>http://mypropertyhomepagehere.ch</url>
+                        <url>http://realestatewebsite.ch</url>
+                    </urls>
+                    <publishers>
+                        <publisher id="homegate">
+                            <options>
+                                <option key="is-special">Y</option>
+                                <option key="form-type">full</option>
+                            </options>
+                            <channels>
+                                <channel expiration="2020-01-01 00:00:00">top-promotion</channel>
+                            </channels>
+                        </publisher>
+                    </publishers>
+                    <descriptions>
+                        <description title="Beschreibung">
+                            <![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitiosum est enim in dividendo partem in genere numerare. Itaque hic ipse iam pridem est reiectus; Id enim volumus, id contendimus, ut officii fructus sit ipsum officium. Vitiosum est enim in dividendo partem in genere numerare. Servari enim iustitia nisi a forti viro, nisi a sapiente non potest. Tum Quintus: Est plane, Piso, ut dicis, inquit. Neque solum ea communia, verum etiam paria esse dixerunt.</p>]]>
+                        </description>
+                        <description title="Lage">
+                            <![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitiosum est enim in dividendo partem in genere numerare. Itaque hic ipse iam pridem est reiectus; Id enim volumus, id contendimus, ut officii fructus sit ipsum officium. Vitiosum est enim in dividendo partem in genere numerare. Servari enim iustitia nisi a forti viro, nisi a sapiente non potest. Tum Quintus: Est plane, Piso, ut dicis, inquit. Neque solum ea communia, verum etiam paria esse dixerunt.</p>]]>
+                        </description>
+                    </descriptions>
+                    <attachments>
+                        <media type="image"> <!-- image / document / plan / youtube / offer-logo / sales-brochure -->
+                            <alt></alt>
+                            <title>Küche</title>
+                            <!-- <file></file> -->
+                            <url>http://cdn.casasoft.ch/3lk2j34kj23ljkj34/1234.jpg</url>
+                            <caption>Wunderschöne Kücke neu sarniert.</caption>
+                            <description>Die Küche wurde am 2015 komplett neu eingebaut. Die ....</description>
+                            <publication></publication><!-- wird von distributionssyteme genutzt um veröffentlichungen zu varrieren -->
+                        </media>
+                    </attachments>
+                    <visitInformation></visitInformation>
+                    <events>
+                        <event type="">
+                            <name>Besuchstermin für alle</name>
+                            <start>2016-01-01 9:00:00</start>
+                            <end>2016-01-01 12:00:00</end>
+                            <location>Beim Objekt</location>
+                            <summary>Frau ... wird sie ...</summary>
+                        </event>
+                    </events>
+                </offer>
+                <offer id="offer123fr" lang="fr"><!-- ... --></offer>
+                <offer id="offer123it" lang="it"><!-- ... --></offer>
+            </offers>
+        </property>
+        <property id="property234">
+            <referenceId>propertyRef234</referenceId>
+            <!-- ... -->
+            <offers>
+                <offer id="offer234de" lang="de"><!-- ... --></offer>
+                <offer id="offer234fr" lang="fr"><!-- ... --></offer>
+                <offer id="offer234it" lang="it"><!-- ... --></offer>
+            </offers>
+        </property>
+        <property id="property345">
+            <referenceId>propertyRef345</referenceId>
+            <!-- ... -->
+            <offers>
+                <offer id="offer345de" lang="de"></offer>
+                <offer id="offer345fr" lang="fr"></offer>
+                <offer id="offer345it" lang="it"></offer>
+            </offers>
+        </property>
+    </properties>
+</export>

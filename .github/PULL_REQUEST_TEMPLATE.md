@@ -13,12 +13,10 @@ Choose one
 - [ ] All new and existing tests pass.
 
 ## List of issues related to this PR
-- #xyz
-- #xyz
+- #999
+- #999
 
-## Summary
-Short summary lists of all notable changes.
-
+## Summary lists of notable changes
 <!-- Delete everything you don't need -->
 
 ### Added
