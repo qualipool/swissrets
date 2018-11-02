@@ -1,0 +1,8 @@
+title: CasaXML
+description: The swiss real-estate publishing standard that makes sense
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
