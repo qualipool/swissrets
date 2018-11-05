@@ -3,7 +3,7 @@ const fs = require('fs-extra')
 const exec = require('../lib/exec')
 
 const destinationFolder = '_posts'
-const cloneFolder = path.join(__dirname, '.tmp', destinationFolder)
+const cloneFolder = path.join(__dirname, '..', '..', destinationFolder)
 const indexFileSrc = path.join(cloneFolder, 'Home.md')
 const indexFileDest = path.join(cloneFolder, '..', 'index.md')
 
