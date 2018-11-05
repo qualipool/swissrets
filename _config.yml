@@ -2,7 +2,7 @@ title: SwissRETS
 description: A swiss real estate transfer standard
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-minimal
+theme: jekyll-theme-tactile
 
 gems:
   - jekyll-mentions
