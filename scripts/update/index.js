@@ -5,7 +5,7 @@ const exec = require('./lib/exec')
 const destinationFolder = '_posts'
 const cloneFolder = path.join(__dirname, '..', '..', destinationFolder)
 const indexFileSrc = path.join(cloneFolder, 'Home.md')
-const indexFileDest = path.join(cloneFolder, '..', '..', 'index.md')
+const indexFileDest = path.join(cloneFolder, '..', 'index.md')
 
 const execConfig = {
   stdio: 'inherit',
