@@ -1,6 +1,5 @@
 language: node_js
-node_js:
-  - '10'
+node_js: '10'
 os: linux
 dist: trusty
 group: stable
@@ -9,5 +8,11 @@ addons:
   apt:
     packages:
       - libxml2-utils # for `xmllint`.
-script:
-  - npm run test -s
+
+jobs:
+  include:
+    - stage: test
+      script: npm run test -s
+
+    - stage: update wiki pages
+      script: npm run fetch-wiki
