@@ -10,7 +10,7 @@ Thank you for contributing SwissRETS
 1. Make sure you fill only a **single topic** per issue
 1. Choose your template
 1. Please use english
-1. submit
+1. Submit
 
 ## Pull request process
 1. Ensure all your changes follow the principles and rules of this document.
