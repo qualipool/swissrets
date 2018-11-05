@@ -15,4 +15,4 @@ jobs:
       script: npm run test -s
 
     - stage: update wiki pages
-      script: npm run fetch-wiki
+      script: npm run update-wiki
