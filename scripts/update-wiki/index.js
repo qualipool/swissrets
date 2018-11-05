@@ -12,20 +12,34 @@ const execConfig = {
   printCommand: true
 }
 
-const fetchWiki = async () => {
+const update = async () => {
+  await exec(`git checkout -b gh-pages origin/gh-pages`)
+
   await fs.remove(cloneFolder)
   await exec(
     `git clone --depth=1 git@github.com:qualipool/swissrets.wiki.git ${cloneFolder}`,
     execConfig
-  )
+    )
   await fs.remove(path.join(cloneFolder, '.git'))
 
   // move index to root
   await fs.remove(indexFileDest)
   await fs.move(indexFileSrc, indexFileDest)
+
+  // commit changes
+  await exec(`git add index.md`, execConfig)
+  await exec(`git rm -r --cached ${destinationFolder}`, execConfig) // suppress submodule warning
+  await exec(`git add -A ${destinationFolder}/*`, execConfig)
+  try {
+    await exec('git commit -m "Updating posts from wiki pages"')
+    await exec('git push origin', execConfig)
+  } catch (e) {
+    // if no changes it exites here
+    console.log(e.result.stdout)
+  }
 }
 
-fetchWiki()
+update()
 
 // make sure, we're exit with code:1 for undhandled rejections
 process.on('unhandledRejection', error => {
