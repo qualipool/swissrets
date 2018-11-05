@@ -5,7 +5,7 @@
 Thank you for contributing SwissRETS
 ====================================
 
-## Submiting a change request or an idea
+## Submitting a change request or an idea
 1. Go to the [new issue page](https://github.com/qualipool/swissrets/issues/new/choose)
 1. Make sure you fill only a **single topic** per issue
 1. Choose your template
