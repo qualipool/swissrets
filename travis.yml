@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - '10'
-os: linux
-dist: trusty
-group: stable
-cache: npm
-script:
-  - npm run update
