@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "update": "node update/index.js"
+    "update": "node scripts/update"
   },
   "repository": {
     "type": "git",
