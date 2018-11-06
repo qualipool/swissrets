@@ -15,4 +15,4 @@ jobs:
       script: npm run test -s
 
     - stage: update gh-pages
-      script: npm run update-pages
+      script: npm run update-pages -s
