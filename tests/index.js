@@ -5,7 +5,7 @@ const { exec, log } = require('../scripts/lib')
 
 const schemaDefinitionUrl = 'http://www.w3.org/2009/XMLSchema/XMLSchema.xsd'
 const cwd = path.join(__dirname, '..')
-const exampleFilesGlob = './docs/examples/*.xml'
+const exampleFilesGlob = './examples/*.xml'
 const schemaFile = path.join('schema', 'schema.xsd')
 
 const lint = (schema, xml) => {
@@ -37,6 +37,11 @@ const executeAllTests = async () => {
 
   // linting examples
   const exampleFiles = await globby(exampleFilesGlob, { cwd })
+
+  if (exampleFiles.length) {
+    throw new Error(`No example files found, using "${exampleFilesGlob}"`)
+  }
+
   log.title(`Linting ${exampleFiles.length} example files`)
   exampleFiles.reduce((promise, exampleFile) => {
     return promise.then(() => lint(schemaFile, exampleFile))
