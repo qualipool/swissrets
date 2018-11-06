@@ -48,11 +48,7 @@ const executeAllTests = async () => {
   }, Promise.resolve())
 }
 
-try {
-  executeAllTests()
-} catch (e) {
-  console.log(e)
-}
+executeAllTests()
 
 // make sure, we're exit with code:1 for undhandled rejections
 process.on('unhandledRejection', error => {
