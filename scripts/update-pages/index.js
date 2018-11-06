@@ -15,20 +15,40 @@ const loudExecConfig = {
   printCommand: true
 }
 
-// sanitized logs for not showing access tokens
+const addToken = (url, token) => url
+  .replace(/^git/, token)
+  .replace(/^https:\/\/github/, `https://${token}@github`)
+
+// sanitized git-clone for not showing access tokens
 const clone = async (repoUrl, folder, branch, token) => {
   log.info(`Cloning ${chalk.cyan(repoUrl)} into ${chalk.cyan(folder)}`)
 
   // use authentication
   if (token) {
     log.info(`Using token`)
-    repoUrl = repoUrl
-      .replace(/^git/, token)
-      .replace(/^https:\/\/github/, `https://${token}@github`)
+    repoUrl = addToken(repoUrl, token)
   }
 
   // catch errors and remove sensisitve information
   return exec(`git clone -b ${branch} ${repoUrl} ${folder}`)
+    .catch(err => {
+      log.warn(err.result.stderr)
+      return Promise.reject(new Error(err.message))
+    })
+}
+
+// sanitized git-push for not showing access tokens
+const push = async (repoUrl, token) => {
+  log.info(`Pushing changes to ${chalk.cyan(repoUrl)}`)
+
+  // use authentication
+  if (token) {
+    log.info(`Using token`)
+    repoUrl = addToken(repoUrl, token)
+  }
+
+  // catch errors and remove sensisitve information
+  return exec(`git push ${repoUrl}`)
     .catch(err => {
       log.warn(err.result.stderr)
       return Promise.reject(new Error(err.message))
@@ -69,8 +89,8 @@ const update = async () => {
   process.chdir(destinationFolder)
   await exec(`git add -A *.md _posts/*`, loudExecConfig)
   try {
-    await exec('git commit -m "Updating posts from wiki pages"')
-    await exec('git push origin', loudExecConfig)
+    await exec('git commit -m "Updating posts from wiki pages"', loudExecConfig)
+    await push(destinationRepo, token)
   } catch (e) {
     // if no changes it exites here
     console.log(e.result.stdout)
