@@ -14,5 +14,5 @@ jobs:
     - stage: test
       script: npm run test -s
 
-    - stage: update wiki pages
-      script: npm run update-wiki
+    - stage: update gh-pages
+      script: npm run update-pages

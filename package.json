@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "node tests",
-    "update-wiki": "node scripts/update-wiki"
+    "update-pages": "node scripts/update-pages"
   },
   "repository": {
     "type": "git",
