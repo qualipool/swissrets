@@ -1,7 +1,7 @@
 const globby = require('globby')
 const path = require('path')
 
-const { exec, log } = require('./lib')
+const { exec, log } = require('../scripts/lib')
 
 const schemaDefinitionUrl = 'http://www.w3.org/2009/XMLSchema/XMLSchema.xsd'
 const cwd = path.join(__dirname, '..')
