@@ -44,19 +44,19 @@ _Mainly targeting the ./schema/schema.xsd_
 While we strive for all three, if we have conflicts, this list acts as priorities.
 
 ### Consistency
-SwissRETS should be predictable. To achieve this, we follow this list
-- Solve the same things the same way
+SwissRETS is predictable.
+- Always solve the same things the same way
 - Have clear naming rules (TODO: add link)
 - Take time to refactor inconsistencies
 
 ### Cleanness
-SwissRETS should be tidy and clean
+SwissRETS is tidy and clean
 - Use real english words to name things
 - No abbrevations
 - Proper indentation (4 spaces)
 - Use syntax checks
 
 ### Ease of use
-SwissRETS should be easy to use
+SwissRETS is easy to use
 - We try to have as little documentation as necessary
 - Try to write selfspeaking code, to avoid documentation

@@ -2,18 +2,6 @@ const { spawn } = require('child_process')
 
 const whiteSpace = /\s+/
 
-const defaults = {
-  env: process.env,
-  cwd: process.cwd(),
-  printCommand: false,
-  trimOutput: true,
-  stdio: 'pipe',
-  shell: true,
-  // 'string' resolves stdout
-  // 'object' resolves to an object containing stdout, stderr, command, code and signal
-  resolveTo: 'string'
-}
-
 const buffersToString = (buffers, trim) => {
   const str = Buffer.concat(buffers).toString()
   return trim
@@ -41,7 +29,29 @@ const error = bareResult => {
 
 const exec = (command, options = {}) => {
   const mergedOptions = {
-    ...defaults,
+    // use all env vars by default
+    env: process.env,
+
+    // use node cwd by default
+    cwd: process.cwd(),
+
+    // print the command before executing it
+    printCommand: false,
+
+    // remove not visible characters from start and end of out put
+    trimOutput: true,
+
+    // swallow output by default
+    stdio: 'pipe',
+
+    // important for windows
+    shell: true,
+
+    // 'string' resolves stdout
+    // 'object' resolves to an object containing stdout, stderr, command, code and signal
+    resolveTo: 'string',
+
+    // allow overriding everything
     ...options
   }
   const {
