@@ -21,6 +21,7 @@ const clone = async (repoUrl, folder, branch, token) => {
 
   // use authentication
   if (token) {
+    log.info(`Using token`)
     repoUrl = repoUrl
       .replace(/^git/, token)
       .replace(/^https:\/\/github/, `https://${token}@github`)
