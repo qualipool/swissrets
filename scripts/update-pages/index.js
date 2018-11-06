@@ -93,7 +93,7 @@ const update = async () => {
     await push(destinationRepo, token)
   } catch (e) {
     // if no changes it exites here
-    console.log(e.result.stdout)
+    log.info(e)
   }
 }
 
