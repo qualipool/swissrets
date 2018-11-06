@@ -5,7 +5,7 @@ const { exec, log } = require('../lib')
 
 // start configuration
 const tempFolder = path.join(__dirname, '.tmp')
-const sourceRepo = 'git@github.com:qualipool/swissrets.wiki.git'
+const sourceRepo = 'https://github.com/qualipool/swissrets.wiki.git'
 const sourceFolderName = 'source'
 const destinationFolderName = 'dest'
 // end configuration
