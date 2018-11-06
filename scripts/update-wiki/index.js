@@ -1,38 +1,53 @@
 const path = require('path')
 const fs = require('fs-extra')
-const exec = require('../lib/exec')
+const { exec } = require('../lib')
 
-const destinationFolder = '_posts'
-const cloneFolder = path.join(__dirname, '..', '..', destinationFolder)
-const indexFileSrc = path.join(cloneFolder, 'Home.md')
-const indexFileDest = path.join(cloneFolder, '..', 'index.md')
+// start configuration
+const tempFolder = path.join(__dirname, '.tmp')
+const sourceRepo = 'git@github.com:qualipool/swissrets.wiki.git'
+const sourceFolderName = 'source'
+const destFolderName = 'dest'
+// end configuration
 
-const execConfig = {
+const loudExecConfig = {
   stdio: 'inherit',
   printCommand: true
 }
 
 const update = async () => {
-  await exec(`git checkout -b gh-pages origin/gh-pages`)
+  // change to temporary directory
+  await fs.remove(tempFolder)
+  await fs.ensureDir(tempFolder)
 
-  await fs.remove(cloneFolder)
-  await exec(
-    `git clone --depth=1 git@github.com:qualipool/swissrets.wiki.git ${cloneFolder}`,
-    execConfig
-    )
-  await fs.remove(path.join(cloneFolder, '.git'))
+  // change to temp dir
+  process.chdir(tempFolder)
 
-  // move index to root
-  await fs.remove(indexFileDest)
-  await fs.move(indexFileSrc, indexFileDest)
+  // clone repos
+  await exec(`git clone --depth=1 ${sourceRepo} ${sourceFolderName}`, loudExecConfig)
+  const sourceFolder = path.join(tempFolder, sourceFolderName)
 
-  // commit changes
-  await exec(`git add index.md`, execConfig)
-  await exec(`git rm -r --cached ${destinationFolder}`, execConfig) // suppress submodule warning
-  await exec(`git add -A ${destinationFolder}/*`, execConfig)
+  const destinationRepo = await exec(`git config --get remote.origin.url`)
+  await exec(`git clone -b gh-pages ${destinationRepo} ${destFolderName}`, loudExecConfig)
+  const destFolder = path.join(tempFolder, destFolderName)
+
+  const indexFileSrc = path.join(sourceFolder, 'Home.md')
+  const indexFileDest = path.join(destFolder, 'index.md')
+  const postsFolder = path.join(destFolder, '_posts')
+
+  // remove old posts folder and copy everything from source to destination
+  await fs.remove(postsFolder)
+  await fs.ensureDir(postsFolder)
+  await fs.copy(indexFileSrc, indexFileDest)
+  await fs.copy(sourceFolder, postsFolder, {
+    filter: (source, dest) => !source.replace(sourceFolder, '').match('.git')
+  })
+
+  // // commit changes
+  process.chdir(destFolder)
+  await exec(`git add -A index.md _posts/*`, loudExecConfig)
   try {
     await exec('git commit -m "Updating posts from wiki pages"')
-    await exec('git push origin', execConfig)
+    await exec('git push origin', loudExecConfig)
   } catch (e) {
     // if no changes it exites here
     console.log(e.result.stdout)
@@ -46,3 +61,5 @@ process.on('unhandledRejection', error => {
   console.error(error.message, '\nDetails:\n', error, '\n\n')
   process.exitCode = 1
 })
+
+
