@@ -1,17 +1,37 @@
 const path = require('path')
+const chalk = require('chalk')
 const fs = require('fs-extra')
-const { exec } = require('../lib')
+const { exec, log } = require('../lib')
 
 // start configuration
 const tempFolder = path.join(__dirname, '.tmp')
 const sourceRepo = 'git@github.com:qualipool/swissrets.wiki.git'
 const sourceFolderName = 'source'
-const destFolderName = 'dest'
+const destinationFolderName = 'dest'
 // end configuration
 
 const loudExecConfig = {
   stdio: 'inherit',
   printCommand: true
+}
+
+// sanitized logs for not showing access tokens
+const clone = async (repoUrl, folder, branch, token) => {
+  log.info(`Cloning ${chalk.cyan(repoUrl)} into ${chalk.cyan(folder)}`)
+
+  // use authentication
+  if (token) {
+    repoUrl = repoUrl
+      .replace(/^git/, token)
+      .replace(/^https:\/\/github/, `https://${token}@github`)
+  }
+
+  // catch errors and remove sensisitve information
+  return exec(`git clone -b ${branch} ${repoUrl} ${folder}`)
+    .catch(err => {
+      log.warn(err.result.stderr)
+      return Promise.reject(new Error(err.message))
+    })
 }
 
 const update = async () => {
@@ -22,17 +42,18 @@ const update = async () => {
   // change to temp dir
   process.chdir(tempFolder)
 
-  // clone repos
-  await exec(`git clone --depth=1 ${sourceRepo} ${sourceFolderName}`, loudExecConfig)
+  // download repo
+  await clone(sourceRepo, sourceFolderName, 'master', process.env.GITHUB_ACCESS_TOKEN)
   const sourceFolder = path.join(tempFolder, sourceFolderName)
 
   const destinationRepo = await exec(`git config --get remote.origin.url`)
-  await exec(`git clone -b gh-pages ${destinationRepo} ${destFolderName}`, loudExecConfig)
-  const destFolder = path.join(tempFolder, destFolderName)
+  await clone(destinationRepo, destinationFolderName, 'gh-pages')
+  const destinationFolder = path.join(tempFolder, destinationFolderName)
 
   const indexFileSrc = path.join(sourceFolder, 'Home.md')
-  const indexFileDest = path.join(destFolder, 'index.md')
-  const postsFolder = path.join(destFolder, '_posts')
+  const indexFileDest = path.join(destinationFolder, 'index.md')
+  const updateFile = path.join(destinationFolder, 'UPDATED.md')
+  const postsFolder = path.join(destinationFolder, '_posts')
 
   // remove old posts folder and copy everything from source to destination
   await fs.remove(postsFolder)
@@ -41,10 +62,11 @@ const update = async () => {
   await fs.copy(sourceFolder, postsFolder, {
     filter: (source, dest) => !source.replace(sourceFolder, '').match('.git')
   })
+  await fs.writeFile(updateFile, (new Date()).toISOString())
 
   // // commit changes
-  process.chdir(destFolder)
-  await exec(`git add -A index.md _posts/*`, loudExecConfig)
+  process.chdir(destinationFolder)
+  await exec(`git add -A *.md _posts/*`, loudExecConfig)
   try {
     await exec('git commit -m "Updating posts from wiki pages"')
     await exec('git push origin', loudExecConfig)
@@ -58,7 +80,7 @@ update()
 
 // make sure, we're exit with code:1 for undhandled rejections
 process.on('unhandledRejection', error => {
-  console.error(error.message, '\nDetails:\n', error, '\n\n')
+  log.failure(error.message, '\nDetails:\n', error, '\n\n')
   process.exitCode = 1
 })
 
