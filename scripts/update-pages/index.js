@@ -92,7 +92,6 @@ const update = async () => {
     await exec('git commit -m "Updating posts from wiki pages"', loudExecConfig)
     await push(destinationRepo, token)
   } catch (e) {
-    // if no changes it exites here
     log.info(e)
   }
 }
