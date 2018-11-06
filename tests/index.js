@@ -8,12 +8,16 @@ const cwd = path.join(__dirname, '..')
 const exampleFilesGlob = './examples/*.xml'
 const schemaFile = path.join('schema', 'schema.xsd')
 
+const execConfig = {
+  printCommand: true,
+  log: log.exec
+}
+
 const lint = (schema, xml) => {
   log.info(`Linting ${xml}...`)
-  return exec(`xmllint --noout --schema ${schema} ${xml}`, { printCommand: true })
+  return exec(`xmllint --noout --schema ${schema} ${xml}`, execConfig)
     .then(result => {
-      log.success(`${xml} is valid`)
-      console.log('\n')
+      log.success(`${xml} is valid`, '\n')
       return result
     })
     .catch(err => {

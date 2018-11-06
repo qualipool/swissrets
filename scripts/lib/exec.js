@@ -51,6 +51,9 @@ const exec = (command, options = {}) => {
     // 'object' resolves to an object containing stdout, stderr, command, code and signal
     resolveTo: 'string',
 
+    // custom logger
+    log: (...args) => console.log(...args),
+
     // allow overriding everything
     ...options
   }
@@ -58,6 +61,7 @@ const exec = (command, options = {}) => {
     trimOutput: trim,
     printCommand,
     resolveTo,
+    log,
     ...spawnOptions
   } = mergedOptions
 
@@ -65,7 +69,7 @@ const exec = (command, options = {}) => {
   let args = []
 
   if (printCommand) {
-    console.log('>', command)
+    log('>', command)
   }
 
   const hasArgs = command.match(whiteSpace)
