@@ -38,7 +38,7 @@ const executeAllTests = async () => {
   // linting examples
   const exampleFiles = await globby(exampleFilesGlob, { cwd })
 
-  if (exampleFiles.length) {
+  if (!exampleFiles.length) {
     throw new Error(`No example files found, using "${exampleFilesGlob}"`)
   }
 
