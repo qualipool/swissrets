@@ -56,6 +56,8 @@ const push = async (repoUrl, token) => {
 }
 
 const update = async () => {
+  const token = process.env.GITHUB_ACCESS_TOKEN
+
   // change to temporary directory
   await fs.remove(tempFolder)
   await fs.ensureDir(tempFolder)
@@ -64,7 +66,7 @@ const update = async () => {
   process.chdir(tempFolder)
 
   // download repo
-  await clone(sourceRepo, sourceFolderName, 'master', process.env.GITHUB_ACCESS_TOKEN)
+  await clone(sourceRepo, sourceFolderName, 'master', token)
   const sourceFolder = path.join(tempFolder, sourceFolderName)
 
   const destinationRepo = await exec(`git config --get remote.origin.url`)
@@ -103,5 +105,3 @@ process.on('unhandledRejection', error => {
   log.failure(error.message, '\nDetails:\n', error, '\n\n')
   process.exitCode = 1
 })
-
-
