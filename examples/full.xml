@@ -13,21 +13,17 @@
             <referenceId>propertyRef123</referenceId> <!-- referenceId can be used to track the original creation id (this should usualy be unique to the property) -->
             <visualReferenceId>visualRef123</visualReferenceId> <!-- visualReferenceId should only be used for presentational purposes publishers tend to present the referenceId if this one is missing -->
             <type>rent</type> <!-- rent/buy -->
-            <availability>available</availability> <!-- reserved / active / taken / reference / private -->
-            <start></start> <!-- datetime -->
+            <availability>active</availability> <!-- reserved / active / taken / reference / private -->
+            <start>2018-10-10T17:00:00Z</start> <!-- datetime -->
             <priceCurrency>CHF</priceCurrency>
             <!-- <price>1000000</price> -->
             <netPrice>1200</netPrice>
             <grossPrice>1450</grossPrice>
-            <bfs>
-                <egid>abc123</egid>
-                <ewid>bcd234</ewid>
-            </bfs>
             <extraCosts>
-                <extraCost key="" frequency="" timesegment="" propertysegment="" type="" title=""></extraCost>
+                <extraCost key="" frequency="1" timesegment="" propertysegment="" type="" title="">1234</extraCost>
             </extraCosts>
             <integratedOffers>
-                <integratedOffer integratedOfferType="" frequency="" timesegment="" propertysegment="" inclusive=""></integratedOffer> <!-- determines if is added to offer-price (inclusive = 0) or appart of it (inclusive = 1) -->
+                <integratedOffer frequency="10" timesegment="" propertysegment="" inclusive="0">123</integratedOffer> <!-- determines if is added to offer-price (inclusive = 0) or appart of it (inclusive = 1) -->
             </integratedOffers>
             <address>
                 <country>CH</country>
@@ -38,7 +34,7 @@
                 <street>Müligässli</street>
                 <streetNumber>1</streetNumber>
                 <streetAddition>Ganz open</streetAddition>
-                <subunit></subunit>
+                <subunit>12</subunit>
                 <geo>
                     <latitude>47.639497</latitude>
                     <longitude>9.211276</longitude>
@@ -46,9 +42,9 @@
             </address>
             <softwareInformation>
                 <lastUser>someuser</lastUser>
-                <lastUpdate></lastUpdate>
-                <updateIteration></updateIteration>
-                <creation></creation>
+                <lastUpdate>2018-10-10T17:00:00Z</lastUpdate>
+                <updateIteration>123</updateIteration>
+                <creation>2018-10-10T17:00:00Z</creation>
             </softwareInformation>
             <features>
                 <feature>has-nice-view</feature>
@@ -232,71 +228,15 @@
                 <value key="carrying_capacity_elevator"></value>
             </numericValues>
             <categories>
-                <category>penthouse</category>
                 <category>apartment</category>
                 <category>attic-flat</category>
-                <category>bachelor-flat</category>
-                <category>bifamiliar-house</category>
                 <category>building-land</category>
-                <category>double-garage</category>
-                <category>duplex</category>
-                <category>factory</category>
-                <category>farm</category>
-                <category>farm-house</category>
-                <category>furnished-flat</category>
-                <category>garage</category>
-                <category>house</category>
-                <category>loft</category>
-                <category>mountain-farm</category>
-                <category>multiple-dwelling</category>
-                <category>open-slot</category>
-                <category>parking-space</category>
-                <category>plot</category>
-                <category>roof-flat</category>
-                <category>row-house</category>
-                <category>single-garage</category>
-                <category>single-house</category>
-                <category>single-room</category>
-                <category>terrace-flat</category>
-                <category>terrace-house</category>
-                <category>underground-slot</category>
-                <category>villa</category>
-                <category>chalet</category>
-                <category>studio</category>
-                <category>covered-slot</category>
-
-                <category>office</category>
-                <category>flat</category>
-                <category>exhibition-space</category>
-                <category>retail</category>
-                <category>bed-and-breakfast</category>
-                <category>hotel</category>
-                <category>warehouse</category>
-                <category>workshop</category>
-                <category>car-park</category>
-                <category>bungalow</category>
-                <category>castle</category>
-                <category>fuel-station</category>
-                <category>cafe-bar</category>
-                <category>garden-apartment</category>
-
-                <category>maisonette</category>
-                <category>rusitco</category>
             </categories>
             <utilities>
                 <utility>residential</utility>
                 <utility>commercial</utility>
                 <utility>gastronomy</utility>
-                <utility>vacation</utility>
-                <utility>agricultural</utility>
-                <utility>industrial</utility>
-                <utility>residential</utility>
-                <utility>storage</utility>
-                <utility>parking</utility>
-                <utility>building</utility>
-                <utility>investment</utility>
             </utilities>
-            <relations></relations>
             <seller>
                 <organization id="">
                     <address>
@@ -308,7 +248,7 @@
                         <street>Müligässli</street>
                         <streetNumber>1</streetNumber>
                         <streetAddition>Ganz open</streetAddition>
-                        <subunit></subunit>
+                        <subunit>112</subunit>
                         <geo>
                             <latitude>47.639497</latitude>
                             <longitude>9.211276</longitude>
@@ -348,7 +288,7 @@
                     <function>Inquiry Manager</function>
                     <givenName>Jeremias</givenName>
                     <familyName>Nater</familyName>
-                    <email></email>
+                    <email>mat@yeah.com</email>
                     <fax></fax>
                     <phone></phone>
                     <mobile></mobile>
@@ -375,7 +315,7 @@
                                 <option key="form-type">full</option>
                             </options>
                             <channels>
-                                <channel expiration="2020-01-01 00:00:00">top-promotion</channel>
+                                <channel expiration="2018-10-10T17:00:00Z">top-promotion</channel>
                             </channels>
                         </publisher>
                     </publishers>
@@ -402,33 +342,13 @@
                     <events>
                         <event type="">
                             <name>Besuchstermin für alle</name>
-                            <start>2016-01-01 9:00:00</start>
-                            <end>2016-01-01 12:00:00</end>
+                            <start>2018-10-10T17:00:00Z</start>
+                            <end>2018-10-10T17:00:00Z</end>
                             <location>Beim Objekt</location>
                             <summary>Frau ... wird sie ...</summary>
                         </event>
                     </events>
                 </offer>
-                <offer id="offer123fr" lang="fr"><!-- ... --></offer>
-                <offer id="offer123it" lang="it"><!-- ... --></offer>
-            </offers>
-        </property>
-        <property id="property234">
-            <referenceId>propertyRef234</referenceId>
-            <!-- ... -->
-            <offers>
-                <offer id="offer234de" lang="de"><!-- ... --></offer>
-                <offer id="offer234fr" lang="fr"><!-- ... --></offer>
-                <offer id="offer234it" lang="it"><!-- ... --></offer>
-            </offers>
-        </property>
-        <property id="property345">
-            <referenceId>propertyRef345</referenceId>
-            <!-- ... -->
-            <offers>
-                <offer id="offer345de" lang="de"></offer>
-                <offer id="offer345fr" lang="fr"></offer>
-                <offer id="offer345it" lang="it"></offer>
             </offers>
         </property>
     </properties>
