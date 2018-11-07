@@ -9,8 +9,10 @@ addons:
     packages:
       - libxml2-utils # for `xmllint`.
 
-script: npm run test -s
+jobs:
+  include:
+    - stage: test
+      script: npm run test -s
 
-deploy:
-  provider: script
-  script: npm run update-pages -s
+    - stage: update gh-pages
+      script: npm run update-pages -s
