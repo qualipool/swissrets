@@ -109,7 +109,7 @@ const update = async () => {
     })
 
     // add back link
-    if (instruction.from !== indexFileSrc) {
+    if (instruction.to !== indexFileSrc) {
       dest = `${backToHome}\n${dest}`
     }
 
