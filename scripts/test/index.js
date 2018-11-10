@@ -4,18 +4,18 @@ const path = require('path')
 const { exec, log } = require('../lib')
 
 const schemaDefinitionUrl = 'http://www.w3.org/2009/XMLSchema/XMLSchema.xsd'
-const cwd = path.join(__dirname, '..')
+const cwd = path.join(__dirname, '..', '..')
 const exampleFilesGlob = './examples/*.xml'
 const schemaFile = path.join('schema', 'schema.xsd')
 
-const execConfig = {
-  printCommand: true,
-  log: log.exec
-}
-
 const lint = (schema, xml) => {
   log.info(`Linting ${xml}...`)
-  return exec(`xmllint --noout --schema ${schema} ${xml}`, execConfig)
+  return exec(`xmllint --noout --schema ${schema} ${xml}`,
+    {
+      printCommand: true,
+      log: log.exec,
+      cwd
+    })
     .then(result => {
       log.success(`${xml} is valid`, '\n')
       return result
@@ -31,7 +31,9 @@ const lint = (schema, xml) => {
 
 const executeAllTests = async () => {
   // check JS syntax
-
+  log.title('JavaScript lint')
+  await exec('npm run lint', { cwd })
+  log.success('JavaScript code passes lint')
 
   // check if xmllint is installed
   log.title('Check if xmllint is installed')
