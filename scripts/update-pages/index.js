@@ -99,7 +99,7 @@ const update = async () => {
     'gi'
   )
 
-  const backToHome = '[Back to home](./)'
+  const backToHome = '[**Back to home**](./)\n\n'
   copyInstructions.forEach(instruction => {
     const src = fs.readFileSync(instruction.from, 'utf8')
 
