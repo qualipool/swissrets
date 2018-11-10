@@ -1,5 +1,6 @@
 const path = require('path')
 const chalk = require('chalk')
+const globby = require('globby')
 const fs = require('fs-extra')
 const { exec, log } = require('../lib')
 
@@ -9,6 +10,8 @@ const sourceRepo = 'https://github.com/qualipool/swissrets.wiki.git'
 const sourceFolderName = 'source'
 const destinationFolderName = 'dest'
 // end configuration
+
+const escapeRegExp = string => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 
 const loudExecConfig = {
   stdio: 'inherit',
@@ -73,28 +76,48 @@ const update = async () => {
   await clone(destinationRepo, destinationFolderName, 'gh-pages')
   const destinationFolder = path.join(tempFolder, destinationFolderName)
 
-  const indexFileSrc = path.join(sourceFolder, 'Home.md')
+  const indexFileSrc = path.join(destinationFolder, 'Home.md')
   const indexFileDest = path.join(destinationFolder, 'index.md')
   const updateFile = path.join(destinationFolder, 'UPDATED.md')
 
-  // remove old posts folder and copy everything from source to destination
-  await fs.copy(indexFileSrc, indexFileDest)
-  await fs.copy(sourceFolder, destinationFolder, {
-    filter: (source, dest) =>
-      !source.replace(sourceFolder, '').match('.git') &&
-      !source.match(indexFileSrc) &&
-      dest.match(/\.md$/)
+  // copy everything from source to destination
+
+  const sourceFiles = await globby('*.md', { cwd: sourceFolder }) || []
+  const copyInstructions = sourceFiles.map(src => ({
+    from: path.join(sourceFolder, src),
+    to: path.join(destinationFolder, src)
+  }))
+  const replaceRegex = new RegExp(
+    sourceFiles
+      .map(src => src.replace('.md', ''))
+      .map(src => `[${src}](${src})`)
+      .map(escapeRegExp)
+      .join('|'),
+    'gi'
+  )
+
+  copyInstructions.forEach(instruction => {
+    const src = fs.readFileSync(instruction.from, 'utf8')
+    const dest = src.replace(replaceRegex, (match) => {
+      return match.replace(')', '.html)')
+    })
+    fs.writeFileSync(instruction.to, dest)
   })
+
+  // rename Home to index
+  await fs.remove(indexFileDest)
+  await fs.move(indexFileSrc, indexFileDest)
+
   await fs.writeFile(updateFile, (new Date()).toISOString())
 
-  // // commit changes
+  // commit changes
   process.chdir(destinationFolder)
   await exec(`git add -A *.md`, loudExecConfig)
   try {
     await exec('git commit -m "Updating posts from wiki pages"', loudExecConfig)
     await push(destinationRepo, token)
   } catch (e) {
-    log.info(e)
+    log.info(e) // don't fail, because if there was nothing to commit, it's ok to end up here
   }
 }
 
