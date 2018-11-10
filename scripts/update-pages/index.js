@@ -78,10 +78,8 @@ const update = async () => {
 
   const indexFileSrc = path.join(destinationFolder, 'Home.md')
   const indexFileDest = path.join(destinationFolder, 'index.md')
-  const updateFile = path.join(destinationFolder, 'UPDATED.md')
 
   // copy everything from source to destination
-
   const sourceFiles = await globby('*.md', { cwd: sourceFolder }) || []
   const copyInstructions = sourceFiles.map(src => ({
     from: path.join(sourceFolder, src),
@@ -108,16 +106,19 @@ const update = async () => {
   await fs.remove(indexFileDest)
   await fs.move(indexFileSrc, indexFileDest)
 
-  await fs.writeFile(updateFile, (new Date()).toISOString())
-
   // commit changes
   process.chdir(destinationFolder)
   await exec(`git add -A *.md`, loudExecConfig)
+  const commitCommand = 'git commit -m "Updating posts from wiki pages"'
   try {
-    await exec('git commit -m "Updating posts from wiki pages"', loudExecConfig)
+    await exec(commitCommand, loudExecConfig)
     await push(destinationRepo, token)
-  } catch (e) {
-    log.info(e) // don't fail, because if there was nothing to commit, it's ok to end up here
+  } catch (error) {
+    if (!error.result || !error.result.command.match(commitCommand)) {
+      throw error
+    }
+    // don't fail, because if there was nothing to commit, it's ok to end up here
+    log.info('no changes found, from wiki')
   }
 }
 
