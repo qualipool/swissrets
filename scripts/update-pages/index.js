@@ -76,21 +76,20 @@ const update = async () => {
   const indexFileSrc = path.join(sourceFolder, 'Home.md')
   const indexFileDest = path.join(destinationFolder, 'index.md')
   const updateFile = path.join(destinationFolder, 'UPDATED.md')
-  const pagesFolderName = '_site'
-  const pagesFolder = path.join(destinationFolder, pagesFolderName)
 
   // remove old posts folder and copy everything from source to destination
-  await fs.remove(pagesFolder)
-  await fs.ensureDir(pagesFolder)
   await fs.copy(indexFileSrc, indexFileDest)
-  await fs.copy(sourceFolder, pagesFolder, {
-    filter: (source, dest) => !source.replace(sourceFolder, '').match('.git')
+  await fs.copy(sourceFolder, destinationFolder, {
+    filter: (source, dest) =>
+      !source.replace(sourceFolder, '').match('.git') &&
+      !source.match(indexFileSrc) &&
+      dest.match(/\.md$/)
   })
   await fs.writeFile(updateFile, (new Date()).toISOString())
 
   // // commit changes
   process.chdir(destinationFolder)
-  await exec(`git add -A *.md ${pagesFolderName}/*.md`, loudExecConfig)
+  await exec(`git add -A *.md`, loudExecConfig)
   try {
     await exec('git commit -m "Updating posts from wiki pages"', loudExecConfig)
     await push(destinationRepo, token)
