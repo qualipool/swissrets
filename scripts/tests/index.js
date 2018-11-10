@@ -1,7 +1,7 @@
 const globby = require('globby')
 const path = require('path')
 
-const { exec, log } = require('../scripts/lib')
+const { exec, log } = require('../lib')
 
 const schemaDefinitionUrl = 'http://www.w3.org/2009/XMLSchema/XMLSchema.xsd'
 const cwd = path.join(__dirname, '..')
@@ -30,10 +30,13 @@ const lint = (schema, xml) => {
 }
 
 const executeAllTests = async () => {
+  // check JS syntax
+
+
   // check if xmllint is installed
   log.title('Check if xmllint is installed')
   const xmllintLocation = await exec('which xmllint')
-  log.success(`Using ${JSON.stringify( xmllintLocation.toString() )} for linting`)
+  log.success(`Using ${JSON.stringify(xmllintLocation.toString())} for linting`)
 
   // lint the schama itself
   log.title('Linting schema')
