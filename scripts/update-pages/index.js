@@ -58,6 +58,11 @@ const push = async (repoUrl, token) => {
     })
 }
 
+// 1. downloads the wiki repo and the gh-pages branch of this repo
+// 2. sync md files from wiki to gh-branch
+// 3. replace links with .html ending
+// 4. add back link to top of non-home markdowns
+// 5. push it to gh-pages branch
 const update = async () => {
   const token = process.env.GITHUB_ACCESS_TOKEN
 
@@ -94,11 +99,20 @@ const update = async () => {
     'gi'
   )
 
+  const backToHome = '[Back to home](./)'
   copyInstructions.forEach(instruction => {
     const src = fs.readFileSync(instruction.from, 'utf8')
-    const dest = src.replace(replaceRegex, (match) => {
+
+    // replaces links
+    let dest = src.replace(replaceRegex, (match) => {
       return match.replace(')', '.html)')
     })
+
+    // add back link
+    if (instruction.from !== indexFileSrc) {
+      dest = `${backToHome}\n${dest}`
+    }
+
     fs.writeFileSync(instruction.to, dest)
   })
 
