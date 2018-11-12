@@ -4,7 +4,7 @@
 
 SwissRETS
 =========
-SwissRETS is a swiss real estate transfer standard that aims to solve the age old data transfer between real estate software and respective online services.
+SwissRETS is a swiss real estate transaction standard that aims to solve the age old data transfer between real estate software and respective online services.
 
 SwissRETS is currently within the suggestion stage.
 
