@@ -60,3 +60,17 @@ SwissRETS is tidy and clean
 SwissRETS is easy to use
 - We try to have as little documentation as necessary
 - Try to write selfspeaking code, to avoid documentation
+
+## Naming things
+-> schema/schema.xsd
+
+### Tag names
+- use camelCase 
+- todo...
+
+### Attribute names
+- use camelCase 
+- todo...
+
+### When to use attributes vs. child tags
+- todo..
