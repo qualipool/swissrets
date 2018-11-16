@@ -164,7 +164,7 @@
       <xs:documentation>The payment interval the price stands for.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-    <xs:enumeration value="one-time"></xs:enumeration>
+    <xs:enumeration value="onetime"></xs:enumeration>
     <xs:enumeration value="day"></xs:enumeration>
     <xs:enumeration value="week"></xs:enumeration>
     <xs:enumeration value="month"></xs:enumeration>
@@ -501,102 +501,103 @@
   <xs:simpleType name="numericValuekeys">
     <xs:restriction base="xs:string">
       <xs:enumeration value="floor"></xs:enumeration>
-      <xs:enumeration value="number_of_floors"></xs:enumeration>
-      <xs:enumeration value="number_of_apartments"></xs:enumeration>
-      <xs:enumeration value="number_of_parcels"></xs:enumeration>
-      <xs:enumeration value="number_of_rooms"></xs:enumeration>
-      <xs:enumeration value="number_of_bathrooms"></xs:enumeration>
-      <xs:enumeration value="distance_kindergarten"></xs:enumeration>
-      <xs:enumeration value="distance_primary_school"></xs:enumeration>
-      <xs:enumeration value="distance_high_school"></xs:enumeration>
-      <xs:enumeration value="distance_college_university"></xs:enumeration>
-      <xs:enumeration value="distance_bus_stop"></xs:enumeration>
-      <xs:enumeration value="distance_train_station"></xs:enumeration>
-      <xs:enumeration value="distance_post"></xs:enumeration>
-      <xs:enumeration value="distance_bank"></xs:enumeration>
-      <xs:enumeration
-        value="distance_cable_railway_station"></xs:enumeration>
-      <xs:enumeration value="distance_boat_dock"></xs:enumeration>
-      <xs:enumeration value="distance_public_transport"></xs:enumeration>
+      <xs:enumeration value="number-of-floors"></xs:enumeration>
+      <xs:enumeration value="number-of-apartments"></xs:enumeration>
+      <xs:enumeration value="number-of-parcels"></xs:enumeration>
+      <xs:enumeration value="number-of-rooms"></xs:enumeration>
+      <xs:enumeration value="number-of-bathrooms"></xs:enumeration>
+      <xs:enumeration value="distance-kindergarten"></xs:enumeration>
+      <xs:enumeration value="distance-primary-school"></xs:enumeration>
+      <xs:enumeration value="distance-high-school"></xs:enumeration>
+      <xs:enumeration value="distance-college-university"></xs:enumeration>
+      <xs:enumeration value="distance-bus-stop"></xs:enumeration>
+      <xs:enumeration value="distance-train-station"></xs:enumeration>
+      <xs:enumeration value="distance-post"></xs:enumeration>
+      <xs:enumeration value="distance-bank"></xs:enumeration>
+      <xs:enumeration value="distance-cable-railway-station"></xs:enumeration>
+      <xs:enumeration value="distance-boat-dock"></xs:enumeration>
+      <xs:enumeration value="distance-public-transport"></xs:enumeration>
       <!-- depricated -->
-      <xs:enumeration value="distance_shop"></xs:enumeration>
-      <xs:enumeration value="distance_motorway"></xs:enumeration>
+      <xs:enumeration value="distance-shop"></xs:enumeration>
+      <xs:enumeration value="distance-motorway"></xs:enumeration>
       <!--freeway??? -->
-      <xs:enumeration value="distance_airport"></xs:enumeration>
-      <xs:enumeration value="distance_tramway"></xs:enumeration>
-      <xs:enumeration value="max_elevator_weight"></xs:enumeration>
-      <xs:enumeration value="area_property_land"></xs:enumeration>
-      <xs:enumeration value="property_land_price"></xs:enumeration>
+      <xs:enumeration value="distance-airport"></xs:enumeration>
+      <xs:enumeration value="distance-tramway"></xs:enumeration>
+      <xs:enumeration value="max-elevator-weight"></xs:enumeration>
+      <xs:enumeration value="area-property-land"></xs:enumeration>
+      <xs:enumeration value="property-land-price"></xs:enumeration>
       <!-- Pseudo Norm -->
-      <xs:enumeration value="area_bwf"></xs:enumeration>
+      <xs:enumeration value="area-bwf"></xs:enumeration>
       <!-- Bruttowohnfläche -->
-      <xs:enumeration value="area_nwf"></xs:enumeration>
+      <xs:enumeration value="area-nwf"></xs:enumeration>
       <!-- Nettowohnfläche -->
       <!-- SIA 416 -->
-      <xs:enumeration value="area_sia_gf"></xs:enumeration>
+      <xs:enumeration value="area-sia-gf"></xs:enumeration>
       <!-- (Brutto) Geschossfläche -->
-      <xs:enumeration value="area_sia_ngf"></xs:enumeration>
+      <xs:enumeration value="area-sia-ngf"></xs:enumeration>
       <!-- Nettogeschossfläche -->
-      <xs:enumeration value="area_sia_kf"></xs:enumeration>
+      <xs:enumeration value="area-sia-kf"></xs:enumeration>
       <!-- Konstruktionsfläche -->
-      <xs:enumeration value="area_sia_nf"></xs:enumeration>
+      <xs:enumeration value="area-sia-nf"></xs:enumeration>
       <!-- Nutzfläche -->
-      <xs:enumeration value="area_sia_vf"></xs:enumeration>
+      <xs:enumeration value="area-sia-vf"></xs:enumeration>
       <!-- Verkehrsfläche -->
-      <xs:enumeration value="area_sia_ff"></xs:enumeration>
+      <xs:enumeration value="area-sia-ff"></xs:enumeration>
       <!-- Funktionsfläche -->
-      <xs:enumeration value="area_sia_kft"></xs:enumeration>
+      <xs:enumeration value="area-sia-kft"></xs:enumeration>
       <!-- Konstruktionsfläche Tragend -->
-      <xs:enumeration value="area_sia_kfn"></xs:enumeration>
+      <xs:enumeration value="area-sia-kfn"></xs:enumeration>
       <!-- Konstruktionsfläche nicht Tragend -->
-      <xs:enumeration value="area_sia_hnf"></xs:enumeration>
+      <xs:enumeration value="area-sia-hnf"></xs:enumeration>
       <!-- Hauptnutzfläche -->
-      <xs:enumeration value="area_sia_nnf"></xs:enumeration>
+      <xs:enumeration value="area-sia-nnf"></xs:enumeration>
       <!-- Nebennutzfläche -->
-      <xs:enumeration value="area_sia_agf"></xs:enumeration>
-      <xs:enumeration value="area_sia_angf"></xs:enumeration>
-      <xs:enumeration value="area_sia_akf"></xs:enumeration>
-      <xs:enumeration value="area_sia_anf"></xs:enumeration>
-      <xs:enumeration value="area_sia_avf"></xs:enumeration>
-      <xs:enumeration value="area_sia_aff"></xs:enumeration>
-      <xs:enumeration value="area_sia_akft"></xs:enumeration>
-      <xs:enumeration value="area_sia_akfn"></xs:enumeration>
-      <xs:enumeration value="volume_sia_gv"></xs:enumeration>
-      <xs:enumeration value="volume_sia_angv"></xs:enumeration>
-      <xs:enumeration value="volume_sia_akv"></xs:enumeration>
-      <xs:enumeration value="volume_sia_anv"></xs:enumeration>
-      <xs:enumeration value="volume_sia_avv"></xs:enumeration>
-      <xs:enumeration value="volume_sia_afv"></xs:enumeration>
-      <xs:enumeration value="area_sia_gsf"></xs:enumeration>
-      <xs:enumeration value="area_sia_uf"></xs:enumeration>
-      <xs:enumeration value="area_sia_ggf"></xs:enumeration>
-      <xs:enumeration value="area_sia_buf"></xs:enumeration>
-      <xs:enumeration value="area_sia_uuf"></xs:enumeration>
+      <xs:enumeration value="area-sia-agf"></xs:enumeration>
+      <xs:enumeration value="area-sia-angf"></xs:enumeration>
+      <xs:enumeration value="area-sia-akf"></xs:enumeration>
+      <xs:enumeration value="area-sia-anf"></xs:enumeration>
+      <xs:enumeration value="area-sia-avf"></xs:enumeration>
+      <xs:enumeration value="area-sia-aff"></xs:enumeration>
+      <xs:enumeration value="area-sia-akft"></xs:enumeration>
+      <xs:enumeration value="area-sia-akfn"></xs:enumeration>
+      <xs:enumeration value="volume-sia-gv"></xs:enumeration>
+      <xs:enumeration value="volume-sia-angv"></xs:enumeration>
+      <xs:enumeration value="volume-sia-akv"></xs:enumeration>
+      <xs:enumeration value="volume-sia-anv"></xs:enumeration>
+      <xs:enumeration value="volume-sia-avv"></xs:enumeration>
+      <xs:enumeration value="volume-sia-afv"></xs:enumeration>
+      <xs:enumeration value="area-sia-gsf"></xs:enumeration>
+      <xs:enumeration value="area-sia-uf"></xs:enumeration>
+      <xs:enumeration value="area-sia-ggf"></xs:enumeration>
+      <xs:enumeration value="area-sia-buf"></xs:enumeration>
+      <xs:enumeration value="area-sia-uuf"></xs:enumeration>
       <!-- DIN 277 -->
-      <!--<xs:enumeration value="area_din_bgf"/> -->
-      <!--<xs:enumeration value="area_din_kgf"/> -->
-      <!--<xs:enumeration value="area_din_ngf"/> -->
-      <!--<xs:enumeration value="area_din_nf"/> -->
-      <!--<xs:enumeration value="area_din_tf"/> -->
-      <!--<xs:enumeration value="area_din_vf"/> -->
-      <xs:enumeration value="volume_gva"></xs:enumeration>
+      <!--
+      <xs:enumeration value="area-din-bgf"/>
+      <xs:enumeration value="area-din-kgf"/>
+      <xs:enumeration value="area-din-ngf"/>
+      <xs:enumeration value="area-din-nf"/>
+      <xs:enumeration value="area-din-tf"/>
+      <xs:enumeration value="area-din-vf"/>
+      -->
+      <xs:enumeration value="volume-gva"></xs:enumeration>
       <!-- Gebäudekubatur GVA (prefered) -->
-      <xs:enumeration value="volume_sia"></xs:enumeration>
+      <xs:enumeration value="volume-sia"></xs:enumeration>
       <!-- Gebäudekubatur SIA -->
-      <xs:enumeration value="gross_premium"></xs:enumeration>
+      <xs:enumeration value="gross-premium"></xs:enumeration>
       <!-- Bruttorendite -->
-      <xs:enumeration value="utilization_number"></xs:enumeration>
+      <xs:enumeration value="utilization-number"></xs:enumeration>
       <!--Ausnützungsziffer -->
       <xs:enumeration
-        value="construction_utilization_number"></xs:enumeration>
+        value="construction-utilization-number"></xs:enumeration>
       <!--Ausnützungsziffer (bau) -->
-      <xs:enumeration value="year_built"></xs:enumeration>
-      <xs:enumeration value="year_last_renovated"></xs:enumeration>
-      <xs:enumeration value="ceiling_height"></xs:enumeration>
-      <xs:enumeration value="hall_height"></xs:enumeration>
-      <xs:enumeration value="maximal_floor_loading"></xs:enumeration>
+      <xs:enumeration value="year-built"></xs:enumeration>
+      <xs:enumeration value="year-last-renovated"></xs:enumeration>
+      <xs:enumeration value="ceiling-height"></xs:enumeration>
+      <xs:enumeration value="hall-height"></xs:enumeration>
+      <xs:enumeration value="maximal-floor-loading"></xs:enumeration>
       <!-- kg -->
-      <xs:enumeration value="carrying_capacity_crane"></xs:enumeration>
+      <xs:enumeration value="carrying-capacity-crane"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="emailAddress">
