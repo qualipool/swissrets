@@ -76,6 +76,16 @@
           <xs:attribute name="referring" type="priceReferringTypes" />
         </xs:complexType>
       </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="auction">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:positiveInteger">
+              <xs:attribute name="start" type="xs:dateTime" />
+              <xs:attribute name="expiration" type="xs:dateTime" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
       <xs:element minOccurs="0" maxOccurs="1" name="deposit">
         <xs:complexType>
           <xs:simpleContent>
