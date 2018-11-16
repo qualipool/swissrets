@@ -28,103 +28,49 @@ Relational map (Properties)
 ---------
 
 ```
-properties
-	< extraCosts
-	< integratedOffers
-	– address
-	– softwareInformation
-	< features
-	< numericValues
-	< categories
-	< utilities
-	< relations
-	– seller
-		– organization
-			– address
-		– viewPerson
-		– visitPerson
-		– inquiryPerson
-	< offers
-		< tags
-		< urls
-		< publishers
-			< options
-			< channels
-		< descriptions
-		< attachments
-		< events
-```
-
-Example XML structure (Properties)
----------
-
-```xml
-<export>
-	<properties>
-		<property id="property123">
-			<referenceId>propertyRef123</referenceId>
-			<visualReferenceId>visualRef123</visualReferenceId>
-			<bfs>
-				<egid>abc123</egid>
-				<ewid>bcd234</ewid>
-			</bfs>
-			<availability>available</availability>
-			<type>rent</type>
-			<netPrice>1200</netPrice>
-			<grossPrice>1450</grossPrice>
-			<features>
-				<feature>has-nice-view</feature>
-                <feature>has-cabletv</feature>
-                <feature>has-parking</feature>
-				<!-- ... -->
-			</features>
-			<numericValues>
-				<value key="number_of_apartments">3</value>
-                <value key="volume_gva">3432</value>
-                <value key="area_sia_gsf">4350</value>
-				<!-- ... -->
-			</numericValues>
-			<categories>
-				<category>penthouse</category>
-			</categories>
-			<utilities>
-				<utility>residential</utility>
-			</utilities>
-			<seller />
-			<!-- ... -->
-			<offers>
-				<offer id="offer123de" lang="de">
-					<name></name>
-					<excerpt></excerpt>
-					<urls />
-					<descriptions />
-					<attachments />
-					<!-- ... -->
-				</offer>
-				<offer id="offer123fr" lang="fr"><!-- ... --></offer>
-				<offer id="offer123it" lang="it"><!-- ... --></offer>
-			</offers>
-		</property>
-		<property id="property234">
-			<referenceId>propertyRef234</referenceId>
-			<!-- ... -->
-			<offers>
-				<offer id="offer234de" lang="de"><!-- ... --></offer>
-				<offer id="offer234fr" lang="fr"><!-- ... --></offer>
-				<offer id="offer234it" lang="it"><!-- ... --></offer>
-			</offers>
-		</property>
-		<property id="property345">
-			<referenceId>propertyRef345</referenceId>
-			<!-- ... -->
-			<offers>
-				<offer id="offer345de" lang="de"></offer>
-				<offer id="offer345fr" lang="fr"></offer>
-				<offer id="offer345it" lang="it"></offer>
-			</offers>
-		</property>
-	</properties>
-</export>
+export
+  0,1 exportInformation
+      0,1 software
+      0,1 softwareVersion
+      0,1 software
+      0,1 software
+  0,1 projects
+    0,n projects
+      1,1 referenceId
+      1,1 units
+        1,1 referenceId
+        1,1 properties
+          1.n propertyRef
+  0,1 properties
+      0,n property
+        0,1 zoneTypes
+        0,1 parcelNumbers
+        1,1 referenceId
+        0,1 visualReferenceId
+        1,1 type
+        0,1 availability
+        0,1 start
+        0,1 prices
+        1,1 address
+        1,1 softwareInformation
+        0,1 characteristics
+        0,1 categories
+        0,1 utilities
+        1,1 seller
+          1,1 organization
+            1,1 address
+          1,1 viewPerson
+          1,1 visitPerson
+          1,1 inquiryPerson
+        1,1 localizations
+          0,1 tags
+          0,1 urls
+          0,1 publishers
+            0,1 options
+            0,1 channels
+          0,1 descriptions
+          0,1 attachments
+          0,1 events
 ```
 
 Relational map (Projects)
