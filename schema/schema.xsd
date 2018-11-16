@@ -1,12 +1,12 @@
 <?xml version="1.0" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
   <!-- TYPE DEFFINITIONS START HERE -->
-  <xs:complexType name="person">
+  <xs:complexType name="personType">
     <xs:all>
       <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="givenName" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="familyName" minOccurs="0" maxOccurs="1" />
-      <xs:element type="emailAddress" name="email" minOccurs="0" maxOccurs="1" />
+      <xs:element type="emailAddressType" name="email" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1" />
@@ -36,7 +36,7 @@
       </xs:element>
     </xs:all>
   </xs:complexType>
-  <xs:simpleType name="availability">
+  <xs:simpleType name="availabilityType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="reserved" />
       <xs:enumeration value="active" />
@@ -294,7 +294,7 @@
       <xs:pattern value="[A-Z]{2}" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="fullUrl">
+  <xs:complexType name="fullUrlType">
     <xs:simpleContent>
       <xs:extension base="xs:anyURI">
         <xs:attribute type="urlTypes" name="type" use="optional" />
@@ -461,7 +461,7 @@
       <xs:enumeration value="sales-brochure" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="emailAddress">
+  <xs:simpleType name="emailAddressType">
     <xs:restriction base="xs:string">
       <xs:pattern value="[^@]+@[^\.]+\..+" />
     </xs:restriction>
@@ -544,7 +544,7 @@
                       </xs:annotation>
                     </xs:element>
                     <xs:element name="type" type="propertyType" minOccurs="1" maxOccurs="1" />
-                    <xs:element name="availability" type="availability" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="availability" type="availabilityType" minOccurs="1" maxOccurs="1" />
                     <xs:element name="start" type="xs:dateTime" minOccurs="0" maxOccurs="1" />
                     <xs:element name="prices" type="pricesType" minOccurs="0" maxOccurs="1" />
                     <xs:element name="address" type="addressType" minOccurs="1" maxOccurs="1" />
@@ -587,8 +587,8 @@
                                 <xs:element name="address" type="addressType" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="emailAddress" name="email" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="emailAddress" name="emailRem" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="emailAddressType" name="email" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="emailAddressType" name="emailRem" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
                                 <xs:element name="website" minOccurs="0" maxOccurs="1">
@@ -605,9 +605,9 @@
                               <xs:attribute type="xs:string" name="id" use="optional" />
                             </xs:complexType>
                           </xs:element>
-                          <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1" />
-                          <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1" />
-                          <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1" />
+                          <xs:element type="personType" name="viewPerson" minOccurs="0" maxOccurs="1" />
+                          <xs:element type="personType" name="visitPerson" minOccurs="0" maxOccurs="1" />
+                          <xs:element type="personType" name="inquiryPerson" minOccurs="0" maxOccurs="1" />
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
@@ -636,7 +636,7 @@
                                 <xs:element name="urls" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element type="fullUrl" name="url" minOccurs="0" maxOccurs="unbounded" />
+                                      <xs:element type="fullUrlType" name="url" minOccurs="0" maxOccurs="unbounded" />
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
