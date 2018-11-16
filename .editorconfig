@@ -17,4 +17,4 @@ insert_final_newline = false
 
 # use 4 spaces for xml documents
 [*.{xml,xsd}]
-indent_size = 4
+indent_size = 2
