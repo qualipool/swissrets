@@ -234,29 +234,29 @@
       <xs:enumeration value="rustico"></xs:enumeration>
       <xs:enumeration value="retail-space"></xs:enumeration>
       <xs:enumeration value="boat-dry-dock"></xs:enumeration>
-      <!--'Boot Hallenplatz','Boat dry dock','Halle à bâteaux','Posteggio 
+      <!--'Boot Hallenplatz','Boat dry dock','Halle à bâteaux','Posteggio
         barca interno', -->
       <xs:enumeration value="alottmen-garden"></xs:enumeration>
       <!--'Schrebergarten','Alottment garden','Jardin familial','Orto', -->
       <xs:enumeration value="squash-badminton"></xs:enumeration>
-      <!--'Squash / Badminton','Squash / Badminton','Squash / Badminton','Squash 
+      <!--'Squash / Badminton','Squash / Badminton','Squash / Badminton','Squash
         / Badminton', -->
       <xs:enumeration value="indoor-tennis-court"></xs:enumeration>
-      <!--'Tennishalle','Indoor tennis courts','Halle de tennis','Campo da 
+      <!--'Tennishalle','Indoor tennis courts','Halle de tennis','Campo da
         tennis interno', -->
       <xs:enumeration value="tennis-court"></xs:enumeration>
-      <!--'Tennisplatz','Tennis court','Place de tennis','Campo da tennis 
+      <!--'Tennisplatz','Tennis court','Place de tennis','Campo da tennis
         esterno', -->
       <xs:enumeration value="sports-hall"></xs:enumeration>
       <!--'Sportanlage','Sports hall','Installation sportive','Impianto sportivo', -->
       <xs:enumeration value="campground"></xs:enumeration>
-      <!--'Camping- / Zeltplatz','Campground / Tent camping','Camping / Terrain 
+      <!--'Camping- / Zeltplatz','Campground / Tent camping','Camping / Terrain
         campement','Campeggio', -->
       <xs:enumeration value="outdoor-swimming-pool"></xs:enumeration>
-      <!--'Freibad','Outdoor swimming pool','Piscine découverte','Piscina 
+      <!--'Freibad','Outdoor swimming pool','Piscine découverte','Piscina
         esterna', -->
       <xs:enumeration value="indoor-swimming-pool"></xs:enumeration>
-      <!--'Hallenbad','Indoor swimming pool','Piscine couverte','Piscina 
+      <!--'Hallenbad','Indoor swimming pool','Piscine couverte','Piscina
         coperta', -->
       <xs:enumeration value="golf-course"></xs:enumeration>
       <!--'Golfplatz','Golf course','Terrain de golf','Campo da golf', -->
@@ -275,7 +275,7 @@
       <xs:enumeration value="solarium"></xs:enumeration>
       <!--'Solarium','Solarium','Solarium','Solario', -->
       <xs:enumeration value="old-age-home"></xs:enumeration>
-      <!--'Altersheim','Old-age home','Home pour personnes âgées','Casa di 
+      <!--'Altersheim','Old-age home','Home pour personnes âgées','Casa di
         riposo', -->
       <xs:enumeration value="home"></xs:enumeration>
       <!--'Heim','Home','Home','Istituto', -->
@@ -284,12 +284,12 @@
       <xs:enumeration value="granny-flat"></xs:enumeration>
       <!--'Stöckli','Granny flat','Dépendance','Stöckli', -->
       <xs:enumeration value="boat-landing-stage"></xs:enumeration>
-      <!--'Boot Stegplatz','Boat landing stage','Place extérieure à bâteaux','Attracco 
+      <!--'Boot Stegplatz','Boat landing stage','Place extérieure à bâteaux','Attracco
         barca esteriore', -->
       <xs:enumeration value="horse-box"></xs:enumeration>
       <!--'Stallboxe','Horse box','Box d\'écurie','Box in stalla', -->
       <xs:enumeration value="boat-mooring"></xs:enumeration>
-      <!--'Boot Bojenplatz','Boat mooring','Place à bâteau balisée','Attracco 
+      <!--'Boot Bojenplatz','Boat mooring','Place à bâteau balisée','Attracco
         barca (boa)', -->
       <xs:enumeration value="cellar-compartment"></xs:enumeration>
       <!--'Kellerabteil','Cellar compartment','Cave','Scomparto cantina', -->
@@ -298,7 +298,7 @@
       <xs:enumeration value="house-part"></xs:enumeration>
       <xs:enumeration
         value="residential-commercial-building"></xs:enumeration>
-      <!--'Wohn- / Geschäftshaus','Imm.com.& hab.','Immob.com. e abitativo','Living 
+      <!--'Wohn- / Geschäftshaus','Imm.com.& hab.','Immob.com. e abitativo','Living
         / commercial building', -->
       <xs:enumeration value="engadine-house"></xs:enumeration>
       <!-- Engadine house, 'Engadinerhaus', Casa engadinese -->
@@ -317,7 +317,7 @@
       <xs:enumeration value="link"></xs:enumeration>
       <!-- a genneric link for display and hrefing. -->
       <xs:enumeration value="direct-link"></xs:enumeration>
-      <!-- use as replacement link. Aka. a custom Endpoint webpage instead 
+      <!-- use as replacement link. Aka. a custom Endpoint webpage instead
         of a generated single/data view. -->
       <xs:enumeration value="virtual-tour"></xs:enumeration>
       <!-- to embed specificaly (usualy iframe) -->
@@ -572,13 +572,16 @@
           minOccurs="0">
           <xs:complexType>
             <xs:all>
-              <xs:element type="xs:string" name="exporter"
-                minOccurs="0" maxOccurs="1"></xs:element>
-              <xs:element type="xs:dateTime"
-                name="exportDate" minOccurs="0" maxOccurs="1"></xs:element>
-              <xs:element type="xs:integer"
-                name="exportIteration" default="1" minOccurs="0"
-                maxOccurs="1"></xs:element>
+              <xs:element type="xs:string" name="software" minOccurs="0"
+                maxOccurs="1">
+              </xs:element>
+              <xs:element type="xs:dateTime" name="exportDate"
+                minOccurs="0" maxOccurs="1">
+              </xs:element>
+              <xs:element type="xs:integer" name="exportIteration"
+                default="1" minOccurs="0" maxOccurs="1">
+              </xs:element>
+              <xs:element name="softwareVersion" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
             </xs:all>
           </xs:complexType>
         </xs:element>
@@ -607,7 +610,7 @@
                                   maxOccurs="1" minOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <!-- <xs:element name="propertyRef" 
+                                      <!-- <xs:element name="propertyRef"
                                         maxOccurs="unbounded" minOccurs="1" type="xs:IDREF" /> -->
                                       <xs:element
                                         maxOccurs="unbounded"
@@ -800,55 +803,42 @@
                             <xs:annotation>
                               <xs:documentation>Flächen:
 
-                                ┌───────────────────────────────────────────────┐
-                                │ GF │ Geschossfläche
-                                ├───────────────────────────────┰───────────────┧
-                                │ NGF ┃ KF ┃ Nettogeschossfläche +
-                                Konstruktionsfläche
-                                ├───────────────┬───────┬───────╂───────┬───────┨
-                                │ NF │ VF │ FF ┃ KFT │ KFN ┃ (Nutzfläche
-                                + Verkehrsfläche + Funktionsfläche) (FK
-                                tragend + KF nicht-tragend)
-                                ├───────┬───────┼───────┴───────┺━━━━━━━┷━━━━━━━┛
-                                │ NNF │ HNF │ Neben + Hauptnutzfläche
-                                └───────┴───────┘
+┌───────────────────────────────────┐
+│                 GF                │ Geschossfläche
+├───────────────────────┬───────────┤
+│          NGF          │    KF     │ Nettogeschossfläche + Konstruktionsfläche
+├───────────┬─────┬─────┼─────┬─────┤
+│     NF    │ VF  │ FF  │ KFT │ KFN │ Nutzfläche + Verkehrsfläche + Funktionsfläche | FK tragend + KF nicht-tragend
+├─────┬─────┼─────┴─────┴─────┴─────┘
+│ NNF │ HNF │ Neben + Hauptnutzfläche
+└─────┴─────┘
 
-                                Ausenflächen
-                                ┌───────────────────────────────────────────────┐
-                                │ AGF │ Aussen-Geschossfläche
-                                ├───────────────────────────────┰───────────────┧
-                                │ ANGF ┃ AKF ┃
-                                Aussen-Nettogeschossfläche +
-                                Aussen-Konstruktionsfläche
-                                ├───────────────┬───────┬───────╂───────┬───────┨
-                                │ ANF │ AVF │ AFF ┃ AKFT │ AKFN ┃
-                                Aussen-* (Nutzfläche + Verkehrsfläche +
-                                Funktionsfläche) (FK tragend + KF
-                                nicht-tragend)
-                                └───────────────┴───────┴───────┺━━━━━━━┷━━━━━━━┛
+Ausenflächen
+┌───────────────────────────────────┐
+│                AGF                │ Aussen-Geschossfläche
+├───────────────────────┬───────────┤
+│         ANGF          │    AKF    │ Aussen-Nettogeschossfläche + Aussen-Konstruktionsfläche
+├───────────┬─────┬─────┼─────┬─────┤
+│    ANF    │ AVF │ AFF │ AKFT│ AKFN│ Aussen-* (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
+└───────────┴─────┴─────┴─────┴─────┘
 
-                                Volumen
-                                ┌───────────────────────────────────────────────┐
-                                │ GV │ Gebäudevolumen
-                                ├───────────────────────────────┬───────────────┤
-                                │ ANGV │ AKV │ Nettogebäudevolumen +
-                                Konstruktions-Volumen
-                                ├───────────────┬───────┬───────┼───────────────┘
-                                │ ANV │ AVV │ AFV │ Nutzvolumen +
-                                Verkehrsvolumen + Funktionsvolumen
-                                └───────────────┴───────┴───────┘
+Volumen
+┌───────────────────────────────────┐
+│                 GV                │ Gebäudevolumen
+├───────────────────────┬───────────┤
+│         ANGV          │    AKV    │ Nettogebäudevolumen + Konstruktions-Volumen
+├───────────┬─────┬─────┼───────────┘
+│    ANV    │ AVV │ AFV │   Nutzvolumen + Verkehrsvolumen + Funktionsvolumen
+└───────────┴─────┴─────┘
 
-                                Grundstückfläche
-                                ┌───────────────────────────────────────────────┐
-                                │ GSF │ Grundstückfläche
-                                ├───────────────────────────────┬───────────────┤
-                                │ UF │ GGF │ Umgebungsfläche +
-                                Gebäudegrundfläche
-                                ├───────────────┬───────────────┼───────────────┘
-                                │ BUF │ UUF │ Bearbeitete
-                                Umgebungsfläche + Unbearbeitete
-                                Umgebungsfläche
-                                └───────────────┴───────────────┘
+Grundstückfläche
+┌───────────────────────────────────┐
+│                 GSF               │ Grundstückfläche
+├───────────────────────┬───────────┤
+│          UF           │    GGF    │ Umgebungsfläche + Gebäudegrundfläche
+├───────────┬───────────┼───────────┘
+│    BUF    │    UUF    │ Bearbeitete Umgebungsfläche + Unbearbeitete Umgebungsfläche
+└───────────┴───────────┘
                               </xs:documentation>
                             </xs:annotation>
                             <xs:complexType>
