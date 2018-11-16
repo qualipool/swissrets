@@ -14,7 +14,7 @@
       <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1" />
     </xs:all>
   </xs:complexType>
-  <xs:complexType name="address">
+  <xs:complexType name="addressType">
     <xs:all>
       <xs:element type="countryCodeType" name="country" minOccurs="1" maxOccurs="1" />
       <xs:element type="xs:string" name="locality" minOccurs="0" maxOccurs="1" />
@@ -175,7 +175,7 @@
       <xs:element name="yearLastRenovated" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
     </xs:all>
   </xs:complexType>
-  <xs:complexType name="prices">
+  <xs:complexType name="pricesType">
     <xs:all>
       <xs:element minOccurs="0" maxOccurs="1" name="rent">
         <xs:complexType>
@@ -543,11 +543,11 @@
                         </xs:documentation>
                       </xs:annotation>
                     </xs:element>
-                    <xs:element type="propertyType" name="type" minOccurs="1" maxOccurs="1" />
-                    <xs:element type="availability" name="availability" minOccurs="1" maxOccurs="1" />
-                    <xs:element type="xs:dateTime" name="start" minOccurs="0" maxOccurs="1" />
-                    <xs:element name="prices" minOccurs="0" maxOccurs="1" type="prices" />
-                    <xs:element name="address" type="address" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="type" type="propertyType" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="availability" type="availability" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="start" type="xs:dateTime" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="prices" type="pricesType" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="address" type="addressType" minOccurs="1" maxOccurs="1" />
                     <xs:element name="softwareInformation" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:all>
@@ -584,7 +584,7 @@
                           <xs:element name="organization" minOccurs="0" maxOccurs="1">
                             <xs:complexType>
                               <xs:all>
-                                <xs:element name="address" type="address" minOccurs="0" maxOccurs="1" />
+                                <xs:element name="address" type="addressType" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="emailAddress" name="email" minOccurs="0" maxOccurs="1" />
