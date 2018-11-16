@@ -76,6 +76,101 @@
       <xs:enumeration value="buy"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
+  <xs:complexType name="prices">
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="rent">
+        <xs:complexType>
+          <xs:all>
+            <xs:element minOccurs="1" maxOccurs="1" name="gross" type="xs:positiveInteger"></xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="net" type="xs:positiveInteger"></xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger"></xs:element>
+          </xs:all>
+          <xs:attribute name="interval" type="priceIntervalTypes" use="optional"></xs:attribute>
+          <xs:attribute name="referring" type="priceReferringTypes" use="optional"></xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="buy">
+        <xs:complexType>
+          <xs:all>
+            <xs:element minOccurs="1" maxOccurs="1" name="price" type="xs:positiveInteger"></xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger"></xs:element>
+          </xs:all>
+          <xs:attribute name="referring" type="priceReferringTypes"></xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="deposit">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:positiveInteger">
+              <xs:attribute name="type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="bank-guarantee"></xs:enumeration>
+                    <xs:enumeration value="deposit-guarantee"></xs:enumeration>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="additionalOffers">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="offer">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:positiveInteger">
+                    <xs:attribute name="type">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="parking-exterior-space"></xs:enumeration>
+                          <xs:enumeration value="parking-carport"></xs:enumeration>
+                          <xs:enumeration value="parking-garage"></xs:enumeration>
+                          <xs:enumeration value="parking-garage-connected"></xs:enumeration>
+                          <xs:enumeration value="parking-garage-box"></xs:enumeration>
+                          <xs:enumeration value="parking-garage-underground"></xs:enumeration>
+                          <xs:enumeration value="parking-house"></xs:enumeration>
+                          <xs:enumeration value="parking-duplex"></xs:enumeration>
+                          <xs:enumeration value="parking-double-garage"></xs:enumeration>
+                          <xs:enumeration value="room-workroom"></xs:enumeration>
+                          <xs:enumeration value="room-storage-basement"></xs:enumeration>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:attribute>
+                    <xs:attribute name="interval" type="priceIntervalTypes" use="optional"></xs:attribute>
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+    <xs:attribute name="currency" type="currencyCodeType"></xs:attribute>
+  </xs:complexType>
+  <xs:simpleType name="priceReferringTypes">
+    <xs:annotation>
+      <xs:documentation>For what area the price stands for.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="all"></xs:enumeration>
+      <xs:enumeration value="m2"></xs:enumeration>
+      <xs:enumeration value="km2"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="priceIntervalTypes">
+    <xs:annotation>
+      <xs:documentation>The payment interval the price stands for.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="one-time"></xs:enumeration>
+    <xs:enumeration value="day"></xs:enumeration>
+    <xs:enumeration value="week"></xs:enumeration>
+    <xs:enumeration value="month"></xs:enumeration>
+    <xs:enumeration value="year"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
   <xs:complexType name="price">
     <xs:annotation>
       <xs:documentation
@@ -89,10 +184,10 @@
           <xs:simpleType>
             <xs:restriction base="xs:string">
               <xs:enumeration value="infinite"></xs:enumeration>
-              <xs:enumeration value="d"></xs:enumeration>
-              <xs:enumeration value="w"></xs:enumeration>
-              <xs:enumeration value="m"></xs:enumeration>
-              <xs:enumeration value="y"></xs:enumeration>
+              <xs:enumeration value="day"></xs:enumeration>
+              <xs:enumeration value="week"></xs:enumeration>
+              <xs:enumeration value="month"></xs:enumeration>
+              <xs:enumeration value="year"></xs:enumeration>
             </xs:restriction>
           </xs:simpleType>
         </xs:attribute>
@@ -135,21 +230,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:simpleType name="integratedOfferType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="parking-exterior-space"></xs:enumeration>
-      <xs:enumeration value="parking-carport"></xs:enumeration>
-      <xs:enumeration value="parking-garage"></xs:enumeration>
-      <xs:enumeration value="parking-garage-connected"></xs:enumeration>
-      <xs:enumeration value="parking-garage-box"></xs:enumeration>
-      <xs:enumeration value="parking-garage-underground"></xs:enumeration>
-      <xs:enumeration value="parking-house"></xs:enumeration>
-      <xs:enumeration value="parking-duplex"></xs:enumeration>
-      <xs:enumeration value="parking-double-garage"></xs:enumeration>
-      <xs:enumeration value="room-workroom"></xs:enumeration>
-      <xs:enumeration value="room-storage-basement"></xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
   <xs:simpleType name="categoryTypes">
     <xs:annotation>
       <xs:documentation
@@ -325,7 +405,7 @@
       <xs:enumeration value="has-garage"></xs:enumeration>
       <xs:enumeration value="has-balcony"></xs:enumeration>
       <xs:enumeration value="has-isdn"></xs:enumeration>
-      <!-- depricated -->
+      <!-- deprecated -->
       <xs:enumeration value="is-wheelchair-accessible"></xs:enumeration>
       <xs:enumeration value="is-animal-friendly"></xs:enumeration>
       <xs:enumeration value="has-ramp"></xs:enumeration>
@@ -364,8 +444,6 @@
       <xs:enumeration value="has-double-car-port"></xs:enumeration>
       <xs:enumeration value="has-double-garage"></xs:enumeration>
       <xs:enumeration value="on-even-ground"></xs:enumeration>
-      <xs:enumeration
-        value="has-rental-deposit-guarantee"></xs:enumeration>
       <xs:enumeration value="is-non-smoking"></xs:enumeration>
       <!-- Nichtraucher -->
       <xs:enumeration value="is-demolition-property"></xs:enumeration>
@@ -519,9 +597,6 @@
       <xs:enumeration value="maximal_floor_loading"></xs:enumeration>
       <!-- kg -->
       <xs:enumeration value="carrying_capacity_crane"></xs:enumeration>
-      <!-- depricated -->
-      <xs:enumeration value="carrying_capacity_elevator"></xs:enumeration>
-      <xs:enumeration value="rental_deposit"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="emailAddress">
@@ -657,6 +732,8 @@
                     <xs:element type="xs:dateTime" name="start"
                       minOccurs="0" maxOccurs="1">
                     </xs:element>
+                    <xs:element name="prices" minOccurs="0" maxOccurs="1" type="prices">
+                    </xs:element>
                     <xs:element type="currencyCodeType"
                       name="priceCurrency" minOccurs="1"
                       maxOccurs="1">
@@ -697,46 +774,6 @@
                                   </xs:attribute>
                                   <xs:attribute type="xs:string"
                                     name="title" use="optional">
-                                  </xs:attribute>
-                                </xs:extension>
-                              </xs:simpleContent>
-                            </xs:complexType>
-                          </xs:element>
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
-                    <xs:element name="integratedOffers" minOccurs="0"
-                      maxOccurs="1">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element name="integratedOffer"
-                            minOccurs="1" maxOccurs="unbounded">
-                            <xs:complexType>
-                              <xs:simpleContent>
-                                <xs:extension base="xs:unsignedInt">
-                                  <xs:attribute
-                                    type="integratedOfferType"
-                                    name="type" use="optional">
-                                  </xs:attribute>
-                                  <xs:attribute type="xs:byte"
-                                    name="frequency" use="optional">
-                                  </xs:attribute>
-                                  <xs:attribute type="xs:string"
-                                    name="timesegment" use="optional">
-                                  </xs:attribute>
-                                  <xs:attribute type="xs:string"
-                                    name="propertysegment"
-                                    use="optional">
-                                  </xs:attribute>
-                                  <xs:attribute type="xs:byte"
-                                    name="inclusive" use="optional">
-                                    <xs:annotation>
-                                      <xs:documentation>
-                                        determines if is added to
-                                        offer-price (inclusive = 0) or
-                                        appart of it (inclusive = 1)
-                                      </xs:documentation>
-                                    </xs:annotation>
                                   </xs:attribute>
                                 </xs:extension>
                               </xs:simpleContent>
@@ -1251,5 +1288,4 @@
       </xs:all>
     </xs:complexType>
   </xs:element>
-
 </xs:schema>
