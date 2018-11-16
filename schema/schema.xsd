@@ -505,7 +505,7 @@
       <xs:enumeration value="area-sia-buf" />
       <xs:enumeration value="area-sia-uuf" />
       <!-- DIN 277 -->
-      <!-- <xs:enumeration value="area-din-bgf"/> <xs:enumeration value="area-din-kgf"/> <xs:enumeration value="area-din-ngf"/> <xs:enumeration 
+      <!-- <xs:enumeration value="area-din-bgf"/> <xs:enumeration value="area-din-kgf"/> <xs:enumeration value="area-din-ngf"/> <xs:enumeration
         value="area-din-nf"/> <xs:enumeration value="area-din-tf"/> <xs:enumeration value="area-din-vf"/> -->
       <xs:enumeration value="volume-gva" />
       <!-- Gebäudekubatur GVA (prefered) -->
@@ -538,9 +538,9 @@
           <xs:complexType>
             <xs:all>
               <xs:element type="xs:string" name="software" minOccurs="0" maxOccurs="1" />
+              <xs:element name="softwareVersion" type="xs:string" minOccurs="0" maxOccurs="1" />
               <xs:element type="xs:dateTime" name="exportDate" minOccurs="0" maxOccurs="1" />
               <xs:element type="xs:integer" name="exportIteration" default="1" minOccurs="0" maxOccurs="1" />
-              <xs:element name="softwareVersion" type="xs:string" minOccurs="0" maxOccurs="1" />
             </xs:all>
           </xs:complexType>
         </xs:element>
@@ -653,7 +653,7 @@
                               rustico
                             </xs:documentation>
                           </xs:annotation>
-                          <xs:element type="categoryTypes" name="category" minOccurs="1" maxOccurs="3" />
+                          <xs:element type="categoryTypes" name="category" minOccurs="1" maxOccurs="unbounded" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
