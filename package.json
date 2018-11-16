@@ -1,6 +1,6 @@
 {
   "name": "swissrets",
-  "version": "0.0.1",
+  "version": "0.1.0-concept.0",
   "description": "A swiss real estate transfer standard.",
   "main": "node/index.js",
   "directories": {
