@@ -109,35 +109,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:complexType name="priceRange">
-    <xs:all>
-      <xs:element type="xs:positiveInteger" name="from"
-        minOccurs="1" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">
-            "from" needs to be smaller than "to"
-          </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element type="xs:positiveInteger" name="to"
-        minOccurs="1" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">
-            "to" needs to be larger than "from"
-          </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-    </xs:all>
-    <xs:attribute name="propertysegment" use="optional">
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="all"></xs:enumeration>
-          <xs:enumeration value="m2"></xs:enumeration>
-          <xs:enumeration value="km2"></xs:enumeration>
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:attribute>
-  </xs:complexType>
   <xs:simpleType name="currencyCodeType">
     <xs:restriction base="xs:string">
       <xs:minLength value="3"></xs:minLength>
@@ -651,73 +622,82 @@
                 maxOccurs="unbounded" minOccurs="0">
                 <xs:complexType>
                   <xs:all>
-                    <xs:element type="xs:string"
-                      name="zoneTypes" minOccurs="0" maxOccurs="1"></xs:element>
-                    <xs:element type="xs:string"
-                      name="parcelNumbers" minOccurs="0" maxOccurs="1"></xs:element>
-                    <xs:element type="xs:string"
-                      name="referenceId" minOccurs="1" maxOccurs="1">
+                    <xs:element type="xs:string" name="zoneTypes"
+                      minOccurs="0" maxOccurs="1">
+                    </xs:element>
+                    <xs:element type="xs:string" name="parcelNumbers"
+                      minOccurs="0" maxOccurs="1">
+                    </xs:element>
+                    <xs:element type="xs:string" name="referenceId"
+                      minOccurs="1" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation> Can be used to track the
-                          original creation id (this should usualy be
-                          unique to the property) </xs:documentation>
+                        <xs:documentation>
+                          Can be used to track the original creation id
+                          (this should usualy be unique to the property)
+                        </xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <xs:element type="xs:string"
                       name="visualReferenceId" minOccurs="0"
                       maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation> Can should only be used for
-                          presentational purposes publishers tend to
-                          present the referenceId if this one is missing
+                        <xs:documentation>
+                          Can should only be used for presentational
+                          purposes publishers tend to present the
+                          referenceId if this one is missing
                         </xs:documentation>
                       </xs:annotation>
                     </xs:element>
-                    <xs:element type="propertyType"
-                      name="type" minOccurs="1" maxOccurs="1"></xs:element>
-                    <xs:element type="availability"
-                      name="availability" minOccurs="1" maxOccurs="1"></xs:element>
-                    <xs:element type="xs:dateTime"
-                      name="start" minOccurs="0" maxOccurs="1"></xs:element>
-                    <xs:element type="currencyCodeType"
-                      name="priceCurrency" minOccurs="1" maxOccurs="1"></xs:element>
-                    <xs:element type="price" name="price"
-                      minOccurs="0" maxOccurs="1"></xs:element>
-                    <xs:element type="priceRange"
-                      name="priceRange" minOccurs="0" maxOccurs="1"></xs:element>
-                    <xs:element type="price" name="netPrice"
-                      minOccurs="0" maxOccurs="1"></xs:element>
-                    <xs:element type="price"
-                      name="grossPrice" minOccurs="0" maxOccurs="1"></xs:element>
-                    <xs:element name="extraCosts"
+                    <xs:element type="propertyType" name="type"
+                      minOccurs="1" maxOccurs="1">
+                    </xs:element>
+                    <xs:element type="availability" name="availability"
+                      minOccurs="1" maxOccurs="1">
+                    </xs:element>
+                    <xs:element type="xs:dateTime" name="start"
                       minOccurs="0" maxOccurs="1">
+                    </xs:element>
+                    <xs:element type="currencyCodeType"
+                      name="priceCurrency" minOccurs="1"
+                      maxOccurs="1">
+                    </xs:element>
+                    <xs:element type="price" name="price" minOccurs="0"
+                      maxOccurs="1">
+                    </xs:element>
+                    <xs:element type="price" name="netPrice"
+                      minOccurs="0" maxOccurs="1">
+                    </xs:element>
+                    <xs:element type="price" name="grossPrice"
+                      minOccurs="0" maxOccurs="1">
+                    </xs:element>
+                    <xs:element name="extraCosts" minOccurs="0"
+                      maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="extraCost"
-                            minOccurs="1" maxOccurs="unbounded">
+                          <xs:element name="extraCost" minOccurs="1"
+                            maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:simpleContent>
-                                <xs:extension
-                                  base="xs:short">
-                                  <xs:attribute
-                                    type="xs:string" name="key"
-                                    use="optional"></xs:attribute>
-                                  <xs:attribute
-                                    type="xs:byte" name="frequency"
-                                    use="optional"></xs:attribute>
-                                  <xs:attribute
-                                    type="xs:string" name="timesegment"
-                                    use="optional"></xs:attribute>
-                                  <xs:attribute
-                                    type="xs:string"
+                                <xs:extension base="xs:short">
+                                  <xs:attribute type="xs:string"
+                                    name="key" use="optional">
+                                  </xs:attribute>
+                                  <xs:attribute type="xs:byte"
+                                    name="frequency" use="optional">
+                                  </xs:attribute>
+                                  <xs:attribute type="xs:string"
+                                    name="timesegment" use="optional">
+                                  </xs:attribute>
+                                  <xs:attribute type="xs:string"
                                     name="propertysegment"
-                                    use="optional"></xs:attribute>
-                                  <xs:attribute
-                                    type="xs:string" name="type"
-                                    use="optional"></xs:attribute>
-                                  <xs:attribute
-                                    type="xs:string" name="title"
-                                    use="optional"></xs:attribute>
+                                    use="optional">
+                                  </xs:attribute>
+                                  <xs:attribute type="xs:string"
+                                    name="type" use="optional">
+                                  </xs:attribute>
+                                  <xs:attribute type="xs:string"
+                                    name="title" use="optional">
+                                  </xs:attribute>
                                 </xs:extension>
                               </xs:simpleContent>
                             </xs:complexType>
@@ -725,37 +705,37 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="integratedOffers"
-                      minOccurs="0" maxOccurs="1">
+                    <xs:element name="integratedOffers" minOccurs="0"
+                      maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="integratedOffer"
                             minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:simpleContent>
-                                <xs:extension
-                                  base="xs:unsignedInt">
+                                <xs:extension base="xs:unsignedInt">
                                   <xs:attribute
                                     type="integratedOfferType"
-                                    name="type" use="optional"></xs:attribute>
-                                  <xs:attribute
-                                    type="xs:byte" name="frequency"
-                                    use="optional"></xs:attribute>
-                                  <xs:attribute
-                                    type="xs:string" name="timesegment"
-                                    use="optional"></xs:attribute>
-                                  <xs:attribute
-                                    type="xs:string"
+                                    name="type" use="optional">
+                                  </xs:attribute>
+                                  <xs:attribute type="xs:byte"
+                                    name="frequency" use="optional">
+                                  </xs:attribute>
+                                  <xs:attribute type="xs:string"
+                                    name="timesegment" use="optional">
+                                  </xs:attribute>
+                                  <xs:attribute type="xs:string"
                                     name="propertysegment"
-                                    use="optional"></xs:attribute>
-                                  <xs:attribute
-                                    type="xs:byte" name="inclusive"
                                     use="optional">
+                                  </xs:attribute>
+                                  <xs:attribute type="xs:byte"
+                                    name="inclusive" use="optional">
                                     <xs:annotation>
-                                      <xs:documentation>determines if is
-                                        added to offer-price (inclusive
-                                        = 0) or appart of it (inclusive
-                                        = 1) </xs:documentation>
+                                      <xs:documentation>
+                                        determines if is added to
+                                        offer-price (inclusive = 0) or
+                                        appart of it (inclusive = 1)
+                                      </xs:documentation>
                                     </xs:annotation>
                                   </xs:attribute>
                                 </xs:extension>
@@ -766,21 +746,26 @@
                       </xs:complexType>
                     </xs:element>
                     <xs:element name="address" type="address"
-                      minOccurs="1" maxOccurs="1"></xs:element>
-                    <xs:element name="softwareInformation"
                       minOccurs="1" maxOccurs="1">
+                    </xs:element>
+                    <xs:element name="softwareInformation" minOccurs="1"
+                      maxOccurs="1">
                       <xs:complexType>
                         <xs:all>
-                          <xs:element type="xs:string"
-                            name="lastUser" minOccurs="0" maxOccurs="1"></xs:element>
+                          <xs:element type="xs:string" name="lastUser"
+                            minOccurs="0" maxOccurs="1">
+                          </xs:element>
                           <xs:element type="xs:dateTime"
                             name="lastUpdate" minOccurs="0"
-                            maxOccurs="1"></xs:element>
+                            maxOccurs="1">
+                          </xs:element>
                           <xs:element type="xs:byte"
                             name="updateIteration" minOccurs="0"
-                            maxOccurs="1"></xs:element>
-                          <xs:element type="xs:dateTime"
-                            name="creation" minOccurs="0" maxOccurs="1"></xs:element>
+                            maxOccurs="1">
+                          </xs:element>
+                          <xs:element type="xs:dateTime" name="creation"
+                            minOccurs="0" maxOccurs="1">
+                          </xs:element>
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
@@ -788,66 +773,76 @@
                       maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="feature"
-                            type="featureTypes" maxOccurs="unbounded"
-                            minOccurs="1"></xs:element>
+                          <xs:element name="feature" type="featureTypes"
+                            maxOccurs="unbounded" minOccurs="1">
+                          </xs:element>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="numericValues"
-                      minOccurs="0" maxOccurs="1">
+                    <xs:element name="numericValues" minOccurs="0"
+                      maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="value"
-                            maxOccurs="unbounded" minOccurs="0">
+                          <xs:element name="value" maxOccurs="unbounded"
+                            minOccurs="0">
                             <xs:annotation>
                               <xs:documentation>
-Innenfläche
-┌───────────────────────────────────┐
-│                 GF                │ Geschossfläche
-├───────────────────────┬───────────┤
-│          NGF          │    KF     │ Nettogeschossfläche + Konstruktionsfläche
-├───────────┬─────┬─────┼─────┬─────┤
-│     NF    │ VF  │ FF  │ KFT │ KFN │ Nutzfläche + Verkehrsfläche + Funktionsfläche | FK tragend + KF nicht-tragend
-├─────┬─────┼─────┴─────┴─────┴─────┘
-│ NNF │ HNF │ Neben + Hauptnutzfläche
-└─────┴─────┘
+                                Innenfläche
+                                ┌───────────────────────────────────┐ │
+                                GF │ Geschossfläche
+                                ├───────────────────────┬───────────┤ │
+                                NGF │ KF │ Nettogeschossfläche +
+                                Konstruktionsfläche
+                                ├───────────┬─────┬─────┼─────┬─────┤ │
+                                NF │ VF │ FF │ KFT │ KFN │ Nutzfläche +
+                                Verkehrsfläche + Funktionsfläche | FK
+                                tragend + KF nicht-tragend
+                                ├─────┬─────┼─────┴─────┴─────┴─────┘ │
+                                NNF │ HNF │ Neben + Hauptnutzfläche
+                                └─────┴─────┘
 
-Ausenflächen
-┌───────────────────────────────────┐
-│                AGF                │ Aussen-Geschossfläche
-├───────────────────────┬───────────┤
-│         ANGF          │    AKF    │ Aussen-Nettogeschossfläche + Aussen-Konstruktionsfläche
-├───────────┬─────┬─────┼─────┬─────┤
-│    ANF    │ AVF │ AFF │ AKFT│ AKFN│ Aussen-* (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
-└───────────┴─────┴─────┴─────┴─────┘
+                                Ausenflächen
+                                ┌───────────────────────────────────┐ │
+                                AGF │ Aussen-Geschossfläche
+                                ├───────────────────────┬───────────┤ │
+                                ANGF │ AKF │ Aussen-Nettogeschossfläche
+                                + Aussen-Konstruktionsfläche
+                                ├───────────┬─────┬─────┼─────┬─────┤ │
+                                ANF │ AVF │ AFF │ AKFT│ AKFN│ Aussen-*
+                                (Nutzfläche + Verkehrsfläche +
+                                Funktionsfläche) (FK tragend + KF
+                                nicht-tragend)
+                                └───────────┴─────┴─────┴─────┴─────┘
 
-Volumen
-┌───────────────────────────────────┐
-│                 GV                │ Gebäudevolumen
-├───────────────────────┬───────────┤
-│         ANGV          │    AKV    │ Nettogebäudevolumen + Konstruktions-Volumen
-├───────────┬─────┬─────┼───────────┘
-│    ANV    │ AVV │ AFV │   Nutzvolumen + Verkehrsvolumen + Funktionsvolumen
-└───────────┴─────┴─────┘
+                                Volumen
+                                ┌───────────────────────────────────┐ │
+                                GV │ Gebäudevolumen
+                                ├───────────────────────┬───────────┤ │
+                                ANGV │ AKV │ Nettogebäudevolumen +
+                                Konstruktions-Volumen
+                                ├───────────┬─────┬─────┼───────────┘ │
+                                ANV │ AVV │ AFV │ Nutzvolumen +
+                                Verkehrsvolumen + Funktionsvolumen
+                                └───────────┴─────┴─────┘
 
-Grundstückfläche
-┌───────────────────────────────────┐
-│                 GSF               │ Grundstückfläche
-├───────────────────────┬───────────┤
-│          UF           │    GGF    │ Umgebungsfläche + Gebäudegrundfläche
-├───────────┬───────────┼───────────┘
-│    BUF    │    UUF    │ Bearbeitete Umgebungsfläche + Unbearbeitete Umgebungsfläche
-└───────────┴───────────┘
+                                Grundstückfläche
+                                ┌───────────────────────────────────┐ │
+                                GSF │ Grundstückfläche
+                                ├───────────────────────┬───────────┤ │
+                                UF │ GGF │ Umgebungsfläche +
+                                Gebäudegrundfläche
+                                ├───────────┬───────────┼───────────┘ │
+                                BUF │ UUF │ Bearbeitete Umgebungsfläche
+                                + Unbearbeitete Umgebungsfläche
+                                └───────────┴───────────┘
                               </xs:documentation>
                             </xs:annotation>
                             <xs:complexType>
                               <xs:simpleContent>
-                                <xs:extension
-                                  base="xs:string">
-                                  <xs:attribute
-                                    type="numericValuekeys" name="key"
-                                    use="required"></xs:attribute>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="numericValuekeys"
+                                    name="key" use="required">
+                                  </xs:attribute>
                                 </xs:extension>
                               </xs:simpleContent>
                             </xs:complexType>
@@ -855,27 +850,31 @@ Grundstückfläche
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="categories"
-                      minOccurs="0" maxOccurs="1">
+                    <xs:element name="categories" minOccurs="0"
+                      maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:annotation>
-                            <xs:documentation>Order represents (least
-                              specific) to (most specific). For example
-                              house, single-house, rustico
+                            <xs:documentation>
+                              Order represents (least specific) to (most
+                              specific). For example house,
+                              single-house, rustico
                             </xs:documentation>
                           </xs:annotation>
                           <xs:element type="categoryTypes"
-                            name="category" minOccurs="1" maxOccurs="3"></xs:element>
+                            name="category" minOccurs="1"
+                            maxOccurs="3">
+                          </xs:element>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="utilities"
-                      minOccurs="0" maxOccurs="1">
+                    <xs:element name="utilities" minOccurs="0"
+                      maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element type="utilityTypes"
-                            name="utility" minOccurs="1" maxOccurs="3"></xs:element>
+                          <xs:element type="utilityTypes" name="utility"
+                            minOccurs="1" maxOccurs="3">
+                          </xs:element>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -883,59 +882,67 @@ Grundstückfläche
                       maxOccurs="1">
                       <xs:complexType>
                         <xs:all>
-                          <xs:element name="organization"
-                            minOccurs="0" maxOccurs="1">
+                          <xs:element name="organization" minOccurs="0"
+                            maxOccurs="1">
                             <xs:complexType>
                               <xs:all>
                                 <xs:element name="address"
                                   type="address" minOccurs="0"
-                                  maxOccurs="1"></xs:element>
+                                  maxOccurs="1">
+                                </xs:element>
                                 <xs:element type="xs:string"
                                   name="legalName" minOccurs="0"
-                                  maxOccurs="1"></xs:element>
+                                  maxOccurs="1">
+                                </xs:element>
                                 <xs:element type="xs:string"
                                   name="brand" minOccurs="0"
-                                  maxOccurs="1"></xs:element>
-                                <xs:element
-                                  type="emailAddress" name="email"
-                                  minOccurs="0" maxOccurs="1"></xs:element>
-                                <xs:element
-                                  type="emailAddress" name="emailRem"
-                                  minOccurs="0" maxOccurs="1"></xs:element>
-                                <xs:element type="xs:string"
-                                  name="fax" minOccurs="0" maxOccurs="1"></xs:element>
+                                  maxOccurs="1">
+                                </xs:element>
+                                <xs:element type="emailAddress"
+                                  name="email" minOccurs="0"
+                                  maxOccurs="1">
+                                </xs:element>
+                                <xs:element type="emailAddress"
+                                  name="emailRem" minOccurs="0"
+                                  maxOccurs="1">
+                                </xs:element>
+                                <xs:element type="xs:string" name="fax"
+                                  minOccurs="0" maxOccurs="1">
+                                </xs:element>
                                 <xs:element type="xs:string"
                                   name="phone" minOccurs="0"
-                                  maxOccurs="1"></xs:element>
-                                <xs:element name="website"
-                                  minOccurs="0" maxOccurs="1">
+                                  maxOccurs="1">
+                                </xs:element>
+                                <xs:element name="website" minOccurs="0"
+                                  maxOccurs="1">
                                   <xs:complexType>
                                     <xs:simpleContent>
-                                      <xs:extension
-                                        base="xs:anyURI">
-                                        <xs:attribute
-                                          type="xs:string" name="title"></xs:attribute>
-                                        <xs:attribute
-                                          type="xs:string" name="label"></xs:attribute>
+                                      <xs:extension base="xs:anyURI">
+                                        <xs:attribute type="xs:string"
+                                          name="title">
+                                        </xs:attribute>
+                                        <xs:attribute type="xs:string"
+                                          name="label">
+                                        </xs:attribute>
                                       </xs:extension>
                                     </xs:simpleContent>
                                   </xs:complexType>
                                 </xs:element>
                               </xs:all>
-                              <xs:attribute
-                                type="xs:string" name="id"
-                                use="optional"></xs:attribute>
+                              <xs:attribute type="xs:string" name="id"
+                                use="optional">
+                              </xs:attribute>
                             </xs:complexType>
                           </xs:element>
-                          <xs:element type="person"
-                            name="viewPerson" minOccurs="0"
-                            maxOccurs="1"></xs:element>
-                          <xs:element type="person"
-                            name="visitPerson" minOccurs="0"
-                            maxOccurs="1"></xs:element>
-                          <xs:element type="person"
-                            name="inquiryPerson" minOccurs="0"
-                            maxOccurs="1"></xs:element>
+                          <xs:element type="person" name="viewPerson"
+                            minOccurs="0" maxOccurs="1">
+                          </xs:element>
+                          <xs:element type="person" name="visitPerson"
+                            minOccurs="0" maxOccurs="1">
+                          </xs:element>
+                          <xs:element type="person" name="inquiryPerson"
+                            minOccurs="0" maxOccurs="1">
+                          </xs:element>
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
@@ -943,18 +950,19 @@ Grundstückfläche
                       minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element
-                            name="rentalDepositProvider" minOccurs="1"
-                            maxOccurs="unbounded">
+                          <xs:element name="rentalDepositProvider"
+                            minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:all>
                                 <xs:element type="xs:string"
                                   name="calculation" minOccurs="0"
-                                  maxOccurs="1"></xs:element>
+                                  maxOccurs="1">
+                                </xs:element>
                               </xs:all>
                               <xs:attribute
                                 type="rentalDepositProviders"
-                                name="provider" use="required"></xs:attribute>
+                                name="provider" use="required">
+                              </xs:attribute>
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
@@ -968,38 +976,41 @@ Grundstückfläche
                       <xs:complexType>
                         <xs:sequence>
                           <xs:annotation>
-                            <xs:documentation>Order is relevant. First
-                              offer is considered to be the main
-                              language etc.</xs:documentation>
+                            <xs:documentation>
+                              Order is relevant. First offer is
+                              considered to be the main language etc.
+                            </xs:documentation>
                           </xs:annotation>
-                          <xs:element name="offer"
-                            minOccurs="1" maxOccurs="unbounded">
+                          <xs:element name="offer" minOccurs="1"
+                            maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:all>
-                                <xs:element type="xs:string"
-                                  name="name" minOccurs="1"
-                                  maxOccurs="1"></xs:element>
+                                <xs:element type="xs:string" name="name"
+                                  minOccurs="1" maxOccurs="1">
+                                </xs:element>
                                 <xs:element type="xs:string"
                                   name="excerpt" minOccurs="0"
-                                  maxOccurs="1"></xs:element>
-                                <xs:element name="tags"
-                                  maxOccurs="1" minOccurs="0">
+                                  maxOccurs="1">
+                                </xs:element>
+                                <xs:element name="tags" maxOccurs="1"
+                                  minOccurs="0">
                                   <xs:complexType>
                                     <xs:sequence>
                                       <xs:element name="tag"
                                         minOccurs="0"
-                                        maxOccurs="unbounded"></xs:element>
+                                        maxOccurs="unbounded">
+                                      </xs:element>
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
-                                <xs:element name="urls"
-                                  minOccurs="0" maxOccurs="1">
+                                <xs:element name="urls" minOccurs="0"
+                                  maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element
-                                        type="fullUrl" name="url"
-                                        minOccurs="0"
-                                        maxOccurs="unbounded"></xs:element>
+                                      <xs:element type="fullUrl"
+                                        name="url" minOccurs="0"
+                                        maxOccurs="unbounded">
+                                      </xs:element>
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
@@ -1007,13 +1018,12 @@ Grundstückfläche
                                   minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element
-                                        name="publisher" minOccurs="1"
+                                      <xs:element name="publisher"
+                                        minOccurs="1"
                                         maxOccurs="unbounded">
                                         <xs:complexType>
                                           <xs:all>
-                                            <xs:element
-                                              name="options"
+                                            <xs:element name="options"
                                               minOccurs="0"
                                               maxOccurs="1">
                                               <xs:complexType
@@ -1030,7 +1040,8 @@ Grundstückfläche
                                                           <xs:attribute
                                                             type="xs:string"
                                                             name="key"
-                                                            use="optional"></xs:attribute>
+                                                            use="optional">
+                                                          </xs:attribute>
                                                         </xs:extension>
                                                       </xs:simpleContent>
                                                     </xs:complexType>
@@ -1038,8 +1049,7 @@ Grundstückfläche
                                                 </xs:sequence>
                                               </xs:complexType>
                                             </xs:element>
-                                            <xs:element
-                                              name="channels"
+                                            <xs:element name="channels"
                                               minOccurs="0"
                                               maxOccurs="1">
                                               <xs:complexType
@@ -1056,11 +1066,13 @@ Grundstückfläche
                                                           <xs:attribute
                                                             type="xs:dateTime"
                                                             name="expiration"
-                                                            use="optional"></xs:attribute>
+                                                            use="optional">
+                                                          </xs:attribute>
                                                           <xs:attribute
                                                             type="xs:dateTime"
                                                             name="start"
-                                                            use="optional"></xs:attribute>
+                                                            use="optional">
+                                                          </xs:attribute>
                                                         </xs:extension>
                                                       </xs:simpleContent>
                                                     </xs:complexType>
@@ -1069,21 +1081,20 @@ Grundstückfläche
                                               </xs:complexType>
                                             </xs:element>
                                           </xs:all>
-                                          <xs:attribute
-                                            type="xs:string" name="id"
-                                            use="required"></xs:attribute>
+                                          <xs:attribute type="xs:string"
+                                            name="id" use="required">
+                                          </xs:attribute>
                                         </xs:complexType>
                                       </xs:element>
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
-                                <xs:element
-                                  name="descriptions" maxOccurs="1"
-                                  minOccurs="0">
+                                <xs:element name="descriptions"
+                                  maxOccurs="1" minOccurs="0">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element
-                                        name="description" minOccurs="0"
+                                      <xs:element name="description"
+                                        minOccurs="0"
                                         maxOccurs="unbounded">
                                         <xs:complexType>
                                           <xs:simpleContent>
@@ -1092,7 +1103,8 @@ Grundstückfläche
                                               <xs:attribute
                                                 type="xs:string"
                                                 name="title"
-                                                use="optional"></xs:attribute>
+                                                use="optional">
+                                              </xs:attribute>
                                             </xs:extension>
                                           </xs:simpleContent>
                                         </xs:complexType>
@@ -1100,52 +1112,53 @@ Grundstückfläche
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
-                                <xs:element
-                                  name="attachments" minOccurs="0"
-                                  maxOccurs="1">
+                                <xs:element name="attachments"
+                                  minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element
-                                        name="media" minOccurs="1"
+                                      <xs:element name="media"
+                                        minOccurs="1"
                                         maxOccurs="unbounded">
                                         <xs:complexType>
                                           <xs:all maxOccurs="1"
                                             minOccurs="1">
-                                            <xs:element
-                                              type="xs:string"
+                                            <xs:element type="xs:string"
                                               name="alt" maxOccurs="1"
-                                              minOccurs="0"></xs:element>
-                                            <xs:element
-                                              type="xs:string"
+                                              minOccurs="0">
+                                            </xs:element>
+                                            <xs:element type="xs:string"
                                               name="title" maxOccurs="1"
-                                              minOccurs="0"></xs:element>
-                                            <xs:element
-                                              type="xs:anyURI"
+                                              minOccurs="0">
+                                            </xs:element>
+                                            <xs:element type="xs:anyURI"
                                               name="file" maxOccurs="1"
-                                              minOccurs="0"></xs:element>
-                                            <xs:element
-                                              type="xs:anyURI"
+                                              minOccurs="0">
+                                            </xs:element>
+                                            <xs:element type="xs:anyURI"
                                               name="url" maxOccurs="1"
-                                              minOccurs="0"></xs:element>
-                                            <xs:element
-                                              type="xs:string"
+                                              minOccurs="0">
+                                            </xs:element>
+                                            <xs:element type="xs:string"
                                               name="caption" default=""
                                               maxOccurs="1"
-                                              minOccurs="0"></xs:element>
-                                            <xs:element
-                                              type="xs:string"
+                                              minOccurs="0">
+                                            </xs:element>
+                                            <xs:element type="xs:string"
                                               name="description"
                                               maxOccurs="1"
-                                              minOccurs="0"></xs:element>
-                                            <xs:element
-                                              type="xs:string"
+                                              minOccurs="0">
+                                            </xs:element>
+                                            <xs:element type="xs:string"
                                               name="publication"
                                               maxOccurs="1"
-                                              minOccurs="0"></xs:element>
+                                              minOccurs="0">
+                                            </xs:element>
                                           </xs:all>
                                           <xs:attribute
                                             type="mediaTypes"
-                                            name="type" use="required"></xs:attribute>
+                                            name="type"
+                                            use="required">
+                                          </xs:attribute>
                                         </xs:complexType>
                                       </xs:element>
                                     </xs:sequence>
@@ -1153,59 +1166,62 @@ Grundstückfläche
                                 </xs:element>
                                 <xs:element type="xs:string"
                                   name="visitInformation" minOccurs="0"
-                                  maxOccurs="1"></xs:element>
-                                <xs:element name="events"
-                                  minOccurs="0" maxOccurs="1">
+                                  maxOccurs="1">
+                                </xs:element>
+                                <xs:element name="events" minOccurs="0"
+                                  maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element
-                                        name="event" minOccurs="1"
+                                      <xs:element name="event"
+                                        minOccurs="1"
                                         maxOccurs="unbounded">
                                         <xs:complexType>
                                           <xs:all>
-                                            <xs:element
-                                              type="xs:string"
+                                            <xs:element type="xs:string"
                                               name="name" minOccurs="1"
-                                              maxOccurs="1"></xs:element>
+                                              maxOccurs="1">
+                                            </xs:element>
                                             <xs:element
                                               type="xs:dateTime"
                                               name="start" minOccurs="1"
-                                              maxOccurs="1"></xs:element>
+                                              maxOccurs="1">
+                                            </xs:element>
                                             <xs:element
                                               type="xs:dateTime"
                                               name="end" minOccurs="1"
-                                              maxOccurs="1"></xs:element>
-                                            <xs:element
-                                              type="xs:string"
+                                              maxOccurs="1">
+                                            </xs:element>
+                                            <xs:element type="xs:string"
                                               name="location"
                                               minOccurs="0"
-                                              maxOccurs="1"></xs:element>
-                                            <xs:element
-                                              type="xs:string"
+                                              maxOccurs="1">
+                                            </xs:element>
+                                            <xs:element type="xs:string"
                                               name="summary"
                                               minOccurs="0"
-                                              maxOccurs="1"></xs:element>
+                                              maxOccurs="1">
+                                            </xs:element>
                                           </xs:all>
-                                          <xs:attribute
-                                            type="xs:string" name="type"></xs:attribute>
+                                          <xs:attribute type="xs:string"
+                                            name="type">
+                                          </xs:attribute>
                                         </xs:complexType>
                                       </xs:element>
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
                               </xs:all>
-                              <xs:attribute
-                                type="xs:string" name="lang"
-                                use="required"></xs:attribute>
+                              <xs:attribute type="xs:string" name="lang"
+                                use="required">
+                              </xs:attribute>
                               <!-- <xs:attribute type="xs:ID" name="id" use="optional"/> -->
-                              <xs:attribute
-                                type="xs:string" name="id"
+                              <xs:attribute type="xs:string" name="id"
                                 use="optional">
                                 <xs:annotation>
-                                  <xs:documentation>Is used for
-                                    machine-identification for the
-                                    individual offer/languages this
-                                    needs to be unique
+                                  <xs:documentation>
+                                    Is used for machine-identification
+                                    for the individual offer/languages
+                                    this needs to be unique
                                   </xs:documentation>
                                 </xs:annotation>
                               </xs:attribute>
@@ -1219,10 +1235,12 @@ Grundstückfläche
                   <xs:attribute type="xs:string" name="id"
                     use="required">
                     <xs:annotation>
-                      <xs:documentation>this ID needs to be unique and
-                        represents the id from the exporter (this can be
-                        the same as referenceId if the exporter is the
-                        original creator)</xs:documentation>
+                      <xs:documentation>
+                        this ID needs to be unique and represents the id
+                        from the exporter (this can be the same as
+                        referenceId if the exporter is the original
+                        creator)
+                      </xs:documentation>
                     </xs:annotation>
                   </xs:attribute>
                 </xs:complexType>
@@ -1233,4 +1251,5 @@ Grundstückfläche
       </xs:all>
     </xs:complexType>
   </xs:element>
+
 </xs:schema>
