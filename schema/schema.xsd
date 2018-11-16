@@ -171,39 +171,6 @@
     <xs:enumeration value="year"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="price">
-    <xs:annotation>
-      <xs:documentation
-        source="https://github.com/qualipool/swissrets/raw/master/docs/price.pdf"></xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="xs:positiveInteger">
-        <xs:attribute type="xs:positiveInteger"
-          name="frequency" use="optional" default="1"></xs:attribute>
-        <xs:attribute name="timesegment" use="optional">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="infinite"></xs:enumeration>
-              <xs:enumeration value="day"></xs:enumeration>
-              <xs:enumeration value="week"></xs:enumeration>
-              <xs:enumeration value="month"></xs:enumeration>
-              <xs:enumeration value="year"></xs:enumeration>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:attribute>
-        <xs:attribute name="propertysegment" use="optional"
-          default="all">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="all"></xs:enumeration>
-              <xs:enumeration value="m2"></xs:enumeration>
-              <xs:enumeration value="km2"></xs:enumeration>
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:attribute>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
   <xs:simpleType name="currencyCodeType">
     <xs:restriction base="xs:string">
       <xs:minLength value="3"></xs:minLength>
@@ -605,13 +572,6 @@
       <xs:pattern value="[^@]+@[^\.]+\..+"></xs:pattern>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="rentalDepositProviders">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="adunokaution"></xs:enumeration>
-      <xs:enumeration value="firstcaution"></xs:enumeration>
-      <xs:enumeration value="swisscaution"></xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
   <xs:element name="export">
     <xs:complexType>
       <xs:all>
@@ -734,54 +694,6 @@
                       minOccurs="0" maxOccurs="1">
                     </xs:element>
                     <xs:element name="prices" minOccurs="0" maxOccurs="1" type="prices">
-                    </xs:element>
-                    <xs:element type="currencyCodeType"
-                      name="priceCurrency" minOccurs="1"
-                      maxOccurs="1">
-                    </xs:element>
-                    <xs:element type="price" name="price" minOccurs="0"
-                      maxOccurs="1">
-                    </xs:element>
-                    <xs:element type="price" name="netPrice"
-                      minOccurs="0" maxOccurs="1">
-                    </xs:element>
-                    <xs:element type="price" name="grossPrice"
-                      minOccurs="0" maxOccurs="1">
-                    </xs:element>
-                    <xs:element name="extraCosts" minOccurs="0"
-                      maxOccurs="1">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element name="extraCost" minOccurs="1"
-                            maxOccurs="unbounded">
-                            <xs:complexType>
-                              <xs:simpleContent>
-                                <xs:extension base="xs:short">
-                                  <xs:attribute type="xs:string"
-                                    name="key" use="optional">
-                                  </xs:attribute>
-                                  <xs:attribute type="xs:byte"
-                                    name="frequency" use="optional">
-                                  </xs:attribute>
-                                  <xs:attribute type="xs:string"
-                                    name="timesegment" use="optional">
-                                  </xs:attribute>
-                                  <xs:attribute type="xs:string"
-                                    name="propertysegment"
-                                    use="optional">
-                                  </xs:attribute>
-                                  <xs:attribute type="xs:string"
-                                    name="type" use="optional">
-                                  </xs:attribute>
-                                  <xs:attribute type="xs:string"
-                                    name="title" use="optional">
-                                  </xs:attribute>
-                                </xs:extension>
-                              </xs:simpleContent>
-                            </xs:complexType>
-                          </xs:element>
-                        </xs:sequence>
-                      </xs:complexType>
                     </xs:element>
                     <xs:element name="address" type="address"
                       minOccurs="1" maxOccurs="1">
@@ -982,28 +894,6 @@
                             minOccurs="0" maxOccurs="1">
                           </xs:element>
                         </xs:all>
-                      </xs:complexType>
-                    </xs:element>
-                    <xs:element name="rentalDepositProviders"
-                      minOccurs="0" maxOccurs="1">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element name="rentalDepositProvider"
-                            minOccurs="1" maxOccurs="unbounded">
-                            <xs:complexType>
-                              <xs:all>
-                                <xs:element type="xs:string"
-                                  name="calculation" minOccurs="0"
-                                  maxOccurs="1">
-                                </xs:element>
-                              </xs:all>
-                              <xs:attribute
-                                type="rentalDepositProviders"
-                                name="provider" use="required">
-                              </xs:attribute>
-                            </xs:complexType>
-                          </xs:element>
-                        </xs:sequence>
                       </xs:complexType>
                     </xs:element>
                     <xs:element name="offers" minOccurs="1"
