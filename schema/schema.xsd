@@ -120,57 +120,56 @@
       <xs:element name="onASlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="onASouthSlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="onEvenGround" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <!-- floats -->
-      <xs:element name="areaBwf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaNwf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaPropertyLand" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAff" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAgf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAkf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAkfn" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAkft" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAnf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAngf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAvf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaBuf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaFf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaGf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaGgf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaGsf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaHnf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaKf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaKfn" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaKft" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaNf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaNgf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaNnf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaUf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaUuf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaVf" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="carryingCapacityCrane" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="ceilingHeight" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="constructionUtilizationNumber" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="grossPremium" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hallHeight" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="maxElevatorWeight" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="maximalFloorLoading" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="numberOfApartments" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="numberOfBathrooms" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="numberOfFloors" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="numberOfParcels" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="numberOfRooms" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="propertyLandPrice" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="utilizationNumber" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeGva" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSia" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAfv" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAkv" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAngv" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAnv" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAvv" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaGv" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <!-- integers -->
-      <xs:element name="floor" type="xs:float" minOccurs="0" maxOccurs="1" />
+      <!-- decimals -->
+      <xs:element name="areaBwf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaNwf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaPropertyLand" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAff" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAgf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAkf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAkfn" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAkft" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAnf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAngf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAvf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaBuf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaFf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaGf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaGgf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaGsf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaHnf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaKf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaKfn" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaKft" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaNf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaNgf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaNnf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaUf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaUuf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaVf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="carryingCapacityCrane" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="ceilingHeight" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="constructionUtilizationNumber" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="floor" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="grossPremium" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hallHeight" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="maxElevatorWeight" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="maximalFloorLoading" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="numberOfApartments" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="numberOfBathrooms" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="numberOfFloors" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="numberOfParcels" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="numberOfRooms" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="propertyLandPrice" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="utilizationNumber" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeGva" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSia" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaAfv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaAkv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaAngv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaAnv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaAvv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaGv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
       <!-- positive integers -->
       <xs:element name="yearBuilt" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
       <xs:element name="yearLastRenovated" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
