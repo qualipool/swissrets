@@ -55,14 +55,28 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="characteristicsType">
-    <xs:all>
+        <xs:annotation>
+          <xs:documentation>Booleans
+They have three states
+true: the characteristic is present
+false: the characteristic is not present
+tag ommited: unknown wether the characteristic is present or not
+
+Decimals
+Leading and trailing zeroes may be trimed
+Decimal point is always the dot
+
+Years
+Can not be earlier than 1000</xs:documentation>
+        </xs:annotation>
+        <xs:all>
       <!-- booleans -->
-      <xs:element name="has_demolition_property" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasBalcony" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasBuildingLawRestrictions" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasCabletv" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasCarPort" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasConnectedBuildingLand" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasDemolitionProperty" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasDoubleCarPort" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasDoubleGarage" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasElevator" type="xs:boolean" minOccurs="0" maxOccurs="1" />
@@ -88,7 +102,6 @@
       <xs:element name="hasTumbler" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasWashingMachine" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasWaterSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="is_projection" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isAllowedAsSecondaryResidency" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isAnimalFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isChildFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1" />
@@ -109,6 +122,7 @@
       <xs:element name="isOnlyAllowedAsPrimaryResidency" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isPartiallyRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isPartiallyRenovationIndigent" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isProjection" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isQuiet" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isRenovationIndigent" type="xs:boolean" minOccurs="0" maxOccurs="1" />
@@ -162,19 +176,30 @@
       <xs:element name="numberOfRooms" type="xs:decimal" minOccurs="0" maxOccurs="1" />
       <xs:element name="propertyLandPrice" type="xs:decimal" minOccurs="0" maxOccurs="1" />
       <xs:element name="utilizationNumber" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeGva" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSia" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAfv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAkv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAngv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAnv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAvv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaGv" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <!-- positive integers -->
-      <xs:element name="yearBuilt" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
-      <xs:element name="yearLastRenovated" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+      <!-- volumes -->
+      <xs:element name="volumeGva" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSia" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaAfv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaAkv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaAngv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaAnv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaAvv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="volumeSiaGv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <!-- years -->
+      <xs:element name="yearBuilt" type="yearType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="yearLastRenovated" type="yearType" minOccurs="0" maxOccurs="1" />
     </xs:all>
   </xs:complexType>
+  <xs:simpleType name="positiveDecimalType">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"></xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="yearType">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1000"></xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
   <xs:complexType name="pricesType">
     <xs:all>
       <xs:element minOccurs="0" maxOccurs="1" name="rent">
