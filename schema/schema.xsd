@@ -57,69 +57,69 @@
   <xs:complexType name="characteristicsType">
     <xs:all>
       <!-- booleans -->
-      <xs:element name="hasElevator" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasNiceView" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasFireplace" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasCabletv" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isChildFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasParking" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasGarage" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasBalcony" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isWheelchairAccessible" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isAnimalFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasRamp" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasLiftingPlatform" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasRailwayTerminal" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasRestrooms" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasWaterSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasSewageSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasPowerSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasGasSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasFlatSharingCommunity" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isCornerHouse" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isMiddleHouse" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasConnectedBuildingLand" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasGardenhouse" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasRaisedGroundFloor" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isNew" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isOld" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasBuildingLawRestrictions" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isUnderRoof" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasSwimmingpool" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isMinergieGeneral" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isMinergieCertified" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isSunny" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isQuiet" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="is_projection" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="has_demolition_property" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasMountainView" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasLakeView" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="onASouthSlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="onASlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasBalcony" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasBuildingLawRestrictions" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasCabletv" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasCarPort" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasConnectedBuildingLand" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasDoubleCarPort" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasDoubleGarage" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="onEvenGround" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isNonSmoking" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasElevator" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasFireplace" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasFlatSharingCommunity" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasForeignQuota" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasGarage" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasGardenhouse" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasGasSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasKachelofen" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasLakeView" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasLiftingPlatform" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasMountainView" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasNiceView" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasParking" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasPowerSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasRailwayTerminal" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasRaisedGroundFloor" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasRamp" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasRestrooms" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasSewageSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasSwimmingpool" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasTumbler" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasWashingMachine" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasWaterSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="is_projection" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isAllowedAsSecondaryResidency" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isAnimalFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isChildFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isCornerHouse" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isDemolitionProperty" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isDilapidated" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isGutted" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isFirstTimeOccupancy" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isWellTended" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isGroundFloor" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isGutted" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isMiddleHouse" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isMinergieCertified" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isMinergieGeneral" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isModernized" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isNew" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isNewConstruction" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isNonSmoking" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isOld" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isOnlyAllowedAsPrimaryResidency" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isPartiallyRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isPartiallyRenovationIndigent" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isQuiet" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isRenovationIndigent" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="isShellConstruction" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isNewConstruction" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isPartiallyRenovationIndigent" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isPartiallyRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasWashingMachine" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasTumbler" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasKachelofen" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isOnlyAllowedAsPrimaryResidency" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isAllowedAsSecondaryResidency" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasForeignQuota" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isGroundFloor" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isSunny" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isUnderRoof" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isWellTended" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="isWheelchairAccessible" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="onASlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="onASouthSlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="onEvenGround" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <!-- floats -->
       <xs:element name="areaBwf" type="xs:float" minOccurs="0" maxOccurs="1" />
       <xs:element name="areaNwf" type="xs:float" minOccurs="0" maxOccurs="1" />
@@ -150,7 +150,6 @@
       <xs:element name="carryingCapacityCrane" type="xs:float" minOccurs="0" maxOccurs="1" />
       <xs:element name="ceilingHeight" type="xs:float" minOccurs="0" maxOccurs="1" />
       <xs:element name="constructionUtilizationNumber" type="xs:float" minOccurs="0" maxOccurs="1" />
-      <xs:element name="floor" type="xs:float" minOccurs="0" maxOccurs="1" />
       <xs:element name="grossPremium" type="xs:float" minOccurs="0" maxOccurs="1" />
       <xs:element name="hallHeight" type="xs:float" minOccurs="0" maxOccurs="1" />
       <xs:element name="maxElevatorWeight" type="xs:float" minOccurs="0" maxOccurs="1" />
@@ -170,6 +169,8 @@
       <xs:element name="volumeSiaAnv" type="xs:float" minOccurs="0" maxOccurs="1" />
       <xs:element name="volumeSiaAvv" type="xs:float" minOccurs="0" maxOccurs="1" />
       <xs:element name="volumeSiaGv" type="xs:float" minOccurs="0" maxOccurs="1" />
+      <!-- integers -->
+      <xs:element name="floor" type="xs:float" minOccurs="0" maxOccurs="1" />
       <!-- positive integers -->
       <xs:element name="yearBuilt" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
       <xs:element name="yearLastRenovated" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
