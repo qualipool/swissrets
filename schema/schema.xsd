@@ -134,49 +134,53 @@ Can not be earlier than 1000</xs:documentation>
       <xs:element name="onASlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="onASouthSlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="onEvenGround" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <!-- decimals -->
+      <!-- various numerics -->
       <xs:element name="areaBwf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
       <xs:element name="areaNwf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaPropertyLand" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAff" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAgf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAkf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAkfn" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAkft" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAnf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAngf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAvf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaBuf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaFf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaGf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaGgf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaGsf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaHnf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaKf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaKfn" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaKft" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaNf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaNgf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaNnf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaUf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaUuf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaVf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaPropertyLand" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+
+      <xs:element name="areaSiaAff" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAgf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAkf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAkfn" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAkft" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAnf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAngf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaAvf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaBuf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaFf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaGf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaGgf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaGsf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaHnf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaKf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaKfn" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaKft" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaNf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaNgf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaNnf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaUf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaUuf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="areaSiaVf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
+
       <xs:element name="carryingCapacityCrane" type="xs:decimal" minOccurs="0" maxOccurs="1" />
       <xs:element name="ceilingHeight" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="constructionUtilizationNumber" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="floor" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="grossPremium" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+
+      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1" />
+
       <xs:element name="hallHeight" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="maxElevatorWeight" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="maximalFloorLoading" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="numberOfApartments" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="numberOfBathrooms" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="numberOfFloors" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="numberOfParcels" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="numberOfRooms" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="propertyLandPrice" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+
+      <xs:element name="elevatorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="floorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+
+      <xs:element name="apartements" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="bathrooms" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="floors" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parcels" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="rooms" type="xs:positiveDecimal" minOccurs="0" maxOccurs="1" />
+
+      <xs:element name="utilizationNumberConstruction" type="xs:decimal" minOccurs="0" maxOccurs="1" />
       <xs:element name="utilizationNumber" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <!-- volumes -->
       <xs:element name="volumeGva" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
       <xs:element name="volumeSia" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
       <xs:element name="volumeSiaAfv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
@@ -185,9 +189,12 @@ Can not be earlier than 1000</xs:documentation>
       <xs:element name="volumeSiaAnv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
       <xs:element name="volumeSiaAvv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
       <xs:element name="volumeSiaGv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <!-- years -->
       <xs:element name="yearBuilt" type="yearType" minOccurs="0" maxOccurs="1" />
       <xs:element name="yearLastRenovated" type="yearType" minOccurs="0" maxOccurs="1" />
+
+      <!-- TODO: discuss, what's this? -->
+      <xs:element name="grossPremium" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+      <xs:element name="propertyLandPrice" type="xs:decimal" minOccurs="0" maxOccurs="1" />
     </xs:all>
   </xs:complexType>
   <xs:simpleType name="positiveDecimalType">
