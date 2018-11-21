@@ -6,7 +6,7 @@
       <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="givenName" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="familyName" minOccurs="0" maxOccurs="1" />
-      <xs:element type="emailAddressType" name="email" minOccurs="0" maxOccurs="1" />
+      <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1" />
@@ -14,7 +14,7 @@
       <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1" />
     </xs:all>
   </xs:complexType>
-  <xs:complexType name="addressType">
+  <xs:complexType name="address">
     <xs:all>
       <xs:element type="countryCodeType" name="country" minOccurs="1" maxOccurs="1" />
       <xs:element type="xs:string" name="locality" minOccurs="0" maxOccurs="1" />
@@ -54,10 +54,10 @@
       <xs:enumeration value="buy" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="characteristicsType">
+  <xs:complexType name="characteristics">
         <xs:annotation>
           <xs:documentation>Booleans
-They have three states
+Have three states
 true: the characteristic is present
 false: the characteristic is not present
 tag ommited: unknown wether the characteristic is present or not
@@ -70,139 +70,341 @@ Years
 Can not be earlier than 1000</xs:documentation>
         </xs:annotation>
         <xs:all>
-      <!-- booleans -->
-      <xs:element name="hasBalcony" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasBuildingLawRestrictions" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasCabletv" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasCarPort" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasConnectedBuildingLand" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasDemolitionProperty" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasDoubleCarPort" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasDoubleGarage" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasElevator" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasFireplace" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasFlatSharingCommunity" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasForeignQuota" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasGarage" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasGardenhouse" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasGasSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasKachelofen" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasLakeView" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasLiftingPlatform" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasMountainView" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasNiceView" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasParking" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasPowerSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasRailwayTerminal" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasRaisedGroundFloor" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasRamp" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasRestrooms" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasSewageSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasSwimmingpool" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasTumbler" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasWashingMachine" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="hasWaterSupply" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isAllowedAsSecondaryResidency" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isAnimalFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isChildFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isCornerHouse" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isDemolitionProperty" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isDilapidated" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isFirstTimeOccupancy" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isGroundFloor" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isGutted" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isMiddleHouse" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isMinergieCertified" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isMinergieGeneral" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isModernized" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isNew" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isNewConstruction" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isNonSmoking" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isOld" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isOnlyAllowedAsPrimaryResidency" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isPartiallyRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isPartiallyRenovationIndigent" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isProjection" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isQuiet" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isRenovationIndigent" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isShellConstruction" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isSunny" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isUnderRoof" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isWellTended" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="isWheelchairAccessible" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="onASlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="onASouthSlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <xs:element name="onEvenGround" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-      <!-- various numerics -->
-      <xs:element name="areaBwf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaNwf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaPropertyLand" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-
-      <xs:element name="areaSiaAff" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAgf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAkf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAkfn" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAkft" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAnf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAngf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaAvf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaBuf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaFf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaGf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaGgf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaGsf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaHnf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaKf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaKfn" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaKft" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaNf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaNgf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaNnf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaUf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaUuf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="areaSiaVf" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-
-      <xs:element name="carryingCapacityCrane" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="ceilingHeight" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-
-      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1" />
-
-      <xs:element name="hallHeight" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-
-      <xs:element name="elevatorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="floorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-
-      <xs:element name="apartements" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
-      <xs:element name="bathrooms" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
-      <xs:element name="floors" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
-      <xs:element name="parcels" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
-      <xs:element name="rooms" type="xs:positiveDecimal" minOccurs="0" maxOccurs="1" />
-
-      <xs:element name="utilizationNumberConstruction" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="utilizationNumber" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeGva" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSia" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAfv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAkv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAngv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAnv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaAvv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="volumeSiaGv" type="positiveDecimalType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="yearBuilt" type="yearType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="yearLastRenovated" type="yearType" minOccurs="0" maxOccurs="1" />
-
-      <!-- TODO: discuss, what's this? -->
-      <xs:element name="grossPremium" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-      <xs:element name="propertyLandPrice" type="xs:decimal" minOccurs="0" maxOccurs="1" />
-    </xs:all>
+          <!-- booleans -->
+          <xs:element name="arePetsAllowed" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Pets are allowed or not tolerated.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasBalcony" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Balcony available.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasBuildingLawRestrictions" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>TODO: this needs documentation</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasCableTv" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Availability of cable tv.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasCarPort" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                A covered structure used to offer limited protection from rain and snow, for one car.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasCarPortDouble" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                A covered structure used to offer limited protection from rain and snow, for two cars.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasConnectedBuildingLand" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>States if the land is fully developed and ready being built on it.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasDemolitionProperty" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                Used for building land, states if there is some demolition property on it (or pieces of it).
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasElevator" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Availability of an elevator.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasFireplace" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Includes a framed opening to hold an open fire, indoors.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasFlatSharingCommunity" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                Wheter or not there is a residential community, sharing the living space.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasGarage" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A shelter for one car.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasGarageDouble" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A shelter for two cars.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasGardenShed" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                A small building for storing garden tools, bicycles, and other equipment.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasGasSupply" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Availability of a gas connection, usually for heating and cooking.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasLakeView" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Direct visibility of a lake.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasLiftingPlatform" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                Provides vertical transportation between building floors, levels or decks, and are commonly found in
+                offices, public buildings and other types of multi-storey accommodation.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasMountainView" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Direct visibility of mountains.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasNiceView" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Has a lovely view, usually from the balcony or the living room.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasParking" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>An uncovered space for one car or more cars.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasPowerSupply" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A connection to the public electric grid.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasRaisedGroundFloor" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Half of a stair elevated story, in a building.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasRamp" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                A sloping floor, walk, or roadway leading from one level to another, usually to make a place accessible
+                for wheels.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasSewageSupply" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A connection to the public waste water system.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasSwimmingPool" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="hasTiledStove" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                A masonry heater or ceramic stove, is a device for warming an interior space usually fed with wood.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasTumbleDryer" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Dryer for clothes after washing them.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasWashingMachine" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>For washing clothes and other cloth.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hasWaterSupply" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A connection to the public water supply.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isChildFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Suitable for families.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isCornerHouse" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>A house situatet on the corner of two streets.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isDemolitionProperty" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>If it's a tear-down property or a site of demolished structures.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isDilapidated" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Old and in poor condition, in a state of decay.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isFirstOccupancy" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                No one used the flat or the building before, since it was built or heavily renovated from ground up.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isGroundFloor" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Nearly on a level with the ground.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isGutted" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                Preparation for demolition or a part-demolition. All contaminants, doors, windows, floors and
+                non-loadbearing walls were removed.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isMiddleHouse" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Situated betwee two other houses or buildings.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isModernized" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isNew" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isNewConstruction" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isNonSmoking" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isOld" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isPartiallyRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isPartiallyRenovationIndigent" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isPrimaryResidenceOnly" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isProjection" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isQuiet" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isQuotedForForeigners" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                Widely used to control the amount of foreigners buying holiday flats in popular regions.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isRenovationIndigent" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isSecondaryResidenceAllowed" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                Where a person lives part time or less than the majority of the calendar year, typically a holiday flat.
+                Some laws and landlords do not allow this.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isShellConstruction" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isSunny" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isUnderRoof" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isWellTended" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="isWheelchairAccessible" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="onASlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="onASouthSlope" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="onEvenGround" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+          <!-- various numerics -->
+          <xs:element name="apartements" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaBwf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaNwf" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaPropertyLand" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaAff" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaAgf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaAkf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaAkfn" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaAkft" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaAnf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaAngf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaAvf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaBuf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaFf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaGf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaGgf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaGsf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaHnf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaKf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaKfn" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaKft" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaNf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaNgf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaNnf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaUf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaUuf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="areaSiaVf" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="bathrooms" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+          <xs:element name="carryingCapacityCrane" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="ceilingHeight" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="elevatorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1" />
+          <xs:element name="floorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="floors" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+          <xs:element name="grossPremium" type="percent" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                A gross premium is the total premium of an insurance contract before brokerage or discounts have been
+                deducted, in percent.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="hallHeight" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+            <xs:element name="minergieCertification" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>Quality label for new and refurbished low-energy-consumption buildings.</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="Minergie"></xs:enumeration>
+                <xs:enumeration value="Minergie-P"></xs:enumeration>
+                <xs:enumeration value="Minergie-Eco"></xs:enumeration>
+                <xs:enumeration value="Minergie-P-Eco"></xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+            <xs:element name="parcels" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+          <xs:element name="propertyLandPrice" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="rooms" type="xs:positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="utilizationNumber" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="utilizationNumberConstruction" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="volumeGva" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="volumeSia" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="volumeSiaAfv" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="volumeSiaAkv" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="volumeSiaAngv" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="volumeSiaAnv" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="volumeSiaAvv" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="volumeSiaGv" type="positiveDecimal" minOccurs="0" maxOccurs="1" />
+          <xs:element name="yearBuilt" type="year" minOccurs="0" maxOccurs="1" />
+          <xs:element name="yearLastRenovated" type="year" minOccurs="0" maxOccurs="1" />
+        </xs:all>
   </xs:complexType>
-  <xs:simpleType name="positiveDecimalType">
+  <xs:simpleType name="percent">
+    <xs:annotation>
+      <xs:documentation>The percent type specifies a percentage from 0 to 100.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="positiveDecimal">
+    <xs:annotation>
+      <xs:documentation>The positive decimal type specifies a decimal from 0 and above</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:decimal">
       <xs:minInclusive value="0"></xs:minInclusive>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="yearType">
+  <xs:simpleType name="year">
+    <xs:annotation>
+      <xs:documentation>The year type specifies an integer from 1000 and above</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:positiveInteger">
       <xs:minInclusive value="1000"></xs:minInclusive>
     </xs:restriction>
@@ -340,114 +542,85 @@ Can not be earlier than 1000</xs:documentation>
       <xs:documentation source="https://github.com/qualipool/swissrets/blob/master/docs/categories-utilities.md" />
     </xs:annotation>
     <xs:restriction base="xs:string">
+      <xs:enumeration value="alottmen-garden" />
       <xs:enumeration value="apartment" />
+      <xs:enumeration value="attic-compartment" />
       <xs:enumeration value="attic-flat" />
       <xs:enumeration value="bachelor-flat" />
+      <xs:enumeration value="bed-and-breakfast" />
       <xs:enumeration value="bifamiliar-house" />
+      <xs:enumeration value="boat-dry-dock" />
+      <xs:enumeration value="boat-landing-stage" />
+      <xs:enumeration value="boat-mooring" />
       <xs:enumeration value="building-land" />
+      <xs:enumeration value="bungalow" />
+      <xs:enumeration value="cafe-bar" />
+      <xs:enumeration value="campground" />
+      <xs:enumeration value="car-park" />
+      <xs:enumeration value="castle" />
+      <xs:enumeration value="cellar-compartment" />
+      <xs:enumeration value="chalet" />
+      <xs:enumeration value="covered-slot" />
+      <xs:enumeration value="display-window" />
       <xs:enumeration value="double-garage" />
       <xs:enumeration value="duplex" />
+      <xs:enumeration value="engadine-house" />
+      <xs:enumeration value="exhibition-space" />
       <xs:enumeration value="factory" />
-      <xs:enumeration value="farm" />
       <xs:enumeration value="farm-house" />
+      <xs:enumeration value="farm" />
+      <xs:enumeration value="flat" />
+      <xs:enumeration value="fuel-station" />
       <xs:enumeration value="furnished-flat" />
       <xs:enumeration value="garage" />
+      <xs:enumeration value="garden-apartment" />
+      <xs:enumeration value="golf-course" />
+      <xs:enumeration value="granny-flat" />
+      <xs:enumeration value="hobby-room" />
+      <xs:enumeration value="home" />
+      <xs:enumeration value="horse-box" />
+      <xs:enumeration value="hospital" />
+      <xs:enumeration value="hotel" />
+      <xs:enumeration value="house-part" />
       <xs:enumeration value="house" />
+      <xs:enumeration value="indoor-swimming-pool" />
+      <xs:enumeration value="indoor-tennis-court" />
       <xs:enumeration value="loft" />
+      <xs:enumeration value="maisonette" />
+      <xs:enumeration value="mini-golf-course" />
       <xs:enumeration value="mountain-farm" />
       <xs:enumeration value="multiple-dwelling" />
+      <xs:enumeration value="nursing-home" />
+      <xs:enumeration value="office" />
+      <xs:enumeration value="old-age-home" />
       <xs:enumeration value="open-slot" />
+      <xs:enumeration value="outdoor-swimming-pool" />
       <xs:enumeration value="parking-space" />
+      <xs:enumeration value="patrician-house" />
       <xs:enumeration value="plot" />
+      <xs:enumeration value="residential-commercial-building" />
+      <xs:enumeration value="retail-space" />
+      <xs:enumeration value="retail" />
+      <xs:enumeration value="riding-hall" />
       <xs:enumeration value="roof-flat" />
       <xs:enumeration value="row-house" />
+      <xs:enumeration value="rustico" />
+      <xs:enumeration value="sanatorium" />
+      <xs:enumeration value="sauna" />
       <xs:enumeration value="single-garage" />
       <xs:enumeration value="single-house" />
       <xs:enumeration value="single-room" />
+      <xs:enumeration value="solarium" />
+      <xs:enumeration value="sports-hall" />
+      <xs:enumeration value="squash-badminton" />
+      <xs:enumeration value="studio" />
+      <xs:enumeration value="tennis-court" />
       <xs:enumeration value="terrace-flat" />
       <xs:enumeration value="terrace-house" />
       <xs:enumeration value="underground-slot" />
       <xs:enumeration value="villa" />
-      <xs:enumeration value="chalet" />
-      <xs:enumeration value="studio" />
-      <xs:enumeration value="covered-slot" />
-      <xs:enumeration value="office" />
-      <xs:enumeration value="flat" />
-      <xs:enumeration value="exhibition-space" />
-      <xs:enumeration value="retail" />
-      <xs:enumeration value="bed-and-breakfast" />
-      <xs:enumeration value="hotel" />
       <xs:enumeration value="warehouse" />
       <xs:enumeration value="workshop" />
-      <xs:enumeration value="car-park" />
-      <xs:enumeration value="bungalow" />
-      <xs:enumeration value="castle" />
-      <xs:enumeration value="fuel-station" />
-      <xs:enumeration value="cafe-bar" />
-      <xs:enumeration value="garden-apartment" />
-      <xs:enumeration value="maisonette" />
-      <xs:enumeration value="rustico" />
-      <xs:enumeration value="retail-space" />
-      <xs:enumeration value="boat-dry-dock" />
-      <!--'Boot Hallenplatz','Boat dry dock','Halle à bâteaux','Posteggio barca interno', -->
-      <xs:enumeration value="alottmen-garden" />
-      <!--'Schrebergarten','Alottment garden','Jardin familial','Orto', -->
-      <xs:enumeration value="squash-badminton" />
-      <!--'Squash / Badminton','Squash / Badminton','Squash / Badminton','Squash / Badminton', -->
-      <xs:enumeration value="indoor-tennis-court" />
-      <!--'Tennishalle','Indoor tennis courts','Halle de tennis','Campo da tennis interno', -->
-      <xs:enumeration value="tennis-court" />
-      <!--'Tennisplatz','Tennis court','Place de tennis','Campo da tennis esterno', -->
-      <xs:enumeration value="sports-hall" />
-      <!--'Sportanlage','Sports hall','Installation sportive','Impianto sportivo', -->
-      <xs:enumeration value="campground" />
-      <!--'Camping- / Zeltplatz','Campground / Tent camping','Camping / Terrain campement','Campeggio', -->
-      <xs:enumeration value="outdoor-swimming-pool" />
-      <!--'Freibad','Outdoor swimming pool','Piscine découverte','Piscina esterna', -->
-      <xs:enumeration value="indoor-swimming-pool" />
-      <!--'Hallenbad','Indoor swimming pool','Piscine couverte','Piscina coperta', -->
-      <xs:enumeration value="golf-course" />
-      <!--'Golfplatz','Golf course','Terrain de golf','Campo da golf', -->
-      <xs:enumeration value="hospital" />
-      <!--'Krankenhaus','Hospital','Etablissement hospitalier','Ospedale', -->
-      <xs:enumeration value="mini-golf-course" />
-      <!--'Minigolfplatz','Mini-golf course','Minigolf','Campo da minigolf', -->
-      <xs:enumeration value="nursing-home" />
-      <!--'Pflegeheim','nursing home','Home de soins','Casa di cura', -->
-      <xs:enumeration value="riding-hall" />
-      <!--'Reithalle','Riding hall','Halle d\'équitation','Maneggio', -->
-      <xs:enumeration value="sanatorium" />
-      <!--'Sanatorium','Sanatorium','Sanatorium','Sanatorio', -->
-      <xs:enumeration value="sauna" />
-      <!--'Sauna','Sauna','Sauna','Sauna', -->
-      <xs:enumeration value="solarium" />
-      <!--'Solarium','Solarium','Solarium','Solario', -->
-      <xs:enumeration value="old-age-home" />
-      <!--'Altersheim','Old-age home','Home pour personnes âgées','Casa di riposo', -->
-      <xs:enumeration value="home" />
-      <!--'Heim','Home','Home','Istituto', -->
-      <xs:enumeration value="display-window" />
-      <!--'Schaufenster','Display window','Vitrine','Vetrina', -->
-      <xs:enumeration value="granny-flat" />
-      <!--'Stöckli','Granny flat','Dépendance','Stöckli', -->
-      <xs:enumeration value="boat-landing-stage" />
-      <!--'Boot Stegplatz','Boat landing stage','Place extérieure à bâteaux','Attracco barca esteriore', -->
-      <xs:enumeration value="horse-box" />
-      <!--'Stallboxe','Horse box','Box d\'écurie','Box in stalla', -->
-      <xs:enumeration value="boat-mooring" />
-      <!--'Boot Bojenplatz','Boat mooring','Place à bâteau balisée','Attracco barca (boa)', -->
-      <xs:enumeration value="cellar-compartment" />
-      <!--'Kellerabteil','Cellar compartment','Cave','Scomparto cantina', -->
-      <xs:enumeration value="attic-compartment" />
-      <!--'Estrichabteil','Attic compartment','Grenier','Scomparto soffitta', -->
-      <xs:enumeration value="house-part" />
-      <xs:enumeration value="residential-commercial-building" />
-      <!--'Wohn- / Geschäftshaus','Imm.com.& hab.','Immob.com. e abitativo','Living / commercial building', -->
-      <xs:enumeration value="engadine-house" />
-      <!-- Engadine house, 'Engadinerhaus', Casa engadinese -->
-      <xs:enumeration value="patrician-house" />
-      <!-- Patrician house, 'Patrizierhaus', Palazzo patrizio -->
-      <xs:enumeration value="hobby-room" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="urlTypes">
@@ -493,7 +666,7 @@ Can not be earlier than 1000</xs:documentation>
       <xs:enumeration value="sales-brochure" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="emailAddressType">
+  <xs:simpleType name="emailaddress">
     <xs:restriction base="xs:string">
       <xs:pattern value="[^@]+@[^\.]+\..+" />
     </xs:restriction>
@@ -528,7 +701,6 @@ Can not be earlier than 1000</xs:documentation>
                                 <xs:element name="properties" maxOccurs="1" minOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <!-- <xs:element name="propertyRef" maxOccurs="unbounded" minOccurs="1" type="xs:IDREF" /> -->
                                       <xs:element maxOccurs="unbounded" minOccurs="1" type="xs:string" name="propertyRef" />
                                     </xs:sequence>
                                   </xs:complexType>
@@ -579,7 +751,7 @@ Can not be earlier than 1000</xs:documentation>
                     <xs:element name="availability" type="availabilityType" minOccurs="1" maxOccurs="1" />
                     <xs:element name="start" type="xs:dateTime" minOccurs="0" maxOccurs="1" />
                     <xs:element name="prices" type="pricesType" minOccurs="0" maxOccurs="1" />
-                    <xs:element name="address" type="addressType" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="address" type="address" minOccurs="1" maxOccurs="1" />
                     <xs:element name="softwareInformation" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:all>
@@ -590,7 +762,7 @@ Can not be earlier than 1000</xs:documentation>
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="characteristics" type="characteristicsType" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="characteristics" type="characteristics" minOccurs="0" maxOccurs="1" />
                     <xs:element name="categories" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
@@ -616,11 +788,11 @@ Can not be earlier than 1000</xs:documentation>
                           <xs:element name="organization" minOccurs="0" maxOccurs="1">
                             <xs:complexType>
                               <xs:all>
-                                <xs:element name="address" type="addressType" minOccurs="0" maxOccurs="1" />
+                                <xs:element name="address" type="address" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="emailAddressType" name="email" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="emailAddressType" name="emailRem" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
                                 <xs:element name="website" minOccurs="0" maxOccurs="1">
