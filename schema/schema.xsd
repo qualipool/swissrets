@@ -142,7 +142,7 @@
       </xs:element>
       <xs:element name="hasLiftingPlatform" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Provides vertical transportation between building floors, levels or decks, and are commonly found in offices, public buildings and other types of multi-storey accommodation.</xs:documentation>
+          <xs:documentation>Provides vertical transportation between building floors, levels or decks, and are commonly found in offices, public buildings and other types of multi-story accommodation.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasMountainView" type="xs:boolean" minOccurs="0" maxOccurs="1">
