@@ -14,7 +14,3 @@ trim_trailing_whitespace = false
 
 [*.json]
 insert_final_newline = false
-
-# use 4 spaces for xml documents
-[*.{xml,xsd}]
-indent_size = 2
