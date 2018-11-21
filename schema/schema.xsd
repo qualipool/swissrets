@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
   <!-- TYPE DEFFINITIONS START HERE -->
-  <xs:complexType name="personType">
+  <xs:complexType name="person">
     <xs:all>
       <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="givenName" minOccurs="0" maxOccurs="1" />
@@ -16,7 +16,7 @@
   </xs:complexType>
   <xs:complexType name="address">
     <xs:all>
-      <xs:element type="countryCodeType" name="country" minOccurs="1" maxOccurs="1" />
+      <xs:element type="countryCode" name="country" minOccurs="1" maxOccurs="1" />
       <xs:element type="xs:string" name="locality" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="region" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="postalCode" minOccurs="0" maxOccurs="1" />
@@ -36,7 +36,7 @@
       </xs:element>
     </xs:all>
   </xs:complexType>
-  <xs:simpleType name="availabilityType">
+  <xs:simpleType name="availability">
     <xs:restriction base="xs:string">
       <xs:enumeration value="reserved" />
       <xs:enumeration value="active" />
@@ -45,7 +45,7 @@
       <xs:enumeration value="private" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="propertyType">
+  <xs:simpleType name="property">
     <xs:annotation>
       <xs:documentation>rent: Mieten, buy: Kaufen</xs:documentation>
     </xs:annotation>
@@ -638,7 +638,7 @@
       <xs:minInclusive value="1000"></xs:minInclusive>
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="pricesType">
+  <xs:complexType name="prices">
     <xs:all>
       <xs:element minOccurs="0" maxOccurs="1" name="rent">
         <xs:complexType>
@@ -647,8 +647,8 @@
             <xs:element minOccurs="0" maxOccurs="1" name="net" type="xs:positiveInteger" />
             <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
           </xs:all>
-          <xs:attribute name="interval" type="priceIntervalTypes" use="optional" />
-          <xs:attribute name="referring" type="priceReferringTypes" use="optional" />
+          <xs:attribute name="interval" type="priceInterval" use="optional" />
+          <xs:attribute name="referring" type="priceReferring" use="optional" />
         </xs:complexType>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="1" name="buy">
@@ -662,7 +662,7 @@
               </xs:annotation>
             </xs:element>
           </xs:all>
-          <xs:attribute name="referring" type="priceReferringTypes" />
+          <xs:attribute name="referring" type="priceReferring" />
         </xs:complexType>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="1" name="auction">
@@ -715,7 +715,7 @@
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:attribute>
-                    <xs:attribute name="interval" type="priceIntervalTypes" use="optional" />
+                    <xs:attribute name="interval" type="priceInterval" use="optional" />
                   </xs:extension>
                 </xs:simpleContent>
               </xs:complexType>
@@ -724,9 +724,9 @@
         </xs:complexType>
       </xs:element>
     </xs:all>
-    <xs:attribute name="currency" type="currencyCodeType" />
+    <xs:attribute name="currency" type="currencyCode" />
   </xs:complexType>
-  <xs:simpleType name="priceReferringTypes">
+  <xs:simpleType name="priceReferring">
     <xs:annotation>
       <xs:documentation>For what area the price stands for.</xs:documentation>
     </xs:annotation>
@@ -736,7 +736,7 @@
       <xs:enumeration value="km2" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="priceIntervalTypes">
+  <xs:simpleType name="priceInterval">
     <xs:annotation>
       <xs:documentation>The payment interval the price stands for.</xs:documentation>
     </xs:annotation>
@@ -748,33 +748,21 @@
       <xs:enumeration value="year" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="currencyCodeType">
+  <xs:simpleType name="currencyCode">
     <xs:restriction base="xs:string">
       <xs:minLength value="3" />
       <xs:maxLength value="3" />
       <xs:pattern value="[A-Z]{3}" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="countryCodeType">
+  <xs:simpleType name="countryCode">
     <xs:restriction base="xs:string">
       <xs:minLength value="2" />
       <xs:maxLength value="2" />
       <xs:pattern value="[A-Z]{2}" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="fullUrlType">
-    <xs:simpleContent>
-      <xs:extension base="xs:anyURI">
-        <xs:attribute type="urlTypes" name="type" use="optional" />
-        <xs:attribute type="xs:string" name="title" use="optional" />
-        <xs:attribute type="xs:string" name="label" use="optional" />
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:simpleType name="categoryTypes">
-    <xs:annotation>
-      <xs:documentation source="https://github.com/qualipool/swissrets/blob/master/docs/categories-utilities.md" />
-    </xs:annotation>
+  <xs:simpleType name="categories">
     <xs:restriction base="xs:string">
       <xs:enumeration value="alottmen-garden" />
       <xs:enumeration value="apartment" />
@@ -857,25 +845,7 @@
       <xs:enumeration value="workshop" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="urlTypes">
-    <xs:annotation>
-      <xs:documentation>Url types define the usage and implementation of a url. It should not describe the url itself.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="link" />
-      <!-- a genneric link for display and hrefing. -->
-      <xs:enumeration value="direct-link" />
-      <!-- use as replacement link. Aka. a custom Endpoint webpage instead of a generated single/data view. -->
-      <xs:enumeration value="virtual-tour" />
-      <!-- to embed specificaly (usualy iframe) -->
-      <xs:enumeration value="youtube" />
-      <!-- to embed specificaly with youtube api -->
-      <xs:enumeration value="archilogic" />
-      <!-- to embed specificaly with archilogic api -->
-      <xs:enumeration value="emonitor" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="utilityTypes">
+  <xs:simpleType name="utilization">
     <xs:restriction base="xs:string">
       <xs:enumeration value="commercial" />
       <xs:enumeration value="gastronomy" />
@@ -978,10 +948,10 @@
                         </xs:documentation>
                       </xs:annotation>
                     </xs:element>
-                    <xs:element name="type" type="propertyType" minOccurs="1" maxOccurs="1" />
-                    <xs:element name="availability" type="availabilityType" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="type" type="property" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="availability" type="availability" minOccurs="1" maxOccurs="1" />
                     <xs:element name="start" type="xs:dateTime" minOccurs="0" maxOccurs="1" />
-                    <xs:element name="prices" type="pricesType" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="prices" type="prices" minOccurs="0" maxOccurs="1" />
                     <xs:element name="address" type="address" minOccurs="1" maxOccurs="1" />
                     <xs:element name="softwareInformation" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
@@ -1002,14 +972,14 @@
                               rustico
                             </xs:documentation>
                           </xs:annotation>
-                          <xs:element type="categoryTypes" name="category" minOccurs="1" maxOccurs="unbounded" />
+                          <xs:element type="categories" name="category" minOccurs="1" maxOccurs="unbounded" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="utilities" minOccurs="0" maxOccurs="1">
+                    <xs:element name="utilizations" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element type="utilityTypes" name="utility" minOccurs="1" maxOccurs="3" />
+                          <xs:element type="utilization" name="utilization" minOccurs="1" maxOccurs="3" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -1040,9 +1010,9 @@
                               <xs:attribute type="xs:string" name="id" use="optional" />
                             </xs:complexType>
                           </xs:element>
-                          <xs:element type="personType" name="viewPerson" minOccurs="0" maxOccurs="1" />
-                          <xs:element type="personType" name="visitPerson" minOccurs="0" maxOccurs="1" />
-                          <xs:element type="personType" name="inquiryPerson" minOccurs="0" maxOccurs="1" />
+                          <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1" />
+                          <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1" />
+                          <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1" />
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
@@ -1064,13 +1034,6 @@
                                   <xs:complexType>
                                     <xs:sequence>
                                       <xs:element name="tag" minOccurs="0" maxOccurs="unbounded" />
-                                    </xs:sequence>
-                                  </xs:complexType>
-                                </xs:element>
-                                <xs:element name="urls" minOccurs="0" maxOccurs="1">
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element type="fullUrlType" name="url" minOccurs="0" maxOccurs="unbounded" />
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
