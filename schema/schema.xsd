@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
-  <!-- TYPE DEFFINITIONS START HERE -->
+  <!-- type definitions -->
   <xs:complexType name="person">
     <xs:all>
       <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1" />
@@ -638,6 +638,25 @@
       <xs:minInclusive value="1000"></xs:minInclusive>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="mimeType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="7"></xs:minLength>
+      <xs:pattern value="[a-z0-9]+\/[a-z0-9\.\-]+([\+][a-z0-9]+)?"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="attachmentDocument">
+    <xs:all maxOccurs="1" minOccurs="1">
+      <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
+      <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
+      <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="attachmentLink">
+    <xs:all maxOccurs="1" minOccurs="1">
+      <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
+      <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
   <xs:complexType name="prices">
     <xs:all>
       <xs:element minOccurs="0" maxOccurs="1" name="rent">
@@ -859,21 +878,13 @@
       <xs:enumeration value="investment" />
     </xs:restriction>
   </xs:simpleType>
-  <!-- Todo: Mimetypes should be defined -->
-  <xs:simpleType name="mediaTypes">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="image" />
-      <xs:enumeration value="document" />
-      <xs:enumeration value="plan" />
-      <xs:enumeration value="offer-logo" />
-      <xs:enumeration value="sales-brochure" />
-    </xs:restriction>
-  </xs:simpleType>
   <xs:simpleType name="emailaddress">
     <xs:restriction base="xs:string">
       <xs:pattern value="[^@]+@[^\.]+\..+" />
     </xs:restriction>
   </xs:simpleType>
+
+  <!-- actual xml structure -->
   <xs:element name="export">
     <xs:complexType>
       <xs:all>
@@ -1016,7 +1027,7 @@
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="offers" minOccurs="1" maxOccurs="1">
+                    <xs:element name="localizations" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation />
                       </xs:annotation>
@@ -1025,7 +1036,7 @@
                           <xs:annotation>
                             <xs:documentation>Order is relevant. First offer is considered to be the main language etc.</xs:documentation>
                           </xs:annotation>
-                          <xs:element name="offer" minOccurs="1" maxOccurs="unbounded">
+                          <xs:element name="localization" minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:all>
                                 <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1" />
@@ -1099,20 +1110,30 @@
                                 <xs:element name="attachments" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element name="media" minOccurs="1" maxOccurs="unbounded">
+                                      <xs:element name="image" minOccurs="1" maxOccurs="unbounded">
                                         <xs:complexType>
                                           <xs:all maxOccurs="1" minOccurs="1">
-                                            <xs:element type="xs:string" name="alt" maxOccurs="1" minOccurs="0" />
+                                            <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
                                             <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
-                                            <xs:element type="xs:anyURI" name="file" maxOccurs="1" minOccurs="0" />
-                                            <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="0" />
-                                            <xs:element type="xs:string" name="caption" default="" maxOccurs="1" minOccurs="0" />
                                             <xs:element type="xs:string" name="description" maxOccurs="1" minOccurs="0" />
-                                            <xs:element type="xs:string" name="publication" maxOccurs="1" minOccurs="0" />
+                                            <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
                                           </xs:all>
-                                          <xs:attribute type="mediaTypes" name="type" use="required" />
                                         </xs:complexType>
                                       </xs:element>
+                                      <xs:element name="logo" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:all maxOccurs="1" minOccurs="1">
+                                            <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
+                                            <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="document" type="attachmentDocument" minOccurs="1" maxOccurs="unbounded" />
+                                      <xs:element name="plan" type="attachmentDocument" minOccurs="1" maxOccurs="unbounded" />
+                                      <xs:element name="direct" type="attachmentLink" minOccurs="1" maxOccurs="unbounded" />
+                                      <xs:element name="link" type="attachmentLink" minOccurs="1" maxOccurs="unbounded" />
+                                      <xs:element name="virtualTour" type="attachmentLink" minOccurs="1" maxOccurs="unbounded" />
+                                      <xs:element name="youtube" type="attachmentLink" minOccurs="1" maxOccurs="unbounded" />
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
