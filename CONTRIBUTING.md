@@ -64,13 +64,10 @@ SwissRETS is easy to use
 ## Naming things
 -> schema/schema.xsd
 
-### Tag names
-- use camelCase 
-- todo...
+### General naming rules
+- use real english words
+- use camelCase (attributes and tags)
+- use a top-down naming schema, start with the broadest thing first and become more specific after
+  - good: entryHallHeight, baths
+  - bad: heightOfEntryHall, numberOfBaths
 
-### Attribute names
-- use camelCase 
-- todo...
-
-### When to use attributes vs. child tags
-- todo..
