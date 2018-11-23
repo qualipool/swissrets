@@ -1,19 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
-  <!-- type definitions -->
-  <xs:complexType name="person">
-    <xs:all>
-      <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="givenName" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="familyName" minOccurs="0" maxOccurs="1" />
-      <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="gender" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1" />
-    </xs:all>
-  </xs:complexType>
+
+  <!-- complex types -->
   <xs:complexType name="address">
     <xs:all>
       <xs:element type="countryCode" minOccurs="1" maxOccurs="1">
@@ -42,6 +30,19 @@
           </xs:all>
         </xs:complexType>
       </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="attachmentDocument">
+    <xs:all maxOccurs="1" minOccurs="1">
+      <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
+      <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
+      <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="attachmentLink">
+    <xs:all maxOccurs="1" minOccurs="1">
+      <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
+      <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
     </xs:all>
   </xs:complexType>
   <xs:complexType name="characteristics">
@@ -597,54 +598,17 @@
       </xs:element>
     </xs:all>
   </xs:complexType>
-  <xs:simpleType name="utilizationRatio">
-    <xs:restriction base="xs:decimal">
-      <xs:minInclusive value="0"></xs:minInclusive>
-      <xs:maxInclusive value="1"></xs:maxInclusive>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="percent">
-    <xs:annotation>
-      <xs:documentation>The percent type specifies a percentage from 0 to 100.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:decimal">
-      <xs:minInclusive value="0" />
-      <xs:maxInclusive value="100" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="positiveDecimal">
-    <xs:annotation>
-      <xs:documentation>The positive decimal type specifies a decimal from 0 and above</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:decimal">
-      <xs:minInclusive value="0"></xs:minInclusive>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="year">
-    <xs:annotation>
-      <xs:documentation>The year type specifies an integer from 1000 and above</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:positiveInteger">
-      <xs:minInclusive value="1000"></xs:minInclusive>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="mimeType">
-    <xs:restriction base="xs:string">
-      <xs:minLength value="7"></xs:minLength>
-      <xs:pattern value="[a-z0-9]+\/[a-z0-9\.\-]+([\+][a-z0-9]+)?"></xs:pattern>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="attachmentDocument">
-    <xs:all maxOccurs="1" minOccurs="1">
-      <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
-      <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
-      <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
-    </xs:all>
-  </xs:complexType>
-  <xs:complexType name="attachmentLink">
-    <xs:all maxOccurs="1" minOccurs="1">
-      <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
-      <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
+  <xs:complexType name="person">
+    <xs:all>
+      <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1" />
+      <xs:element type="xs:string" name="givenName" minOccurs="0" maxOccurs="1" />
+      <xs:element type="xs:string" name="familyName" minOccurs="0" maxOccurs="1" />
+      <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
+      <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
+      <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
+      <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1" />
+      <xs:element type="xs:string" name="gender" minOccurs="0" maxOccurs="1" />
+      <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1" />
     </xs:all>
   </xs:complexType>
   <xs:complexType name="prices">
@@ -733,37 +697,18 @@
         </xs:complexType>
       </xs:element>
     </xs:all>
-    <xs:attribute name="currency" type="currencyCode" />
+    <xs:attribute name="currency">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="3" />
+          <xs:maxLength value="3" />
+          <xs:pattern value="[A-Z]{3}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
   </xs:complexType>
-  <xs:simpleType name="priceReferring">
-    <xs:annotation>
-      <xs:documentation>For what area the price stands for.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="all" />
-      <xs:enumeration value="m2" />
-      <xs:enumeration value="km2" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="priceInterval">
-    <xs:annotation>
-      <xs:documentation>The payment interval the price stands for.</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="onetime" />
-      <xs:enumeration value="day" />
-      <xs:enumeration value="week" />
-      <xs:enumeration value="month" />
-      <xs:enumeration value="year" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="currencyCode">
-    <xs:restriction base="xs:string">
-      <xs:minLength value="3" />
-      <xs:maxLength value="3" />
-      <xs:pattern value="[A-Z]{3}" />
-    </xs:restriction>
-  </xs:simpleType>
+
+  <!-- simple types -->
   <xs:simpleType name="categories">
     <xs:restriction base="xs:string">
       <xs:enumeration value="alottmen-garden" />
@@ -847,6 +792,56 @@
       <xs:enumeration value="workshop" />
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="emailaddress">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[^@]+@[^\.]+\..+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="mimeType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="7"></xs:minLength>
+      <xs:pattern value="[a-z0-9]+\/[a-z0-9\.\-]+([\+][a-z0-9]+)?"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="percent">
+    <xs:annotation>
+      <xs:documentation>The percent type specifies a percentage from 0 to 100.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="positiveDecimal">
+    <xs:annotation>
+      <xs:documentation>The positive decimal type specifies a decimal from 0 and above</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"></xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="priceInterval">
+    <xs:annotation>
+      <xs:documentation>The payment interval the price stands for.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="onetime" />
+      <xs:enumeration value="day" />
+      <xs:enumeration value="week" />
+      <xs:enumeration value="month" />
+      <xs:enumeration value="year" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="priceReferring">
+    <xs:annotation>
+      <xs:documentation>For what area the price stands for.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="all" />
+      <xs:enumeration value="m2" />
+      <xs:enumeration value="km2" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="utilization">
     <xs:restriction base="xs:string">
       <xs:enumeration value="commercial" />
@@ -861,9 +856,18 @@
       <xs:enumeration value="investment" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="emailaddress">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[^@]+@[^\.]+\..+" />
+  <xs:simpleType name="utilizationRatio">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"></xs:minInclusive>
+      <xs:maxInclusive value="1"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="year">
+    <xs:annotation>
+      <xs:documentation>The year type specifies an integer from 1000 and above</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1000"></xs:minInclusive>
     </xs:restriction>
   </xs:simpleType>
 
