@@ -943,10 +943,10 @@
                       </xs:annotation>
                     </xs:element>
                     <xs:element name="type" minOccurs="1" maxOccurs="1">
-                                            <xs:annotation>
-                                              <xs:documentation>Buy or rent</xs:documentation>
-                                            </xs:annotation>
-                                            <xs:simpleType>
+                      <xs:annotation>
+                        <xs:documentation>Buy or rent</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
                         <xs:restriction base="xs:string">
                           <xs:enumeration value="buy"></xs:enumeration>
                           <xs:enumeration value="rent"></xs:enumeration>
@@ -955,10 +955,10 @@
                     </xs:element>
                     <xs:element name="availability" minOccurs="1" maxOccurs="1">
                       <xs:simpleType>
-                                                <xs:annotation>
-                                                  <xs:documentation>Describes wheter the property is available, taken or others..</xs:documentation>
-                                                </xs:annotation>
-                                                <xs:restriction base="xs:string">
+                        <xs:annotation>
+                          <xs:documentation>Describes wheter the property is available, taken or others..</xs:documentation>
+                        </xs:annotation>
+                        <xs:restriction base="xs:string">
                           <xs:enumeration value="reserved" />
                           <xs:enumeration value="active" />
                           <xs:enumeration value="taken" />
