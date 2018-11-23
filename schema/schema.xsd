@@ -36,24 +36,6 @@
       </xs:element>
     </xs:all>
   </xs:complexType>
-  <xs:simpleType name="availability">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="reserved" />
-      <xs:enumeration value="active" />
-      <xs:enumeration value="taken" />
-      <xs:enumeration value="reference" />
-      <xs:enumeration value="private" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="property">
-    <xs:annotation>
-      <xs:documentation>rent: Mieten, buy: Kaufen</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="rent" />
-      <xs:enumeration value="buy" />
-    </xs:restriction>
-  </xs:simpleType>
   <xs:complexType name="characteristics">
     <xs:annotation>
       <xs:documentation>Booleans have three states. "true" = the characteristic is present, "false" = the characteristic explicitely is not present, tag ommited = unknown wether the characteristic is present or not.</xs:documentation>
@@ -959,8 +941,31 @@
                         </xs:documentation>
                       </xs:annotation>
                     </xs:element>
-                    <xs:element name="type" type="property" minOccurs="1" maxOccurs="1" />
-                    <xs:element name="availability" type="availability" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="type" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                              <xs:documentation>Buy or rent</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="buy"></xs:enumeration>
+                          <xs:enumeration value="rent"></xs:enumeration>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="availability" minOccurs="1" maxOccurs="1">
+                      <xs:simpleType>
+                                                <xs:annotation>
+                                                  <xs:documentation>Describes wheter the property is available, taken or others..</xs:documentation>
+                                                </xs:annotation>
+                                                <xs:restriction base="xs:string">
+                          <xs:enumeration value="reserved" />
+                          <xs:enumeration value="active" />
+                          <xs:enumeration value="taken" />
+                          <xs:enumeration value="reference" />
+                          <xs:enumeration value="private" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
                     <xs:element name="start" type="xs:dateTime" minOccurs="0" maxOccurs="1" />
                     <xs:element name="prices" type="prices" minOccurs="0" maxOccurs="1" />
                     <xs:element name="address" type="address" minOccurs="1" maxOccurs="1" />
