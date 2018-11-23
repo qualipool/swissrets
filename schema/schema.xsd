@@ -1,6 +1,5 @@
 <?xml version="1.0" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
-
   <!-- complex types -->
   <xs:complexType name="address">
     <xs:all>
@@ -707,7 +706,6 @@
       </xs:simpleType>
     </xs:attribute>
   </xs:complexType>
-
   <!-- simple types -->
   <xs:simpleType name="categories">
     <xs:restriction base="xs:string">
@@ -876,7 +874,6 @@
       <xs:minInclusive value="1000" />
     </xs:restriction>
   </xs:simpleType>
-
   <!-- actual xml structure -->
   <xs:element name="export">
     <xs:complexType>
