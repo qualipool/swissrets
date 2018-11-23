@@ -4,7 +4,7 @@
   <!-- complex types -->
   <xs:complexType name="address">
     <xs:all>
-      <xs:element type="countryCode" minOccurs="1" maxOccurs="1">
+      <xs:element name="countryCode" minOccurs="1" maxOccurs="1">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:minLength value="2" />
@@ -519,10 +519,10 @@
         </xs:annotation>
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="Minergie"></xs:enumeration>
-            <xs:enumeration value="Minergie-P"></xs:enumeration>
-            <xs:enumeration value="Minergie-Eco"></xs:enumeration>
-            <xs:enumeration value="Minergie-P-Eco"></xs:enumeration>
+            <xs:enumeration value="Minergie" />
+            <xs:enumeration value="Minergie-P" />
+            <xs:enumeration value="Minergie-Eco" />
+            <xs:enumeration value="Minergie-P-Eco" />
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
@@ -799,8 +799,14 @@
   </xs:simpleType>
   <xs:simpleType name="mimeType">
     <xs:restriction base="xs:string">
-      <xs:minLength value="7"></xs:minLength>
-      <xs:pattern value="[a-z0-9]+\/[a-z0-9\.\-]+([\+][a-z0-9]+)?"></xs:pattern>
+      <xs:minLength value="7" />
+      <xs:pattern value="[a-z0-9]+\/[a-z0-9\.\-]+([\+][a-z0-9]+)?" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="languageCode">
+    <xs:restriction base="xs:string">
+      <xs:length value="2" />
+      <xs:pattern value="[a-z]{2}" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="percent">
@@ -817,7 +823,7 @@
       <xs:documentation>The positive decimal type specifies a decimal from 0 and above</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:decimal">
-      <xs:minInclusive value="0"></xs:minInclusive>
+      <xs:minInclusive value="0" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="priceInterval">
@@ -858,8 +864,8 @@
   </xs:simpleType>
   <xs:simpleType name="utilizationRatio">
     <xs:restriction base="xs:decimal">
-      <xs:minInclusive value="0"></xs:minInclusive>
-      <xs:maxInclusive value="1"></xs:maxInclusive>
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="1" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="year">
@@ -867,7 +873,7 @@
       <xs:documentation>The year type specifies an integer from 1000 and above</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:positiveInteger">
-      <xs:minInclusive value="1000"></xs:minInclusive>
+      <xs:minInclusive value="1000" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -952,8 +958,8 @@
                       </xs:annotation>
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
-                          <xs:enumeration value="buy"></xs:enumeration>
-                          <xs:enumeration value="rent"></xs:enumeration>
+                          <xs:enumeration value="buy" />
+                          <xs:enumeration value="rent" />
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
@@ -1044,80 +1050,40 @@
                       <xs:complexType>
                         <xs:sequence>
                           <xs:annotation>
-                            <xs:documentation>Order is relevant. First offer is considered to be the main language etc.</xs:documentation>
+                            <xs:documentation>Order is relevant. First localization is considered to be the main language etc.</xs:documentation>
                           </xs:annotation>
                           <xs:element name="localization" minOccurs="1" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:all>
-                                <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1" />
-                                <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1" />
-                                <xs:element name="tags" maxOccurs="1" minOccurs="0">
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element name="tag" minOccurs="0" maxOccurs="unbounded" />
-                                    </xs:sequence>
-                                  </xs:complexType>
+                                <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Simple marketing title.</xs:documentation>
+                                  </xs:annotation>
                                 </xs:element>
-                                <xs:element name="publishers" minOccurs="0" maxOccurs="1">
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element name="publisher" minOccurs="1" maxOccurs="unbounded">
-                                        <xs:complexType>
-                                          <xs:all>
-                                            <xs:element name="options" minOccurs="0" maxOccurs="1">
-                                              <xs:complexType mixed="true">
-                                                <xs:sequence>
-                                                  <xs:element name="option" maxOccurs="unbounded" minOccurs="1">
-                                                    <xs:complexType>
-                                                      <xs:simpleContent>
-                                                        <xs:extension base="xs:string">
-                                                          <xs:attribute type="xs:string" name="key" use="optional" />
-                                                        </xs:extension>
-                                                      </xs:simpleContent>
-                                                    </xs:complexType>
-                                                  </xs:element>
-                                                </xs:sequence>
-                                              </xs:complexType>
-                                            </xs:element>
-                                            <xs:element name="channels" minOccurs="0" maxOccurs="1">
-                                              <xs:complexType mixed="true">
-                                                <xs:sequence>
-                                                  <xs:element name="channel" maxOccurs="unbounded" minOccurs="1">
-                                                    <xs:complexType>
-                                                      <xs:simpleContent>
-                                                        <xs:extension base="xs:string">
-                                                          <xs:attribute type="xs:dateTime" name="expiration" use="optional" />
-                                                          <xs:attribute type="xs:dateTime" name="start" use="optional" />
-                                                        </xs:extension>
-                                                      </xs:simpleContent>
-                                                    </xs:complexType>
-                                                  </xs:element>
-                                                </xs:sequence>
-                                              </xs:complexType>
-                                            </xs:element>
-                                          </xs:all>
-                                          <xs:attribute type="xs:string" name="id" use="required" />
-                                        </xs:complexType>
-                                      </xs:element>
-                                    </xs:sequence>
-                                  </xs:complexType>
+                                <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>A short extract from description, location and equipment.</xs:documentation>
+                                  </xs:annotation>
                                 </xs:element>
-                                <xs:element name="descriptions" maxOccurs="1" minOccurs="0">
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element name="description" minOccurs="0" maxOccurs="unbounded">
-                                        <xs:complexType>
-                                          <xs:simpleContent>
-                                            <xs:extension base="xs:string">
-                                              <xs:attribute type="xs:string" name="title" use="optional" />
-                                            </xs:extension>
-                                          </xs:simpleContent>
-                                        </xs:complexType>
-                                      </xs:element>
-                                    </xs:sequence>
-                                  </xs:complexType>
+                                <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Main description.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="location" type="xs:string" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Description of the surrounding and location.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="equipment" type="xs:string" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Description of available and included equipment.</xs:documentation>
+                                  </xs:annotation>
                                 </xs:element>
                                 <xs:element name="attachments" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>URL and file attachements.</xs:documentation>
+                                  </xs:annotation>
                                   <xs:complexType>
                                     <xs:sequence>
                                       <xs:element name="image" minOccurs="1" maxOccurs="unbounded">
@@ -1147,8 +1113,25 @@
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
-                                <xs:element type="xs:string" name="visitInformation" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="xs:string" name="visitInformation" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>TODO: what is this? do we need this?</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="tags" maxOccurs="1" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation>TODO: what is this? do we need this?</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="tag" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
                                 <xs:element name="events" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>TODO: what is this? do we need this?</xs:documentation>
+                                  </xs:annotation>
                                   <xs:complexType>
                                     <xs:sequence>
                                       <xs:element name="event" minOccurs="1" maxOccurs="unbounded">
@@ -1167,22 +1150,50 @@
                                   </xs:complexType>
                                 </xs:element>
                               </xs:all>
-                              <xs:attribute type="xs:string" name="lang" use="required" />
-                              <!-- <xs:attribute type="xs:ID" name="id" use="optional"/> -->
-                              <xs:attribute type="xs:string" name="id" use="optional">
-                                <xs:annotation>
-                                  <xs:documentation>Is used for machine-identification for the individual offer/languages this needs to be
-                                    unique
-                                  </xs:documentation>
-                                </xs:annotation>
-                              </xs:attribute>
+                              <xs:attribute name="lang" type="languageCode" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="publishers" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:annotation>
+                          <xs:documentation>A set of</xs:documentation>
+                        </xs:annotation>
+                        <xs:sequence>
+                          <xs:element name="publisher" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="options" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                      <xs:element name="option" maxOccurs="unbounded" minOccurs="1">
+                                        <xs:complexType>
+                                          <xs:annotation>
+                                            <xs:documentation>A generic data field, used for non-standardized data transaction, between two entities.</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="key" use="optional" />
+                                              <xs:attribute name="lang" type="languageCode" use="required" />
+                                              <xs:attribute name="start" type="xs:dateTime" />
+                                              <xs:attribute name="expiration" type="xs:dateTime" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                              <xs:attribute type="xs:string" name="id" use="required" />
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
                   </xs:all>
-                  <!-- <xs:attribute type="xs:ID" name="id" use="required"/> -->
                   <xs:attribute type="xs:string" name="id" use="required">
                     <xs:annotation>
                       <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as
