@@ -1127,10 +1127,10 @@
                                 <xs:element name="tags" maxOccurs="1" minOccurs="0">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element name="tag" maxOccurs="unbound" minOccurs="1">
+                                      <xs:element name="tag" maxOccurs="unbounded" minOccurs="1">
                                         <xs:simpleType>
                                           <xs:restriction base="xs:string">
-                                            <xs:maxLength value="30"></xs:maxLength>
+                                            <xs:maxLength value="30" />
                                           </xs:restriction>
                                         </xs:simpleType>
                                       </xs:element>
@@ -1146,6 +1146,9 @@
                     </xs:element>
                     <xs:element name="seller" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
+                        <xs:annotation>
+                          <xs:documentation>TODO: review documentation of organisation, viewPerson, visitPerson and inquiryPerson</xs:documentation>
+                        </xs:annotation>
                         <xs:all>
                           <xs:element name="organization" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
@@ -1176,7 +1179,7 @@
                           </xs:element>
                           <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Person responsible for making visiting appointments.</xs:documentation>
+                              <xs:documentation>Person responsible for making visit appointments.</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1">
