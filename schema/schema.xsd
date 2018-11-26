@@ -924,9 +924,6 @@
           </xs:complexType>
         </xs:element>
         <xs:element name="properties" maxOccurs="1" minOccurs="0">
-          <xs:annotation>
-            <xs:documentation />
-          </xs:annotation>
           <xs:complexType>
             <xs:sequence>
               <xs:annotation>
@@ -978,12 +975,31 @@
                     <xs:element name="prices" type="prices" minOccurs="0" maxOccurs="1" />
                     <xs:element name="address" type="address" minOccurs="1" maxOccurs="1" />
                     <xs:element name="softwareInformation" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Property data creation information</xs:documentation>
+                      </xs:annotation>
                       <xs:complexType>
                         <xs:all>
-                          <xs:element type="xs:string" name="lastUser" minOccurs="0" maxOccurs="1" />
-                          <xs:element type="xs:dateTime" name="lastUpdate" minOccurs="0" maxOccurs="1" />
-                          <xs:element type="xs:byte" name="updateIteration" minOccurs="0" maxOccurs="1" />
-                          <xs:element type="xs:dateTime" name="creation" minOccurs="0" maxOccurs="1" />
+                          <xs:element type="xs:string" name="lastUser" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>TODO: why do we need this?</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="xs:byte" name="updateIteration" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>TODO: what is this? do we need this?</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="xs:dateTime" name="creation" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>Creation date and time of the data.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="xs:dateTime" name="modified" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>Date and time of the last modifictiion.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
@@ -1007,43 +1023,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="seller" minOccurs="0" maxOccurs="1">
-                      <xs:complexType>
-                        <xs:all>
-                          <xs:element name="organization" minOccurs="0" maxOccurs="1">
-                            <xs:complexType>
-                              <xs:all>
-                                <xs:element name="address" type="address" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
-                                <xs:element name="website" minOccurs="0" maxOccurs="1">
-                                  <xs:complexType>
-                                    <xs:simpleContent>
-                                      <xs:extension base="xs:anyURI">
-                                        <xs:attribute type="xs:string" name="title" />
-                                        <xs:attribute type="xs:string" name="label" />
-                                      </xs:extension>
-                                    </xs:simpleContent>
-                                  </xs:complexType>
-                                </xs:element>
-                              </xs:all>
-                              <xs:attribute type="xs:string" name="id" use="optional" />
-                            </xs:complexType>
-                          </xs:element>
-                          <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1" />
-                          <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1" />
-                          <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1" />
-                        </xs:all>
-                      </xs:complexType>
-                    </xs:element>
                     <xs:element name="localizations" minOccurs="1" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation />
-                      </xs:annotation>
                       <xs:complexType>
                         <xs:sequence>
                           <xs:annotation>
@@ -1151,6 +1131,39 @@
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="seller" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="organization" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="address" type="address" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
+                                <xs:element name="website" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:anyURI">
+                                        <xs:attribute type="xs:string" name="title" />
+                                        <xs:attribute type="xs:string" name="label" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                              <xs:attribute type="xs:string" name="id" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1" />
+                          <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1" />
+                          <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1" />
+                        </xs:all>
                       </xs:complexType>
                     </xs:element>
                     <xs:element name="publishers" minOccurs="0" maxOccurs="1">
