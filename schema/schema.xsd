@@ -165,7 +165,10 @@
           <xs:documentation>A connection to the public waste water system.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasSwimmingPool" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasSwimmingPool" type="xs:boolean" minOccurs="0" maxOccurs="1" >
+        <xs:annotation>
+          <xs:documentation>Personal swimming pool.</xs:documentation>
+        </xs:annotation></xs:element>
       <xs:element name="hasTiledStove" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A masonry heater or ceramic stove, is a device for warming an interior space usually fed with wood.</xs:documentation>
@@ -941,7 +944,10 @@
                 <xs:complexType>
                   <xs:all>
                     <xs:element type="xs:string" name="zoneTypes" minOccurs="0" maxOccurs="1" />
-                    <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1" />
+                    <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1" >
+                      <xs:annotation>
+                        <xs:documentation>TODO: this needs documentation</xs:documentation>
+                      </xs:annotation></xs:element>
                     <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Can be used to track the original creation id (this should usualy be unique to the property)</xs:documentation>
@@ -949,8 +955,7 @@
                     </xs:element>
                     <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Can should only be used for presentational purposes publishers tend to present the referenceId if
-                          this one is missing
+                        <xs:documentation>Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing
                         </xs:documentation>
                       </xs:annotation>
                     </xs:element>
@@ -966,9 +971,12 @@
                       </xs:simpleType>
                     </xs:element>
                     <xs:element name="availability" minOccurs="1" maxOccurs="1">
-                      <xs:simpleType>
+                                            <xs:annotation>
+                                              <xs:documentation>Describes wheter the property is available, taken or others..</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
                         <xs:annotation>
-                          <xs:documentation>Describes wheter the property is available, taken or others..</xs:documentation>
+                          <xs:documentation></xs:documentation>
                         </xs:annotation>
                         <xs:restriction base="xs:string">
                           <xs:enumeration value="reserved" />
@@ -1011,7 +1019,10 @@
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="characteristics" type="characteristics" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="characteristics" type="characteristics" minOccurs="0" maxOccurs="1" >
+                      <xs:annotation>
+                        <xs:documentation>Main characteristics of properties.</xs:documentation>
+                      </xs:annotation></xs:element>
                     <xs:element name="categories" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
