@@ -941,7 +941,7 @@
               <xs:annotation>
                 <xs:documentation>Order of properties is relevant. Custom sorting can be defined by provider.</xs:documentation>
               </xs:annotation>
-              <xs:element name="property" maxOccurs="unbounded" minOccurs="0">
+              <xs:element name="property" maxOccurs="unbounded" minOccurs="1">
                 <xs:complexType>
                   <xs:all>
                     <xs:element name="softwareInformation" minOccurs="1" maxOccurs="1">
