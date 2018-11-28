@@ -39,7 +39,7 @@ export
           0..1 distribution
         0..1 characteristics
         0..1 categories
-          1..* utilization
+          1..* category
         0..1 utilizations
           1..3 utilization
         1..1 localizations
