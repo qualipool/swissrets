@@ -973,7 +973,11 @@
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element type="xs:string" name="zoneTypes" minOccurs="0" maxOccurs="1" />
+                    <xs:element type="xs:string" name="zoneTypes" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>TODO: this needs documentation</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
                     <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>TODO: this needs documentation</xs:documentation>
@@ -1017,9 +1021,17 @@
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
-                    <xs:element name="start" type="xs:dateTime" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="start" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>From when the property is available.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
                     <xs:element name="prices" type="prices" minOccurs="0" maxOccurs="1" />
-                    <xs:element name="address" type="address" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="address" type="address" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Location of the property.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
                     <xs:element name="heating" maxOccurs="1" minOccurs="0">
                       <xs:complexType>
                         <xs:sequence>
@@ -1133,10 +1145,14 @@
                                       </xs:element>
                                       <xs:element name="document" type="attachmentDocument" minOccurs="1" maxOccurs="unbounded" />
                                       <xs:element name="plan" type="attachmentDocument" minOccurs="1" maxOccurs="unbounded" />
-                                      <xs:element name="direct" type="attachmentLink" minOccurs="1" maxOccurs="unbounded" />
+                                      <xs:element name="linkDirect" type="attachmentLink" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>Direct deeplink or URL to the property.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
                                       <xs:element name="link" type="attachmentLink" minOccurs="1" maxOccurs="unbounded" />
-                                      <xs:element name="virtualTour" type="attachmentLink" minOccurs="1" maxOccurs="unbounded" />
-                                      <xs:element name="youtube" type="attachmentLink" minOccurs="1" maxOccurs="unbounded" />
+                                      <xs:element name="linkVirtualTour" type="attachmentLink" minOccurs="1" maxOccurs="unbounded" />
+                                      <xs:element name="linkYoutube" type="attachmentLink" minOccurs="1" maxOccurs="unbounded" />
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
@@ -1167,6 +1183,9 @@
                                   </xs:complexType>
                                 </xs:element>
                                 <xs:element name="tags" maxOccurs="1" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation>TODO: this needs documentation. what are tags used for?</xs:documentation>
+                                  </xs:annotation>
                                   <xs:complexType>
                                     <xs:sequence>
                                       <xs:element name="tag" maxOccurs="unbounded" minOccurs="1">
