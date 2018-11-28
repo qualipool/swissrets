@@ -1035,7 +1035,7 @@
                     <xs:element name="heating" maxOccurs="1" minOccurs="0">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="production" maxOccurs="1" minOccurs="0">
+                          <xs:element name="generation" maxOccurs="1" minOccurs="0">
                             <xs:simpleType>
                               <xs:annotation>
                                 <xs:documentation>How the heat is produced.</xs:documentation>

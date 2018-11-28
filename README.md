@@ -35,7 +35,7 @@ export
         0..1 prices
         1..1 address
         0..1 heating
-          0..1 production
+          0..1 generation
           0..1 distribution
         0..1 characteristics
         0..1 categories
