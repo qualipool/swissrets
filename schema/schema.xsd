@@ -1052,18 +1052,15 @@
                     </xs:element>
                     <xs:element name="availability" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Describes wheter the property is available, taken or others..</xs:documentation>
+                        <xs:documentation>Describes how the property is available. "active" means available for everyone. "private" means available for a some, usually behind a login or some other closed circle of people. "reference" TODO: needs clarification. "reserved" means blocked by someone for taking. "taken" means it's not available anymore.</xs:documentation>
                       </xs:annotation>
                       <xs:simpleType>
-                        <xs:annotation>
-                          <xs:documentation />
-                        </xs:annotation>
                         <xs:restriction base="xs:string">
-                          <xs:enumeration value="reserved" />
                           <xs:enumeration value="active" />
-                          <xs:enumeration value="taken" />
-                          <xs:enumeration value="reference" />
                           <xs:enumeration value="private" />
+                          <xs:enumeration value="reference" />
+                          <xs:enumeration value="reserved" />
+                          <xs:enumeration value="taken" />
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
