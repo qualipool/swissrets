@@ -100,6 +100,11 @@
           <xs:documentation>Used for building land, states if there is some demolition property on it (or pieces of it).</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="hasDishwasher" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Availability of a dishwasher.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="hasElevator" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Availability of an elevator.</xs:documentation>
