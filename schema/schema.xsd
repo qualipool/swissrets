@@ -1005,6 +1005,45 @@
               <xs:element name="property" maxOccurs="unbounded" minOccurs="1">
                 <xs:complexType>
                   <xs:all>
+                    <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Can be used to track the original creation id (this should usualy be unique to the property)</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="bfs" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>BFS Property Information</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element type="xs:string" name="egid" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>The building identifier of the swiss population register</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="xs:byte" name="ewid" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>The flat identifier of the swiss population register</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="availability" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Describes how the property is available. "active" means available for everyone. "private" means available for a some, usually behind a login or some other closed circle of people. "reference" TODO: needs clarification. "reserved" means blocked by someone for taking. "taken" means it's not available anymore.</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:annotation />
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="active" />
+                          <xs:enumeration value="private" />
+                          <xs:enumeration value="reference" />
+                          <xs:enumeration value="reserved" />
+                          <xs:enumeration value="taken" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
                     <xs:element name="softwareInformation" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Property data creation information</xs:documentation>
@@ -1044,11 +1083,6 @@
                         <xs:documentation>TODO: this needs documentation</xs:documentation>
                       </xs:annotation>
                     </xs:element>
-                    <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>Can be used to track the original creation id (this should usualy be unique to the property)</xs:documentation>
-                      </xs:annotation>
-                    </xs:element>
                     <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing</xs:documentation>
@@ -1062,20 +1096,6 @@
                         <xs:restriction base="xs:string">
                           <xs:enumeration value="buy" />
                           <xs:enumeration value="rent" />
-                        </xs:restriction>
-                      </xs:simpleType>
-                    </xs:element>
-                    <xs:element name="availability" minOccurs="1" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>Describes how the property is available. "active" means available for everyone. "private" means available for a some, usually behind a login or some other closed circle of people. "reference" TODO: needs clarification. "reserved" means blocked by someone for taking. "taken" means it's not available anymore.</xs:documentation>
-                      </xs:annotation>
-                      <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                          <xs:enumeration value="active" />
-                          <xs:enumeration value="private" />
-                          <xs:enumeration value="reference" />
-                          <xs:enumeration value="reserved" />
-                          <xs:enumeration value="taken" />
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
