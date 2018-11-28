@@ -135,11 +135,6 @@
           <xs:documentation>A small building for storing garden tools, bicycles, and other equipment.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasGasSupply" type="xs:boolean" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Availability of a gas connection, usually for heating and cooking.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
       <xs:element name="hasLakeView" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Direct visibility of a lake.</xs:documentation>
@@ -170,19 +165,9 @@
           <xs:documentation>Has a playground for children nearby.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasPowerSupply" type="xs:boolean" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>A connection to the public electric grid.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
       <xs:element name="hasRamp" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A sloping floor, walk, or roadway leading from one level to another, usually to make a place accessible for wheels.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="hasSewageSupply" type="xs:boolean" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>A connection to the public waste water system.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasSteamer" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -195,7 +180,27 @@
           <xs:documentation>Storeroom, stowage room.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasSwimmingPool" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:element name="hasSupplyGas" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Availability of a gas connection, usually for heating and cooking.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+            <xs:element name="hasSupplyPower" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>A connection to the public electric grid.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+            <xs:element name="hasSupplySewage" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>A connection to the public waste water system.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+            <xs:element name="hasSupplyWater" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>A connection to the public water supply.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+            <xs:element name="hasSwimmingPool" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Personal swimming pool.</xs:documentation>
         </xs:annotation>
@@ -213,11 +218,6 @@
       <xs:element name="hasWashingMachine" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>For washing clothes and other cloth.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="hasWaterSupply" type="xs:boolean" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>A connection to the public water supply.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isChildFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1">
