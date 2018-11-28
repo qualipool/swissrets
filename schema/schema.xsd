@@ -955,7 +955,7 @@
             <xs:all>
               <xs:element type="xs:dateTime" name="exportDate" minOccurs="0" maxOccurs="1" />
               <xs:element type="xs:integer" name="exportIteration" default="1" minOccurs="0" maxOccurs="1" />
-              <xs:element name="software" type="xs:string" minOccurs="1" maxOccurs="1">
+              <xs:element name="software" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                   <xs:documentation>The name and version of the software which has generated the given document</xs:documentation>
                 </xs:annotation>
