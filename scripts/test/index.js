@@ -37,7 +37,10 @@ const executeAllTests = async () => {
 
   // check if xmllint is installed
   log.title('Check if xmllint is installed')
-  const xmllintLocation = await exec('which xmllint')
+  const locator = process.platform === 'win32'
+    ? 'where'
+    : 'which'
+  const xmllintLocation = await exec(`${locator} xmllint`)
   log.success(`Using ${JSON.stringify(xmllintLocation.toString())} for linting`)
 
   // lint the schama itself
