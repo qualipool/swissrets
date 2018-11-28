@@ -584,16 +584,10 @@
           <xs:documentation>Number of rooms.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="showers">
+      <xs:element name="showers" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>The number of showers</xs:documentation>
         </xs:annotation>
-        <xs:simpleType>
-          <xs:restriction base="xs:positiveInteger">
-            <xs:minExclusive value="0" />
-            <xs:maxExclusive value="1" />
-          </xs:restriction>
-        </xs:simpleType>
       </xs:element>
       <xs:element name="toilets" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
