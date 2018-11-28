@@ -80,6 +80,11 @@
           <xs:documentation>A covered structure used to offer limited protection from rain and snow, for two cars.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="hasCellar" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Availability of a cellar.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="hasConnectedBuildingLand" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>States if the land is fully developed and ready being built on it.</xs:documentation>
