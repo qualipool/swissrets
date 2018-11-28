@@ -939,10 +939,16 @@
         <xs:element name="exportInformation" maxOccurs="1" minOccurs="0">
           <xs:complexType>
             <xs:all>
-              <xs:element type="xs:string" name="software" minOccurs="0" maxOccurs="1" />
-              <xs:element name="softwareVersion" type="xs:string" minOccurs="0" maxOccurs="1" />
               <xs:element type="xs:dateTime" name="exportDate" minOccurs="0" maxOccurs="1" />
               <xs:element type="xs:integer" name="exportIteration" default="1" minOccurs="0" maxOccurs="1" />
+              <xs:element name="software" type="xs:string" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>The name and version of the software which has generated the given document</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:attribute name="version" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
             </xs:all>
           </xs:complexType>
         </xs:element>

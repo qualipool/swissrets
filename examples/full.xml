@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsd" href="https://raw.githubusercontent.com/qualipool/swissrets/master/schema/schema.xsd"?>
 <export>
     <exportInformation>
-        <exporter>CasaGateway</exporter>
+        <software version="1.0">CasaGateway</software>
         <exportDate>2016-08-30T10:01:25+02:00</exportDate>
         <exportIteration>123</exportIteration>
     </exportInformation>
