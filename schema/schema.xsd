@@ -883,6 +883,11 @@
       <xs:maxInclusive value="100" />
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="phoneNumber">
+    <xs:restriction base="xs:string">
+         <xs:pattern value="^[+]?[0-9]+$"/>
+    </xs:restriction>
+</xs:simpleType>
   <xs:simpleType name="positiveDecimal">
     <xs:annotation>
       <xs:documentation>The positive decimal type specifies a decimal from 0 and above</xs:documentation>
@@ -1291,7 +1296,7 @@
                         <xs:all>
                           <xs:element name="organization" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Address of the owner or the owners substutue (e.g. broker).</xs:documentation>
+                              <xs:documentation>Address of the owner or the owners substitute (e.g. broker).</xs:documentation>
                             </xs:annotation>
                             <xs:complexType>
                               <xs:all>
@@ -1301,7 +1306,8 @@
                                 <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1"/>
                                 <xs:element name="website" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:simpleContent>
