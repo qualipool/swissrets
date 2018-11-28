@@ -539,6 +539,11 @@
           <xs:documentation>Number of rooms.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="toilets" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The number of toilets</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="utilizationRatio" type="utilizationRatio" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Plot area built on. The ratio between plot area and gross floor area.</xs:documentation>
