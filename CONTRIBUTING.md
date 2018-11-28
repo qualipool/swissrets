@@ -35,13 +35,11 @@ You're very welcome to fork the project and send pull requests.
 ## Coding priciples
 _Mainly targeting the ./schema/schema.xsd_  
 
-----
+While we strive for all three, if we have conflicts, this list acts as priorities.
+
 1. **Consistency**
 2. **Cleanness**
 3. **Ease of use**
-----
-
-While we strive for all three, if we have conflicts, this list acts as priorities.
 
 ### Consistency
 SwissRETS is predictable.
@@ -70,4 +68,14 @@ SwissRETS is easy to use
 - use a top-down naming schema, start with the broadest thing first and become more specific after
   - good: entryHallHeight, baths
   - bad: heightOfEntryHall, numberOfBaths
+
+### XML best practic
+**tags should have values**  
+- avoid using empty tags, whenever possible
+
+**tags over attributes**
+- when in doubt, use tags over attributes
+- tags are easier to document and extend in the future
+- tags requre less documentation
+
 
