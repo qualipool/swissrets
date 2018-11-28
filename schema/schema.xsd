@@ -175,6 +175,11 @@
           <xs:documentation>A connection to the public waste water system.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="hasSteamer" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Has a steamer.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="hasStoreRoom" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Storeroom, stowage room.</xs:documentation>
