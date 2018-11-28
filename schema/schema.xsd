@@ -160,6 +160,11 @@
           <xs:documentation>An uncovered space for one car or more cars.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="hasPlayground" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Has a playground for children nearby.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="hasPowerSupply" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A connection to the public electric grid.</xs:documentation>
