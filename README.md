@@ -16,14 +16,14 @@ export
       0..1 exportDate
       0..1 exportIteration
   0..1 projects
-    0..n projects
+    0..* projects
       1..1 referenceId
       1..1 units
         1..1 referenceId
         1..1 properties
-          1..n propertyRef
+          1..* propertyRef
   0..1 properties
-      0..n property
+      0..* property
         1..1 softwareInformation
         0..1 zoneTypes
         0..1 parcelNumbers
