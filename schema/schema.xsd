@@ -671,8 +671,8 @@
           <xs:documentation>TODO: do we really need fax?</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
+      <xs:element type="phoneNumber" name="mobile" minOccurs="0" maxOccurs="1" />
+      <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="gender" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1" />
     </xs:all>
@@ -1310,8 +1310,8 @@
                                 <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="phoneNumber" name="mobile" minOccurs="0" maxOccurs="1" />
                                 <xs:element name="website" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:simpleContent>
