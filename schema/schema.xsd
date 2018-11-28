@@ -885,9 +885,9 @@
   </xs:simpleType>
   <xs:simpleType name="phoneNumber">
     <xs:restriction base="xs:string">
-         <xs:pattern value="^[+]?[0-9]+$"/>
+      <xs:pattern value="^[+]?[0-9]+$" />
     </xs:restriction>
-</xs:simpleType>
+  </xs:simpleType>
   <xs:simpleType name="positiveDecimal">
     <xs:annotation>
       <xs:documentation>The positive decimal type specifies a decimal from 0 and above</xs:documentation>
@@ -1036,7 +1036,7 @@
                     </xs:element>
                     <xs:element name="availability" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Describes how the property is available. "active" means available for everyone. "private" means available for a some, usually behind a login or some other closed circle of people. "reference" TODO: needs clarification. "reserved" means blocked by someone for taking. "taken" means it's not available anymore.</xs:documentation>
+                        <xs:documentation>Describes how the property is available. "active" means available for everyone. "private" means available for a some, usually behind a login or some other closed circle of people. "reference" showcase object typically used by brokers for showcasing their work. "reserved" means blocked by someone for taking. "taken" means it's not available anymore.</xs:documentation>
                       </xs:annotation>
                       <xs:simpleType>
                         <xs:annotation />
@@ -1306,8 +1306,8 @@
                                 <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1"/>
-                                <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1"/>
+                                <xs:element type="xs:string" name="phone" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="xs:string" name="mobile" minOccurs="0" maxOccurs="1" />
                                 <xs:element name="website" minOccurs="0" maxOccurs="1">
                                   <xs:complexType>
                                     <xs:simpleContent>
