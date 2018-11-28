@@ -1021,7 +1021,7 @@
                               <xs:documentation>The building identifier of the swiss population register</xs:documentation>
                             </xs:annotation>
                           </xs:element>
-                          <xs:element type="xs:byte" name="ewid" minOccurs="0" maxOccurs="1">
+                          <xs:element type="xs:string" name="ewid" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
                               <xs:documentation>The flat identifier of the swiss population register</xs:documentation>
                             </xs:annotation>
