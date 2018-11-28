@@ -55,6 +55,11 @@
           <xs:documentation>Pets are allowed or not tolerated.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="hasAttic" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Has an attic.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="hasBalcony" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Balcony available.</xs:documentation>
