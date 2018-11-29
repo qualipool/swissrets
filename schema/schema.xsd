@@ -370,12 +370,17 @@
           <xs:documentation>All aspects are accessible for wheelchail users.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isHillside" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="onEvenGround" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Built on even grounds.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="onHillside" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Built on a sloping hillside.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isHillsideSouth" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="onHillsideSouth" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Built on a sloping hillside towards the south.</xs:documentation>
         </xs:annotation>
