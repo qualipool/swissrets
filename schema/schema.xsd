@@ -381,11 +381,6 @@
         </xs:annotation>
       </xs:element>
       <!-- various numerics -->
-      <xs:element name="apartements" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Number of apartements contained.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
       <xs:element name="areaBwf" type="xs:decimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Living area in m²</xs:documentation>
@@ -516,19 +511,14 @@
           <xs:documentation>SIA-VF area in m²</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="bathrooms" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Number of bathrooms.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="carryingCapacityCrane" type="xs:decimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Carrying capacity for crane in kg.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
       <xs:element name="ceilingHeight" type="xs:decimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Height of the rooms in m.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="craneCapacity" type="xs:decimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Carrying capacity for crane in kg.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="elevatorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1">
@@ -544,11 +534,6 @@
       <xs:element name="floorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Maxumum floor load in kg/m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="floors" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Total amount of floors.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="grossPremium" type="percent" minOccurs="0" maxOccurs="1">
@@ -574,22 +559,42 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="parcels" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+      <xs:element name="numberOfApartements" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Number of apartements contained.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numberOfBathrooms" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Number of bathrooms.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numberOfFloors" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Total amount of floors.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numberOfParcels" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Number of parcels.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="rooms" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+      <xs:element name="numberOfRooms" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Number of rooms.</xs:documentation>
+          <xs:documentation>Total number of rooms.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="showers" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+      <xs:element name="numberOfShowers" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>The number of showers</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="toilets" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+      <xs:element name="numberOfToilets" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>The number of toilets</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numberOfToiletsGuest" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>The number of toilets</xs:documentation>
         </xs:annotation>
