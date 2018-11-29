@@ -596,7 +596,7 @@
       </xs:element>
       <xs:element name="numberOfToiletsGuest" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>The number of toilets</xs:documentation>
+          <xs:documentation>The number of guest and additional toilets</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="utilizationRatio" type="utilizationRatio" minOccurs="0" maxOccurs="1">
