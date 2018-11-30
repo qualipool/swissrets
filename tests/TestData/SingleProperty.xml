@@ -6,13 +6,13 @@
     <software version="1.0">XYZ-Soft</software>
   </exportInformation>
   <projects>
-    <project id="1">
+    <project id="EF-1">
       <referenceId>1548-6254</referenceId>
       <units>
-        <unit id="1">
-          <referenceId>str1234</referenceId>
+        <unit id="UT-1">
+          <referenceId>AF-4578</referenceId>
           <properties>
-            <propertyRef>str1234</propertyRef>
+            <propertyRef>7634</propertyRef>
           </properties>
         </unit>
       </units>
@@ -38,36 +38,31 @@
       <type>buy</type>
       <start>2012-12-13T12:12:12</start>
       <prices currency="CHF">
-        <rent interval="onetime" referring="all">
-          <gross>745</gross>
-          <net>745</net>
-          <extra>745</extra>
-        </rent>
         <buy referring="all">
-          <price>745</price>
-          <extra>745</extra>
-          <land>str1234</land>
+          <price>850000</price>
+          <extra>25000</extra>
+          <land>400000</land>
         </buy>
         <auction start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:12">745</auction>
-        <deposit type="bank-guarantee">745</deposit>
+        <deposit type="bank-guarantee">60000</deposit>
         <additionalOffers>
-          <offer type="parking-exterior-space" interval="onetime">745</offer>
+          <offer type="parking-garage" interval="onetime">25000</offer>
         </additionalOffers>
       </prices>
       <address>
         <countryCode>CH</countryCode>
-        <locality>str1234</locality>
-        <region>str1234</region>
-        <postalCode>str1234</postalCode>
-        <postOfficeBoxNumber>str1234</postOfficeBoxNumber>
-        <street>str1234</street>
-        <streetNumber>str1234</streetNumber>
-        <streetAddition>str1234</streetAddition>
+        <locality>Kirchlindach</locality>
+        <region>Bern</region>
+        <postalCode>3038</postalCode>
+        <postOfficeBoxNumber>1</postOfficeBoxNumber>
+        <street>Somestreet</street>
+        <streetNumber>5</streetNumber>
+        <streetAddition>a</streetAddition>
         <subunit>1</subunit>
         <geo>
-          <latitude>3.14159</latitude>
-          <longitude>3.14159</longitude>
-          <elevation>3.14159</elevation>
+          <latitude>46.9479739</latitude>
+          <longitude>7.4474468</longitude>
+          <elevation>350</elevation>
         </geo>
       </address>
       <heating>
@@ -139,8 +134,6 @@
         <isUnderRoof>true</isUnderRoof>
         <isWellTended>true</isWellTended>
         <isWheelchairAccessible>true</isWheelchairAccessible>
-        <isHillsideSouth>true</isHillsideSouth>
-        <apartements>745</apartements>
         <areaBwf>123.45</areaBwf>
         <areaNwf>123.45</areaNwf>
         <areaPropertyLand>123.45</areaPropertyLand>
@@ -167,22 +160,21 @@
         <areaSiaUf>123.45</areaSiaUf>
         <areaSiaUuf>123.45</areaSiaUuf>
         <areaSiaVf>123.45</areaSiaVf>
-        <bathrooms>745</bathrooms>
-        <carryingCapacityCrane>123.45</carryingCapacityCrane>
-        <ceilingHeight>123.45</ceilingHeight>
-        <elevatorLoad>123.45</elevatorLoad>
-        <floor>1234</floor>
-        <floorLoad>123.45</floorLoad>
-        <floors>745</floors>
-        <grossPremium>123.45</grossPremium>
-        <hallHeight>123.45</hallHeight>
+        <ceilingHeight>2.4</ceilingHeight>
+        <elevatorLoad>1000</elevatorLoad>
+        <floor>1</floor>
+        <floorLoad>50</floorLoad>
+        <grossPremium>5</grossPremium>
+        <hallHeight>2.4</hallHeight>
         <minergieCertification>Minergie</minergieCertification>
-        <parcels>745</parcels>
-        <rooms>123.45</rooms>
-        <showers>745</showers>
-        <toilets>745</toilets>
-        <utilizationRatio>123.45</utilizationRatio>
-        <utilizationRatioConstruction>123.45</utilizationRatioConstruction>
+        <numberOfParcels>1</numberOfParcels>
+        <numberOfRooms>4.5</numberOfRooms>
+        <numberOfShowers>2</numberOfShowers>
+        <numberOfToilets>2</numberOfToilets>
+        <onHillside>true</onHillside>
+        <onHillsideSouth>true</onHillsideSouth>
+        <utilizationRatio>0</utilizationRatio>
+        <utilizationRatioConstruction>0</utilizationRatioConstruction>
         <volumeGva>123.45</volumeGva>
         <volumeSia>123.45</volumeSia>
         <volumeSiaAfv>123.45</volumeSiaAfv>
@@ -191,134 +183,140 @@
         <volumeSiaAnv>123.45</volumeSiaAnv>
         <volumeSiaAvv>123.45</volumeSiaAvv>
         <volumeSiaGv>123.45</volumeSiaGv>
-        <yearBuilt>745</yearBuilt>
-        <yearLastRenovated>745</yearLastRenovated>
+        <yearBuilt>2010</yearBuilt>
+        <yearLastRenovated>2014</yearLastRenovated>
       </characteristics>
       <categories>
-        <category>alottmen-garden</category>
+        <category>flat</category>
       </categories>
       <utilizations>
-        <utilization>commercial</utilization>
+        <utilization>residential</utilization>
       </utilizations>
       <localizations>
-        <localization lang="st">
-          <name>str1234</name>
-          <excerpt>str1234</excerpt>
-          <description>str1234</description>
-          <location>str1234</location>
-          <equipment>str1234</equipment>
+        <localization lang="en">
+          <name>Calm and beautiful flat</name>
+          <excerpt>Calm and beautiful flat in green environment</excerpt>
+          <description>Calm and beautiful flat in green environment with garden and small pod</description>
+          <location>Green fields and woods with a village nearby</location>
+          <equipment>Sauna, Pool</equipment>
           <attachments>
+          <image>
+            <url>http://www.someorg.com/dg546jdl</url>
+            <title>The living room</title>
+            <description>The living is very nice</description>
+            <mimeType>image/jpeg</mimeType>
+          </image>
             <image>
-              <url>http://www.xsd2xml.com</url>
-              <title>str1234</title>
-              <description>str1234</description>
-              <mimeType>str1234</mimeType>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The bathroom</title>
+              <description>The bathroom is very nice</description>
+              <mimeType>image/jpeg</mimeType>
             </image>
             <logo>
-              <url>http://www.xsd2xml.com</url>
-              <mimeType>str1234</mimeType>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <mimeType>image/jpeg</mimeType>
             </logo>
             <document>
-              <url>http://www.xsd2xml.com</url>
-              <title>str1234</title>
-              <mimeType>str1234</mimeType>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The document</title>
+              <mimeType>image/jpeg</mimeType>
             </document>
             <plan>
-              <url>http://www.xsd2xml.com</url>
-              <title>str1234</title>
-              <mimeType>str1234</mimeType>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The plan</title>
+              <mimeType>image/jpeg</mimeType>
             </plan>
             <linkDirect>
-              <url>http://www.xsd2xml.com</url>
-              <title>str1234</title>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The direct link</title>
             </linkDirect>
             <link>
-              <url>http://www.xsd2xml.com</url>
-              <title>str1234</title>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The link</title>
             </link>
             <linkVirtualTour>
-              <url>http://www.xsd2xml.com</url>
-              <title>str1234</title>
+              <url>http://www.virtualmax.com/dg546jdl</url>
+              <title>The virtual tour</title>
             </linkVirtualTour>
             <linkYoutube>
-              <url>http://www.xsd2xml.com</url>
-              <title>str1234</title>
+              <url>http://www.youtube.com/dg546jdl</url>
+              <title>The video</title>
             </linkYoutube>
           </attachments>
           <visitInformation>str1234</visitInformation>
           <events>
-            <event type="str1234">
-              <name>str1234</name>
-              <start>2012-12-13T12:12:12</start>
-              <end>2012-12-13T12:12:12</end>
-              <location>str1234</location>
-              <summary>str1234</summary>
+            <event type="Visit">
+              <name>Visit</name>
+              <start>2012-12-13T12:00:00</start>
+              <end>2012-12-13T13:00:00</end>
+              <location>At the real estate</location>
+              <summary>Max. 2 persons allowed. No dogs!</summary>
             </event>
           </events>
           <tags>
-            <tag>str1234</tag>
+            <tag>Some tag</tag>
           </tags>
         </localization>
       </localizations>
       <seller>
-        <organization id="str1234">
+        <organization id="Someorg Ltd">
           <address>
-            <countryCode>st</countryCode>
+            <countryCode>CH</countryCode>
             <locality>str1234</locality>
-            <region>str1234</region>
-            <postalCode>str1234</postalCode>
-            <postOfficeBoxNumber>str1234</postOfficeBoxNumber>
-            <street>str1234</street>
-            <streetNumber>str1234</streetNumber>
-            <streetAddition>str1234</streetAddition>
+            <region>Bern</region>
+            <postalCode>3000</postalCode>
+            <postOfficeBoxNumber>1000</postOfficeBoxNumber>
+            <street>Somestreet</street>
+            <streetNumber>1</streetNumber>
+            <streetAddition>c</streetAddition>
             <subunit>1</subunit>
             <geo>
-              <latitude>3.14159</latitude>
-              <longitude>3.14159</longitude>
-              <elevation>3.14159</elevation>
+              <latitude>46.9479739</latitude>
+              <longitude>7.4474468</longitude>
+              <elevation>350</elevation>
             </geo>
           </address>
-          <legalName>str1234</legalName>
-          <brand>str1234</brand>
-          <email>str1234</email>
-          <emailRem>str1234</emailRem>
-          <fax>str1234</fax>
-          <phone>str1234</phone>
-          <mobile>str1234</mobile>
-          <website title="str1234" label="str1234">http://www.xsd2xml.com</website>
+          <legalName>Someorg Ltd</legalName>
+          <brand>Someorg Ltd</brand>
+          <email>info@someorg.com</email>
+          <emailRem>info-remax@someorg.com</emailRem>
+          <fax>+4178254657</fax>
+          <mobile>+4178254657</mobile>
+          <phone>+4178254657</phone>
+          <website title="Someorg Ltd Website" label="Someorg Ltd Website">http://www.someorg.com</website>
         </organization>
         <viewPerson>
-          <function>str1234</function>
-          <givenName>str1234</givenName>
-          <familyName>str1234</familyName>
-          <email>str1234</email>
-          <fax>str1234</fax>
-          <mobile>str1234</mobile>
-          <phone>str1234</phone>
-          <gender>str1234</gender>
-          <note>str1234</note>
+          <function>Caretaker</function>
+          <givenName>Jim</givenName>
+          <familyName>Smith</familyName>
+          <email>jsmith@somehwere.com</email>
+          <fax>+4178254657</fax>
+          <mobile>+4178254657</mobile>
+          <phone>+4178254657</phone>
+          <gender>m</gender>
+          <note>Contact Mr. Smith</note>
         </viewPerson>
         <visitPerson>
-          <function>str1234</function>
-          <givenName>str1234</givenName>
-          <familyName>str1234</familyName>
-          <email>str1234</email>
-          <fax>str1234</fax>
-          <mobile>str1234</mobile>
-          <phone>str1234</phone>
-          <gender>str1234</gender>
-          <note>str1234</note>
+          <function>Caretaker</function>
+          <givenName>Jim</givenName>
+          <familyName>Smith</familyName>
+          <email>jsmith@somehwere.com</email>
+          <fax>+4178254657</fax>
+          <mobile>+4178254657</mobile>
+          <phone>+4178254657</phone>
+          <gender>m</gender>
+          <note>Contact Mr. Smith</note>
         </visitPerson>
         <inquiryPerson>
-          <function>str1234</function>
-          <givenName>str1234</givenName>
-          <familyName>str1234</familyName>
-          <email>str1234</email>
-          <fax>str1234</fax>
-          <mobile>str1234</mobile>
-          <phone>str1234</phone>
-          <gender>str1234</gender>
-          <note>str1234</note>
+          <function>Caretaker</function>
+          <givenName>Jim</givenName>
+          <familyName>Smith</familyName>
+          <email>jsmith@somehwere.com</email>
+          <fax>+4178254657</fax>
+          <mobile>+4178254657</mobile>
+          <phone>+4178254657</phone>
+          <gender>m</gender>
+          <note>Contact Mr. Smith</note>
         </inquiryPerson>
       </seller>
       <publishers>
