@@ -36,7 +36,7 @@
       <parcelNumbers>str1234</parcelNumbers>
       <visualReferenceId>str1234</visualReferenceId>
       <type>buy</type>
-      <start>2012-12-13T12:12:12</start>
+      <availableFrom>2012-12-13T12:12:12</availableFrom>
       <prices currency="CHF">
         <buy referring="all">
           <price>850000</price>

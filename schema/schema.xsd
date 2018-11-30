@@ -1118,7 +1118,7 @@
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
-                    <xs:element name="start" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+                    <xs:element name="availableFrom" type="xs:dateTime" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>From when the property is available.</xs:documentation>
                       </xs:annotation>
