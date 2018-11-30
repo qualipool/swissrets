@@ -1063,6 +1063,19 @@
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
+                    <xs:element name="development" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Describes the development state of the property.</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:annotation />
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="full" />
+                          <xs:enumeration value="partial" />
+                          <xs:enumeration value="undeveloped" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
                     <xs:element name="softwareInformation" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Property data creation information</xs:documentation>
