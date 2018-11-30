@@ -1,4 +1,4 @@
-language: node_js
+language: csharp
 node_js: '10'
 os: linux
 dotnet: 2.1.300
@@ -7,6 +7,9 @@ group: stable
 cache: npm
 install:
   - dotnet restore
+  - nvm install 8.0.0
+  - nvm use 8.0.0
+  - npm install
 
 addons:
   apt:
