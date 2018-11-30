@@ -5,3 +5,8 @@
 /scripts/update-pages/.tmp
 /.project
 /.settings
+/testsbin
+bin
+obj
+.vs
+package-lock.json
