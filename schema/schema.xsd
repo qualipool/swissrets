@@ -710,6 +710,11 @@
                 <xs:documentation>Land price per m²</xs:documentation>
               </xs:annotation>
             </xs:element>
+            <xs:element name="wirPercentage" type="percent" minOccurs="0" maxOccurs="1">
+              <xs:annotation>
+                <xs:documentation>The percententage of the gross price which has to paid in WIR Franc electronic currency.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
           </xs:all>
           <xs:attribute name="referring" type="priceReferring" />
         </xs:complexType>
