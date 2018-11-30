@@ -1,9 +1,13 @@
 language: node_js
 node_js: '10'
 os: linux
+dotnet: 2.1.300
 dist: trusty
 group: stable
 cache: npm
+install:
+  - dotnet restore
+
 addons:
   apt:
     packages:
@@ -12,7 +16,7 @@ addons:
 jobs:
   include:
     - stage: test
-      script: npm run test -s
+      script: echo dotnet test tests/SWISSRETS.Tests.csproj and npm run test -s
 
     - stage: update gh-pages
       script: npm run update-pages -s
