@@ -819,7 +819,6 @@
       <xs:enumeration value="garage" />
       <xs:enumeration value="garden-apartment" />
       <xs:enumeration value="golf-course" />
-      <xs:enumeration value="granny-flat" />
       <xs:enumeration value="hobby-room" />
       <xs:enumeration value="home" />
       <xs:enumeration value="horse-box" />
@@ -857,6 +856,7 @@
       <xs:enumeration value="solarium" />
       <xs:enumeration value="sports-hall" />
       <xs:enumeration value="squash-badminton" />
+      <xs:enumeration value="stoeckli" />
       <xs:enumeration value="studio" />
       <xs:enumeration value="tennis-court" />
       <xs:enumeration value="terrace-flat" />
