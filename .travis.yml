@@ -21,8 +21,8 @@ jobs:
     - stage: node-test
       script: npm run test -s
 
-    - stage: dotnet-test
-      script: dotnet restore tests/SWISSRETS.Tests.csproj and dotnet test tests/SWISSRETS.Tests.csproj
+    #- stage: dotnet-test
+    #  script: dotnet restore tests/SWISSRETS.Tests.csproj and dotnet test tests/SWISSRETS.Tests.csproj
 
     - stage: update gh-pages
       script: npm run update-pages -s
