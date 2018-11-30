@@ -15,16 +15,23 @@
             <type>rent</type> <!-- rent/buy -->
             <availability>active</availability> <!-- reserved / active / taken / reference / private -->
             <start>2018-10-10T17:00:00Z</start> <!-- datetime -->
-            <priceCurrency>CHF</priceCurrency>
             <!-- <price>1000000</price> -->
-            <netPrice>1200</netPrice>
-            <grossPrice>1450</grossPrice>
-            <extraCosts>
-                <extraCost key="" frequency="1" timesegment="" propertysegment="" type="" title="">1234</extraCost>
-            </extraCosts>
-            <integratedOffers>
-                <integratedOffer frequency="10" timesegment="" propertysegment="" inclusive="0">123</integratedOffer> <!-- determines if is added to offer-price (inclusive = 0) or appart of it (inclusive = 1) -->
-            </integratedOffers>
+            <prices currency="CHF">
+              <rent interval="month" referring="m2">
+                <net>1600</net>
+                <gross>1800</gross>
+                <extra>200</extra>
+              </rent>
+              <buy referring="m2">
+                <price>1200</price>
+                <extra>10</extra>
+              </buy>
+              <deposit type="bank-guarantee">3600</deposit>
+              <auction start="2018-11-16T21:04:57Z" expiration="2018-12-16T21:04:57Z">4500</auction>
+              <additionalOffers>
+                <offer interval="month" type="parking-spot">100</offer>
+              </additionalOffers>
+            </prices>
             <address>
                 <country>CH</country>
                 <locality>Bottighofen</locality>
