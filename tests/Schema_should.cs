@@ -25,13 +25,12 @@ namespace SwissRETS.Tests
     [Fact]
     public void validate_single_property_file()
     {
-      var schema = new XmlSchemaSet();  
-      schema.Add("", @"Schema/schema.xsd");  
-      var rd = XmlReader.Create(@"TestData/SingleProperty.xml");  
+      var schema = new XmlSchemaSet();
+      schema.Add("", @"Schema/schema.xsd");
+      var rd = XmlReader.Create(@"TestData/SingleProperty.xml");
       var doc = XDocument.Load(rd, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo);
       this.validationErrors.Clear();
       doc.Validate(schema, ValidationEventHandler, true);
-
       this.validationErrors.ToString().Should().BeNullOrEmpty(this.validationErrors.ToString());
     }
 
@@ -40,7 +39,7 @@ namespace SwissRETS.Tests
     {
       if (e.Severity == XmlSeverityType.Error)
       {
-        this.validationErrors.AppendLine($">> {e.Message}\n-> XML line {e.Exception.LineNumber} position {e.Exception.LinePosition}");
+        this.validationErrors.AppendLine($"\n\n>> {e.Message}\n-> XML line {e.Exception.LineNumber} position {e.Exception.LinePosition}");
       }
     }
     #endregion
