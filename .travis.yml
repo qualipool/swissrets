@@ -7,7 +7,6 @@ dist: trusty
 group: stable
 cache: npm
 install:
-  - dotnet restore
   - nvm install 8.0.0
   - nvm use 8.0.0
   - npm install
@@ -20,7 +19,7 @@ addons:
 jobs:
   include:
     - stage: test
-      script: echo dotnet test tests/SWISSRETS.Tests.csproj and npm run test -s
+      script: echo dotnet restore tests/SWISSRETS.Tests.csproj and dotnet test tests/SWISSRETS.Tests.csproj and npm run test -s
 
     - stage: update gh-pages
       script: npm run update-pages -s
