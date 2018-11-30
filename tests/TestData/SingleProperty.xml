@@ -9,7 +9,7 @@
     <project id="1">
       <referenceId>1548-6254</referenceId>
       <units>
-        <unit id="???">
+        <unit id="1">
           <referenceId>str1234</referenceId>
           <properties>
             <propertyRef>str1234</propertyRef>
@@ -37,7 +37,7 @@
       <visualReferenceId>str1234</visualReferenceId>
       <type>buy</type>
       <start>2012-12-13T12:12:12</start>
-      <prices currency="str">
+      <prices currency="CHF">
         <rent interval="onetime" referring="all">
           <gross>745</gross>
           <net>745</net>
@@ -55,7 +55,7 @@
         </additionalOffers>
       </prices>
       <address>
-        <countryCode>st</countryCode>
+        <countryCode>CH</countryCode>
         <locality>str1234</locality>
         <region>str1234</region>
         <postalCode>str1234</postalCode>
@@ -139,7 +139,6 @@
         <isUnderRoof>true</isUnderRoof>
         <isWellTended>true</isWellTended>
         <isWheelchairAccessible>true</isWheelchairAccessible>
-        <isHillside>true</isHillside>
         <isHillsideSouth>true</isHillsideSouth>
         <apartements>745</apartements>
         <areaBwf>123.45</areaBwf>
