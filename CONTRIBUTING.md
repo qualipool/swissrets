@@ -27,6 +27,8 @@ You're very welcome to fork the project and send pull requests.
 1. Install [.NET core SDK](https://dotnet.microsoft.com/download)
 1. Fork the project - hit the **Fork** button on [qualipool/swissrets](https://github.com/qualipool/swissrets) - top right corner
 1. Clone your fork locally
+1. `npm i`
+1. `npm start` this brings up nodemon to re-run all tests if the schema or example files change.
 
 ## Coding priciples
 _Mainly targeting the ./schema/schema.xsd_
