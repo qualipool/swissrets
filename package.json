@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "node scripts/test",
+    "test": "dotnet test scripts/tests/SwissRETS.Tests.csproj",
     "update-pages": "node scripts/update-pages"
   },
   "repository": {

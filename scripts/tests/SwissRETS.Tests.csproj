@@ -18,19 +18,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\schema\schema.xsd" Link="Schema\schema.xsd">
+    <None Include="..\..\schema\schema.xsd" Link="Schema\schema.xsd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\examples\full.xml" Link="TestData\full.xml">
+    <None Include="..\..\examples\full.xml" Link="TestData\full.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\examples\minimal.xml" Link="TestData\minimal.xml">
+    <None Include="..\..\examples\minimal.xml" Link="TestData\minimal.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
