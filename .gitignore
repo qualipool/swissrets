@@ -1,11 +1,10 @@
 .DS_Store
 /node_modules
-/tests/.tmp
-/scripts/fetch-wiki/.tmp
 /scripts/update-pages/.tmp
 /.project
 /.settings
 /testsbin
+/.vscode
 bin
 obj
 .vs
