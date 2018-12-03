@@ -16,7 +16,7 @@ install:
 jobs:
   include:
     - stage: test
-     script: npm run test -s
+      script: npm run test -s
 
     - stage: update gh-pages
       script: npm run update-pages -s
