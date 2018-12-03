@@ -385,7 +385,7 @@
           <xs:documentation>Built on a sloping hillside towards the south.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <!-- various numerics -->
+      <!-- various -->
       <xs:element name="areaBwf" type="xs:decimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Living area in m²</xs:documentation>
