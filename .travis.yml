@@ -1,28 +1,22 @@
-language: csharp
-mono: none
-node_js: '10'
 os: linux
-dotnet: 2.1.300
 dist: trusty
 group: stable
+
+language: csharp
+mono: none
+dotnet: 2.1.300
+node_js: '10'
 cache: npm
+
 install:
   - nvm install node
   - nvm use node
   - npm install
 
-addons:
-  apt:
-    packages:
-      - libxml2-utils # for `xmllint`.
-
 jobs:
   include:
-    #- stage: node-test
-    #  script: npm run test -s
-
-    - stage: dotnet-test
-      script: dotnet test tests/SwissRETS.Tests.csproj
+    - stage: test
+     script: npm run test -s
 
     - stage: update gh-pages
       script: npm run update-pages -s
