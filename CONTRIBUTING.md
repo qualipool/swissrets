@@ -22,18 +22,14 @@ Thank you for contributing SwissRETS
 
 You're very welcome to fork the project and send pull requests.
 
-- Use an editor that supports [Editorconfig](https://editorconfig.org/) or install the plugin
-- Install [Node >8](https://nodejs.org/en/download/)
-- Install xmllint
-  - [on Windows](http://flowingmotion.jojordan.org/2011/10/08/3-steps-to-download-xmllint/)
-  - on OSX with homebrew: `brew install xmlstarlet`
-  - on Linux (Debian/Ubuntu): `sudo apt-get install libxml2-utils`
-- Forkthe project
-  - Hit the **Fork** button on [qualipool/swissrets](https://github.com/qualipool/swissrets) - top right corner
-  - Clone it locally
+1. Use an editor that supports [Editorconfig](https://editorconfig.org/) or install the plugin
+1. Install [Node >8](https://nodejs.org/en/download/)
+1. Install [.NET core SDK](https://dotnet.microsoft.com/download)
+1. Fork the project - hit the **Fork** button on [qualipool/swissrets](https://github.com/qualipool/swissrets) - top right corner
+1. Clone your fork locally
 
 ## Coding priciples
-_Mainly targeting the ./schema/schema.xsd_  
+_Mainly targeting the ./schema/schema.xsd_
 
 While we strive for all three, if we have conflicts, this list acts as priorities.
 
@@ -64,13 +60,14 @@ SwissRETS is easy to use
 
 ### General naming rules
 - use real english words
-- use camelCase (attributes and tags)
+- for node and attribute names use camelCase
+- for attribute values use 'dash-separated-lower-case-words'
 - use a top-down naming schema, start with the broadest thing first and become more specific after
   - good: entryHallHeight, baths
   - bad: heightOfEntryHall, numberOfBaths
 
-### XML best practic
-**tags should have values**  
+### XML best practice
+**tags should have values**
 - avoid using empty tags, whenever possible
 
 **tags over attributes**
