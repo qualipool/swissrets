@@ -24,7 +24,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="TestData\SingleProperty.xml">
+    <None Include="..\examples\full.xml" Link="TestData\full.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\examples\minimal.xml" Link="TestData\minimal.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
