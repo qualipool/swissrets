@@ -1,4 +1,5 @@
 <?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="xs3p.xsl"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
   <!-- complex types -->
   <xs:complexType name="address">
@@ -1178,6 +1179,7 @@
                                 <xs:enumeration value="geothermal-probe" />
                                 <xs:enumeration value="heatpump-air-and-water" />
                                 <xs:enumeration value="heatpump" />
+                                <xs:enumeration value="oil" />
                                 <xs:enumeration value="wood-pellet" />
                                 <xs:enumeration value="wood" />
                               </xs:restriction>
