@@ -899,8 +899,12 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="phoneNumber">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="^[+]?[0-9]+$" />
+        <xs:annotation>
+          <xs:documentation>Strings of at least three numbers. May start with a plus sign and can have single spaces between numbers. Leading and trailing whitespace are not allowed.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+      <xs:enumeration value="value"></xs:enumeration>
+      <xs:pattern value="[+]?[0-9]((?!\s{2,})[0-9 ])+[0-9]"></xs:pattern>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="positiveDecimal">
