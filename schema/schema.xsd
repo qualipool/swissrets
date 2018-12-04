@@ -873,17 +873,26 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="emailaddress">
+    <xs:annotation>
+      <xs:documentation>Very loose email like strings. Basically just checking if there is an @ sign and a dot after that.</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:pattern value="[^@]+@[^\.]+\..+" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="mimeType">
+    <xs:annotation>
+      <xs:documentation source="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">A MIME type consists of a type and a subtype — two strings separated by /. No whitespace is allowed.</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:minLength value="7" />
       <xs:pattern value="[a-z0-9]+/[a-z0-9.-]+([+][a-z0-9]+)?" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="languageCode">
+    <xs:annotation>
+      <xs:documentation>Lowercase, two letter representaion of a language.</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:length value="2" />
       <xs:pattern value="[a-z]{2}" />
@@ -900,7 +909,7 @@
   </xs:simpleType>
   <xs:simpleType name="phoneNumber">
     <xs:annotation>
-      <xs:documentation>Strings of at least three numbers. May start with a plus sign and can have single spaces between numbers. Leading and trailing whitespace are not allowed.</xs:documentation>
+      <xs:documentation>Strings of at least three digits. May start with a plus sign and can have single spaces between digits. Leading and trailing whitespace are not allowed.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="value" />
@@ -917,7 +926,7 @@
   </xs:simpleType>
   <xs:simpleType name="priceInterval">
     <xs:annotation>
-      <xs:documentation>The payment interval the price stands for.</xs:documentation>
+      <xs:documentation>The payment interval, the price stands for.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="onetime" />
@@ -938,6 +947,9 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="utilization">
+    <xs:annotation>
+      <xs:documentation>The intended usage of a certain property. Considered as the superset of the categories.</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="commercial" />
       <xs:enumeration value="gastronomy" />
@@ -959,10 +971,10 @@
   </xs:simpleType>
   <xs:simpleType name="year">
     <xs:annotation>
-      <xs:documentation>The year type specifies an integer from 1000 and above</xs:documentation>
+      <xs:documentation>Four digit representation of a year.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:positiveInteger">
-      <xs:minInclusive value="1000" />
+      <xs:pattern value="[12][0-9]{3}" />
     </xs:restriction>
   </xs:simpleType>
   <!-- actual xml structure -->
