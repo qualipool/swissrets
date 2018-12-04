@@ -912,7 +912,6 @@
       <xs:documentation>Strings of at least three digits. May start with a plus sign and can have single spaces between digits. Leading and trailing whitespace are not allowed.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="value" />
       <xs:pattern value="[+]?([0-9] ?){2,}[0-9]" />
     </xs:restriction>
   </xs:simpleType>
