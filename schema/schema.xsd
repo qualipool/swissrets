@@ -1,5 +1,4 @@
 <?xml version="1.0" standalone="yes"?>
-<?xml-stylesheet type="text/xsl" href="xs3p.xsl"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
   <!-- complex types -->
   <xs:complexType name="address">
