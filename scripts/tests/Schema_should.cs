@@ -13,15 +13,15 @@ namespace SwissRETS.Tests
 {
     public class Schema_should
     {
-        string schemaFilename = @"Schema/schema.xsd";
-        string currentFilename = null;
+        const string schemaFilename = @"Schema/schema.xsd";
         StringBuilder validationErrors = new StringBuilder();
+        string currentFilename = null;
 
         [Fact]
         public void be_valid_xml()
         {
             var document = new XmlDocument();
-            document.Load(this.schemaFilename);
+            document.Load(Schema_should.schemaFilename);
         }
 
         [Fact]
@@ -40,7 +40,7 @@ namespace SwissRETS.Tests
         void validate (string filename)
         {
             var schema = new XmlSchemaSet();
-            schema.Add("", this.schemaFilename);
+            schema.Add("", Schema_should.schemaFilename);
             var rd = XmlReader.Create(filename);
             var doc = XDocument.Load(rd, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo);
             this.validationErrors.Clear();
