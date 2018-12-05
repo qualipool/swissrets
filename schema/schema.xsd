@@ -1049,25 +1049,6 @@
                         <xs:documentation>Can be used to track the original creation id (this should usualy be unique to the property)</xs:documentation>
                       </xs:annotation>
                     </xs:element>
-                    <xs:element name="bfs" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>BFS Property Information</xs:documentation>
-                      </xs:annotation>
-                      <xs:complexType>
-                        <xs:all>
-                          <xs:element type="xs:string" name="egid" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                              <xs:documentation>The building identifier of the swiss population register</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                          <xs:element type="xs:string" name="ewid" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                              <xs:documentation>The flat identifier of the swiss population register</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                        </xs:all>
-                      </xs:complexType>
-                    </xs:element>
                     <xs:element name="availability" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Describes how the property is available. "active" means available for everyone. "private" means available for a some, usually behind a login or some other closed circle of people. "reference" showcase object typically used by brokers for showcasing their work. "reserved" means blocked by someone for taking. "taken" means it's not available anymore.</xs:documentation>
@@ -1083,63 +1064,6 @@
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
-                    <xs:element name="development" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>Describes the development state of the property.</xs:documentation>
-                      </xs:annotation>
-                      <xs:simpleType>
-                        <xs:annotation />
-                        <xs:restriction base="xs:string">
-                          <xs:enumeration value="full" />
-                          <xs:enumeration value="partial" />
-                          <xs:enumeration value="undeveloped" />
-                        </xs:restriction>
-                      </xs:simpleType>
-                    </xs:element>
-                    <xs:element name="softwareInformation" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>Property data creation information</xs:documentation>
-                      </xs:annotation>
-                      <xs:complexType>
-                        <xs:all>
-                          <xs:element type="xs:string" name="lastUser" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                              <xs:documentation>TODO: why do we need this?</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                          <xs:element type="xs:byte" name="updateIteration" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                              <xs:documentation>TODO: what is this? do we need this?</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                          <xs:element type="xs:dateTime" name="creation" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                              <xs:documentation>Creation date and time of the data.</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                          <xs:element type="xs:dateTime" name="modified" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                              <xs:documentation>Date and time of the last modifictiion.</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                        </xs:all>
-                      </xs:complexType>
-                    </xs:element>
-                    <xs:element type="xs:string" name="zoneTypes" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>TODO: this needs documentation</xs:documentation>
-                      </xs:annotation>
-                    </xs:element>
-                    <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>TODO: this needs documentation</xs:documentation>
-                      </xs:annotation>
-                    </xs:element>
-                    <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing</xs:documentation>
-                      </xs:annotation>
-                    </xs:element>
                     <xs:element name="type" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Buy or rent</xs:documentation>
@@ -1151,70 +1075,10 @@
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
-                    <xs:element name="availableFrom" type="xs:dateTime" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>From when the property is available.</xs:documentation>
-                      </xs:annotation>
-                    </xs:element>
-                    <xs:element name="prices" type="prices" minOccurs="0" maxOccurs="1" />
                     <xs:element name="address" type="address" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Location of the property.</xs:documentation>
                       </xs:annotation>
-                    </xs:element>
-                    <xs:element name="heating" maxOccurs="1" minOccurs="0">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element name="generation" maxOccurs="1" minOccurs="0">
-                            <xs:simpleType>
-                              <xs:annotation>
-                                <xs:documentation>How the heat is produced.</xs:documentation>
-                              </xs:annotation>
-                              <xs:restriction base="xs:string">
-                                <xs:enumeration value="district" />
-                                <xs:enumeration value="electricity" />
-                                <xs:enumeration value="gas" />
-                                <xs:enumeration value="geothermal-probe" />
-                                <xs:enumeration value="heatpump-air-and-water" />
-                                <xs:enumeration value="heatpump" />
-                                <xs:enumeration value="oil" />
-                                <xs:enumeration value="wood-pellet" />
-                                <xs:enumeration value="wood" />
-                              </xs:restriction>
-                            </xs:simpleType>
-                          </xs:element>
-                          <xs:element name="distribution" maxOccurs="1" minOccurs="0">
-                            <xs:simpleType>
-                              <xs:restriction base="xs:string">
-                                <xs:enumeration value="radiator" />
-                                <xs:enumeration value="floor" />
-                              </xs:restriction>
-                            </xs:simpleType>
-                          </xs:element>
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
-                    <xs:element name="characteristics" type="characteristics" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>Main characteristics of properties.</xs:documentation>
-                      </xs:annotation>
-                    </xs:element>
-                    <xs:element name="categories" minOccurs="0" maxOccurs="1">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:annotation>
-                            <xs:documentation>Order represents (least specific) to (most specific). For example house, single-house, rustico</xs:documentation>
-                          </xs:annotation>
-                          <xs:element type="categories" name="category" minOccurs="1" maxOccurs="unbounded" />
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
-                    <xs:element name="utilizations" minOccurs="0" maxOccurs="1">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element type="utilization" name="utilization" minOccurs="0" maxOccurs="unbounded" />
-                        </xs:sequence>
-                      </xs:complexType>
                     </xs:element>
                     <xs:element name="localizations" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
@@ -1339,6 +1203,113 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+                    <xs:element name="bfs" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>BFS Property Information</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element type="xs:string" name="egid" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>The building identifier of the swiss population register</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="xs:string" name="ewid" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>The flat identifier of the swiss population register</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="development" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Describes the development state of the property.</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:annotation />
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="full" />
+                          <xs:enumeration value="partial" />
+                          <xs:enumeration value="undeveloped" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="zoneTypes" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>TODO: this needs documentation</xs:documentation>
+                      </xs:annotation>
+        </xs:element>
+                    <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>TODO: this needs documentation</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="availableFrom" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>From when the property is available.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="prices" type="prices" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="heating" maxOccurs="1" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="generation" maxOccurs="1" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:annotation>
+                                <xs:documentation>How the heat is produced.</xs:documentation>
+                              </xs:annotation>
+                              <xs:restriction base="xs:string">
+                                <xs:enumeration value="district" />
+                                <xs:enumeration value="electricity" />
+                                <xs:enumeration value="gas" />
+                                <xs:enumeration value="geothermal-probe" />
+                                <xs:enumeration value="heatpump-air-and-water" />
+                                <xs:enumeration value="heatpump" />
+                                <xs:enumeration value="oil" />
+                                <xs:enumeration value="wood-pellet" />
+                                <xs:enumeration value="wood" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="distribution" maxOccurs="1" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:enumeration value="radiator" />
+                                <xs:enumeration value="floor" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="characteristics" type="characteristics" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Main characteristics of properties.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="categories" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:annotation>
+                            <xs:documentation>Order represents (least specific) to (most specific). For example house, single-house, rustico</xs:documentation>
+                          </xs:annotation>
+                          <xs:element type="categories" name="category" minOccurs="1" maxOccurs="unbounded" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="utilizations" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="utilization" name="utilization" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
                     <xs:element name="seller" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:annotation>
@@ -1428,7 +1399,36 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                  </xs:all>
+                                        <xs:element name="softwareInformation" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Property data creation information</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element type="xs:string" name="lastUser" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>TODO: why do we need this?</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="xs:byte" name="updateIteration" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>TODO: what is this? do we need this?</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="xs:dateTime" name="creation" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>Creation date and time of the data.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="xs:dateTime" name="modified" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>Date and time of the last modifictiion.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                                    </xs:all>
                   <xs:attribute type="xs:string" name="id" use="required">
                     <xs:annotation>
                       <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as
