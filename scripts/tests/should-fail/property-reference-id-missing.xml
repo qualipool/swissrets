@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <properties>
+    <property id="1245687">
+      <availability>active</availability>
+      <type>rent</type>
+      <address>
+        <countryCode>CH</countryCode>
+      </address>
+      <localizations>
+        <localization lang="en">
+          <name>Calm and beautiful flat</name>
+        </localization>
+      </localizations>
+    </property>
+  </properties>
+</export>

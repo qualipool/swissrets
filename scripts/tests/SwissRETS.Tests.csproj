@@ -24,14 +24,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\examples\full.xml" Link="examples\full.xml">
+    <None Include="..\..\examples\**\*.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>should-pass\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\examples\minimal.xml" Link="examples\minimal.xml">
+    <None Include=".\should-fail\**\*.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>should-fail\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </None>
   </ItemGroup>
 
