@@ -9,8 +9,9 @@
         <countryCode>CH</countryCode>
       </address>
       <localizations>
-        <localization lang="en">
+        <localization lang="de">
           <name>Calm and beautiful flat</name>
+          <phone>18</phone>
         </localization>
       </localizations>
     </property>

@@ -7,6 +7,8 @@
   },
   "scripts": {
     "lint": "standard",
+    "test": "node scripts/test",
+    "xsddoc": "node scripts/xsddoc",
     "start": "nodemon --exec 'npm test -s'",
     "test": "dotnet test scripts/tests/SwissRETS.Tests.csproj",
     "update-pages": "node scripts/update-pages"
