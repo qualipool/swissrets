@@ -133,6 +133,7 @@ const update = async () => {
   // commit changes
   process.chdir(destinationFolder)
   await exec(`git add -A *.md`, loudExecConfig)
+  await exec(`git add -A ${docsFilesDest}/*.*`, loudExecConfig)
   await exec(`git add -A ${docsFilesDest}/**/*.*`, loudExecConfig)
   const commitCommand = 'git commit -m "Updating posts and docs"'
   try {
