@@ -1,7 +1,7 @@
 const globby = require('globby')
 const path = require('path')
 const fs = require('fs-extra')
-const { exec } = require('../lib')
+const { exec, log } = require('../lib')
 
 const xsddoc = async () => {
   const { CLASSPATH } = process.argv
@@ -21,6 +21,7 @@ const xsddoc = async () => {
   const classpath = localClassPath.join(':')
 
   const outputDir = path.join(__dirname, '.tmp')
+  await fs.remove(outputDir)
   await fs.ensureDir(outputDir)
 
   const args = [
@@ -31,10 +32,24 @@ const xsddoc = async () => {
     path.join(__dirname, '..', '..', 'schema', 'schema.xsd')
   ].join(' ')
 
+  // execute xsddoc
   await exec(`${executable} -classpath ${classpath} net.sf.xframe.xsddoc.Main ${args}`, {
     stdio: 'inherit',
     printCommand: true
   })
+
+  // override stylesheet
+  const styleFile = 'stylesheet.css'
+  await fs.copy(
+    path.join(__dirname, styleFile),
+    path.join(outputDir, styleFile)
+  )
 }
 
 xsddoc()
+
+// make sure, we're exit with code:1 for undhandled rejections
+process.on('unhandledRejection', error => {
+  log.failure(error.message, '\nDetails:\n', error, '\n\n')
+  process.exitCode = 1
+})
