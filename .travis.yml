@@ -18,5 +18,6 @@ jobs:
     - stage: test
       script: npm run test -s
 
-    - stage: update gh-pages
+    - if: branch = master
+      stage: update gh-pages
       script: npm run update-pages -s
