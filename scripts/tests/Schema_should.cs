@@ -13,7 +13,7 @@ namespace SwissRETS.Tests
 {
     public class Schema_should
     {
-        const string schemaFilename = @"Schema/schema.xsd";
+        const string schemaFilename = @"schema/schema.xsd";
         StringBuilder validationErrors = new StringBuilder();
         string currentFilename = null;
 
@@ -27,17 +27,17 @@ namespace SwissRETS.Tests
         [Fact]
         public void validate_full_file()
         {
-            this.validate(@"TestData/full.xml");
+            this.validate(@"examples/full.xml", 0);
         }
 
         [Fact]
         public void validate_minmal_file()
         {
-            this.validate(@"TestData/minimal.xml");
+            this.validate(@"examples/minimal.xml", 0);
         }
 
         #region validate
-        void validate (string filename)
+        void validate (string filename, int expectedErrorCount = 0, string errorPatern = "")
         {
             var schema = new XmlSchemaSet();
             schema.Add("", Schema_should.schemaFilename);
@@ -46,7 +46,12 @@ namespace SwissRETS.Tests
             this.validationErrors.Clear();
             this.currentFilename = filename;
             doc.Validate(schema, ValidationEventHandler, true);
-            this.validationErrors.ToString().Should().BeNullOrEmpty(this.validationErrors.ToString());
+
+            if (expectedErrorCount == 0)
+            {
+              this.validationErrors.Length.Should().Be(0, this.validationErrors.ToString());
+              return;
+            }
         }
         #endregion
 
@@ -55,7 +60,7 @@ namespace SwissRETS.Tests
         {
             if (e.Severity == XmlSeverityType.Error)
             {
-                this.validationErrors.AppendLine($"\n{this.currentFilename}:{e.Exception.LineNumber}:{e.Exception.LinePosition}\n> {e.Message}");
+                this.validationErrors.AppendLine($"{this.currentFilename}:{e.Exception.LineNumber}:{e.Exception.LinePosition} {e.Message}\n");
             }
         }
         #endregion
