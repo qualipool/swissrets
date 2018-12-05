@@ -9,6 +9,7 @@
   "scripts": {
     "lint": "standard",
     "test": "node scripts/test",
+    "xsddoc": "node scripts/xsddoc",
     "update-pages": "node scripts/update-pages"
   },
   "repository": {
