@@ -4,6 +4,7 @@
 /.project
 /.settings
 /testsbin
+/scripts/xsddoc/.tmp
 /.vscode
 bin
 obj

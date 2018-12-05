@@ -3,6 +3,7 @@ const chalk = require('chalk')
 const globby = require('globby')
 const fs = require('fs-extra')
 const { exec, log } = require('../lib')
+const xsddoc = require('../xsddoc/xsddoc')
 
 // start configuration
 const tempFolder = path.join(__dirname, '.tmp')
@@ -62,7 +63,8 @@ const push = async (repoUrl, token) => {
 // 2. sync md files from wiki to gh-branch
 // 3. replace links with .html ending
 // 4. add back link to top of non-home markdowns
-// 5. push it to gh-pages branch
+// 5. generate the xsd docs
+// 6. push it to gh-pages branch
 const update = async () => {
   const token = process.env.GITHUB_ACCESS_TOKEN
 
@@ -120,10 +122,20 @@ const update = async () => {
   await fs.remove(indexFileDest)
   await fs.move(indexFileSrc, indexFileDest)
 
+  // generate docs
+  await xsddoc()
+  const docsFilesSrc = path.join(__dirname, '..', 'xsddoc', '.tmp')
+  const docsFilesDest = path.join(destinationFolder, 'docs')
+  console.log(docsFilesSrc, docsFilesDest)
+  await fs.remove(docsFilesDest)
+  await fs.copy(docsFilesSrc, docsFilesDest)
+
   // commit changes
   process.chdir(destinationFolder)
   await exec(`git add -A *.md`, loudExecConfig)
-  const commitCommand = 'git commit -m "Updating posts from wiki pages"'
+  await exec(`git add -A ${docsFilesDest}/*.*`, loudExecConfig)
+  await exec(`git add -A ${docsFilesDest}/**/*.*`, loudExecConfig)
+  const commitCommand = 'git commit -m "Updating posts and docs"'
   try {
     await exec(commitCommand, loudExecConfig)
     await push(destinationRepo, token)
@@ -132,7 +144,7 @@ const update = async () => {
       throw error
     }
     // don't fail, because if there was nothing to commit, it's ok to end up here
-    log.info('no changes found, from wiki')
+    log.info('no changes found')
   }
 }
 
