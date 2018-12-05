@@ -100,7 +100,7 @@ namespace SwissRETS.Tests
         void validate (string filename, int expectedErrorCount = 0, string errorPattern = "")
         {
             var schema = new XmlSchemaSet();
-            schema.Add("http://swissrets.ch", Schema_should.schemaFilename);
+            schema.Add("", Schema_should.schemaFilename);
             var reader = XmlReader.Create(
               $"{(expectedErrorCount == 0 ? "should-pass" : "should-fail")}/{filename}"
             );
