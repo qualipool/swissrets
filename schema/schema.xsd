@@ -1306,7 +1306,7 @@
                     <xs:element name="utilizations" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element type="utilization" name="utilization" minOccurs="0" maxOccurs="unbounded" />
+                          <xs:element type="utilization" name="utilization" minOccurs="1" maxOccurs="unbounded" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
