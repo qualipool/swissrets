@@ -1356,7 +1356,7 @@
                                 <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="fax" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="phoneNumber" name="fax" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="phoneNumber" name="mobile" minOccurs="0" maxOccurs="1" />
                                 <xs:element name="website" minOccurs="0" maxOccurs="1">
