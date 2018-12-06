@@ -126,15 +126,13 @@ const update = async () => {
   await xsddoc()
   const docsFilesSrc = path.join(__dirname, '..', 'xsddoc', '.tmp')
   const docsFilesDest = path.join(destinationFolder, 'docs')
-  console.log(docsFilesSrc, docsFilesDest)
   await fs.remove(docsFilesDest)
   await fs.copy(docsFilesSrc, docsFilesDest)
 
   // commit changes
   process.chdir(destinationFolder)
   await exec(`git add -A *.md`, loudExecConfig)
-  await exec(`git add -A ${docsFilesDest}/*.*`, loudExecConfig)
-  await exec(`git add -A ${docsFilesDest}/**/*.*`, loudExecConfig)
+  await exec(`git add -A ${docsFilesDest}/*`, loudExecConfig)
   const commitCommand = 'git commit -m "Updating posts and docs"'
   try {
     await exec(commitCommand, loudExecConfig)
