@@ -978,6 +978,9 @@
   </xs:simpleType>
   <!-- actual xml structure -->
   <xs:element name="export">
+    <xs:annotation>
+      <xs:documentation>Root node.</xs:documentation>
+    </xs:annotation>
     <xs:complexType>
       <xs:all>
         <xs:element name="exportInformation" maxOccurs="1" minOccurs="0">
@@ -1001,6 +1004,9 @@
           </xs:complexType>
         </xs:element>
         <xs:element name="projects" maxOccurs="1" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Sequence of new building projects.</xs:documentation>
+          </xs:annotation>
           <xs:complexType>
             <xs:sequence>
               <xs:element name="project" maxOccurs="unbounded" minOccurs="0">
@@ -1036,11 +1042,11 @@
           </xs:complexType>
         </xs:element>
         <xs:element name="properties" maxOccurs="1" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Sequence of properties, like buildings, houses, flats and all other possible objects. Order of properties is relevant. Custom sorting can be defined by provider.</xs:documentation>
+          </xs:annotation>
           <xs:complexType>
             <xs:sequence>
-              <xs:annotation>
-                <xs:documentation>Order of properties is relevant. Custom sorting can be defined by provider.</xs:documentation>
-              </xs:annotation>
               <xs:element name="property" maxOccurs="unbounded" minOccurs="1">
                 <xs:complexType>
                   <xs:all>
@@ -1066,7 +1072,7 @@
                     </xs:element>
                     <xs:element name="type" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Buy or rent</xs:documentation>
+                        <xs:documentation>Specifies rent or buy.</xs:documentation>
                       </xs:annotation>
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
@@ -1081,12 +1087,15 @@
                       </xs:annotation>
                     </xs:element>
                     <xs:element name="localizations" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Sequence of all language specific content and texts.</xs:documentation>
+                      </xs:annotation>
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:annotation>
-                            <xs:documentation>Order is relevant. First localization is considered to be the main language etc.</xs:documentation>
-                          </xs:annotation>
                           <xs:element name="localization" minOccurs="1" maxOccurs="unbounded">
+                            <xs:annotation>
+                              <xs:documentation>One for each language, a set of language specific content and texts.</xs:documentation>
+                            </xs:annotation>
                             <xs:complexType>
                               <xs:all>
                                 <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1">
@@ -1205,7 +1214,7 @@
                     </xs:element>
                     <xs:element name="bfs" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>BFS Property Information</xs:documentation>
+                        <xs:documentation>Federal statistical office specific information.</xs:documentation>
                       </xs:annotation>
                       <xs:complexType>
                         <xs:all>
@@ -1239,7 +1248,7 @@
                       <xs:annotation>
                         <xs:documentation>TODO: this needs documentation</xs:documentation>
                       </xs:annotation>
-        </xs:element>
+                    </xs:element>
                     <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>TODO: this needs documentation</xs:documentation>
@@ -1294,6 +1303,9 @@
                       </xs:annotation>
                     </xs:element>
                     <xs:element name="categories" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Sequence of categories, for hierarchy use ordering of categories (parent category first).</xs:documentation>
+                      </xs:annotation>
                       <xs:complexType>
                         <xs:sequence>
                           <xs:annotation>
@@ -1304,6 +1316,9 @@
                       </xs:complexType>
                     </xs:element>
                     <xs:element name="utilizations" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Prioritized sequence to describes the intended utilization of the property, main comes first.</xs:documentation>
+                      </xs:annotation>
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element type="utilization" name="utilization" minOccurs="1" maxOccurs="unbounded" />
@@ -1318,7 +1333,7 @@
                         <xs:all>
                           <xs:element name="organization" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Address of the owner or the owners substitute (e.g. broker).</xs:documentation>
+                              <xs:documentation>Address of the owner or the owners substitute (for example a broker).</xs:documentation>
                             </xs:annotation>
                             <xs:complexType>
                               <xs:all>
@@ -1331,6 +1346,9 @@
                                 <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="phoneNumber" name="mobile" minOccurs="0" maxOccurs="1" />
                                 <xs:element name="website" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Sellers URL, typically the company website.</xs:documentation>
+                                  </xs:annotation>
                                   <xs:complexType>
                                     <xs:simpleContent>
                                       <xs:extension base="xs:anyURI">
@@ -1399,7 +1417,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                                        <xs:element name="softwareInformation" minOccurs="0" maxOccurs="1">
+                    <xs:element name="softwareInformation" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Property data creation information</xs:documentation>
                       </xs:annotation>
@@ -1428,7 +1446,7 @@
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
-                                    </xs:all>
+                  </xs:all>
                   <xs:attribute type="xs:string" name="id" use="required">
                     <xs:annotation>
                       <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as
