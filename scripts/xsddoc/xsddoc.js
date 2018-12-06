@@ -24,7 +24,7 @@ const xsddoc = async () => {
   await fs.remove(outputDir)
   await fs.ensureDir(outputDir)
 
-  const head = `<a href="./" target="__top"><strong>Back to SwissRETS</strong></a>`
+  const head = `<a href="https://swissrets.ch" target="__top"><strong>Back to SwissRETS</strong></a>`
 
   const args = [
     `-h "${head}"`,
