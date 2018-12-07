@@ -325,7 +325,7 @@
           <xs:documentation>Part of a quiet surrounding or neighbourhood.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isQuotedForForeigners" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasForeignQuota" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Widely used to control the amount of foreigners buying holiday flats in popular regions.</xs:documentation>
         </xs:annotation>
