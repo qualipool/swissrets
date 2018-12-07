@@ -1048,7 +1048,7 @@
                         <xs:documentation>Can be used to track the original creation id (this should usualy be unique to the property)</xs:documentation>
                       </xs:annotation>
                     </xs:element>
-                                        <xs:element name="availability" minOccurs="1" maxOccurs="1">
+                    <xs:element name="availability" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Describes how the property is available. "active" means available for everyone. "private" means available for a some, usually behind a login or some other closed circle of people. "reference" showcase object typically used by brokers for showcasing their work. "reserved" means blocked by someone for taking. "taken" means it's not available anymore.</xs:documentation>
                       </xs:annotation>
@@ -1205,7 +1205,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                                        <xs:element name="bfs" minOccurs="0" maxOccurs="1">
+                    <xs:element name="bfs" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Federal statistical office specific information.</xs:documentation>
                       </xs:annotation>
@@ -1409,22 +1409,22 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                                        <xs:element type="xs:string" name="author" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                              <xs:documentation>The name or username of the author, who created the data.</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                                        <xs:element type="xs:dateTime" name="created" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                              <xs:documentation>Creation date and time of the data.</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                                        <xs:element type="xs:dateTime" name="modified" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                              <xs:documentation>Date and time of the last modifictiion.</xs:documentation>
-                            </xs:annotation>
-                          </xs:element>
-                                    </xs:all>
+                    <xs:element type="xs:string" name="author" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>The name or username of the author, who created the data.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element type="xs:dateTime" name="created" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Creation date and time of the data.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element type="xs:dateTime" name="modified" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Date and time of the last modifictiion.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:all>
                   <xs:attribute type="xs:string" name="id" use="required">
                     <xs:annotation>
                       <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as
