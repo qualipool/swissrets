@@ -62,6 +62,7 @@
         <generation>district</generation>
         <distribution>radiator</distribution>
       </heating>
+      <minergieCertification>Minergie-P-Eco</minergieCertification>
       <characteristics>
         <arePetsAllowed>true</arePetsAllowed>
         <hasAttic>true</hasAttic>
@@ -160,7 +161,6 @@
         <floorLoad>50</floorLoad>
         <grossPremium>5</grossPremium>
         <hallHeight>2.4</hallHeight>
-        <minergieCertification>Minergie</minergieCertification>
         <numberOfParcels>1</numberOfParcels>
         <numberOfRooms>4.5</numberOfRooms>
         <numberOfShowers>2</numberOfShowers>
