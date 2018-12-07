@@ -280,7 +280,6 @@
           <brand>Someorg Ltd</brand>
           <email>info@someorg.com</email>
           <emailRem>info-remax@someorg.com</emailRem>
-          <fax>+4178254657</fax>
           <mobile>+4178254657</mobile>
           <phone>+4178254657</phone>
           <website title="Someorg Ltd Website" label="Someorg Ltd Website">http://www.someorg.com</website>
@@ -290,7 +289,6 @@
           <givenName>Jim</givenName>
           <familyName>Smith</familyName>
           <email>jsmith@somehwere.com</email>
-          <fax>+4178254657</fax>
           <mobile>+4178254657</mobile>
           <phone>+4178254657</phone>
           <gender>m</gender>
@@ -301,7 +299,6 @@
           <givenName>Jim</givenName>
           <familyName>Smith</familyName>
           <email>jsmith@somehwere.com</email>
-          <fax>+4178254657</fax>
           <mobile>+4178254657</mobile>
           <phone>+4178254657</phone>
           <gender>m</gender>
@@ -312,7 +309,6 @@
           <givenName>Jim</givenName>
           <familyName>Smith</familyName>
           <email>jsmith@somehwere.com</email>
-          <fax>+4178254657</fax>
           <mobile>+4178254657</mobile>
           <phone>+4178254657</phone>
           <gender>m</gender>
