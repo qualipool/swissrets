@@ -6,8 +6,8 @@
       <availability>active</availability>
       <type>rent</type>
       <address>
+        <countryCode>CH</countryCode>
         <locality>Kirchlindach</locality>
-        <postalCode>3038</postalCode>
       </address>
       <localizations>
         <localization lang="en">

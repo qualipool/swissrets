@@ -7,6 +7,8 @@
       <type>rent</type>
       <address>
         <countryCode>CH</countryCode>
+        <locality>Kirchlindach</locality>
+        <postalCode>3038</postalCode>
       </address>
     </property>
   </properties>

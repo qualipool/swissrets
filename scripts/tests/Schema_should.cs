@@ -72,7 +72,19 @@ namespace SwissRETS.Tests
           );
           this.validate(
             @"property-address-country-missing.xml", 1,
+            "List of possible elements expected: 'countryCode'."
+          );
+          this.validate(
+            @"property-address-empty.xml", 1,
             "The element 'address' has incomplete content."
+          );
+          this.validate(
+            @"property-address-locality-missing.xml", 1,
+            "List of possible elements expected: 'locality'."
+          );
+          this.validate(
+            @"property-address-postalcode-missing.xml", 1,
+            "List of possible elements expected: 'postalCode'."
           );
           this.validate(
             @"property-address-missing.xml", 1,
@@ -112,8 +124,10 @@ namespace SwissRETS.Tests
             this.currentFilename = filename;
             document.Validate(schema, ValidationEventHandler, true);
             var allErrors = String.Join("\n", this.validationErrors);
-            if (expectedErrorCount == 0 && this.validationErrors.Count > 0) {
+            if (expectedErrorCount != this.validationErrors.Count) {
+              Console.WriteLine("\n\n------------");
               Console.WriteLine(allErrors);
+              Console.WriteLine("------------\n\n");
             }
 
             // make sure the right amount of errors occured
