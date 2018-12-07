@@ -673,11 +673,7 @@
   </xs:complexType>
   <xs:complexType name="person">
     <xs:all>
-      <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>TODO: what does funciton mean? Do we need this?</xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="givenName" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="familyName" minOccurs="0" maxOccurs="1" />
       <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
@@ -1163,7 +1159,7 @@
                                 </xs:element>
                                 <xs:element name="events" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
-                                    <xs:documentation>TODO: what is this? do we need this?</xs:documentation>
+                                    <xs:documentation>Describes orgenized events, typically for visiting the property.</xs:documentation>
                                   </xs:annotation>
                                   <xs:complexType>
                                     <xs:sequence>
@@ -1184,7 +1180,7 @@
                                 </xs:element>
                                 <xs:element name="tags" maxOccurs="1" minOccurs="0">
                                   <xs:annotation>
-                                    <xs:documentation>TODO: this needs documentation. what are tags used for?</xs:documentation>
+                                    <xs:documentation>Arbitrary tag words, that do not fit into utilizations, categories nor characteristics.</xs:documentation>
                                   </xs:annotation>
                                   <xs:complexType>
                                     <xs:sequence>
@@ -1320,9 +1316,6 @@
                     </xs:element>
                     <xs:element name="seller" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
-                        <xs:annotation>
-                          <xs:documentation>TODO: review documentation of organisation, viewPerson, visitPerson and inquiryPerson</xs:documentation>
-                        </xs:annotation>
                         <xs:all>
                           <xs:element name="organization" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
