@@ -60,7 +60,7 @@
           <xs:documentation>Has an attic.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasBalcony" type="xs:boolean" minOccurs="0" maxOccurs="1">
+            <xs:element name="hasBalcony" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Balcony available.</xs:documentation>
         </xs:annotation>
@@ -555,19 +555,6 @@
         <xs:annotation>
           <xs:documentation>Hall height in m. Usually for commercial properties.</xs:documentation>
         </xs:annotation>
-      </xs:element>
-      <xs:element name="minergieCertification" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation source="https://en.wikipedia.org/wiki/Minergie#Certification">Quality label for new and refurbished low-energy-consumption buildings.</xs:documentation>
-        </xs:annotation>
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="Minergie" />
-            <xs:enumeration value="Minergie-P" />
-            <xs:enumeration value="Minergie-Eco" />
-            <xs:enumeration value="Minergie-P-Eco" />
-          </xs:restriction>
-        </xs:simpleType>
       </xs:element>
       <xs:element name="numberOfApartements" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
@@ -1365,7 +1352,20 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="publishers" minOccurs="0" maxOccurs="1">
+                                        <xs:element name="minergieCertification" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation source="https://en.wikipedia.org/wiki/Minergie#Certification">Quality label for new and refurbished low-energy-consumption buildings.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Minergie" />
+            <xs:enumeration value="Minergie-P" />
+            <xs:enumeration value="Minergie-Eco" />
+            <xs:enumeration value="Minergie-P-Eco" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+                                        <xs:element name="publishers" minOccurs="0" maxOccurs="1">
                       <xs:complexType>
                         <xs:annotation>
                           <xs:documentation>A set of</xs:documentation>
