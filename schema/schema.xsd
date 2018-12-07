@@ -1411,7 +1411,7 @@
                     </xs:element>
                     <xs:element type="xs:string" name="author" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>The name or username of the author, who created the data.</xs:documentation>
+                        <xs:documentation>The name or username of the author, who created the record.</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <xs:element type="xs:dateTime" name="created" minOccurs="0" maxOccurs="1">
