@@ -988,24 +988,17 @@
     </xs:annotation>
     <xs:complexType>
       <xs:all>
-        <xs:element name="exportInformation" maxOccurs="1" minOccurs="0">
+        <xs:element type="xs:dateTime" name="created" minOccurs="0" maxOccurs="1" />
+        <xs:element name="generator" minOccurs="1" maxOccurs="1">
+          <xs:annotation>
+            <xs:documentation>The software name and version, that generated the export.</xs:documentation>
+          </xs:annotation>
           <xs:complexType>
-            <xs:all>
-              <xs:element type="xs:dateTime" name="exportDate" minOccurs="0" maxOccurs="1" />
-              <xs:element type="xs:integer" name="exportIteration" default="1" minOccurs="0" maxOccurs="1" />
-              <xs:element name="software" minOccurs="1" maxOccurs="1">
-                <xs:annotation>
-                  <xs:documentation>The name and version of the software which has generated the given document</xs:documentation>
-                </xs:annotation>
-                <xs:complexType>
-                  <xs:simpleContent>
-                    <xs:extension base="xs:string">
-                      <xs:attribute name="version" type="xs:string" />
-                    </xs:extension>
-                  </xs:simpleContent>
-                </xs:complexType>
-              </xs:element>
-            </xs:all>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="version" type="xs:string" />
+              </xs:extension>
+            </xs:simpleContent>
           </xs:complexType>
         </xs:element>
         <xs:element name="projects" maxOccurs="1" minOccurs="0">
