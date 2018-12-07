@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <export>
-  <exportInformation>
-    <exportDate>2012-12-13T12:12:12</exportDate>
-    <exportIteration>5</exportIteration>
-    <software version="1.0">XYZ-Soft</software>
-  </exportInformation>
+  <created>2012-12-13T12:12:12</created>
+  <generator version="1.0">XYZ-Soft</generator>
   <projects>
     <project id="EF-1">
       <referenceId>1548-6254</referenceId>
@@ -87,9 +84,11 @@
         <hasElevator>true</hasElevator>
         <hasFireplace>true</hasFireplace>
         <hasFlatSharingCommunity>true</hasFlatSharingCommunity>
+        <hasForeignQuota>true</hasForeignQuota>
         <hasGarage>true</hasGarage>
         <hasGarageDouble>true</hasGarageDouble>
         <hasGardenShed>true</hasGardenShed>
+        <hasGarageUnderground>true</hasGarageUnderground>
         <hasLakeView>true</hasLakeView>
         <hasLiftingPlatform>true</hasLiftingPlatform>
         <hasMountainView>true</hasMountainView>
@@ -127,7 +126,6 @@
         <isOldBuilding>true</isOldBuilding>
         <isProjection>true</isProjection>
         <isQuiet>true</isQuiet>
-        <isQuotedForForeigners>true</isQuotedForForeigners>
         <isRefurbished>true</isRefurbished>
         <isRefurbishedPartially>true</isRefurbishedPartially>
         <isSecondaryResidenceAllowed>true</isSecondaryResidenceAllowed>
