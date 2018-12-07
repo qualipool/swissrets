@@ -989,7 +989,7 @@
     <xs:complexType>
       <xs:all>
         <xs:element type="xs:dateTime" name="created" minOccurs="0" maxOccurs="1" />
-        <xs:element name="generator" minOccurs="1" maxOccurs="1">
+        <xs:element name="generator" minOccurs="0" maxOccurs="1">
           <xs:annotation>
             <xs:documentation>The software name and version, that generated the export.</xs:documentation>
           </xs:annotation>
