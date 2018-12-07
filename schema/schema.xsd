@@ -135,6 +135,11 @@
           <xs:documentation>A shelter for two cars.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="hasGarageUnderground" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Subterranean garage for cars.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="hasGardenShed" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A small building for storing garden tools, bicycles, and other equipment.</xs:documentation>
