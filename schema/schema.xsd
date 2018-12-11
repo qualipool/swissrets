@@ -772,6 +772,15 @@
     </xs:attribute>
   </xs:complexType>
   <!-- simple types -->
+  <xs:simpleType name="availability">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="active" />
+      <xs:enumeration value="private" />
+      <xs:enumeration value="reference" />
+      <xs:enumeration value="reserved" />
+      <xs:enumeration value="taken" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="categories">
     <xs:restriction base="xs:string">
       <xs:enumeration value="apartment" />
@@ -978,16 +987,14 @@
                       <xs:annotation>
                         <xs:documentation>Describes how the property is available. "active" means available for everyone. "private" means available for a some, usually behind a login or some other closed circle of people. "reference" showcase object typically used by brokers for showcasing their work. "reserved" means blocked by someone for taking. "taken" means it's not available anymore.</xs:documentation>
                       </xs:annotation>
-                      <xs:simpleType>
-                        <xs:annotation />
-                        <xs:restriction base="xs:string">
-                          <xs:enumeration value="active" />
-                          <xs:enumeration value="private" />
-                          <xs:enumeration value="reference" />
-                          <xs:enumeration value="reserved" />
-                          <xs:enumeration value="taken" />
-                        </xs:restriction>
-                      </xs:simpleType>
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="availability">
+                            <xs:attribute name="start" type="xs:dateTime" />
+                            <xs:attribute name="expiration" type="xs:dateTime" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
                     </xs:element>
                     <xs:element name="type" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
@@ -1193,11 +1200,6 @@
                     <xs:element name="characteristics" type="characteristics" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Main characteristics of properties.</xs:documentation>
-                      </xs:annotation>
-                    </xs:element>
-                    <xs:element name="availableFrom" type="xs:dateTime" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>From when the property is available.</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <!-- not important optional stuff -->
