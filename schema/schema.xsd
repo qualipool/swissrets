@@ -1216,9 +1216,9 @@
                               <xs:attribute type="xs:string" name="id" use="optional" />
                             </xs:complexType>
                           </xs:element>
-                          <xs:element type="person" name="viewPerson" minOccurs="0" maxOccurs="1">
+                          <xs:element type="person" name="contactPerson" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Person responsible for making visit appointments.</xs:documentation>
+                              <xs:documentation>Contact person for questions and typically responsible for making appointments.</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1">
