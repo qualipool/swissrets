@@ -875,16 +875,16 @@
       <xs:documentation>The intended usage of a certain property. Considered as the superset of the categories.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="commercial" />
-      <xs:enumeration value="gastronomy" />
-      <xs:enumeration value="vacation" />
       <xs:enumeration value="agricultural" />
+      <xs:enumeration value="commercial" />
+      <xs:enumeration value="construction" />
+      <xs:enumeration value="gastronomy" />
       <xs:enumeration value="industrial" />
+      <xs:enumeration value="investment" />
+      <xs:enumeration value="parking" />
       <xs:enumeration value="residential" />
       <xs:enumeration value="storage" />
-      <xs:enumeration value="parking" />
-      <xs:enumeration value="building" />
-      <xs:enumeration value="investment" />
+      <xs:enumeration value="vacation" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="utilizationRatio">
