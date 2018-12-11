@@ -1203,7 +1203,7 @@
                     <!-- not important optional stuff -->
                     <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>TODO: this needs documentation</xs:documentation>
+                        <xs:documentation>Arbitrary string that holds one or more parcel numbers, either from the swiss cadastral system or from a certain municipality.</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1">
