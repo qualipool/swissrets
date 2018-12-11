@@ -1160,7 +1160,6 @@
                                             <xs:element type="xs:string" name="location" minOccurs="0" maxOccurs="1" />
                                             <xs:element type="xs:string" name="summary" minOccurs="0" maxOccurs="1" />
                                           </xs:all>
-                                          <xs:attribute type="xs:string" name="type" />
                                         </xs:complexType>
                                       </xs:element>
                                     </xs:sequence>
