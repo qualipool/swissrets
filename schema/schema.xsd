@@ -1203,6 +1203,11 @@
                       </xs:annotation>
                     </xs:element>
                     <!-- not important optional stuff -->
+                    <xs:element type="xs:string" name="buildingZones" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Building zones intended for residential buildings or for other buildings intended as long-stay accommodation, those are typically municipal-specific abbreviations.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
                     <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Arbitrary string that holds one or more parcel numbers, either from the swiss cadastral system or from a certain municipality.</xs:documentation>
@@ -1211,11 +1216,6 @@
                     <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing</xs:documentation>
-                      </xs:annotation>
-                    </xs:element>
-                    <xs:element type="xs:string" name="zoneTypes" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>TODO: this needs documentation</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <xs:element name="bfs" minOccurs="0" maxOccurs="1">
