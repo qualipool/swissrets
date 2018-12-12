@@ -22,13 +22,12 @@
         <egid>12458</egid>
         <ewid>54856</ewid>
       </bfs>
-      <availability>active</availability>
+      <availability start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:13">active</availability>
       <development>full</development>
       <zoneTypes>str1234</zoneTypes>
       <parcelNumbers>str1234</parcelNumbers>
       <visualReferenceId>str1234</visualReferenceId>
       <type>buy</type>
-      <availableFrom>2012-12-13T12:12:12</availableFrom>
       <prices currency="CHF">
         <buy referring="all">
           <price>850000</price>
@@ -36,7 +35,7 @@
           <land>400000</land>
           <wirPercentage>5</wirPercentage>
         </buy>
-        <auction start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:12">745</auction>
+        <auction start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:13">745</auction>
         <deposit type="bank-guarantee">60000</deposit>
         <additionalOffers>
           <offer type="parking-garage" interval="onetime">25000</offer>
@@ -180,12 +179,12 @@
         <yearBuilt>2010</yearBuilt>
         <yearLastRenovated>2014</yearLastRenovated>
       </characteristics>
-      <categories>
-        <category>flat</category>
-      </categories>
       <utilizations>
         <utilization>residential</utilization>
       </utilizations>
+      <categories>
+        <category>apartment</category>
+      </categories>
       <localizations>
         <localization lang="en">
           <name>Calm and beautiful flat</name>
@@ -239,7 +238,7 @@
           </attachments>
           <visitInformation>str1234</visitInformation>
           <events>
-            <event type="Visit">
+            <event>
               <name>Visit</name>
               <start>2012-12-13T12:00:00</start>
               <end>2012-12-13T13:00:00</end>
@@ -247,9 +246,6 @@
               <summary>Max. 2 persons allowed. No dogs!</summary>
             </event>
           </events>
-          <tags>
-            <tag>Some tag</tag>
-          </tags>
         </localization>
       </localizations>
       <seller>
@@ -278,7 +274,7 @@
           <phone>+4178254657</phone>
           <website title="Someorg Ltd Website" label="Someorg Ltd Website">http://www.someorg.com</website>
         </organization>
-        <viewPerson>
+        <contactPerson>
           <function>Caretaker</function>
           <givenName>Jim</givenName>
           <familyName>Smith</familyName>
@@ -287,7 +283,7 @@
           <phone>+4178254657</phone>
           <gender>m</gender>
           <note>Contact Mr. Smith</note>
-        </viewPerson>
+        </contactPerson>
         <visitPerson>
           <function>Caretaker</function>
           <givenName>Jim</givenName>

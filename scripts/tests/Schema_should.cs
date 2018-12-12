@@ -29,6 +29,7 @@ namespace SwissRETS.Tests
         {
             this.validate(@"full.xml", 0);
             this.validate(@"minimal.xml", 0);
+            this.validate(@"multiple.xml", 0);
         }
 
         [Fact]
