@@ -985,7 +985,7 @@
                     </xs:element>
                     <xs:element name="availability" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Describes how the property is available. "active" means available for everyone. "private" means available for a some, usually behind a login or some other closed circle of people. "reference" showcase object typically used by brokers for showcasing their work. "reserved" means blocked by someone for taking. "taken" means it's not available anymore.</xs:documentation>
+                        <xs:documentation>"active" available for everyone, "private" available for a some, usually behind a login or some other closed circle of people, "reference" showcase object for showcasing past work, "reserved" means blocked by someone, "taken" means it's not available anymore.</xs:documentation>
                       </xs:annotation>
                       <xs:complexType>
                         <xs:simpleContent>
