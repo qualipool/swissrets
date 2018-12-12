@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<export>
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:noNamespaceSchemaLocation="https://swissrets.ch/v1.0.0/schema.xsd">
   <properties>
     <property id="1245687">
       <referenceId>LA-644238</referenceId>
