@@ -1,6 +1,6 @@
 {
   "name": "swissrets",
-  "version": "0.1.0-concept.0",
+  "version": "1.0.0",
   "description": "A swiss real estate transfer standard.",
   "directories": {
     "doc": "docs"
