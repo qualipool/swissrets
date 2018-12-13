@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="https://swissrets.ch/v1.0.0/schema.xsd">
+  xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v1.0.0/schema.xsd">
   <created>2012-12-13T12:12:12</created>
   <generator version="1.0">XYZ-Soft</generator>
   <projects>
