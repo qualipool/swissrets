@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v1.0.0/schema.xsd">
+  <properties>
+    <property id="1245687">
+      <referenceId>LA-644238</referenceId>
+      <availability>active</availability>
+      <type>rent</type>
+      <address>
+        <countryCode>CH</countryCode>
+        <locality>Kirchlindach</locality>
+        <postalCode>3038</postalCode>
+      </address>
+      <localizations>
+        <localization lang="en">
+          <name>Calm and beautiful flat</name>
+        </localization>
+      </localizations>
+    </property>
+    <property id="1245688">
+      <referenceId>LA-644239</referenceId>
+      <availability>taken</availability>
+      <type>buy</type>
+      <address>
+        <countryCode>CH</countryCode>
+        <locality>Gampelen</locality>
+        <postalCode>2336</postalCode>
+      </address>
+      <localizations>
+        <localization lang="de">
+          <name>S bescht wos je heds gids</name>
+        </localization>
+      </localizations>
+    </property>
+    <property id="1245689">
+      <referenceId>LA-644240</referenceId>
+      <availability>reserved</availability>
+      <type>rent</type>
+      <address>
+        <countryCode>CH</countryCode>
+        <locality>Marin-Epagnier</locality>
+        <postalCode>2074</postalCode>
+      </address>
+      <localizations>
+        <localization lang="fr">
+          <name>Aucune idee - mois non plus.</name>
+        </localization>
+      </localizations>
+    </property>
+  </properties>
+</export>

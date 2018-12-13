@@ -1,6 +1,12 @@
 .DS_Store
 /node_modules
-/tests/.tmp
-/scripts/fetch-wiki/.tmp
 /scripts/update-pages/.tmp
+/.project
+/.settings
+/testsbin
 /scripts/xsddoc/.tmp
+/.vscode
+bin
+obj
+.vs
+package-lock.json

@@ -2,7 +2,6 @@
   "name": "swissrets",
   "version": "0.1.0-concept.0",
   "description": "A swiss real estate transfer standard.",
-  "main": "node/index.js",
   "directories": {
     "doc": "docs"
   },
@@ -10,6 +9,8 @@
     "lint": "standard",
     "test": "node scripts/test",
     "xsddoc": "node scripts/xsddoc",
+    "start": "nodemon --exec 'npm test -s'",
+    "test": "dotnet test scripts/tests/SwissRETS.Tests.csproj",
     "update-pages": "node scripts/update-pages"
   },
   "repository": {
@@ -34,6 +35,10 @@
     "chalk": "^2.4.1",
     "fs-extra": "^7.0.0",
     "globby": "^8.0.1",
+    "nodemon": "^1.18.7",
     "standard": "^12.0.1"
+  },
+  "nodemonConfig": {
+    "watch": ["examples/*", "schema/schema.xsd"]
   }
 }

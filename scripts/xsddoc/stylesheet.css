@@ -2,18 +2,18 @@
 
 body {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:#444;
+  background:#fefefe;
 }
-
-body { background-color: #FFFFFF; }
 
 p { margin: 3px; }
 
-.TableHeadingColor     { background: #CCCCFF }
+.TableHeadingColor     { background: #efefef }
 .TableSubHeadingColor  { background: #EEEEFF }
 .TableRowColor         { background: #FFFFFF }
 
-.NavBarCell1    { background-color:#EEEEFF;}/* Light mauve */
-.NavBarCell1Rev { background-color:rgb(63, 63, 63);}
+.NavBarCell1    { background-color:#efefef;}
+.NavBarCell1Rev { background-color:#3f3f3f; padding-left: 5px; }
 .NavBarFont1    { font-family: 'Open Sans', 'Helvetica Neue', sans-serif; color:#000000;}
 .NavBarFont1Rev { font-family: 'Open Sans', 'Helvetica Neue', sans-serif; color:#FFFFFF;}
 
@@ -43,14 +43,15 @@ dt { font-weight: bold; }
 .anno { color: #888888; }
 .smal { font-size: 60%; font-weight: bold; }
 
-
-body{
-  color:#444;
-  background:#fefefe;
+table {
+  border-color: #ddd;
+  overflow: hidden;
 }
 
-a{ color: #0645ad; text-decoration:none;}
-a:hover{ color: #06e; }
-a:active{ color:#faa700; }
+a{ color: #1864e0; text-decoration:none;}
+a:hover{ color: #126cff }
 a:focus{ outline: thin dotted; }
 a:hover, a:active{ outline: 0; }
+
+/* hide footer with missleading links */
+body > table + hr + font[size="-1"]:last-child{ display:none; }

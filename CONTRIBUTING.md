@@ -22,26 +22,22 @@ Thank you for contributing SwissRETS
 
 You're very welcome to fork the project and send pull requests.
 
-- Use an editor that supports [Editorconfig](https://editorconfig.org/) or install the plugin
-- Install [Node >8](https://nodejs.org/en/download/)
-- Install xmllint
-  - [on Windows](http://flowingmotion.jojordan.org/2011/10/08/3-steps-to-download-xmllint/)
-  - on OSX with homebrew: `brew install xmlstarlet`
-  - on Linux (Debian/Ubuntu): `sudo apt-get install libxml2-utils`
-- Forkthe project
-  - Hit the **Fork** button on [qualipool/swissrets](https://github.com/qualipool/swissrets) - top right corner
-  - Clone it locally
+1. Use an editor that supports [Editorconfig](https://editorconfig.org/) or install the plugin
+1. Install [Node >8](https://nodejs.org/en/download/)
+1. Install [.NET core SDK](https://dotnet.microsoft.com/download)
+1. Fork the project - hit the **Fork** button on [qualipool/swissrets](https://github.com/qualipool/swissrets) - top right corner
+1. Clone your fork locally
+1. `npm i`
+1. `npm start` this brings up nodemon to re-run all tests if the schema or example files change.
 
 ## Coding priciples
-_Mainly targeting the ./schema/schema.xsd_  
+_Mainly targeting the ./schema/schema.xsd_
 
-----
+While we strive for all three, if we have conflicts, this list acts as priorities.
+
 1. **Consistency**
 2. **Cleanness**
 3. **Ease of use**
-----
-
-While we strive for all three, if we have conflicts, this list acts as priorities.
 
 ### Consistency
 SwissRETS is predictable.
@@ -64,13 +60,21 @@ SwissRETS is easy to use
 ## Naming things
 -> schema/schema.xsd
 
-### Tag names
-- use camelCase 
-- todo...
+### General naming rules
+- use real english words
+- for node and attribute names use camelCase
+- for attribute values use 'dash-separated-lower-case-words'
+- use a top-down naming schema, start with the broadest thing first and become more specific after
+  - good: entryHallHeight, baths
+  - bad: heightOfEntryHall, numberOfBaths
 
-### Attribute names
-- use camelCase 
-- todo...
+### XML best practice
+**tags should have values**
+- avoid using empty tags, whenever possible
 
-### When to use attributes vs. child tags
-- todo..
+**tags over attributes**
+- when in doubt, use tags over attributes
+- tags are easier to document and extend in the future
+- tags requre less documentation
+
+

@@ -1,18 +1,23 @@
-language: node_js
-node_js: '10'
 os: linux
 dist: trusty
 group: stable
+
+language: csharp
+mono: none
+dotnet: 2.1.300
+node_js: '10'
 cache: npm
-addons:
-  apt:
-    packages:
-      - libxml2-utils # for `xmllint`.
+
+install:
+  - nvm install node
+  - nvm use node
+  - npm install
 
 jobs:
   include:
     - stage: test
       script: npm run test -s
 
-    - stage: update gh-pages
+    - if: branch = master
+      stage: update gh-pages
       script: npm run update-pages -s
