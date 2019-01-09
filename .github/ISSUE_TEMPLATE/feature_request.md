@@ -4,11 +4,8 @@ about: Suggest an idea for this project
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
+**Feature description**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]. How can others profit from the change. What's the main benefit.
 
-**Describe the solution you'd like**
+**Desired Solution**
 A clear and concise description of what you want to happen.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
