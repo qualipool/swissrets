@@ -252,7 +252,7 @@
       </xs:element>
       <xs:element name="isCornerHouse" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>A house situatet on the corner of two streets.</xs:documentation>
+          <xs:documentation>A house situated on the corner of two streets.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isDemolitionProperty" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -372,7 +372,7 @@
       </xs:element>
       <xs:element name="isWheelchairAccessible" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>All aspects are accessible for wheelchail users.</xs:documentation>
+          <xs:documentation>All aspects are accessible for wheelchair users.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="onEvenGround" type="xs:boolean" minOccurs="0" maxOccurs="1">
