@@ -543,7 +543,7 @@
       </xs:element>
       <xs:element name="floorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Maxumum floor load in kg/m²</xs:documentation>
+          <xs:documentation>Maximum floor load in kg/m²</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="grossPremium" type="percent" minOccurs="0" maxOccurs="1">
