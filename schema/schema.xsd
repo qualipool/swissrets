@@ -1351,8 +1351,7 @@
                   </xs:all>
                   <xs:attribute type="xs:string" name="id" use="required">
                     <xs:annotation>
-                      <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as
-                        referenceId if the exporter is the original creator)
+                      <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as referenceId if the exporter is the original creator)
                       </xs:documentation>
                     </xs:annotation>
                   </xs:attribute>
