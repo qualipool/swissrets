@@ -943,6 +943,7 @@
           <xs:documentation>workshop - A room or building in which goods are manufactured or repaired, for commercial or business reasons.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+    </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="emailaddress">
     <xs:annotation>
