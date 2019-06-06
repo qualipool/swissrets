@@ -923,10 +923,26 @@
           <xs:documentation>A small house, typically near a larger farm-house, in the past they were residences for aged farmers after turning over the farm to their heirs. Not to be confused with the 'granny-flat' category.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="terrace-flat" />
-      <xs:enumeration value="split-level-house" />
-      <xs:enumeration value="villa" />
-      <xs:enumeration value="workshop" />
+      <xs:enumeration value="stepped-flat">
+        <xs:annotation>
+          <xs:documentation>A set of rooms for living in, arranged in a staircase like manner, typicaly over two or more floors.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="stepped-house">
+        <xs:annotation>
+          <xs:documentation>A building containing one or more appartements arranged in a staircase manner, in order to maximize the outside space.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="villa">
+        <xs:annotation>
+          <xs:documentation>A large and luxurious house in its own grounds.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="workshop">
+        <xs:annotation>
+          <xs:documentation>A room or building in which goods are manufactured or repaired, for commercial or business reasons.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="emailaddress">
