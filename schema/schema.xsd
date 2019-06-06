@@ -783,27 +783,166 @@
   </xs:simpleType>
   <xs:simpleType name="categories">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="apartment" />
-      <xs:enumeration value="attic-flat" />
-      <xs:enumeration value="bifamiliar-house" />
-      <xs:enumeration value="chalet" />
-      <xs:enumeration value="duplex" />
-      <xs:enumeration value="farm" />
-      <xs:enumeration value="furnished-flat" />
-      <xs:enumeration value="hobby-room" />
-      <xs:enumeration value="loft" />
-      <xs:enumeration value="multiple-dwelling" />
-      <xs:enumeration value="office" />
-      <xs:enumeration value="retail-space" />
-      <xs:enumeration value="roof-flat" />
-      <xs:enumeration value="row-house" />
-      <xs:enumeration value="rustico" />
-      <xs:enumeration value="single-house" />
-      <xs:enumeration value="single-room" />
-      <xs:enumeration value="studio" />
-      <xs:enumeration value="terrace-flat" />
-      <xs:enumeration value="terrace-house" />
-      <xs:enumeration value="villa" />
+      <xs:enumeration value="apartment">
+        <xs:annotation>
+          <xs:documentation>A part of a building, suitable for people to live in.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="atelier">
+        <xs:annotation>
+          <xs:documentation>A private workshop or studio of hobbiests or professionals.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="attic-flat">
+        <xs:annotation>
+          <xs:documentation>A free-standing apartment, built onto the roof of a multi-story building. Also called a penthouse.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cafe-bar">
+        <xs:annotation>
+          <xs:documentation>Cafes and bars, combined category for both of them.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="car-repair-shop">
+        <xs:annotation>
+          <xs:documentation>An automobile repair shop, also known regionally as a garage.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="castle">
+        <xs:annotation>
+          <xs:documentation>A large building, typically of the medieval period, fortified against attack with thick walls, battlements, towers, and in many cases a moat.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="chalet">
+        <xs:annotation>
+          <xs:documentation>A wooden house with overhanging eaves, typically found in the Swiss Alps.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="earth-sheltered-dwelling">
+        <xs:annotation>
+          <xs:documentation>A house, flat, or other place of residence, with a significant amount of soil or substrate in contact with its external envelope.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="detached-house">
+        <xs:annotation>
+          <xs:documentation>A stand-alone free-standing residential building. Also called a single-detached dwelling or single-family house.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="doctors-office">
+        <xs:annotation>
+          <xs:documentation>Doctors' offices are the primary place where ambulatory care is given, and are often the first place that a sick person would go for care. Also called a doctor's practice.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="duplex-house">
+        <xs:annotation>
+          <xs:documentation>A divided house, two living units attached, either side by side or one above the other. Also called two-family house.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="farm-house">
+        <xs:annotation>
+          <xs:documentation>Usually a larger house combining different needs. Typically the accommodation wing is attached to a stable, a shelter, a shed or a stock.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="furnished-flat">
+        <xs:annotation>
+          <xs:documentation>Typically a flat or house which comes with all the built-in and loose furniture, refrigerator, washer and dryer and other essential electric appliances.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="granny-flat">
+        <xs:annotation>
+          <xs:documentation>A set of rooms, often connected to or part of a relation's house, typically with a separate house entry. Not to be confused with the 'stoeckli' category.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="hobby-room">
+        <xs:annotation>
+          <xs:documentation>A sparate room for activities done regularly in one's leisure time for pleasure. Similar to an atelier, but not limited to creating things.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="hotel">
+        <xs:annotation>
+          <xs:documentation>An establishment providing accommodation, meals, and other services for travellers and tourists.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="loft">
+        <xs:annotation>
+          <xs:documentation>A single room flat, typically built in an old industry storage halls or newly built as a loft flat.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="maisonette">
+        <xs:annotation>
+          <xs:documentation>A flat with at least two connected stories in a building. Typically the story directly under the roof and the one below.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="multiplex-house">
+        <xs:annotation>
+          <xs:documentation>A divided house, more than two living units attached, either side by side and/or one above the other. Also called multyfamily house or multiple-dwelling.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="office">
+        <xs:annotation>
+          <xs:documentation>A place in which business, clerical, or professional activities are conducted.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="one-room-flat">
+        <xs:annotation>
+          <xs:documentation>A studio flat in which the bedroom, sitting-room and kitchen are all one-room. Not to be confused with the 'single-room' category.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="restaurant">
+        <xs:annotation>
+          <xs:documentation>Commercial establishment where meals are prepared and served to customers.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="retail-location">
+        <xs:annotation>
+          <xs:documentation>A space for the selling of goods to consumers.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="roof-flat">
+        <xs:annotation>
+          <xs:documentation>An apartment directly under the roof, typically features roof slopes.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="row-house">
+        <xs:annotation>
+          <xs:documentation>One of a row of similar houses that are joined together by both of their side walls.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="rustico">
+        <xs:annotation>
+          <xs:documentation>A converted or rebuilt old small landside house, typically found in Ticino region on mountain slopes.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="single-room">
+        <xs:annotation>
+          <xs:documentation>A single room, typically for rent. Does not neccessary include an own bathroom or kitchen. Not to be confused with the 'one-room-flat' category.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="stoeckli">
+        <xs:annotation>
+          <xs:documentation>A small house, typically near a larger farm-house, in the past they were residences for aged farmers after turning over the farm to their heirs. Not to be confused with the 'granny-flat' category.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="stepped-flat">
+        <xs:annotation>
+          <xs:documentation>A set of rooms for living in, arranged in a staircase like manner, typicaly over two or more floors.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="stepped-house">
+        <xs:annotation>
+          <xs:documentation>A building containing one or more appartements arranged in a staircase manner, in order to maximize the outside space.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="villa">
+        <xs:annotation>
+          <xs:documentation>A large and luxurious house in its own grounds.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="workshop">
+        <xs:annotation>
+          <xs:documentation>A room or building in which goods are manufactured or repaired, for commercial or business reasons.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="emailaddress">
@@ -1351,8 +1490,7 @@
                   </xs:all>
                   <xs:attribute type="xs:string" name="id" use="required">
                     <xs:annotation>
-                      <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as
-                        referenceId if the exporter is the original creator)
+                      <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as referenceId if the exporter is the original creator)
                       </xs:documentation>
                     </xs:annotation>
                   </xs:attribute>

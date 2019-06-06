@@ -1,6 +1,3 @@
-# _Draft_
-
-------
 
 Thank you for contributing SwissRETS
 ====================================

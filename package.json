@@ -38,6 +38,9 @@
     "standard": "^12.0.1"
   },
   "nodemonConfig": {
-    "watch": ["examples/*", "schema/schema.xsd"]
+    "watch": [
+      "examples/*",
+      "schema/schema.xsd"
+    ]
   }
 }
