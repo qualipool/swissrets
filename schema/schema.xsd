@@ -122,7 +122,7 @@
       </xs:element>
       <xs:element name="hasFlatSharingCommunity" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Wheter or not there is a residential community, sharing the living space.</xs:documentation>
+          <xs:documentation>Whether or not there is a residential community, sharing the living space.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasForeignQuota" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -252,7 +252,7 @@
       </xs:element>
       <xs:element name="isCornerHouse" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>A house situatet on the corner of two streets.</xs:documentation>
+          <xs:documentation>A house situated on the corner of two streets.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isDemolitionProperty" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -372,7 +372,7 @@
       </xs:element>
       <xs:element name="isWheelchairAccessible" type="xs:boolean" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>All aspects are accessible for wheelchail users.</xs:documentation>
+          <xs:documentation>All aspects are accessible for wheelchair users.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="onEvenGround" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -543,7 +543,7 @@
       </xs:element>
       <xs:element name="floorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Maxumum floor load in kg/m²</xs:documentation>
+          <xs:documentation>Maximum floor load in kg/m²</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="grossPremium" type="percent" minOccurs="0" maxOccurs="1">
