@@ -10,7 +10,7 @@
     "xsddoc": "node scripts/xsddoc",
     "start": "nodemon --exec 'npm test -s'",
     "test": "dotnet test scripts/tests/SwissRETS.Tests.csproj",
-    "update-pages": "node scripts/update-pages"
+    "xsddocs": "node scripts/xsddocs"
   },
   "repository": {
     "type": "git",
