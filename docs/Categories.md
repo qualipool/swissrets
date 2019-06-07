@@ -4,6 +4,8 @@ Categories describe how the property is built or how it looks.
 
 Categories help group the properties sensibly. These tend to only make sence in combination with [utilizations](./Utilizations).
 
+Categories should answer the question _«How is this listing built?»_ or _«What structure does it have?»_. This should not be confused with utilities.
+
 ### All categories
 
 key | description

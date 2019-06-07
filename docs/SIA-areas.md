@@ -1,6 +1,6 @@
 [**◀ Home**](./)
 
-All children in `<characteristics>`s that start with `<areaSia***>`
+All children in `<characteristics>`s that start with `<areaSia***>` correspond with the general swiss SIA-Norm 416. Below is a generalization in german.
 
 ### Flächen:
 
