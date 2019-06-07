@@ -14,8 +14,8 @@ SwissRETS is currently within the suggestion stage.
 1. Details
    - [Utilizations](./Utilizations) - main groups of properties
    - OUTDATED [Categories](./Categories) - sub groups of properties
-   - TODO [Availability](./Availability) - vacancy of properties
-   - TODO [SIA-areas](./SIA-areas) - area definitions according to [SIA 416](http://www.svkg.ch/)
+   - [Availabilities](./Availabilities) - vacancy of properties
+   - INCOMPLETE [SIA-areas](./SIA-areas) - area definitions according to [SIA 416](http://www.svkg.ch/)
    - [Usage FAQ](FAQ)
 1. Check out the [examples](https://github.com/qualipool/swissrets/tree/master/examples)
 1. [Changelog](https://github.com/qualipool/swissrets/releases)
