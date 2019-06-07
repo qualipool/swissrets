@@ -388,12 +388,12 @@
         </xs:annotation>
       </xs:element>
       <!-- various -->
-      <xs:element name="areaBwf" type="xs:decimal" minOccurs="0" maxOccurs="1">
+      <xs:element name="areaBwf" type="hallHeight" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Living area in m²</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="areaNwf" type="xs:decimal" minOccurs="0" maxOccurs="1">
+      <xs:element name="areaNwf" type="hallHeight" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Net livin area in m²</xs:documentation>
         </xs:annotation>
@@ -518,17 +518,17 @@
           <xs:documentation>SIA-VF area in m²</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="ceilingHeight" type="xs:decimal" minOccurs="0" maxOccurs="1">
+      <xs:element name="ceilingHeight" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Height of the rooms in m.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="craneCapacity" type="xs:decimal" minOccurs="0" maxOccurs="1">
+      <xs:element name="craneCapacity" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Carrying capacity for crane in kg.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="elevatorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1">
+      <xs:element name="elevatorLoad" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Maximum elevator load in kg.</xs:documentation>
         </xs:annotation>
@@ -538,7 +538,7 @@
           <xs:documentation>Floor number. Ground floor is 0. Basement floors are negative.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="floorLoad" type="xs:decimal" minOccurs="0" maxOccurs="1">
+      <xs:element name="floorLoad" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Maximum floor load in kg/m²</xs:documentation>
         </xs:annotation>
@@ -548,7 +548,7 @@
           <xs:documentation>A gross premium is the total premium of an insurance contract before brokerage or discounts have been deducted, in percent.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hallHeight" type="xs:decimal" minOccurs="0" maxOccurs="1">
+      <xs:element name="hallHeight" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Hall height in m. Usually for commercial properties.</xs:documentation>
         </xs:annotation>
