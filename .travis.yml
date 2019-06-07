@@ -28,4 +28,4 @@ deploy:
   keep-history: true
   local-dir: docs
   on:
-    branch: master
+    tags: true
