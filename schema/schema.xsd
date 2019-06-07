@@ -45,347 +45,344 @@
     </xs:all>
   </xs:complexType>
   <xs:complexType name="characteristics">
-    <xs:annotation>
-      <xs:documentation>Booleans have three states. "true" = the characteristic is present, "false" = the characteristic explicitely is not present, tag ommited = unknown wether the characteristic is present or not.</xs:documentation>
-    </xs:annotation>
     <xs:all>
       <!-- booleans -->
-      <xs:element name="arePetsAllowed" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="arePetsAllowed" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Pets are allowed or not tolerated.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasAttic" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasAttic" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Has an attic.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasBalcony" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasBalcony" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Balcony available.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasBuildingLawRestrictions" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasBuildingLawRestrictions" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Restrictions for modifications apply. e.g. monument protection and similar.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasCableTv" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasCableTv" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Availability of cable tv.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasCarPort" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasCarPort" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A covered structure used to offer limited protection from rain and snow, for one car.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasCarPortDouble" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasCarPortDouble" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A covered structure used to offer limited protection from rain and snow, for two cars.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasCellar" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasCellar" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Availability of a cellar.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasChargingStation" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasChargingStation" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Whether or not a charging station for e-Cars is provided.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasConnectedBuildingLand" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasConnectedBuildingLand" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>States if the land is fully developed and ready being built on it.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasDemolitionProperty" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasDemolitionProperty" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Used for building land, states if there is some demolition property on it (or pieces of it).</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasDishwasher" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasDishwasher" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Availability of a dishwasher.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasElevator" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasElevator" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Availability of an elevator.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasFireplace" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasFireplace" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Includes a framed opening to hold an open fire, indoors.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasFlatSharingCommunity" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasFlatSharingCommunity" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Whether or not there is a residential community, sharing the living space.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasForeignQuota" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasForeignQuota" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Widely used to control the amount of foreigners buying holiday flats in popular regions.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasGarage" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasGarage" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A shelter for one car.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasGarageDouble" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasGarageDouble" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A shelter for two cars.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasGarageUnderground" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasGarageUnderground" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Subterranean garage for cars.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasGardenShed" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasGardenShed" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A small building for storing garden tools, bicycles, and other equipment.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasLakeView" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasLakeView" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Direct visibility of a lake.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasLiftingPlatform" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasLiftingPlatform" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Provides vertical transportation between building floors, levels or decks, and are commonly found in offices, public buildings and other types of multi-story accommodation.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasMountainView" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasMountainView" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Direct visibility of mountains.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasNiceView" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasNiceView" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Has a lovely view, usually from the balcony or the living room.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasParking" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasParking" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>An uncovered space for one car or more cars.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasPhotovoltaic" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasPhotovoltaic" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Whether or not a photovoltaic system is provided.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasPlayground" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasPlayground" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Has a playground for children nearby.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasRamp" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasRamp" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A sloping floor, walk, or roadway leading from one level to another, usually to make a place accessible for wheels.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasSteamer" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasSteamer" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Has a steamer.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasStoreRoom" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasStoreRoom" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Storeroom, stowage room.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasSupplyGas" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasSupplyGas" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Availability of a gas connection, usually for heating and cooking.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasSupplyPower" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasSupplyPower" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A connection to the public electric grid.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasSupplySewage" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasSupplySewage" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A connection to the public waste water system.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasSupplyWater" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasSupplyWater" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A connection to the public water supply.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasSwimmingPool" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasSwimmingPool" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Personal swimming pool.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasThermalSolarCollector" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasThermalSolarCollector" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Whether or not a thermal solacr collector system is provided.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasTiledStove" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasTiledStove" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A masonry heater or ceramic stove, is a device for warming an interior space usually fed with wood.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasTumbleDryer" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasTumbleDryer" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Dryer for clothes after washing them.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasWashingMachine" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="hasWashingMachine" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>For washing clothes and other cloth.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isChildFriendly" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isChildFriendly" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Suitable for families.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isCornerHouse" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isCornerHouse" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>A house situated on the corner of two streets.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isDemolitionProperty" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isDemolitionProperty" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>If it's a tear-down property or a site of demolished structures.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isDilapidated" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isDilapidated" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Old and in poor condition, in a state of decay.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isFirstOccupancy" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isFirstOccupancy" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>No one used the flat or the building before, since it was built or heavily renovated from ground up.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isGroundFloor" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isGroundFloor" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Nearly on a level with the ground.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isGroundFloorRaised" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isGroundFloorRaised" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Half of a stair elevated story, in a building.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isGutted" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isGutted" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Preparation for demolition or a part-demolition. All contaminants, doors, windows, floors and non-loadbearing walls were removed.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isInNeedOfRenovation" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isInNeedOfRenovation" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Needs to be renewed in order to be fully usable again.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isInNeedOfRenovationPartially" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isInNeedOfRenovationPartially" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Needs to be renewed partially in order to be fully usable again.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isLikeNew" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isLikeNew" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Used, but as good as new.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isMiddleHouse" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isMiddleHouse" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Situated betwee two other houses or buildings.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isModernized" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isModernized" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>TODO: needs documentation</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isNewConstruction" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isNewConstruction" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Newly built house or building.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isSmokingAllowed" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isSmokingAllowed" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Smoking allowed inside.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isOldBuilding" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isOldBuilding" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Refers to the construction method used until 60-80 years ago.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isProjection" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isProjection" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Planned for the future.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isQuiet" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isQuiet" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Part of a quiet surrounding or neighbourhood.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isRefurbished" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isRefurbished" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Fully renovated, neat, clean and restored.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isRefurbishedPartially" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isRefurbishedPartially" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Partially renovated or restored.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isSecondaryResidenceAllowed" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isSecondaryResidenceAllowed" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Where a person lives part time or less than the majority of the calendar year, typically a holiday flat. Some laws and landlords do not allow this.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isShellConstruction" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isShellConstruction" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>TODO: what is this? do we need this?</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isSunny" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isSunny" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Sunny surroundings, nor trees, mountains or other buildings do shadow.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isUnderRoof" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isUnderRoof" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Mainly used for parking slots.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isWellTended" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isWellTended" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Properly looked after.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isWheelchairAccessible" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="isWheelchairAccessible" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>All aspects are accessible for wheelchair users.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="onEvenGround" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="onEvenGround" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Built on even grounds.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="onHillside" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="onHillside" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Built on a sloping hillside.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="onHillsideSouth" type="xs:boolean" minOccurs="0" maxOccurs="1">
+      <xs:element name="onHillsideSouth" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Built on a sloping hillside towards the south.</xs:documentation>
         </xs:annotation>
@@ -772,6 +769,16 @@
     </xs:attribute>
   </xs:complexType>
   <!-- simple types -->
+  <xs:simpleType name="applicable">
+    <xs:annotation>
+      <xs:documentation>Applicables can have three states, unknown must be thretened as default.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="applies" />
+      <xs:enumeration value="does-not-apply" />
+      <xs:enumeration value="unknown" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="availability">
     <xs:restriction base="xs:string">
       <xs:enumeration value="active" />
