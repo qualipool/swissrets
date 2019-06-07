@@ -13,12 +13,12 @@ SwissRETS is currently within the suggestion stage.
 1. [The schema.xsd](https://github.com/qualipool/swissrets/blob/master/schema/schema.xsd)
 1. Details
    - [Utilizations](./Utilizations) - main groups of properties
-   - [Categories](./Categories) - sub groups of properties
+   - OUTDATED [Categories](./Categories) - sub groups of properties
    - TODO [Availability](./Availability) - vacancy of properties
    - TODO [SIA-areas](./SIA-areas) - area definitions according to [SIA 416](http://www.svkg.ch/)
    - [Usage FAQ](FAQ)
 1. Check out the [examples](https://github.com/qualipool/swissrets/tree/master/examples)
-1. [Changelog](https://github.com/qualipool/swissrets/releases)  
+1. [Changelog](https://github.com/qualipool/swissrets/releases)
    Complete release history and migration paths for braking changes
 
 ## Submitting a change request or an idea
