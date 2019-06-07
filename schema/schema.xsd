@@ -1000,7 +1000,7 @@
       <xs:documentation>The positive decimal type specifies a decimal from 0 and above</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:decimal">
-      <xs:minInclusive value="0" />
+      <xs:minExclusive value="0" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="priceInterval">
