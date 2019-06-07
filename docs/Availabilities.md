@@ -1,6 +1,6 @@
 [**◀ Home**](./)
 
-The Availability of a property defines in what state/lifecycle the current offer is in. Each property can only be in one state at one perticular time.
+`<availabilities>` describes defines in what state/lifecycle the current offer/property is in. Each property can only be in one state at one perticular time.
 
 ### Explanation
 

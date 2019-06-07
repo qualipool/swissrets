@@ -6,16 +6,16 @@
 
 SwissRETS is a swiss real estate transaction standard. It's main goal ist to standardise data exchange between real estate software and platforms. It's meant to be a replacement for old and static formats like the widely used [IDX](https://en.wikipedia.org/wiki/Internet_Data_Exchange) in Switzerland.
 
-SwissRETS is currently within the suggestion stage.
-
 ## Using SwissRETS
 1. [XSD docs](https://swissrets.ch/docs/noNamespace/) generated from the schema
 1. [The schema.xsd](https://github.com/qualipool/swissrets/blob/master/schema/schema.xsd)
 1. Details
-   - [Utilizations](./Utilizations) - main groups of properties
-   - OUTDATED [Categories](./Categories) - sub groups of properties
+   - [Utilizations](./Utilizations) - main, required usage groups
+   - OUTDATED [Categories](./Categories) - further groups for properties
    - [Availabilities](./Availabilities) - vacancy of properties
-   - INCOMPLETE [SIA-areas](./SIA-areas) - area definitions according to [SIA 416](http://www.svkg.ch/)
+   - [Characteristics](./Characteristics) - facts and features
+       - [SIA-areas](./SIA-areas) - area definitions according to [SIA 416](http://www.svkg.ch/)
+   - TODO [Attachments](./Attachments) - Medias
    - [Usage FAQ](FAQ)
 1. Check out the [examples](https://github.com/qualipool/swissrets/tree/master/examples)
 1. [Changelog](https://github.com/qualipool/swissrets/releases)

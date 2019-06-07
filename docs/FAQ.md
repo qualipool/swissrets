@@ -3,6 +3,10 @@
 
 General questions and answers that have not found their place within the documentation yet get placed here.
 
+### How can I specify an offer "on request"
+
+Simply ommit the `<rent>` or `<buy>` tag within `<prices>`.
+
 ### How can I declare videos
 
 TODO

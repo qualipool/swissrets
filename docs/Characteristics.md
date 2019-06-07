@@ -6,8 +6,6 @@ A Utilization is required and dictates what the categories and characteristics s
 
 Utilities do not describe how the property is built or how it looks, if that is what you are looking for consider the [categories](./Categories) instead.
 
-These answer question such as:
-
 *  Can I live here? (residential)
 *  Is it to perform services? (commercial)
 *  Can I grow crops there? (agricultural)
