@@ -72,26 +72,6 @@ namespace SwissRETS.Tests
             "The element 'property' has incomplete content."
           );
           this.validate(
-            @"property-address-country-missing.xml", 1,
-            "List of possible elements expected: 'countryCode'."
-          );
-          this.validate(
-            @"property-address-empty.xml", 1,
-            "The element 'address' has incomplete content."
-          );
-          this.validate(
-            @"property-address-locality-missing.xml", 1,
-            "List of possible elements expected: 'locality'."
-          );
-          this.validate(
-            @"property-address-postalcode-missing.xml", 1,
-            "List of possible elements expected: 'postalCode'."
-          );
-          this.validate(
-            @"property-address-missing.xml", 1,
-            "The element 'property' has incomplete content."
-          );
-          this.validate(
             @"property-id-missing.xml", 1,
             "The required attribute 'id' is missing."
           );
