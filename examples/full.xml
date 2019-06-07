@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v1.0.0/schema.xsd">
+  xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.0.0/schema.xsd">
   <created>2012-12-13T12:12:12</created>
   <generator version="1.0">XYZ-Soft</generator>
   <projects>
@@ -64,71 +64,71 @@
       </heating>
       <minergieCertification>Minergie-P-Eco</minergieCertification>
       <characteristics>
-        <arePetsAllowed>true</arePetsAllowed>
-        <hasAttic>true</hasAttic>
-        <hasBalcony>true</hasBalcony>
-        <hasBuildingLawRestrictions>true</hasBuildingLawRestrictions>
-        <hasCableTv>true</hasCableTv>
-        <hasCarPort>true</hasCarPort>
-        <hasCarPortDouble>true</hasCarPortDouble>
-        <hasCellar>true</hasCellar>
-        <hasChargingStation>true</hasChargingStation>
-        <hasConnectedBuildingLand>true</hasConnectedBuildingLand>
-        <hasDemolitionProperty>true</hasDemolitionProperty>
-        <hasDishwasher>true</hasDishwasher>
-        <hasElevator>true</hasElevator>
-        <hasFireplace>true</hasFireplace>
-        <hasFlatSharingCommunity>true</hasFlatSharingCommunity>
-        <hasForeignQuota>true</hasForeignQuota>
-        <hasGarage>true</hasGarage>
-        <hasGarageDouble>true</hasGarageDouble>
-        <hasGardenShed>true</hasGardenShed>
-        <hasGarageUnderground>true</hasGarageUnderground>
-        <hasLakeView>true</hasLakeView>
-        <hasLiftingPlatform>true</hasLiftingPlatform>
-        <hasMountainView>true</hasMountainView>
-        <hasNiceView>true</hasNiceView>
-        <hasParking>true</hasParking>
-        <hasPhotovoltaic>true</hasPhotovoltaic>
-        <hasPlayground>true</hasPlayground>
-        <hasRamp>true</hasRamp>
-        <hasSteamer>true</hasSteamer>
-        <hasStoreRoom>true</hasStoreRoom>
-        <hasSupplyGas>true</hasSupplyGas>
-        <hasSupplyPower>true</hasSupplyPower>
-        <hasSupplySewage>true</hasSupplySewage>
-        <hasSupplyWater>true</hasSupplyWater>
-        <hasSwimmingPool>true</hasSwimmingPool>
-        <hasThermalSolarCollector>true</hasThermalSolarCollector>
-        <hasTiledStove>true</hasTiledStove>
-        <hasTumbleDryer>true</hasTumbleDryer>
-        <hasWashingMachine>true</hasWashingMachine>
-        <isChildFriendly>true</isChildFriendly>
-        <isCornerHouse>true</isCornerHouse>
-        <isDemolitionProperty>true</isDemolitionProperty>
-        <isDilapidated>true</isDilapidated>
-        <isFirstOccupancy>true</isFirstOccupancy>
-        <isGroundFloor>true</isGroundFloor>
-        <isGroundFloorRaised>true</isGroundFloorRaised>
-        <isGutted>true</isGutted>
-        <isInNeedOfRenovation>true</isInNeedOfRenovation>
-        <isInNeedOfRenovationPartially>true</isInNeedOfRenovationPartially>
-        <isLikeNew>true</isLikeNew>
-        <isMiddleHouse>true</isMiddleHouse>
-        <isModernized>true</isModernized>
-        <isNewConstruction>true</isNewConstruction>
-        <isSmokingAllowed>true</isSmokingAllowed>
-        <isOldBuilding>true</isOldBuilding>
-        <isProjection>true</isProjection>
-        <isQuiet>true</isQuiet>
-        <isRefurbished>true</isRefurbished>
-        <isRefurbishedPartially>true</isRefurbishedPartially>
-        <isSecondaryResidenceAllowed>true</isSecondaryResidenceAllowed>
-        <isShellConstruction>true</isShellConstruction>
-        <isSunny>true</isSunny>
-        <isUnderRoof>true</isUnderRoof>
-        <isWellTended>true</isWellTended>
-        <isWheelchairAccessible>true</isWheelchairAccessible>
+        <arePetsAllowed>applies</arePetsAllowed>
+        <hasAttic>applies</hasAttic>
+        <hasBalcony>applies</hasBalcony>
+        <hasBuildingLawRestrictions>applies</hasBuildingLawRestrictions>
+        <hasCableTv>applies</hasCableTv>
+        <hasCarPort>applies</hasCarPort>
+        <hasCarPortDouble>applies</hasCarPortDouble>
+        <hasCellar>applies</hasCellar>
+        <hasChargingStation>applies</hasChargingStation>
+        <hasConnectedBuildingLand>applies</hasConnectedBuildingLand>
+        <hasDemolitionProperty>applies</hasDemolitionProperty>
+        <hasDishwasher>applies</hasDishwasher>
+        <hasElevator>applies</hasElevator>
+        <hasFireplace>applies</hasFireplace>
+        <hasFlatSharingCommunity>applies</hasFlatSharingCommunity>
+        <hasForeignQuota>applies</hasForeignQuota>
+        <hasGarage>applies</hasGarage>
+        <hasGarageDouble>applies</hasGarageDouble>
+        <hasGardenShed>applies</hasGardenShed>
+        <hasGarageUnderground>applies</hasGarageUnderground>
+        <hasLakeView>applies</hasLakeView>
+        <hasLiftingPlatform>applies</hasLiftingPlatform>
+        <hasMountainView>applies</hasMountainView>
+        <hasNiceView>applies</hasNiceView>
+        <hasParking>applies</hasParking>
+        <hasPhotovoltaic>applies</hasPhotovoltaic>
+        <hasPlayground>applies</hasPlayground>
+        <hasRamp>applies</hasRamp>
+        <hasSteamer>applies</hasSteamer>
+        <hasStoreRoom>applies</hasStoreRoom>
+        <hasSupplyGas>applies</hasSupplyGas>
+        <hasSupplyPower>applies</hasSupplyPower>
+        <hasSupplySewage>applies</hasSupplySewage>
+        <hasSupplyWater>applies</hasSupplyWater>
+        <hasSwimmingPool>applies</hasSwimmingPool>
+        <hasThermalSolarCollector>applies</hasThermalSolarCollector>
+        <hasTiledStove>applies</hasTiledStove>
+        <hasTumbleDryer>applies</hasTumbleDryer>
+        <hasWashingMachine>applies</hasWashingMachine>
+        <isChildFriendly>applies</isChildFriendly>
+        <isCornerHouse>applies</isCornerHouse>
+        <isDemolitionProperty>applies</isDemolitionProperty>
+        <isDilapidated>applies</isDilapidated>
+        <isFirstOccupancy>applies</isFirstOccupancy>
+        <isGroundFloor>applies</isGroundFloor>
+        <isGroundFloorRaised>applies</isGroundFloorRaised>
+        <isGutted>applies</isGutted>
+        <isInNeedOfRenovation>applies</isInNeedOfRenovation>
+        <isInNeedOfRenovationPartially>applies</isInNeedOfRenovationPartially>
+        <isLikeNew>applies</isLikeNew>
+        <isMiddleHouse>applies</isMiddleHouse>
+        <isModernized>applies</isModernized>
+        <isNewConstruction>applies</isNewConstruction>
+        <isSmokingAllowed>applies</isSmokingAllowed>
+        <isOldBuilding>applies</isOldBuilding>
+        <isProjection>applies</isProjection>
+        <isQuiet>applies</isQuiet>
+        <isRefurbished>applies</isRefurbished>
+        <isRefurbishedPartially>applies</isRefurbishedPartially>
+        <isSecondaryResidenceAllowed>applies</isSecondaryResidenceAllowed>
+        <isShellConstruction>applies</isShellConstruction>
+        <isSunny>applies</isSunny>
+        <isUnderRoof>applies</isUnderRoof>
+        <isWellTended>applies</isWellTended>
+        <isWheelchairAccessible>applies</isWheelchairAccessible>
         <areaBwf>123.45</areaBwf>
         <areaNwf>123.45</areaNwf>
         <areaPropertyLand>123.45</areaPropertyLand>
@@ -165,8 +165,8 @@
         <numberOfRooms>4.5</numberOfRooms>
         <numberOfShowers>2</numberOfShowers>
         <numberOfToilets>2</numberOfToilets>
-        <onHillside>true</onHillside>
-        <onHillsideSouth>true</onHillsideSouth>
+        <onHillside>applies</onHillside>
+        <onHillsideSouth>applies</onHillsideSouth>
         <utilizationRatio>0</utilizationRatio>
         <utilizationRatioConstruction>0</utilizationRatioConstruction>
         <volumeGva>123.45</volumeGva>
