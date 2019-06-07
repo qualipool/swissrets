@@ -1,7 +1,8 @@
 [**◀ Home**](./)
 
+Categories describe how the property is built or how it looks.
 
-Categories should help grouping properties. They're considered as a sub-group of [utilizations](./Utilizations).
+Categories help group the properties sensibly. These tend to only make sence in combination with [utilizations](./Utilizations).
 
 ### All categories
 
