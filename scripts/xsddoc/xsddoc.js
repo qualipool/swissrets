@@ -20,7 +20,7 @@ const xsddoc = async () => {
   localClassPath.push(...libClasses.map(file => path.resolve(__dirname, file)))
   const classpath = localClassPath.join(':')
 
-  const outputDir = path.join(__dirname, '.tmp')
+  const outputDir = path.join(__dirname, '..', '..', 'docs', 'docs')
   await fs.remove(outputDir)
   await fs.ensureDir(outputDir)
 
@@ -40,7 +40,7 @@ const xsddoc = async () => {
     printCommand: true
   })
 
-  // override stylesheet
+  // override stylesheet, with custom styles
   const styleFile = 'stylesheet.css'
   await fs.copy(
     path.join(__dirname, styleFile),
