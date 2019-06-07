@@ -1,0 +1,10 @@
+title: SwissRETS
+description: A swiss real estate transaction standard
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-slate
+github:
+  zip_url: https://github.com/qualipool/swissrets/zipball/master
+  tar_url: https://github.com/qualipool/swissrets/tarball/master
+gems:
+  - jekyll-mentions
