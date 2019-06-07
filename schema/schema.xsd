@@ -3,7 +3,7 @@
   <!-- complex types -->
   <xs:complexType name="address">
     <xs:all>
-      <xs:element name="countryCode" minOccurs="1" maxOccurs="1">
+      <xs:element name="countryCode" minOccurs="0" maxOccurs="1">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:minLength value="2" />
@@ -12,9 +12,9 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element type="xs:string" name="locality" minOccurs="1" maxOccurs="1" />
+      <xs:element type="xs:string" name="locality" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="region" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="postalCode" minOccurs="1" maxOccurs="1" />
+      <xs:element type="xs:string" name="postalCode" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="postOfficeBoxNumber" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="street" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="streetNumber" minOccurs="0" maxOccurs="1" />
