@@ -1455,7 +1455,7 @@
                                           </xs:annotation>
                                           <xs:simpleContent>
                                             <xs:extension base="xs:string">
-                                              <xs:attribute type="xs:string" name="key" use="required" />
+                                              <xs:attribute name="key" type="xs:string"  use="required" />
                                               <xs:attribute name="lang" type="languageCode" use="optional" />
                                               <xs:attribute name="start" type="xs:dateTime" use="optional"/>
                                               <xs:attribute name="expiration" type="xs:dateTime" use="optional"/>
