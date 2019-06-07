@@ -1,7 +1,9 @@
 const xsddoc = require('./xsddoc')
 const { log } = require('../lib')
 
-xsddoc()
+;(async () => {
+  await xsddoc()
+})()
 
 // make sure, we're exit with code:1 for undhandled rejections
 process.on('unhandledRejection', error => {
