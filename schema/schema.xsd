@@ -388,12 +388,12 @@
         </xs:annotation>
       </xs:element>
       <!-- various -->
-      <xs:element name="areaBwf" type="hallHeight" minOccurs="0" maxOccurs="1">
+      <xs:element name="areaBwf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Living area in m²</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="areaNwf" type="hallHeight" minOccurs="0" maxOccurs="1">
+      <xs:element name="areaNwf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Net livin area in m²</xs:documentation>
         </xs:annotation>
@@ -1153,7 +1153,7 @@
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
-                    <xs:element name="address" type="address" minOccurs="1" maxOccurs="1">
+                    <xs:element name="address" type="address" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Location of the property.</xs:documentation>
                       </xs:annotation>
