@@ -4,7 +4,7 @@
 
 ## Purpose
 
-SwissRETS is a swiss real estate transaction standard. It's main goal ist to standardise data exchange between real estate software and platforms. It's meant to be a replacement for old and static formats like the widely used [IDX](https://en.wikipedia.org/wiki/Internet_Data_Exchange) in Switzerland.
+SwissRETS is a swiss real estate transaction standard. It's main goal ist to standardise data exchange between real estate software and platforms. It's meant to be a replacement for old and static formats like the widely used [IDX 3.01](https://en.wikipedia.org/wiki/Internet_Data_Exchange) in Switzerland.
 
 ## Using SwissRETS
 1. [XSD docs](https://swissrets.ch/docs/noNamespace/) generated from the schema
@@ -22,11 +22,9 @@ SwissRETS is a swiss real estate transaction standard. It's main goal ist to sta
    Complete release history and migration paths for braking changes
 
 ## Submitting a change request or an idea
-1. Go to the [new issue page](https://github.com/qualipool/swissrets/issues/new/choose)
 1. Make sure you fill only a **single topic** per issue
-1. Choose your template
 1. Please write in English
-1. Submit
+1. Go to the [new issue page](https://github.com/qualipool/swissrets/issues/new/choose)
 
 ## Contributing
 Developers please check our [contribution guide](https://github.com/qualipool/swissrets/blob/master/CONTRIBUTING.md)
