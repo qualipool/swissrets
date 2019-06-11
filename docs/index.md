@@ -11,7 +11,7 @@ SwissRETS is a swiss real estate transaction standard. It's main goal ist to sta
 1. [The schema.xsd](https://github.com/qualipool/swissrets/blob/master/schema/schema.xsd)
 1. Details
    - [Utilizations](./Utilizations) - main, required usage groups
-   - OUTDATED [Categories](./Categories) - further groups for properties
+   - [Categories](./Categories) - further groups for properties
    - [Availabilities](./Availabilities) - vacancy of properties
    - [Characteristics](./Characteristics) - facts and features
        - [SIA-areas](./SIA-areas) - area definitions according to [SIA 416](http://www.svkg.ch/)
