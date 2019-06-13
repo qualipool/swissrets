@@ -8,11 +8,11 @@ Lifecycle state of an object. [Availabilities](https://swissrets.ch/docs/noNames
 
 key | description
 :--- | :---
-active | Active and is open for inquiries.
-private | Same as active, but for a private audience (e.g. behind login).
-reference | Testimonial or reference of a transaction in the past, to showcase work.
-reserved | Same as active, but someone reserved it and it's not taken yet.
-taken | Offer has ben sold or rented out.
+active | Enabled and open for inquiries
+private | Same as active, but for a private audience (e.g. behind login)
+reference | Testimonial or reference of a transaction in the past, to showcase work
+reserved | Same as active, but someone reserved it and it's not taken yet
+taken | Offer has ben sold or rented out
 
 ### Example translations
 

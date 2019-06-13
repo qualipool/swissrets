@@ -774,11 +774,26 @@
   </xs:simpleType>
   <xs:simpleType name="availability">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="active" />
-      <xs:enumeration value="private" />
-      <xs:enumeration value="reference" />
-      <xs:enumeration value="reserved" />
-      <xs:enumeration value="taken" />
+      <xs:enumeration value="active" >
+        <xs:annotation>
+          <xs:documentation>active - Enabled and open for inquiries</xs:documentation>
+        </xs:annotation></xs:enumeration>
+      <xs:enumeration value="private" >
+        <xs:annotation>
+          <xs:documentation>private - Same as active, but for a private audience (e.g. behind login)</xs:documentation>
+        </xs:annotation></xs:enumeration>
+      <xs:enumeration value="reference" >
+        <xs:annotation>
+          <xs:documentation>reference - Testimonial or reference of a transaction in the past, to showcase work</xs:documentation>
+        </xs:annotation></xs:enumeration>
+      <xs:enumeration value="reserved" >
+        <xs:annotation>
+          <xs:documentation>reserved - Same as active, but someone reserved it and it's not taken yet</xs:documentation>
+        </xs:annotation></xs:enumeration>
+      <xs:enumeration value="taken" >
+        <xs:annotation>
+          <xs:documentation>taken - Offer has ben sold or rented out</xs:documentation>
+        </xs:annotation></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="categories">
@@ -1134,7 +1149,7 @@
                     </xs:element>
                     <xs:element name="availability" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>"active" available for everyone, "private" available for a some, usually behind a login or some other closed circle of people, "reference" showcase object for showcasing past work, "reserved" means blocked by someone, "taken" means it's not available anymore.</xs:documentation>
+                        <xs:documentation>Mutually exclusive liveycle state.</xs:documentation>
                       </xs:annotation>
                       <xs:complexType>
                         <xs:simpleContent>
