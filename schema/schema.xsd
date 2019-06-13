@@ -773,27 +773,35 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="availability">
+    <xs:annotation>
+      <xs:documentation>Lifecycle state of properties.</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="active" >
+      <xs:enumeration value="active">
         <xs:annotation>
           <xs:documentation>active - Enabled and open for inquiries</xs:documentation>
-        </xs:annotation></xs:enumeration>
-      <xs:enumeration value="private" >
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="private">
         <xs:annotation>
           <xs:documentation>private - Same as active, but for a private audience (e.g. behind login)</xs:documentation>
-        </xs:annotation></xs:enumeration>
-      <xs:enumeration value="reference" >
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="reference">
         <xs:annotation>
           <xs:documentation>reference - Testimonial or reference of a transaction in the past, to showcase work</xs:documentation>
-        </xs:annotation></xs:enumeration>
-      <xs:enumeration value="reserved" >
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="reserved">
         <xs:annotation>
           <xs:documentation>reserved - Same as active, but someone reserved it and it's not taken yet</xs:documentation>
-        </xs:annotation></xs:enumeration>
-      <xs:enumeration value="taken" >
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="taken">
         <xs:annotation>
           <xs:documentation>taken - Offer has ben sold or rented out</xs:documentation>
-        </xs:annotation></xs:enumeration>
+        </xs:annotation>
+      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="categories">

@@ -2,7 +2,7 @@
 
 # Availability
 
-Lifecycle state of an object. [Availabilities](https://swissrets.ch/docs/noNamespace/element/export.properties.property.availability.html) are mutually exclusive.
+Lifecycle state of an object. [Availabilities](https://swissrets.ch/docs/noNamespace/simpleType/availability.html) are mutually exclusive.
 
 ### Explanation
 
