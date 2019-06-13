@@ -2,9 +2,9 @@
 
 The distinct object type name or object built type.
 
-Categories help group the properties sensibly. These tend to only make sense in combination with [utilizations](./Utilizations).
+[Categories](https://swissrets.ch/docs/noNamespace/simpleType/categories.html) help group the properties sensibly. These tend to only make sense in combination with [utilizations](./Utilizations).
 
-Categories should answer the question _«How is this listing built?»_ or _«What structure does it have?»_. This should not be confused with utilities.
+[Categories](https://swissrets.ch/docs/noNamespace/simpleType/categories.html) should answer the question _«How is this listing built?»_ or _«What structure does it have?»_. This should not be confused with utilities.
 
 ### All categories
 
@@ -13,7 +13,8 @@ key | description
 apartment | A part of a building, suitable for people to live in.
 atelier | A private workshop or studio of hobbiests or professionals.
 attic-flat | A free-standing apartment, built onto the roof of a multi-story building. Also called a penthouse.
-cafe-bar | Cafes and bars, combined category for both of them.
+bar | Where drinks, especially alcoholic drinks, are sold and drunk.
+cafe | Cafes and bars, combined category for both of them.
 car-repair-shop | An automobile repair shop, also known regionally as a garage.
 castle | A large building, typically of the medieval period, fortified against attack with thick walls, battlements, towers, and in many cases a moat.
 chalet | A wooden house with overhanging eaves, typically found in the Swiss Alps.
@@ -48,28 +49,29 @@ workshop | A room or building in which goods are manufactured or repaired, for c
 key | fr | en | de | it
 :--- | :--- | :--- | :--- | :---
 apartment | Appartement | Apartment | Wohnung | Appartamento
-atelier | - | - | - | -
+atelier | - | Atelier | Atelier | -
 attic-flat | Appartement en attique | Attic flat | Attikawohnung | Mansarda
-cafe-bar | - | - | - | -
-car-repair-shop | - | - | - | -
-castle | - | - | - | -
+bar | - | Bar | Bar | -
+cafe | - | Cafe | Cafe | -
+car-repair-shop | - | Car repair shop | Garage | -
+castle | - | Castle | Schloss | -
 chalet | Chalet | Chalet | Chalet | Chalet
 detached-house | Maison individuelle | Single house | Einfamilienhaus | Casa unifamiliare
-doctors-office | - | - | - | -
+doctors-office | - | Doctors office | Praxis | -
 duplex-house | Duplex | Duplex | Duplex | Casa bifamiliare
-earth-sheltered-dwelling | - | - | - | -
+earth-sheltered-dwelling | - | Earth sheltered dwelling | Erdhaus | -
 farm | Ferme | Farm | Bauernhaus | Fattoria
-farm-house | - | - | - | -
+farm-house | - | Farm house | Bauernhaus | -
 furnished-flat | Appartement meublé | Furnished flat | Möblierte Wohnung | Appartamento ammobiliato
-granny-flat | - | - | - | -
+granny-flat | - | Granny flat | Einliegerwohnung | -
 hobby-room | Atelier | Atelier | Atelier | Atelier
-hotel | - | - | - | -
+hotel | - | Hotel | Hotel | -
 loft | Loft | Loft | Loft | Loft
-maisonette | - | - | - | -
+maisonette | - | Maisonette | Maisonette | -
 multiplex-house | Immeuble | Multiple dwelling | Mehrfamilienhaus | Casa plurifamiliare
 office | Buro | Office | Büro | Ufficio
 one-room-flat | Studio | One room flat | Studio | Monolocale
-restaurant | - | - | - | -
+restaurant | - | Restaurant | Restaurant | -
 retail-location | Commerce | Retail space | Ladenfläche | Spazio commerciale
 roof-flat | Appartement mansardé | Roof flat | Dachwohnung | Appartamento mansardato
 row-house | Maison mitoyenne | Row house | Reihenhaus | Casa a schiera
@@ -78,4 +80,4 @@ single-room | Chambre individuelle | Single room | Einzelzimmer | Singola
 stepped-flat | Appartement en terrasse | Terrace flat | Terrassenwohnung | Terrazza appartamento
 stepped-house | Maison en terrasse | Terrace house | Terrassenhaus | Casa a schiera
 villa | Villa | Villa | Villa | Villa
-workshop | - | - | - | -
+workshop | - | Workshop | Werkstatt | -

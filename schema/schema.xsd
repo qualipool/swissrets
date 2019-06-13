@@ -824,9 +824,14 @@
           <xs:documentation>attic-flat - A free-standing apartment, built onto the roof of a multi-story building. Also called a penthouse.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="cafe-bar">
+      <xs:enumeration value="bar">
         <xs:annotation>
-          <xs:documentation>cafe-bar - Cafes and bars, combined category for both of them.</xs:documentation>
+          <xs:documentation>bar - Where drinks, especially alcoholic drinks, are sold and drunk.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cafe">
+        <xs:annotation>
+          <xs:documentation>Small restaurant where simple meals and drinks are served.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="car-repair-shop">
