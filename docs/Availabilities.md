@@ -1,8 +1,8 @@
 [**◀ Home**](./)
 
-# `<availabilities>`
+# Availability
 
-Lifecycle state of an object. Availabilities are mutualy exclusive.
+Lifecycle state of an object. [Availabilities](https://swissrets.ch/docs/noNamespace/element/export.properties.property.availability.html) are mutualy exclusive.
 
 ### Explanation
 
