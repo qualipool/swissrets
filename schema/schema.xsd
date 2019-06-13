@@ -805,6 +805,9 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="categories">
+    <xs:annotation>
+      <xs:documentation>The distinct object type name or object built type.</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="apartment">
         <xs:annotation>
@@ -1194,7 +1197,7 @@
                     </xs:element>
                     <xs:element name="categories" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Sequence of categories, for hierarchy use ordering of categories (parent category first).</xs:documentation>
+                        <xs:documentation>Sequence of ordered categories (main first).</xs:documentation>
                       </xs:annotation>
                       <xs:complexType>
                         <xs:sequence>
