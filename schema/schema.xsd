@@ -46,10 +46,174 @@
   </xs:complexType>
   <xs:complexType name="characteristics">
     <xs:all>
-      <!-- booleans -->
+      <xs:element name="areaBwf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Living area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaNwf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Net livin area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaPropertyLand" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Property land area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaAff" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-AFF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaAgf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-AGF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaAkf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-AKF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaAkfn" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-AKFN area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaAkft" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-AKFT area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaAnf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-ANF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaAngf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-ANGF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaAvf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-AVF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaBuf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-BUF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaFf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-FF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaGf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-GF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaGgf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-GGF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaGsf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-GSF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaHnf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-HNF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaKf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-KF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaKfn" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-KFN area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaKft" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-KFT area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaNf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-NF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaNgf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-NGF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaNnf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-NNF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaUf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-UF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaUuf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-UUF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaSiaVf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>SIA-VF area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="arePetsAllowed" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Pets are allowed or not tolerated.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ceilingHeight" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Height of the rooms in m.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="craneCapacity" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Carrying capacity for crane in kg.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="elevatorLoad" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Maximum elevator load in kg.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Floor number. Ground floor is 0. Basement floors are negative.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="floorLoad" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Maximum floor load in kg/m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="grossPremium" type="percent" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>A gross premium is the total premium of an insurance contract before brokerage or discounts have been deducted, in percent.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hallHeight" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Hall height in m. Usually for commercial properties.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasAttic" type="applicable" minOccurs="0" maxOccurs="1">
@@ -312,11 +476,6 @@
           <xs:documentation>Newly built house or building.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="isSmokingAllowed" type="applicable" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Smoking allowed inside.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
       <xs:element name="isOldBuilding" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Refers to the construction method used until 60-80 years ago.</xs:documentation>
@@ -352,6 +511,11 @@
           <xs:documentation>TODO: what is this? do we need this?</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="isSmokingAllowed" type="applicable" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Smoking allowed inside.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="isSunny" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Sunny surroundings, nor trees, mountains or other buildings do shadow.</xs:documentation>
@@ -370,187 +534,6 @@
       <xs:element name="isWheelchairAccessible" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>All aspects are accessible for wheelchair users.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="onEvenGround" type="applicable" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Built on even grounds.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="onHillside" type="applicable" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Built on a sloping hillside.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="onHillsideSouth" type="applicable" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Built on a sloping hillside towards the south.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <!-- various -->
-      <xs:element name="areaBwf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Living area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaNwf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Net livin area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaPropertyLand" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Property land area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaAff" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-AFF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaAgf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-AGF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaAkf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-AKF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaAkfn" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-AKFN area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaAkft" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-AKFT area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaAnf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-ANF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaAngf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-ANGF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaAvf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-AVF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaBuf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-BUF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaFf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-FF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaGf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-GF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaGgf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-GGF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaGsf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-GSF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaHnf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-HNF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaKf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-KF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaKfn" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-KFN area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaKft" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-KFT area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaNf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-NF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaNgf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-NGF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaNnf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-NNF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaUf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-UF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaUuf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-UUF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="areaSiaVf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>SIA-VF area in m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="ceilingHeight" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Height of the rooms in m.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="craneCapacity" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Carrying capacity for crane in kg.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="elevatorLoad" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Maximum elevator load in kg.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Floor number. Ground floor is 0. Basement floors are negative.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="floorLoad" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Maximum floor load in kg/m²</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="grossPremium" type="percent" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>A gross premium is the total premium of an insurance contract before brokerage or discounts have been deducted, in percent.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="hallHeight" type="positiveDecimal" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Hall height in m. Usually for commercial properties.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="numberOfApartements" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
@@ -591,6 +574,21 @@
       <xs:element name="numberOfToiletsGuest" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>The number of guest and additional toilets</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="onEvenGround" type="applicable" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Built on even grounds.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="onHillside" type="applicable" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Built on a sloping hillside.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="onHillsideSouth" type="applicable" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Built on a sloping hillside towards the south.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="utilizationRatio" type="utilizationRatio" minOccurs="0" maxOccurs="1">
