@@ -1073,11 +1073,14 @@
         </xs:element>
         <xs:element name="projects" maxOccurs="1" minOccurs="0">
           <xs:annotation>
-            <xs:documentation>Sequence of new building projects.</xs:documentation>
+            <xs:documentation>Sequence of new building projects, the order of properties defines their importance, if any.</xs:documentation>
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
               <xs:element name="project" maxOccurs="unbounded" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>New building project container.</xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                   <xs:all>
                     <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1" />
@@ -1111,11 +1114,14 @@
         </xs:element>
         <xs:element name="properties" maxOccurs="1" minOccurs="0">
           <xs:annotation>
-            <xs:documentation>Sequence of properties, like buildings, houses, flats and all other possible objects. Order of properties is relevant. Custom sorting can be defined by provider.</xs:documentation>
+            <xs:documentation>Collection of properties, the order of properties defines their importance, if any.</xs:documentation>
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
               <xs:element name="property" maxOccurs="unbounded" minOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>Property container for buildings, houses, flats and all other possible objects.</xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                   <xs:all>
                     <!-- required stuff -->
@@ -1237,7 +1243,7 @@
                                 </xs:element>
                                 <xs:element name="events" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
-                                    <xs:documentation>Describes orgenized events, typically for visiting the property.</xs:documentation>
+                                    <xs:documentation>Organised events, typically for visiting the property.</xs:documentation>
                                   </xs:annotation>
                                   <xs:complexType>
                                     <xs:sequence>
@@ -1265,7 +1271,7 @@
                     <!-- important optional stuff -->
                     <xs:element name="utilizations" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Prioritized sequence to describes the intended utilization of the property, main comes first.</xs:documentation>
+                        <xs:documentation>Prioritized sequence for the intended utilization of the property, main comes first.</xs:documentation>
                       </xs:annotation>
                       <xs:complexType>
                         <xs:sequence>
@@ -1380,7 +1386,7 @@
                     </xs:element>
                     <xs:element name="development" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Describes the development state of the property.</xs:documentation>
+                        <xs:documentation>The development state of the property.</xs:documentation>
                       </xs:annotation>
                       <xs:simpleType>
                         <xs:annotation />
@@ -1455,10 +1461,10 @@
                                           </xs:annotation>
                                           <xs:simpleContent>
                                             <xs:extension base="xs:string">
-                                              <xs:attribute name="key" type="xs:string"  use="required" />
+                                              <xs:attribute name="key" type="xs:string" use="required" />
                                               <xs:attribute name="lang" type="languageCode" use="optional" />
-                                              <xs:attribute name="start" type="xs:dateTime" use="optional"/>
-                                              <xs:attribute name="expiration" type="xs:dateTime" use="optional"/>
+                                              <xs:attribute name="start" type="xs:dateTime" use="optional" />
+                                              <xs:attribute name="expiration" type="xs:dateTime" use="optional" />
                                             </xs:extension>
                                           </xs:simpleContent>
                                         </xs:complexType>
