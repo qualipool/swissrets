@@ -1247,21 +1247,62 @@
                               <xs:documentation>Technology used to create heat.</xs:documentation>
                             </xs:annotation>
                             <xs:simpleType>
-                              <xs:annotation>
-                                <xs:documentation>How the heat is produced.</xs:documentation>
-                              </xs:annotation>
                               <xs:restriction base="xs:string">
-                                <xs:enumeration value="district" />
-                                <xs:enumeration value="electricity" />
-                                <xs:enumeration value="gas" />
-                                <xs:enumeration value="geothermal-probe" />
-                                <xs:enumeration value="heatpump-air-and-water" />
-                                <xs:enumeration value="heatpump" />
-                                <xs:enumeration value="oil" />
-                                <xs:enumeration value="photovoltaics" />
-                                <xs:enumeration value="solar-thermal" />
-                                <xs:enumeration value="wood-pellet" />
-                                <xs:enumeration value="wood" />
+                                <xs:enumeration value="district">
+                                  <xs:annotation>
+                                    <xs:documentation>district - A system for distributing heat generated in a centralized location through a system of insulated pipes into a network.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="electricity">
+                                  <xs:annotation>
+                                    <xs:documentation>electricity - Electrical energy is converted to heat energy for space heating.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="gas">
+                                  <xs:annotation>
+                                    <xs:documentation>gas - Heating by burning natural gas, liquefied petroleum gas, propane or butane.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="geothermal-probe">
+                                  <xs:annotation>
+                                    <xs:documentation>geothermal-probe -</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="heatpump-air-and-water">
+                                  <xs:annotation>
+                                    <xs:documentation>heatpump-air-and-water -</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="heatpump">
+                                  <xs:annotation>
+                                    <xs:documentation>heatpump - Heating and/or cooling system that transfers heat to or from the ground using a pump.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="oil">
+                                  <xs:annotation>
+                                    <xs:documentation>oil - Heating by burning fosile heating oil.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="photovoltaics">
+                                  <xs:annotation>
+                                    <xs:documentation>photovoltaics - In general, thermal photovoltaics use solar cells to convert the light that radiates from a hot surface into electricity and/or heating water.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="solar-thermal">
+                                  <xs:annotation>
+                                    <xs:documentation>solar-thermal - The conversion of sunlight into heat for water heating using a solar thermal collector</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="wood-pellet">
+                                  <xs:annotation>
+                                    <xs:documentation>wood-pellet - Wood pellets, small pellets from wood chips and sawdust, are combusted.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="wood">
+                                  <xs:annotation>
+                                    <xs:documentation>wood - Burning wood fuel and wood-derived biomass fuel, such as sawdust bricks.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
