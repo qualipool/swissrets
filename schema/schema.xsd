@@ -1258,6 +1258,8 @@
                                 <xs:enumeration value="heatpump-air-and-water" />
                                 <xs:enumeration value="heatpump" />
                                 <xs:enumeration value="oil" />
+                                <xs:enumeration value="photovoltaics" />
+                                <xs:enumeration value="solar-thermal" />
                                 <xs:enumeration value="wood-pellet" />
                                 <xs:enumeration value="wood" />
                               </xs:restriction>
@@ -1265,7 +1267,7 @@
                           </xs:element>
                           <xs:element name="distribution" maxOccurs="1" minOccurs="0">
                             <xs:annotation>
-                              <xs:documentation>How the heating system distributes heat and maintains the temperature.</xs:documentation>
+                              <xs:documentation>How the heating system distributes and maintains temperature.</xs:documentation>
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
