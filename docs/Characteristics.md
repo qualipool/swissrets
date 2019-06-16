@@ -86,10 +86,10 @@ isChildFriendly | Suitable for families. | [applicable](#type-applicable)
 isCornerHouse | A house situated on the corner of two streets. | [applicable](#type-applicable)
 isDemolitionProperty | If it's a tear-down property or a site of demolished structures. | [applicable](#type-applicable)
 isDilapidated | Old and in poor condition, in a state of decay. | [applicable](#type-applicable)
-isFirstOccupancy | No one used the flat or the building before, since it was built or heavily | [applicable](#type-applicable)renovated from ground up.
+isFirstOccupancy | No one used the flat or the building before, since it was built or heavily renovated from ground up. | [applicable](#type-applicable)
 isGroundFloor | Nearly on a level with the ground. | [applicable](#type-applicable)
 isGroundFloorRaised | Half of a stair elevated story, in a building. | [applicable](#type-applicable)
-isGutted | Preparation for demolition or a part-demolition, all contaminants, doors, windows, floors | [applicable](#type-applicable)and non-loadbearing walls were removed.
+isGutted | Preparation for demolition or a part-demolition, all contaminants, doors, windows, floors and non-loadbearing walls were removed. | [applicable](#type-applicable)
 isInNeedOfRenovation | Needs to be renewed in order to be fully usable again. | [applicable](#type-applicable)
 isInNeedOfRenovationPartially | Needs to be renewed partially in order to be fully usable again. | [applicable](#type-applicable)
 isLikeNew | Used, but as good as new. | [applicable](#type-applicable)
