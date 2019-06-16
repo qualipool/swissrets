@@ -198,7 +198,7 @@
       </xs:element>
       <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Floor number. Ground floor is 0. Basement floors are negative.</xs:documentation>
+          <xs:documentation>Floor number, ground floor is 0, basement floors are negative.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="floorLoad" type="positiveDecimal" minOccurs="0" maxOccurs="1">
@@ -213,7 +213,7 @@
       </xs:element>
       <xs:element name="hallHeight" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Hall height in m. Usually for commercial properties.</xs:documentation>
+          <xs:documentation>Hall height in m, usually for commercial properties.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasAttic" type="applicable" minOccurs="0" maxOccurs="1">
@@ -228,7 +228,7 @@
       </xs:element>
       <xs:element name="hasBuildingLawRestrictions" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Restrictions for modifications apply. e.g. monument protection and similar.</xs:documentation>
+          <xs:documentation>Restrictions for modifications apply, like monument protection and similar.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasCableTv" type="applicable" minOccurs="0" maxOccurs="1">
@@ -443,7 +443,7 @@
       </xs:element>
       <xs:element name="isGutted" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Preparation for demolition or a part-demolition. All contaminants, doors, windows, floors and non-loadbearing walls were removed.</xs:documentation>
+          <xs:documentation>Preparation for demolition or a part-demolition, all contaminants, doors, windows, floors and non-loadbearing walls were removed.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isInNeedOfRenovation" type="applicable" minOccurs="0" maxOccurs="1">
@@ -493,7 +493,7 @@
       </xs:element>
       <xs:element name="isRefurbished" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Fully renovated, neat, clean and restored. </xs:documentation>
+          <xs:documentation>Fully renovated, neat, clean and restored.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isRefurbishedPartially" type="applicable" minOccurs="0" maxOccurs="1">
@@ -503,7 +503,7 @@
       </xs:element>
       <xs:element name="isSecondaryResidenceAllowed" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Where a person lives part time or less than the majority of the calendar year, typically a holiday flat. Some laws and landlords do not allow this.</xs:documentation>
+          <xs:documentation>Where a person lives part time or less than the majority of the calendar year, typically a holiday flat, some laws and landlords do not allow this.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isShellConstruction" type="applicable" minOccurs="0" maxOccurs="1">
@@ -593,12 +593,12 @@
       </xs:element>
       <xs:element name="utilizationRatio" type="utilizationRatio" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Plot area built on. The ratio between plot area and gross floor area.</xs:documentation>
+          <xs:documentation>Plot area built on, the ratio between plot area and gross floor area.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="utilizationRatioConstruction" type="utilizationRatio" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Plot area to be built on. The ratio between plot area and gross floor area.</xs:documentation>
+          <xs:documentation>Plot area to be built on, the ratio between plot area and gross floor area.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="volumeGva" type="positiveDecimal" minOccurs="0" maxOccurs="1">
@@ -784,7 +784,7 @@
       </xs:enumeration>
       <xs:enumeration value="private">
         <xs:annotation>
-          <xs:documentation>private - Same as active, but for a private audience (e.g. behind login)</xs:documentation>
+          <xs:documentation>private - Same as active, but for a private audience, like behind a login</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="reference">
@@ -821,7 +821,7 @@
       </xs:enumeration>
       <xs:enumeration value="attic-flat">
         <xs:annotation>
-          <xs:documentation>attic-flat - A free-standing apartment, built onto the roof of a multi-story building. Also called a penthouse.</xs:documentation>
+          <xs:documentation>attic-flat - A free-standing apartment, built onto the roof of a multi-story building, also called a penthouse.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="bar">
@@ -856,22 +856,22 @@
       </xs:enumeration>
       <xs:enumeration value="detached-house">
         <xs:annotation>
-          <xs:documentation>detached-house - A stand-alone free-standing residential building. Also called a single-detached dwelling or single-family house.</xs:documentation>
+          <xs:documentation>detached-house - A stand-alone free-standing residential building, also called a single-detached dwelling or single-family house.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="doctors-office">
         <xs:annotation>
-          <xs:documentation>doctors-office - Doctors' offices are the primary place where ambulatory care is given, and are often the first place that a sick person would go for care. Also called a doctor's practice.</xs:documentation>
+          <xs:documentation>doctors-office - Doctors' offices are the primary place where ambulatory care is given, and are often the first place that a sick person would go for care, also called a doctor's practice.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="duplex-house">
         <xs:annotation>
-          <xs:documentation>duplex-house - A divided house, two living units attached, either side by side or one above the other. Also called two-family house.</xs:documentation>
+          <xs:documentation>duplex-house - A divided house, two living units attached, either side by side or one above the other, also called two-family house.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="farm-house">
         <xs:annotation>
-          <xs:documentation>farm-house - Usually a larger house combining different needs. Typically the accommodation wing is attached to a stable, a shelter, a shed or a stock.</xs:documentation>
+          <xs:documentation>farm-house - Usually a larger house combining different needs, typically the accommodation wing is attached to a stable, a shelter, a shed or a stock.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="furnished-flat">
@@ -881,12 +881,12 @@
       </xs:enumeration>
       <xs:enumeration value="granny-flat">
         <xs:annotation>
-          <xs:documentation>granny-flat - A set of rooms, often connected to or part of a relation's house, typically with a separate house entry. Not to be confused with the 'stoeckli' category.</xs:documentation>
+          <xs:documentation>granny-flat - A set of rooms, often connected to or part of a relation's house, typically with a separate house entry, not to be confused with the 'stoeckli' category.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="hobby-room">
         <xs:annotation>
-          <xs:documentation>hobby-room - A sparate room for activities done regularly in one's leisure time for pleasure. Similar to an atelier, but not limited to creating things.</xs:documentation>
+          <xs:documentation>hobby-room - A sparate room for activities done regularly in one's leisure time for pleasure, similar to an atelier, but not limited to creating things.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="hotel">
@@ -901,12 +901,12 @@
       </xs:enumeration>
       <xs:enumeration value="maisonette">
         <xs:annotation>
-          <xs:documentation>maisonette - A flat with at least two connected stories in a building. Typically the story directly under the roof and the one below.</xs:documentation>
+          <xs:documentation>maisonette - A flat with at least two connected stories in a building, typically the story directly under the roof and the one below.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="multiplex-house">
         <xs:annotation>
-          <xs:documentation>multiplex-house - A divided house, more than two living units attached, either side by side and/or one above the other. Also called multyfamily house or multiple-dwelling.</xs:documentation>
+          <xs:documentation>multiplex-house - A divided house, more than two living units attached, either side by side and/or one above the other, also called multyfamily house or multiple-dwelling.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="office">
@@ -916,7 +916,7 @@
       </xs:enumeration>
       <xs:enumeration value="one-room-flat">
         <xs:annotation>
-          <xs:documentation>one-room-flat - A studio flat in which the bedroom, sitting-room and kitchen are all one-room. Not to be confused with the 'single-room' category.</xs:documentation>
+          <xs:documentation>one-room-flat - A studio flat in which the bedroom, sitting-room and kitchen are all one-room, not to be confused with the 'single-room' category.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="restaurant">
@@ -946,12 +946,12 @@
       </xs:enumeration>
       <xs:enumeration value="single-room">
         <xs:annotation>
-          <xs:documentation>single-room - A single room, typically for rent. Does not neccessary include an own bathroom or kitchen. Not to be confused with the 'one-room-flat' category.</xs:documentation>
+          <xs:documentation>single-room - A single room, typically for rent, does not neccessary include an own bathroom or kitchen, not to be confused with the 'one-room-flat' category.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="stoeckli">
         <xs:annotation>
-          <xs:documentation>stoeckli - A small house, typically near a larger farm-house, in the past they were residences for aged farmers after turning over the farm to their heirs. Not to be confused with the 'granny-flat' category.</xs:documentation>
+          <xs:documentation>stoeckli - A small house, typically near a larger farm-house, in the past they were residences for aged farmers after turning over the farm to their heirs, not to be confused with the 'granny-flat' category.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="stepped-flat">
@@ -978,7 +978,7 @@
   </xs:simpleType>
   <xs:simpleType name="emailaddress">
     <xs:annotation>
-      <xs:documentation>Very loose email like strings. Basically just checking if there is an @ sign and a dot after that.</xs:documentation>
+      <xs:documentation>Very loose email like strings, validation basically just checks, if there is an @ sign and a dot after that.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:pattern value="[^@]+@[^\.]+\..+" />
@@ -986,7 +986,7 @@
   </xs:simpleType>
   <xs:simpleType name="mimeType">
     <xs:annotation>
-      <xs:documentation source="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">A MIME type consists of a type and a subtype — two strings separated by /. No whitespace is allowed.</xs:documentation>
+      <xs:documentation source="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">A MIME type consists of a type and a subtype — two strings separated by / no whitespace is allowed.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:minLength value="7" />
@@ -1013,7 +1013,7 @@
   </xs:simpleType>
   <xs:simpleType name="phoneNumber">
     <xs:annotation>
-      <xs:documentation>Strings of at least three digits. May start with a plus sign and can have single spaces between digits. Leading and trailing whitespace are not allowed.</xs:documentation>
+      <xs:documentation>Strings of at least three digits, may start with a plus sign and can have single spaces between digits, leading and trailing whitespace are not allowed.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:pattern value="[+]?([0-9] ?){2,}[0-9]" />
@@ -1051,7 +1051,7 @@
   </xs:simpleType>
   <xs:simpleType name="utilization">
     <xs:annotation>
-      <xs:documentation>The intended usage of a certain property. Considered as the superset of the categories.</xs:documentation>
+      <xs:documentation>The intended usage, onsidered as the superset of the categories.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="agricultural" />
@@ -1207,7 +1207,7 @@
                       <xs:complexType>
                         <xs:sequence>
                           <xs:annotation>
-                            <xs:documentation>Order represents (least specific) to (most specific). For example house, single-house, rustico</xs:documentation>
+                            <xs:documentation>Order represents (least specific) to (most specific), for example house, single-house, rustico</xs:documentation>
                           </xs:annotation>
                           <xs:element type="categories" name="category" minOccurs="1" maxOccurs="unbounded" />
                         </xs:sequence>
@@ -1363,7 +1363,7 @@
                                   </xs:annotation>
                                   <xs:complexType>
                                     <xs:annotation>
-                                      <xs:documentation source="https://en.wikipedia.org/wiki/File_URI_scheme">All attachements have an URL, to encurage the use of online available resources. If for some reason a public available resource is not suitable, the file URI scheme should be used.</xs:documentation>
+                                      <xs:documentation source="https://en.wikipedia.org/wiki/File_URI_scheme">All attachements have an URL, to encurage the use of online available resources, if for some reason a public available resource is not suitable, the file URI scheme should be used.</xs:documentation>
                                     </xs:annotation>
                                     <xs:sequence>
                                       <xs:element name="image" minOccurs="0" maxOccurs="unbounded">
@@ -1425,7 +1425,7 @@
                                 </xs:element>
                                 <xs:element type="xs:string" name="visitInformation" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
-                                    <xs:documentation>Specific visiting instructions or information. Where to get the key, when to contact and similar.</xs:documentation>
+                                    <xs:documentation>Specific visiting instructions or information, where to get the key, when to contact and similar.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
                                 <xs:element name="events" minOccurs="0" maxOccurs="1">
