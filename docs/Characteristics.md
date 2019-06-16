@@ -134,6 +134,7 @@ yearLastRenovated | Year of last renovation, in four digits. | year
 
 ## Type applicable
 Applicables can have three states, `unknown` must be thretened as default.
+
 state | meaning
 :--- | :---
 `applies` | The characteristic applies, is present or is available.
