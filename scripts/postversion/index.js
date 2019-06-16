@@ -25,7 +25,7 @@ const execConfig = {
   await fs.copy(inputFile, outputFile)
 
   await exec(`git add -A`, execConfig)
-  await exec(`git commmit -am ""`, execConfig)
+  await exec(`git commit -am "Add dist file"`, execConfig)
   await exec(`git push origin`, execConfig)
   await exec(`git push origin --tags`, execConfig)
 
