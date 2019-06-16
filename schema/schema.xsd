@@ -2,8 +2,14 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
   <!-- complex types -->
   <xs:complexType name="address">
+    <xs:annotation>
+      <xs:documentation>Postal address.</xs:documentation>
+    </xs:annotation>
     <xs:all>
       <xs:element name="countryCode" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Uppercase two letter country code.</xs:documentation>
+        </xs:annotation>
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:minLength value="2" />
@@ -21,6 +27,9 @@
       <xs:element type="xs:string" name="streetAddition" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:byte" name="subunit" minOccurs="0" maxOccurs="1" />
       <xs:element name="geo" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Geo coordinates and elevation</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
           <xs:all>
             <xs:element type="xs:float" name="latitude" minOccurs="1" maxOccurs="1" />
@@ -32,6 +41,9 @@
     </xs:all>
   </xs:complexType>
   <xs:complexType name="attachmentDocument">
+    <xs:annotation>
+      <xs:documentation>Localized document file attachemnt for properties.</xs:documentation>
+    </xs:annotation>
     <xs:all maxOccurs="1" minOccurs="1">
       <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
       <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
@@ -39,12 +51,18 @@
     </xs:all>
   </xs:complexType>
   <xs:complexType name="attachmentLink">
+    <xs:annotation>
+      <xs:documentation>Localized link attachemnt for properties.</xs:documentation>
+    </xs:annotation>
     <xs:all maxOccurs="1" minOccurs="1">
       <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
       <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
     </xs:all>
   </xs:complexType>
   <xs:complexType name="characteristics">
+    <xs:annotation>
+      <xs:documentation>The cold facts, to represent the property or offer.</xs:documentation>
+    </xs:annotation>
     <xs:all>
       <xs:element name="areaBwf" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
@@ -654,6 +672,9 @@
     </xs:all>
   </xs:complexType>
   <xs:complexType name="person">
+    <xs:annotation>
+      <xs:documentation>Personal information about people.</xs:documentation>
+    </xs:annotation>
     <xs:all>
       <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="givenName" minOccurs="0" maxOccurs="1" />
@@ -666,8 +687,14 @@
     </xs:all>
   </xs:complexType>
   <xs:complexType name="prices">
+    <xs:annotation>
+      <xs:documentation>Sell, rent, deposit and auction prices.</xs:documentation>
+    </xs:annotation>
     <xs:all>
       <xs:element minOccurs="0" maxOccurs="1" name="rent">
+        <xs:annotation>
+          <xs:documentation>Recurring rental price.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
           <xs:all>
             <xs:element minOccurs="1" maxOccurs="1" name="gross" type="xs:positiveInteger" />
@@ -679,6 +706,9 @@
         </xs:complexType>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="1" name="buy">
+        <xs:annotation>
+          <xs:documentation>One time buy prices.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
           <xs:all>
             <xs:element minOccurs="1" maxOccurs="1" name="price" type="xs:positiveInteger" />
@@ -693,6 +723,9 @@
         </xs:complexType>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="1" name="auction">
+        <xs:annotation>
+          <xs:documentation>Starting price for an auction.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
           <xs:simpleContent>
             <xs:extension base="xs:positiveInteger">
@@ -703,6 +736,9 @@
         </xs:complexType>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="1" name="deposit">
+        <xs:annotation>
+          <xs:documentation>Required amount of deposit.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
           <xs:simpleContent>
             <xs:extension base="xs:positiveInteger">
@@ -719,9 +755,15 @@
         </xs:complexType>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="1" name="additionalOffers">
+        <xs:annotation>
+          <xs:documentation>List of extras.</xs:documentation>
+        </xs:annotation>
         <xs:complexType>
           <xs:sequence>
             <xs:element minOccurs="1" maxOccurs="unbounded" name="offer">
+              <xs:annotation>
+                <xs:documentation>An extra whitch causes additional costs.</xs:documentation>
+              </xs:annotation>
               <xs:complexType>
                 <xs:simpleContent>
                   <xs:extension base="xs:positiveInteger">
@@ -1111,19 +1153,28 @@
             <xs:sequence>
               <xs:element name="project" maxOccurs="unbounded" minOccurs="0">
                 <xs:annotation>
-                  <xs:documentation>New building project container.</xs:documentation>
+                  <xs:documentation>Building project container.</xs:documentation>
                 </xs:annotation>
                 <xs:complexType>
                   <xs:all>
                     <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1" />
                     <xs:element name="units" maxOccurs="1" minOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>List of units.</xs:documentation>
+                      </xs:annotation>
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="unit" maxOccurs="unbounded" minOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>A set of properties</xs:documentation>
+                            </xs:annotation>
                             <xs:complexType>
                               <xs:all>
                                 <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1" />
                                 <xs:element name="properties" maxOccurs="1" minOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>List of property references</xs:documentation>
+                                  </xs:annotation>
                                   <xs:complexType>
                                     <xs:sequence>
                                       <xs:element maxOccurs="unbounded" minOccurs="1" type="xs:string" name="propertyRef" />
@@ -1433,11 +1484,14 @@
                                 </xs:element>
                                 <xs:element name="events" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
-                                    <xs:documentation>Organised events, typically for visiting the property.</xs:documentation>
+                                    <xs:documentation>List of events</xs:documentation>
                                   </xs:annotation>
                                   <xs:complexType>
                                     <xs:sequence>
                                       <xs:element name="event" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>Organised events, typically for visiting the property.</xs:documentation>
+                                        </xs:annotation>
                                         <xs:complexType>
                                           <xs:all>
                                             <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1" />
@@ -1484,22 +1538,28 @@
                     </xs:element>
                     <xs:element name="prices" type="prices" minOccurs="0" maxOccurs="1" />
                     <xs:element name="publishers" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>List of publisher custom fields</xs:documentation>
+                      </xs:annotation>
                       <xs:complexType>
-                        <xs:annotation>
-                          <xs:documentation>A set of</xs:documentation>
-                        </xs:annotation>
                         <xs:sequence>
                           <xs:element name="publisher" minOccurs="1" maxOccurs="unbounded">
+                            <xs:annotation>
+                              <xs:documentation>Affected publisher by the custom fields</xs:documentation>
+                            </xs:annotation>
                             <xs:complexType>
                               <xs:all>
                                 <xs:element name="options" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>List of publisher specific custom fields</xs:documentation>
+                                  </xs:annotation>
                                   <xs:complexType mixed="true">
                                     <xs:sequence>
                                       <xs:element name="option" maxOccurs="unbounded" minOccurs="1">
+                                        <xs:annotation>
+                                          <xs:documentation>Custom key-value pair, or generic data field, used for non-standardized data transaction, between two entities.</xs:documentation>
+                                        </xs:annotation>
                                         <xs:complexType>
-                                          <xs:annotation>
-                                            <xs:documentation>A generic data field, used for non-standardized data transaction, between two entities.</xs:documentation>
-                                          </xs:annotation>
                                           <xs:simpleContent>
                                             <xs:extension base="xs:string">
                                               <xs:attribute name="key" type="xs:string" use="required" />
@@ -1526,11 +1586,14 @@
                       </xs:annotation>
                     </xs:element>
                     <xs:element name="seller" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>The owner or the owners substitute (for example a broker).</xs:documentation>
+                      </xs:annotation>
                       <xs:complexType>
                         <xs:all>
                           <xs:element name="organization" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Address of the owner or the owners substitute (for example a broker).</xs:documentation>
+                              <xs:documentation>Postal address.</xs:documentation>
                             </xs:annotation>
                             <xs:complexType>
                               <xs:all>
