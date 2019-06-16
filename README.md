@@ -4,7 +4,7 @@
 
 SwissRETS
 =========
-SwissRETS is a swiss real estate transaction standard. It aims to solve data exchange between real estate software and platforms. It's meant to be a replacement for old and static formats like the widely used [IDX](https://en.wikipedia.org/wiki/Internet_Data_Exchange) in Switzerland.
+SwissRETS is a swiss real estate transaction standard. It aims to solve data exchange between real estate software and platforms. It's meant to be a replacement for old and static formats like the widely used [IDX 3.01](https://en.wikipedia.org/wiki/Internet_Data_Exchange) in Switzerland.
 
 Check out the documentation
 - [https://swissrets.ch](https://swissrets.ch)

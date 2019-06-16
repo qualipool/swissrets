@@ -6,12 +6,12 @@ about: Ask something
 
 ## Main topic
 
-<!--- Put an `x` in all the boxes that apply -->
+<!--- Delete topics that do not aply -->
 
-- [ ] Technical understanding
-- [ ] Missing documentation
-- [ ] Contributing and community
-- [ ] other: __________
+- Technical understanding
+- Missing documentation
+- Contributing and community
+- ...
 
 ## Precise and short description of your question
 _description_

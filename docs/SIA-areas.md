@@ -1,8 +1,10 @@
-[**◀ Home**](./)
+[**◀ Home**](index.md)
 
-All children in `<characteristics>`s that start with `<areaSia***>`
+# SIA aras
 
-### Flächen:
+All children in `<characteristics>`s that start with `<areaSia***>` correspond with the general swiss SIA-Norm 416. Below is a generalization in german.
+
+## Flächen:
 
 ```
 ┌───────────────────────────────────────────────┐
@@ -16,7 +18,7 @@ All children in `<characteristics>`s that start with `<areaSia***>`
 └───────┴───────┘
 ```
 
-### Ausenflächen
+## Ausenflächen
 
 ```
 ┌───────────────────────────────────────────────┐
@@ -28,7 +30,7 @@ All children in `<characteristics>`s that start with `<areaSia***>`
 └───────────────┴───────┴───────┺━━━━━━━┷━━━━━━━┛
 ```
 
-### Volumen
+## Volumen
 
 ```
 ┌───────────────────────────────────────────────┐
@@ -40,7 +42,7 @@ All children in `<characteristics>`s that start with `<areaSia***>`
 └───────────────┴───────┴───────┘
 ```
 
-### Grundstückfläche
+## Grundstückfläche
 
 ```
 ┌───────────────────────────────────────────────┐
