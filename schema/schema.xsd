@@ -1067,6 +1067,9 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="utilizationRatio">
+    <xs:annotation>
+      <xs:documentation>Ratio between 0 and 1 inclusive, like how much of the land is allowed to be built on</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:decimal">
       <xs:minInclusive value="0" />
       <xs:maxInclusive value="1" />

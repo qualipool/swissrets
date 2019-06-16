@@ -12,33 +12,33 @@ key | description
 :--- | :---
 apartment | A part of a building, suitable for people to live in.
 atelier | A private workshop or studio of hobbiests or professionals.
-attic-flat | A free-standing apartment, built onto the roof of a multi-story building. Also called a penthouse.
+attic-flat | A free-standing apartment, built onto the roof of a multi-story building, also called a penthouse.
 bar | Where drinks, especially alcoholic drinks, are sold and drunk.
-cafe | Cafes and bars, combined category for both of them.
+Small restaurant where simple meals and drinks are served.
 car-repair-shop | An automobile repair shop, also known regionally as a garage.
 castle | A large building, typically of the medieval period, fortified against attack with thick walls, battlements, towers, and in many cases a moat.
 chalet | A wooden house with overhanging eaves, typically found in the Swiss Alps.
 earth-sheltered-dwelling | A house, flat, or other place of residence, with a significant amount of soil or substrate in contact with its external envelope.
-detached-house | A stand-alone free-standing residential building. Also called a single-detached dwelling or single-family house.
-doctors-office | Doctors' offices are the primary place where ambulatory care is given, and are often the first place that a sick person would go for care. Also called a doctor's practice.
-duplex-house | A divided house, two living units attached, either side by side or one above the other. Also called two-family house.
-farm-house | Usually a larger house combining different needs. Typically the accommodation wing is attached to a stable, a shelter, a shed or a stock.
+detached-house | A stand-alone free-standing residential building, also called a single-detached dwelling or single-family house.
+doctors-office | Doctors' offices are the primary place where ambulatory care is given, and are often the first place that a sick person would go for care, also called a doctor's practice.
+duplex-house | A divided house, two living units attached, either side by side or one above the other, also called two-family house.
+farm-house | Usually a larger house combining different needs, typically the accommodation wing is attached to a stable, a shelter, a shed or a stock.
 furnished-flat | Typically a flat or house which comes with all the built-in and loose furniture, refrigerator, washer and dryer and other essential electric appliances.
-granny-flat | A set of rooms, often connected to or part of a relation's house, typically with a separate house entry. Not to be confused with the 'stoeckli' category.
-hobby-room | A sparate room for activities done regularly in one's leisure time for pleasure. Similar to an atelier, but not limited to creating things.
+granny-flat | A set of rooms, often connected to or part of a relation's house, typically with a separate house entry, not to be confused with the 'stoeckli' category.
+hobby-room | A sparate room for activities done regularly in one's leisure time for pleasure, similar to an atelier, but not limited to creating things.
 hotel | An establishment providing accommodation, meals, and other services for travellers and tourists.
 loft | A single room flat, typically built in an old industry storage halls or newly built as a loft flat.
-maisonette | A flat with at least two connected stories in a building. Typically the story directly under the roof and the one below.
-multiplex-house | A divided house, more than two living units attached, either side by side and/or one above the other. Also called multyfamily house or multiple-dwelling.
+maisonette | A flat with at least two connected stories in a building, typically the story directly under the roof and the one below.
+multiplex-house | A divided house, more than two living units attached, either side by side and/or one above the other, also called multyfamily house or multiple-dwelling.
 office | A place in which business, clerical, or professional activities are conducted.
-one-room-flat | A studio flat in which the bedroom, sitting-room and kitchen are all one-room. Not to be confused with the 'single-room' category.
+one-room-flat | A studio flat in which the bedroom, sitting-room and kitchen are all one-room, not to be confused with the 'single-room' category.
 restaurant | Commercial establishment where meals are prepared and served to customers.
 retail-location | A space for the selling of goods to consumers.
 roof-flat | An apartment directly under the roof, typically features roof slopes.
 row-house | One of a row of similar houses that are joined together by both of their side walls.
 rustico | A converted or rebuilt old small landside house, typically found in Ticino region on mountain slopes.
-single-room | A single room, typically for rent. Does not neccessary include an own bathroom or kitchen. Not to be confused with the 'one-room-flat' category.
-stoeckli | A small house, typically near a larger farm-house, in the past they were residences for aged farmers after turning over the farm to their heirs. Not to be confused with the 'granny-flat' category.
+single-room | A single room, typically for rent, does not neccessary include an own bathroom or kitchen, not to be confused with the 'one-room-flat' category.
+stoeckli | A small house, typically near a larger farm-house, in the past they were residences for aged farmers after turning over the farm to their heirs, not to be confused with the 'granny-flat' category.
 stepped-flat | A set of rooms for living in, arranged in a staircase like manner, typicaly over two or more floors.
 stepped-house | A building containing one or more appartements arranged in a staircase manner, in order to maximize the outside space.
 villa | A large and luxurious house in its own grounds.
