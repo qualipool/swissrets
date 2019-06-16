@@ -1,4 +1,4 @@
-[**◀ Home**](./)
+[**◀ Home**](index.md)
 
 # FAQ
 General questions and answers that have not found their place within the documentation yet get placed here.

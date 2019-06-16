@@ -1,4 +1,4 @@
-[**◀ Home**](./)
+[**◀ Home**](index.md)
 
 # Property heating generation
 
