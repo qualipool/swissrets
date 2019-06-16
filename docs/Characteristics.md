@@ -8,6 +8,17 @@ Every characteristic has a imlicit SI-unit such as `m²` or `Kg` associated to i
 
 Descriptions for characteristics are in the [xsd documentation](https://swissrets.ch/docs/noNamespace/complexType/characteristics.html).
 
+## Type applicable
+Applicables can have three states, `unknown` must be thretened as default.
+
+state | meaning
+:--- | :---
+`applies` | The characteristic applies, is present or is available.
+`does-not-apply` | The characteristic does explicitly not apply, like "no balcony" is `hasBalcony=does-not-apply`.
+`unknown` | _default_ There is no information about the characteristic.
+
+## All characteristics
+
 key | description | type
 :--- | :--- | :---
 areaBwf | Living area in m² | positiveDecimal
@@ -131,12 +142,3 @@ volumeSiaAvv | Volume SIA-AVV in m³ | positiveDecimal
 volumeSiaGv | Volume SIA-GV in m³ | positiveDecimal
 yearBuilt | Year of construction, in four digits. | year
 yearLastRenovated | Year of last renovation, in four digits. | year
-
-## Type applicable
-Applicables can have three states, `unknown` must be thretened as default.
-
-state | meaning
-:--- | :---
-`applies` | The characteristic applies, is present or is available.
-`does-not-apply` | The characteristic does explicitly not apply, like "no balcony" is `hasBalcony=does-not-apply`.
-`unknown` | _default_ There is no information about the characteristic.
