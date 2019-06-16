@@ -2,45 +2,22 @@
 <export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.0.0/schema.xsd">
   <created>2012-12-13T12:12:12</created>
-  <generator version="1.0">XYZ-Soft</generator>
+  <generator version="v3.4.5">Some Immo Soft</generator>
   <projects>
-    <project id="EF-1">
-      <referenceId>1548-6254</referenceId>
+    <project id="str1234">
+      <referenceId>str1234</referenceId>
       <units>
-        <unit id="UT-1">
-          <referenceId>AF-4578</referenceId>
+        <unit id="str12345">
+          <referenceId>str1234</referenceId>
           <properties>
-            <propertyRef>7634</propertyRef>
+            <propertyRef>str1234</propertyRef>
           </properties>
         </unit>
       </units>
     </project>
   </projects>
   <properties>
-    <property id="1245687">
-      <referenceId>LA-644238</referenceId>
-      <bfs>
-        <egid>12458</egid>
-        <ewid>54856</ewid>
-      </bfs>
-      <availability start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:13">active</availability>
-      <development>full</development>
-      <buildingZones>str1234</buildingZones>
-      <parcelNumbers>str1234</parcelNumbers>
-      <visualReferenceId>str1234</visualReferenceId>
-      <type>buy</type>
-      <prices currency="CHF">
-        <buy referring="all">
-          <price>850000</price>
-          <extra>25000</extra>
-          <wirPercentage>5</wirPercentage>
-        </buy>
-        <auction start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:13">745</auction>
-        <deposit type="bank-guarantee">60000</deposit>
-        <additionalOffers>
-          <offer type="parking-garage" interval="onetime">25000</offer>
-        </additionalOffers>
-      </prices>
+    <property id="str12346">
       <address>
         <countryCode>CH</countryCode>
         <locality>Kirchlindach</locality>
@@ -57,15 +34,53 @@
           <elevation>350</elevation>
         </geo>
       </address>
-      <heating>
-        <generation>district</generation>
-        <distribution>radiator</distribution>
-      </heating>
-      <minergieCertification>Minergie-P-Eco</minergieCertification>
+      <author>str1234</author>
+      <availability start="2018-12-13T12:12:12" expiration="2019-12-13T12:12:12">active</availability>
+      <bfs>
+        <egid>str1234</egid>
+        <ewid>str1234</ewid>
+      </bfs>
+      <buildingZones>str1234</buildingZones>
+      <categories>
+        <category>apartment</category>
+      </categories>
       <characteristics>
+        <areaBwf>123.45</areaBwf>
+        <areaNwf>123.45</areaNwf>
+        <areaPropertyLand>123.45</areaPropertyLand>
+        <areaSiaAff>123.45</areaSiaAff>
+        <areaSiaAgf>123.45</areaSiaAgf>
+        <areaSiaAkf>123.45</areaSiaAkf>
+        <areaSiaAkfn>123.45</areaSiaAkfn>
+        <areaSiaAkft>123.45</areaSiaAkft>
+        <areaSiaAnf>123.45</areaSiaAnf>
+        <areaSiaAngf>123.45</areaSiaAngf>
+        <areaSiaAvf>123.45</areaSiaAvf>
+        <areaSiaBuf>123.45</areaSiaBuf>
+        <areaSiaFf>123.45</areaSiaFf>
+        <areaSiaGf>123.45</areaSiaGf>
+        <areaSiaGgf>123.45</areaSiaGgf>
+        <areaSiaGsf>123.45</areaSiaGsf>
+        <areaSiaHnf>123.45</areaSiaHnf>
+        <areaSiaKf>123.45</areaSiaKf>
+        <areaSiaKfn>123.45</areaSiaKfn>
+        <areaSiaKft>123.45</areaSiaKft>
+        <areaSiaNf>123.45</areaSiaNf>
+        <areaSiaNgf>123.45</areaSiaNgf>
+        <areaSiaNnf>123.45</areaSiaNnf>
+        <areaSiaUf>123.45</areaSiaUf>
+        <areaSiaUuf>123.45</areaSiaUuf>
+        <areaSiaVf>123.45</areaSiaVf>
         <arePetsAllowed>applies</arePetsAllowed>
-        <hasAttic>applies</hasAttic>
-        <hasBalcony>applies</hasBalcony>
+        <ceilingHeight>123.45</ceilingHeight>
+        <craneCapacity>123.45</craneCapacity>
+        <elevatorLoad>123.45</elevatorLoad>
+        <floor>1234</floor>
+        <floorLoad>123.45</floorLoad>
+        <grossPremium>45</grossPremium>
+        <hallHeight>2.45</hallHeight>
+        <hasAttic>does-not-apply</hasAttic>
+        <hasBalcony>unknown</hasBalcony>
         <hasBuildingLawRestrictions>applies</hasBuildingLawRestrictions>
         <hasCableTv>applies</hasCableTv>
         <hasCarPort>applies</hasCarPort>
@@ -81,8 +96,8 @@
         <hasForeignQuota>applies</hasForeignQuota>
         <hasGarage>applies</hasGarage>
         <hasGarageDouble>applies</hasGarageDouble>
-        <hasGardenShed>applies</hasGardenShed>
         <hasGarageUnderground>applies</hasGarageUnderground>
+        <hasGardenShed>applies</hasGardenShed>
         <hasLakeView>applies</hasLakeView>
         <hasLiftingPlatform>applies</hasLiftingPlatform>
         <hasMountainView>applies</hasMountainView>
@@ -116,7 +131,6 @@
         <isMiddleHouse>applies</isMiddleHouse>
         <isModernized>applies</isModernized>
         <isNewConstruction>applies</isNewConstruction>
-        <isSmokingAllowed>applies</isSmokingAllowed>
         <isOldBuilding>applies</isOldBuilding>
         <isProjection>applies</isProjection>
         <isQuiet>applies</isQuiet>
@@ -124,50 +138,24 @@
         <isRefurbishedPartially>applies</isRefurbishedPartially>
         <isSecondaryResidenceAllowed>applies</isSecondaryResidenceAllowed>
         <isShellConstruction>applies</isShellConstruction>
+        <isSmokingAllowed>applies</isSmokingAllowed>
         <isSunny>applies</isSunny>
         <isUnderRoof>applies</isUnderRoof>
         <isWellTended>applies</isWellTended>
         <isWheelchairAccessible>applies</isWheelchairAccessible>
-        <areaBwf>123.45</areaBwf>
-        <areaNwf>123.45</areaNwf>
-        <areaPropertyLand>123.45</areaPropertyLand>
-        <areaSiaAff>123.45</areaSiaAff>
-        <areaSiaAgf>123.45</areaSiaAgf>
-        <areaSiaAkf>123.45</areaSiaAkf>
-        <areaSiaAkfn>123.45</areaSiaAkfn>
-        <areaSiaAkft>123.45</areaSiaAkft>
-        <areaSiaAnf>123.45</areaSiaAnf>
-        <areaSiaAngf>123.45</areaSiaAngf>
-        <areaSiaAvf>123.45</areaSiaAvf>
-        <areaSiaBuf>123.45</areaSiaBuf>
-        <areaSiaFf>123.45</areaSiaFf>
-        <areaSiaGf>123.45</areaSiaGf>
-        <areaSiaGgf>123.45</areaSiaGgf>
-        <areaSiaGsf>123.45</areaSiaGsf>
-        <areaSiaHnf>123.45</areaSiaHnf>
-        <areaSiaKf>123.45</areaSiaKf>
-        <areaSiaKfn>123.45</areaSiaKfn>
-        <areaSiaKft>123.45</areaSiaKft>
-        <areaSiaNf>123.45</areaSiaNf>
-        <areaSiaNgf>123.45</areaSiaNgf>
-        <areaSiaNnf>123.45</areaSiaNnf>
-        <areaSiaUf>123.45</areaSiaUf>
-        <areaSiaUuf>123.45</areaSiaUuf>
-        <areaSiaVf>123.45</areaSiaVf>
-        <ceilingHeight>2.4</ceilingHeight>
-        <elevatorLoad>1000</elevatorLoad>
-        <floor>1</floor>
-        <floorLoad>50</floorLoad>
-        <grossPremium>5</grossPremium>
-        <hallHeight>2.4</hallHeight>
-        <numberOfParcels>1</numberOfParcels>
-        <numberOfRooms>4.5</numberOfRooms>
-        <numberOfShowers>2</numberOfShowers>
-        <numberOfToilets>2</numberOfToilets>
+        <numberOfApartements>745</numberOfApartements>
+        <numberOfBathrooms>745</numberOfBathrooms>
+        <numberOfFloors>745</numberOfFloors>
+        <numberOfParcels>745</numberOfParcels>
+        <numberOfRooms>123.45</numberOfRooms>
+        <numberOfShowers>745</numberOfShowers>
+        <numberOfToilets>745</numberOfToilets>
+        <numberOfToiletsGuest>745</numberOfToiletsGuest>
+        <onEvenGround>applies</onEvenGround>
         <onHillside>applies</onHillside>
         <onHillsideSouth>applies</onHillsideSouth>
-        <utilizationRatio>0</utilizationRatio>
-        <utilizationRatioConstruction>0</utilizationRatioConstruction>
+        <utilizationRatio>0.7</utilizationRatio>
+        <utilizationRatioConstruction>0.6</utilizationRatioConstruction>
         <volumeGva>123.45</volumeGva>
         <volumeSia>123.45</volumeSia>
         <volumeSiaAfv>123.45</volumeSiaAfv>
@@ -176,29 +164,29 @@
         <volumeSiaAnv>123.45</volumeSiaAnv>
         <volumeSiaAvv>123.45</volumeSiaAvv>
         <volumeSiaGv>123.45</volumeSiaGv>
-        <yearBuilt>2010</yearBuilt>
-        <yearLastRenovated>2014</yearLastRenovated>
+        <yearBuilt>2009</yearBuilt>
+        <yearLastRenovated>2019</yearLastRenovated>
       </characteristics>
-      <utilizations>
-        <utilization>residential</utilization>
-      </utilizations>
-      <categories>
-        <category>apartment</category>
-      </categories>
+      <created>2012-12-13T12:12:12</created>
+      <development>full</development>
+      <heating>
+        <generation>district</generation>
+        <distribution>radiator</distribution>
+      </heating>
       <localizations>
-        <localization lang="en">
-          <name>Calm and beautiful flat</name>
-          <excerpt>Calm and beautiful flat in green environment</excerpt>
-          <description>Calm and beautiful flat in green environment with garden and small pod</description>
-          <location>Green fields and woods with a village nearby</location>
-          <equipment>Sauna, Pool</equipment>
+        <localization lang="st">
+          <name>str1234</name>
+          <excerpt>str1234</excerpt>
+          <description>str1234</description>
+          <location>str1234</location>
+          <equipment>str1234</equipment>
           <attachments>
-          <image>
-            <url>http://www.someorg.com/dg546jdl</url>
-            <title>The living room</title>
-            <description>The living is very nice</description>
-            <mimeType>image/jpeg</mimeType>
-          </image>
+            <image>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The living room</title>
+              <description>The living is very nice</description>
+              <mimeType>image/jpeg</mimeType>
+            </image>
             <image>
               <url>http://www.someorg.com/dg546jdl</url>
               <title>The bathroom</title>
@@ -248,6 +236,29 @@
           </events>
         </localization>
       </localizations>
+      <minergieCertification>Minergie</minergieCertification>
+      <modified>2012-12-13T12:12:12</modified>
+      <parcelNumbers>str1234</parcelNumbers>
+      <prices currency="CHF">
+        <buy referring="all">
+          <price>850000</price>
+          <extra>25000</extra>
+          <wirPercentage>5</wirPercentage>
+        </buy>
+        <auction start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:13">745</auction>
+        <deposit type="bank-guarantee">60000</deposit>
+        <additionalOffers>
+          <offer type="parking-garage" interval="onetime">25000</offer>
+        </additionalOffers>
+      </prices>
+      <publishers>
+        <publisher id="str12347">
+          <options>
+            <option key="str1234" lang="st" start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:12">str1234</option>
+          </options>
+        </publisher>
+      </publishers>
+      <referenceId>str1234</referenceId>
       <seller>
         <organization id="Someorg Ltd">
           <address>
@@ -272,9 +283,9 @@
           <emailRem>info-remax@someorg.com</emailRem>
           <mobile>+4178254657</mobile>
           <phone>+4178254657</phone>
-          <website title="Someorg Ltd Website" label="Someorg Ltd Website">http://www.someorg.com</website>
+          <website title="Some LTD org" label="Some LTD org">https://someorg.com</website>
         </organization>
-        <contactPerson>
+         <contactPerson>
           <function>Caretaker</function>
           <givenName>Jim</givenName>
           <familyName>Smith</familyName>
@@ -305,16 +316,11 @@
           <note>Contact Mr. Smith</note>
         </inquiryPerson>
       </seller>
-      <publishers>
-        <publisher id="str1234">
-          <options>
-            <option key="str1234" lang="st" start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:12">str1234</option>
-          </options>
-        </publisher>
-      </publishers>
-      <author>Hans-Müller</author>
-      <created>2012-12-13T12:12:12</created>
-      <modified>2012-12-13T12:12:12</modified>
+      <type>buy</type>
+      <utilizations>
+        <utilization>agricultural</utilization>
+      </utilizations>
+      <visualReferenceId>str1234</visualReferenceId>
     </property>
   </properties>
 </export>
