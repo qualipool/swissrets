@@ -10,6 +10,7 @@
     "xsddoc": "node scripts/xsddoc",
     "start": "nodemon --exec 'npm test -s'",
     "test": "dotnet test scripts/tests/SwissRETS.Tests.csproj",
+    "postversion": "node scripts/postversion",
     "xsddocs": "node scripts/xsddocs"
   },
   "repository": {
