@@ -5,7 +5,7 @@ const { exec } = require('../lib')
 const { version } = require('../../package.json')
 
 const rootDir = path.join(__dirname, '..', '..')
-const outputDir = path.join(rootDir, 'docs', 'dist', version)
+const outputDir = path.join(rootDir, 'docs', 'dist', `v${version}`)
 const inputFile = path.join(rootDir, 'schema', 'schema.xsd')
 const outputFile = path.join(outputDir, path.basename(inputFile))
 
