@@ -1,24 +1,24 @@
 [**◀ Home**](./)
 
-`<utilizations>` describe what the offer/property is used for. It simply defines for what purpose the property can/should be used/published for.
+# Utilizations
 
-A Utilization is required and dictates what the categories and characteristics stand for. In other words you could think of them as a super-group.
+What the offer/property's main usage intention. Defines what purpose the property can/should be used or is published.
 
-Utilities do not describe how the property is built or how it looks, if that is what you are looking for consider the [categories](./Categories) instead.
+A Utilization is required and defines the categories and characteristics stand for. Think of them as a super-group of [categories](./Categories).
 
-It should answer questions such as:
+Utilizations answer questions like
 
 *  Can I live here? (residential)
 *  Is it to perform services? (commercial)
 *  Can I grow crops there? (agricultural)
 
-### Explanation
+## Explanation
 
 key | description
 :--- | :---
 agricultural | Can be used for farming, growing crops and related.
 commercial | Can be used to run a business or a company that provides a service.
-construction | Is related to construction, this includes 
+construction | Is related to construction, this includes
 gastronomy | Related to cooking, eating and drinking.
 industrial | Suited for factories and companies, related to industries.
 investment | Suitable for investing money for profit.
@@ -27,7 +27,7 @@ residential | Suitable for people living there.
 storage | Places used to store something for future use.
 vacation | Suitable for short term residential situations.
 
-### Example translations
+## Example translations
 
 key | fr | en | de | it
 :--- | :--- | :--- | :--- | :---

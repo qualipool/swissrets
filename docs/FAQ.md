@@ -1,21 +1,15 @@
 [**◀ Home**](./)
 
-
+# FAQ
 General questions and answers that have not found their place within the documentation yet get placed here.
 
-### How can I specify an offer "on request"
+## How to map IDX 3.01 to Swissrets.
+It's recommendet to use the [Qualipool agreed mapping table](https://docs.google.com/spreadsheets/d/1NKx8oDF16AMF8nMXmaa4OQTC0iu9NdDPB2rN1pCa2vA/edit#gid=1387607905).
 
+## How can I specify an offer "on request"
 Simply ommit the `<rent>` or `<buy>` tag within `<prices>`.
 
-### How can I declare videos
-
-TODO
-
-### How to use custom fields
-
-TODO
-
-### How to specify local files
+## How to specify local files
 Whenever possible, try to **avoid using local files**. For all the other cases use the [file URI scheme](https://en.wikipedia.org/wiki/File_URI_scheme).
 
 <details>
