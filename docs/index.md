@@ -11,14 +11,14 @@ SwissRETS is a swiss real estate transaction standard. The main goal ist to stan
 1. [XSD docs](https://swissrets.ch/docs/noNamespace/) generated from the schema
 1. [The schema.xsd](https://github.com/qualipool/swissrets/blob/master/schema/schema.xsd)
 1. Details
-   - [Attachments](./Attachments.md) - Medias
-   - [Availability](Availability.md) - vacancy of properties
-   - [Categories](Categories.md) - further groups for properties
+   - [Attachments](./Attachments.md) - images, documents, links
+   - [Availability](Availability.md) - lifecycle states
+   - [Categories](Categories.md) - categorization
    - [Characteristics](./Characteristics.md) - facts and features
-      - [applicables](./Characteristics.md#type-applicable) - facts and features
+      - [applicables](./Characteristics.md#type-applicable)
       - [SIA-areas](./SIA-areas.md) - area definitions according to [SIA 416](http://www.svkg.ch/)
    - [Usage FAQ](FAQ)
-   - [Utilizations](Utilizations.md) - required usage groups
+   - [Utilizations](Utilizations.md) - usage groups
 1. [Example](https://github.com/qualipool/swissrets/tree/master/examples) XML files
 1. [Changelog](https://github.com/qualipool/swissrets/releases)
    Complete release history and migration paths for braking changes
