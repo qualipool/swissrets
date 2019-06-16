@@ -9,8 +9,8 @@ key | description
 district | A system for distributing heat generated in a centralized location through a system of insulated pipes into a network.
 electricity | Electrical energy is converted to heat energy for space heating.
 gas | Heating by burning natural gas, liquefied petroleum gas, propane or butane.
-geothermal-probe -
-heatpump-air-and-water -
+geothermal-probe | -
+heatpump-air-and-water | -
 heatpump | Heating and/or cooling system that transfers heat to or from the ground using a pump.
 oil | Heating by burning fosile heating oil.
 photovoltaics | In general, thermal photovoltaics use solar cells to convert the light that radiates from a hot surface into electricity and/or heating water.

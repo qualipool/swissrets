@@ -31,8 +31,7 @@ Would result in using the following **export.xml**
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="https://swissrets.ch/v1.0.0/schema.xsd">
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://swissrets.ch/v1.0.0/schema.xsd">
   <properties>
     <property id="120080">
       <referenceId>LA-644238</referenceId>
