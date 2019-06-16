@@ -1,10 +1,10 @@
 [**◀ Home**](./)
 
-The distinct object type name or object built type.
+# Categories
+
+The distinct object type name or object built type. _«How is this listing built?»_ or _«What structure does it have?»_
 
 [Categories](https://swissrets.ch/docs/noNamespace/simpleType/categories.html) help group the properties sensibly. These tend to only make sense in combination with [utilizations](./Utilizations).
-
-[Categories](https://swissrets.ch/docs/noNamespace/simpleType/categories.html) should answer the question _«How is this listing built?»_ or _«What structure does it have?»_. This should not be confused with utilities.
 
 ### All categories
 

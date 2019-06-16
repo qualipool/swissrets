@@ -468,7 +468,7 @@
       </xs:element>
       <xs:element name="isModernized" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>TODO: needs documentation</xs:documentation>
+          <xs:documentation>Modernized means improved, thins like a better insulated roof and walls, modern heating system and similar imrovements.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isNewConstruction" type="applicable" minOccurs="0" maxOccurs="1">
@@ -493,7 +493,7 @@
       </xs:element>
       <xs:element name="isRefurbished" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Fully renovated, neat, clean and restored.</xs:documentation>
+          <xs:documentation>Fully renovated, neat, clean and restored. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isRefurbishedPartially" type="applicable" minOccurs="0" maxOccurs="1">
@@ -508,7 +508,7 @@
       </xs:element>
       <xs:element name="isShellConstruction" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>TODO: what is this? do we need this?</xs:documentation>
+          <xs:documentation>Intentionally missing interior finish in order to allow customization.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isSmokingAllowed" type="applicable" minOccurs="0" maxOccurs="1">
