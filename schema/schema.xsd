@@ -831,7 +831,7 @@
       </xs:enumeration>
       <xs:enumeration value="cafe">
         <xs:annotation>
-          <xs:documentation>Small restaurant where simple meals and drinks are served.</xs:documentation>
+          <xs:documentation>cafe - Small restaurant where simple meals and drinks are served.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="car-repair-shop">

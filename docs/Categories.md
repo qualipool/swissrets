@@ -14,7 +14,7 @@ apartment | A part of a building, suitable for people to live in.
 atelier | A private workshop or studio of hobbiests or professionals.
 attic-flat | A free-standing apartment, built onto the roof of a multi-story building, also called a penthouse.
 bar | Where drinks, especially alcoholic drinks, are sold and drunk.
-Small restaurant where simple meals and drinks are served.
+cafe | Small restaurant where simple meals and drinks are served.
 car-repair-shop | An automobile repair shop, also known regionally as a garage.
 castle | A large building, typically of the medieval period, fortified against attack with thick walls, battlements, towers, and in many cases a moat.
 chalet | A wooden house with overhanging eaves, typically found in the Swiss Alps.
