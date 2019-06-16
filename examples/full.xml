@@ -317,7 +317,7 @@
       </seller>
       <type>buy</type>
       <utilizations>
-        <utilization>agricultural</utilization>
+        <utilization>residential</utilization>
       </utilizations>
       <visualReferenceId>str1234</visualReferenceId>
     </property>
