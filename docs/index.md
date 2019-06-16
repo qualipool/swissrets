@@ -12,7 +12,7 @@ SwissRETS is a swiss real estate transaction standard. The main goal ist to stan
 1. [The schema.xsd](https://github.com/qualipool/swissrets/blob/master/schema/schema.xsd)
 1. Details
    - [Attachments](./Attachments.md) - Medias
-   - [Availabilities](Availabilities.md) - vacancy of properties
+   - [Availability](Availability.md) - vacancy of properties
    - [Categories](Categories.md) - further groups for properties
    - [Characteristics](./Characteristics.md) - facts and features
       - [applicables](./Characteristics.md#type-applicable) - facts and features
