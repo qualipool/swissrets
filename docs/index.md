@@ -8,8 +8,20 @@ SwissRETS is a swiss real estate transaction standard. The main goal ist to stan
 
 ## Using SwissRETS
 
+### XML
+Schema location declaration for validation.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<export
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.0.0/schema.xsd"
+  >
+  <!-- ... -->
+</export>
+```
+
+### Documentation
 1. [XSD docs](https://swissrets.ch/docs/noNamespace/) generated from the schema
-1. [The schema.xsd](https://github.com/qualipool/swissrets/blob/master/schema/schema.xsd)
 1. Details
    - [Attachments](./Attachments.md) - images, documents, links
    - [Availability](Availability.md) - lifecycle states
