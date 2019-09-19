@@ -48,6 +48,7 @@
       <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
       <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
       <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
+      <xs:element type="xs:dateTime" name="lastModified" maxOccurs="1" minOccurs="0" />
     </xs:all>
   </xs:complexType>
   <xs:complexType name="attachmentLink">
@@ -1430,6 +1431,7 @@
                                             <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
                                             <xs:element type="xs:string" name="description" maxOccurs="1" minOccurs="0" />
                                             <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
+                                            <xs:element type="xs:dateTime" name="lastModified" maxOccurs="1" minOccurs="0" />
                                           </xs:all>
                                         </xs:complexType>
                                       </xs:element>
@@ -1441,6 +1443,7 @@
                                           <xs:all maxOccurs="1" minOccurs="1">
                                             <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
                                             <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
+                                            <xs:element type="xs:dateTime" name="lastModified" maxOccurs="1" minOccurs="0" />
                                           </xs:all>
                                         </xs:complexType>
                                       </xs:element>
