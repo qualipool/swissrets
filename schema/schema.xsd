@@ -1429,7 +1429,14 @@
                                             <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
                                             <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
                                             <xs:element type="xs:string" name="description" maxOccurs="1" minOccurs="0" />
-                                            <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
+                                            <xs:element name="mimeType" maxOccurs="1" minOccurs="0">
+                                              <xs:simpleType>
+                                                <xs:restriction base="mimeType">
+                                                  <xs:enumeration value="image/jpeg" />
+                                                  <xs:enumeration value="image/png" />
+                                                </xs:restriction>
+                                              </xs:simpleType>
+                                            </xs:element>
                                           </xs:all>
                                         </xs:complexType>
                                       </xs:element>
@@ -1440,7 +1447,14 @@
                                         <xs:complexType>
                                           <xs:all maxOccurs="1" minOccurs="1">
                                             <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
-                                            <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
+                                            <xs:element name="mimeType" maxOccurs="1" minOccurs="0">
+                                              <xs:simpleType>
+                                                <xs:restriction base="mimeType">
+                                                  <xs:enumeration value="image/jpeg" />
+                                                  <xs:enumeration value="image/png" />
+                                                </xs:restriction>
+                                              </xs:simpleType>
+                                            </xs:element>
                                           </xs:all>
                                         </xs:complexType>
                                       </xs:element>

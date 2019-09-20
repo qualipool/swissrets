@@ -87,6 +87,10 @@ namespace SwissRETS.Tests
             @"utilizations-empty.xml", 1,
             "The element 'utilizations' has incomplete content."
           );
+          this.validate(
+            @"image-mimeType-invalid.xml", 2,
+            "The 'mimeType' element is invalid - The value 'image/svg+xml' is invalid according to its datatype 'String' - The Enumeration constraint failed."
+          );
         }
 
         #region validate
