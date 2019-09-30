@@ -683,7 +683,7 @@
       <xs:element type="phoneNumber" name="mobile" minOccurs="0" maxOccurs="1" />
       <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
       <xs:element type="shortString" name="gender" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1" />
+      <xs:element type="longString" name="note" minOccurs="0" maxOccurs="1" />
     </xs:all>
   </xs:complexType>
   <xs:complexType name="prices">
@@ -810,6 +810,14 @@
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:maxLength value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="longString">
+    <xs:annotation>
+      <xs:documentation>Long string to be used for strings up to 10000 characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10000" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="applicable">
@@ -1399,22 +1407,22 @@
                                     <xs:documentation>Simple marketing title.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
-                                <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1">
+                                <xs:element type="longString" name="excerpt" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>A short extract from description, location and equipment.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
-                                <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:element name="description" type="longString" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Main description.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
-                                <xs:element name="location" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:element name="location" type="longString" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Description of the surrounding and location.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
-                                <xs:element name="equipment" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:element name="equipment" type="longString" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Description of available and included equipment.</xs:documentation>
                                   </xs:annotation>
@@ -1436,7 +1444,7 @@
                                           <xs:all maxOccurs="1" minOccurs="1">
                                             <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
                                             <xs:element type="shortString" name="title" maxOccurs="1" minOccurs="0" />
-                                            <xs:element type="xs:string" name="description" maxOccurs="1" minOccurs="0" />
+                                            <xs:element type="longString" name="description" maxOccurs="1" minOccurs="0" />
                                             <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
                                           </xs:all>
                                         </xs:complexType>
@@ -1485,7 +1493,7 @@
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
-                                <xs:element type="xs:string" name="visitInformation" minOccurs="0" maxOccurs="1">
+                                <xs:element type="longString" name="visitInformation" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Specific visiting instructions or information, where to get the key, when to contact and similar.</xs:documentation>
                                   </xs:annotation>
