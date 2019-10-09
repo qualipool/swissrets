@@ -1,0 +1,9 @@
+version: "3.3"
+
+services:
+  dotnet:
+    image: mcr.microsoft.com/dotnet/core/sdk:2.1
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: "dotnet test scripts/tests/SwissRETS.Tests.csproj"
