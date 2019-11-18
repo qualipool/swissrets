@@ -185,26 +185,31 @@
               <title>The living room</title>
               <description>The living is very nice</description>
               <mimeType>image/jpeg</mimeType>
+              <lastModified>2002-05-30T09:30:10.5</lastModified>
             </image>
             <image>
               <url>http://www.someorg.com/dg546jdl</url>
               <title>The bathroom</title>
               <description>The bathroom is very nice</description>
               <mimeType>image/jpeg</mimeType>
+              <lastModified>2002-05-30T09:30:10.5</lastModified>
             </image>
             <logo>
               <url>http://www.someorg.com/dg546jdl</url>
               <mimeType>image/jpeg</mimeType>
+              <lastModified>2002-05-30T09:30:10.5</lastModified>
             </logo>
             <document>
               <url>http://www.someorg.com/dg546jdl</url>
               <title>The document</title>
               <mimeType>image/jpeg</mimeType>
+              <lastModified>2002-05-30T09:30:10.5</lastModified>
             </document>
             <plan>
               <url>http://www.someorg.com/dg546jdl</url>
               <title>The plan</title>
               <mimeType>image/jpeg</mimeType>
+              <lastModified>2002-05-30T09:30:10.5</lastModified>
             </plan>
             <linkDirect>
               <url>http://www.someorg.com/dg546jdl</url>
