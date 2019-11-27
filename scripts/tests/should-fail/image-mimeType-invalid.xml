@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.0.0/schema.xsd">
+  <properties>
+    <property id="1245687">
+      <referenceId>LA-644238</referenceId>
+      <availability>active</availability>
+      <type>rent</type>
+      <localizations>
+        <localization lang="en">
+          <name>Calm and beautiful flat</name>
+          <attachments>
+            <image>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The living room</title>
+              <description>The living is very nice</description>
+              <mimeType>image/svg+xml</mimeType>
+            </image>
+            <logo>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <mimeType>image/ico</mimeType>
+            </logo>
+          </attachments>
+        </localization>
+      </localizations>
+    </property>
+  </properties>
+</export>
