@@ -18,13 +18,13 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element type="shortString" name="locality" minOccurs="0" maxOccurs="1" />
-      <xs:element type="shortString" name="region" minOccurs="0" maxOccurs="1" />
-      <xs:element type="shortString" name="postalCode" minOccurs="0" maxOccurs="1" />
-      <xs:element type="shortString" name="postOfficeBoxNumber" minOccurs="0" maxOccurs="1" />
+      <xs:element type="extraShortString" name="locality" minOccurs="0" maxOccurs="1" />
+      <xs:element type="extraShortString" name="region" minOccurs="0" maxOccurs="1" />
+      <xs:element type="extraShortString" name="postalCode" minOccurs="0" maxOccurs="1" />
+      <xs:element type="extraShortString" name="postOfficeBoxNumber" minOccurs="0" maxOccurs="1" />
       <xs:element type="shortString" name="street" minOccurs="0" maxOccurs="1" />
-      <xs:element type="shortString" name="streetNumber" minOccurs="0" maxOccurs="1" />
-      <xs:element type="shortString" name="streetAddition" minOccurs="0" maxOccurs="1" />
+      <xs:element type="extraShortString" name="streetNumber" minOccurs="0" maxOccurs="1" />
+      <xs:element type="extraShortString" name="streetAddition" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:byte" name="subunit" minOccurs="0" maxOccurs="1" />
       <xs:element name="geo" minOccurs="0" maxOccurs="1">
         <xs:annotation>
@@ -676,13 +676,13 @@
       <xs:documentation>Personal information about people.</xs:documentation>
     </xs:annotation>
     <xs:all>
-      <xs:element type="shortString" name="function" minOccurs="0" maxOccurs="1" />
+      <xs:element type="extraShortString" name="function" minOccurs="0" maxOccurs="1" />
       <xs:element type="shortString" name="givenName" minOccurs="0" maxOccurs="1" />
       <xs:element type="shortString" name="familyName" minOccurs="0" maxOccurs="1" />
       <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
       <xs:element type="phoneNumber" name="mobile" minOccurs="0" maxOccurs="1" />
       <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
-      <xs:element type="shortString" name="gender" minOccurs="0" maxOccurs="1" />
+      <xs:element type="extraShortString" name="gender" minOccurs="0" maxOccurs="1" />
       <xs:element type="longString" name="note" minOccurs="0" maxOccurs="1" />
     </xs:all>
   </xs:complexType>
@@ -804,6 +804,14 @@
     </xs:attribute>
   </xs:complexType>
   <!-- simple types -->
+  <xs:simpleType name="extraShortString">
+    <xs:annotation>
+      <xs:documentation>Extra short string to be used for strings not longer than 50 characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="shortString">
     <xs:annotation>
       <xs:documentation>Short string to be used for strings not longer than 255 characters.</xs:documentation>
@@ -1156,7 +1164,7 @@
           <xs:complexType>
             <xs:simpleContent>
               <xs:extension base="xs:string">
-                <xs:attribute name="version" type="shortString" />
+                <xs:attribute name="version" type="extraShortString" />
               </xs:extension>
             </xs:simpleContent>
           </xs:complexType>
@@ -1252,12 +1260,12 @@
                       </xs:annotation>
                       <xs:complexType>
                         <xs:all>
-                          <xs:element type="shortString" name="egid" minOccurs="0" maxOccurs="1">
+                          <xs:element type="extraShortString" name="egid" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
                               <xs:documentation>The building identifier of the swiss population register</xs:documentation>
                             </xs:annotation>
                           </xs:element>
-                          <xs:element type="shortString" name="ewid" minOccurs="0" maxOccurs="1">
+                          <xs:element type="extraShortString" name="ewid" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
                               <xs:documentation>The flat identifier of the swiss population register</xs:documentation>
                             </xs:annotation>
@@ -1590,7 +1598,7 @@
                                   </xs:complexType>
                                 </xs:element>
                               </xs:all>
-                              <xs:attribute type="shortString" name="id" use="required" />
+                              <xs:attribute type="extraShortString" name="id" use="required" />
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
@@ -1634,7 +1642,7 @@
                                   </xs:complexType>
                                 </xs:element>
                               </xs:all>
-                              <xs:attribute type="shortString" name="id" use="optional" />
+                              <xs:attribute type="extraShortString" name="id" use="optional" />
                             </xs:complexType>
                           </xs:element>
                           <xs:element type="person" name="contactPerson" minOccurs="0" maxOccurs="1">
@@ -1684,7 +1692,7 @@
                     </xs:element>
                     <!-- additional information about the data itself -->
                   </xs:all>
-                  <xs:attribute type="shortString" name="id" use="required">
+                  <xs:attribute type="extraShortString" name="id" use="required">
                     <xs:annotation>
                       <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as referenceId if the exporter is the original creator)
                       </xs:documentation>
