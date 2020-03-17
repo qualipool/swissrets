@@ -18,13 +18,13 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element type="xs:string" name="locality" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="region" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="postalCode" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="postOfficeBoxNumber" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="street" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="streetNumber" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="streetAddition" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="locality" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="region" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="postalCode" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="postOfficeBoxNumber" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="street" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="streetNumber" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="streetAddition" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:byte" name="subunit" minOccurs="0" maxOccurs="1" />
       <xs:element name="geo" minOccurs="0" maxOccurs="1">
         <xs:annotation>
@@ -46,7 +46,7 @@
     </xs:annotation>
     <xs:all maxOccurs="1" minOccurs="1">
       <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
-      <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
+      <xs:element type="shortString" name="title" maxOccurs="1" minOccurs="0" />
       <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
     </xs:all>
   </xs:complexType>
@@ -56,7 +56,7 @@
     </xs:annotation>
     <xs:all maxOccurs="1" minOccurs="1">
       <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
-      <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
+      <xs:element type="shortString" name="title" maxOccurs="1" minOccurs="0" />
     </xs:all>
   </xs:complexType>
   <xs:complexType name="characteristics">
@@ -676,14 +676,14 @@
       <xs:documentation>Personal information about people.</xs:documentation>
     </xs:annotation>
     <xs:all>
-      <xs:element type="xs:string" name="function" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="givenName" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="familyName" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="function" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="givenName" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="familyName" minOccurs="0" maxOccurs="1" />
       <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
       <xs:element type="phoneNumber" name="mobile" minOccurs="0" maxOccurs="1" />
       <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="gender" minOccurs="0" maxOccurs="1" />
-      <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1" />
+      <xs:element type="shortString" name="gender" minOccurs="0" maxOccurs="1" />
+      <xs:element type="longString" name="note" minOccurs="0" maxOccurs="1" />
     </xs:all>
   </xs:complexType>
   <xs:complexType name="prices">
@@ -804,6 +804,22 @@
     </xs:attribute>
   </xs:complexType>
   <!-- simple types -->
+  <xs:simpleType name="shortString">
+    <xs:annotation>
+      <xs:documentation>Short string to be used for strings not longer than 255 characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="longString">
+    <xs:annotation>
+      <xs:documentation>Long string to be used for strings up to 10000 characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10000" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="applicable">
     <xs:annotation>
       <xs:documentation>Applicables can have three states, unknown must be thretened as default.</xs:documentation>
@@ -1140,7 +1156,7 @@
           <xs:complexType>
             <xs:simpleContent>
               <xs:extension base="xs:string">
-                <xs:attribute name="version" type="xs:string" />
+                <xs:attribute name="version" type="shortString" />
               </xs:extension>
             </xs:simpleContent>
           </xs:complexType>
@@ -1157,7 +1173,7 @@
                 </xs:annotation>
                 <xs:complexType>
                   <xs:all>
-                    <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="shortString" name="referenceId" minOccurs="1" maxOccurs="1" />
                     <xs:element name="units" maxOccurs="1" minOccurs="1">
                       <xs:annotation>
                         <xs:documentation>List of units.</xs:documentation>
@@ -1170,14 +1186,14 @@
                             </xs:annotation>
                             <xs:complexType>
                               <xs:all>
-                                <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1" />
+                                <xs:element type="shortString" name="referenceId" minOccurs="1" maxOccurs="1" />
                                 <xs:element name="properties" maxOccurs="1" minOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>List of property references</xs:documentation>
                                   </xs:annotation>
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element maxOccurs="unbounded" minOccurs="1" type="xs:string" name="propertyRef" />
+                                      <xs:element maxOccurs="unbounded" minOccurs="1" type="shortString" name="propertyRef" />
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
@@ -1212,7 +1228,7 @@
                         <xs:documentation>Location of the property.</xs:documentation>
                       </xs:annotation>
                     </xs:element>
-                    <xs:element type="xs:string" name="author" minOccurs="0" maxOccurs="1">
+                    <xs:element type="shortString" name="author" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>The name or username of the author, who created the record.</xs:documentation>
                       </xs:annotation>
@@ -1236,12 +1252,12 @@
                       </xs:annotation>
                       <xs:complexType>
                         <xs:all>
-                          <xs:element type="xs:string" name="egid" minOccurs="0" maxOccurs="1">
+                          <xs:element type="shortString" name="egid" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
                               <xs:documentation>The building identifier of the swiss population register</xs:documentation>
                             </xs:annotation>
                           </xs:element>
-                          <xs:element type="xs:string" name="ewid" minOccurs="0" maxOccurs="1">
+                          <xs:element type="shortString" name="ewid" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
                               <xs:documentation>The flat identifier of the swiss population register</xs:documentation>
                             </xs:annotation>
@@ -1249,7 +1265,7 @@
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element type="xs:string" name="buildingZones" minOccurs="0" maxOccurs="1">
+                    <xs:element type="shortString" name="buildingZones" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Building zones intended for residential buildings or for other buildings intended as long-stay accommodation, those are typically municipal-specific abbreviations.</xs:documentation>
                       </xs:annotation>
@@ -1386,27 +1402,27 @@
                             </xs:annotation>
                             <xs:complexType>
                               <xs:all>
-                                <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1">
+                                <xs:element type="shortString" name="name" minOccurs="1" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Simple marketing title.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
-                                <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1">
+                                <xs:element type="longString" name="excerpt" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>A short extract from description, location and equipment.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
-                                <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:element name="description" type="longString" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Main description.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
-                                <xs:element name="location" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:element name="location" type="longString" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Description of the surrounding and location.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
-                                <xs:element name="equipment" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:element name="equipment" type="longString" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Description of available and included equipment.</xs:documentation>
                                   </xs:annotation>
@@ -1427,8 +1443,8 @@
                                         <xs:complexType>
                                           <xs:all maxOccurs="1" minOccurs="1">
                                             <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
-                                            <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
-                                            <xs:element type="xs:string" name="description" maxOccurs="1" minOccurs="0" />
+                                            <xs:element type="shortString" name="title" maxOccurs="1" minOccurs="0" />
+                                            <xs:element type="longString" name="description" maxOccurs="1" minOccurs="0" />
                                             <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
                                           </xs:all>
                                         </xs:complexType>
@@ -1477,7 +1493,7 @@
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
-                                <xs:element type="xs:string" name="visitInformation" minOccurs="0" maxOccurs="1">
+                                <xs:element type="longString" name="visitInformation" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Specific visiting instructions or information, where to get the key, when to contact and similar.</xs:documentation>
                                   </xs:annotation>
@@ -1494,11 +1510,11 @@
                                         </xs:annotation>
                                         <xs:complexType>
                                           <xs:all>
-                                            <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1" />
+                                            <xs:element type="shortString" name="name" minOccurs="1" maxOccurs="1" />
                                             <xs:element type="xs:dateTime" name="start" minOccurs="1" maxOccurs="1" />
                                             <xs:element type="xs:dateTime" name="end" minOccurs="1" maxOccurs="1" />
-                                            <xs:element type="xs:string" name="location" minOccurs="0" maxOccurs="1" />
-                                            <xs:element type="xs:string" name="summary" minOccurs="0" maxOccurs="1" />
+                                            <xs:element type="shortString" name="location" minOccurs="0" maxOccurs="1" />
+                                            <xs:element type="shortString" name="summary" minOccurs="0" maxOccurs="1" />
                                           </xs:all>
                                         </xs:complexType>
                                       </xs:element>
@@ -1531,7 +1547,7 @@
                         <xs:documentation>Date and time of the last modifictiion.</xs:documentation>
                       </xs:annotation>
                     </xs:element>
-                    <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1">
+                    <xs:element type="shortString" name="parcelNumbers" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Arbitrary string that holds one or more parcel numbers, either from the swiss cadastral system or from a certain municipality.</xs:documentation>
                       </xs:annotation>
@@ -1562,7 +1578,7 @@
                                         <xs:complexType>
                                           <xs:simpleContent>
                                             <xs:extension base="xs:string">
-                                              <xs:attribute name="key" type="xs:string" use="required" />
+                                              <xs:attribute name="key" type="shortString" use="required" />
                                               <xs:attribute name="lang" type="languageCode" use="optional" />
                                               <xs:attribute name="start" type="xs:dateTime" use="optional" />
                                               <xs:attribute name="expiration" type="xs:dateTime" use="optional" />
@@ -1574,13 +1590,13 @@
                                   </xs:complexType>
                                 </xs:element>
                               </xs:all>
-                              <xs:attribute type="xs:string" name="id" use="required" />
+                              <xs:attribute type="shortString" name="id" use="required" />
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1">
+                    <xs:element type="shortString" name="referenceId" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Can be used to track the original creation id (this should usualy be unique to the property)</xs:documentation>
                       </xs:annotation>
@@ -1598,8 +1614,8 @@
                             <xs:complexType>
                               <xs:all>
                                 <xs:element name="address" type="address" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1" />
-                                <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="shortString" name="legalName" minOccurs="0" maxOccurs="1" />
+                                <xs:element type="shortString" name="brand" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
                                 <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
@@ -1611,14 +1627,14 @@
                                   <xs:complexType>
                                     <xs:simpleContent>
                                       <xs:extension base="xs:anyURI">
-                                        <xs:attribute type="xs:string" name="title" />
-                                        <xs:attribute type="xs:string" name="label" />
+                                        <xs:attribute type="shortString" name="title" />
+                                        <xs:attribute type="shortString" name="label" />
                                       </xs:extension>
                                     </xs:simpleContent>
                                   </xs:complexType>
                                 </xs:element>
                               </xs:all>
-                              <xs:attribute type="xs:string" name="id" use="optional" />
+                              <xs:attribute type="shortString" name="id" use="optional" />
                             </xs:complexType>
                           </xs:element>
                           <xs:element type="person" name="contactPerson" minOccurs="0" maxOccurs="1">
@@ -1661,14 +1677,14 @@
                       </xs:complexType>
                     </xs:element>
                     <!-- not important optional stuff -->
-                    <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1">
+                    <xs:element type="shortString" name="visualReferenceId" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <!-- additional information about the data itself -->
                   </xs:all>
-                  <xs:attribute type="xs:string" name="id" use="required">
+                  <xs:attribute type="shortString" name="id" use="required">
                     <xs:annotation>
                       <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as referenceId if the exporter is the original creator)
                       </xs:documentation>
