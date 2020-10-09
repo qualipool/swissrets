@@ -718,11 +718,10 @@
                 <xs:documentation>Optional price range to describe a more flexible pricing model for purchase</xs:documentation>
               </xs:annotation>
               <xs:complexType>
-                <xs:all>
+                <xs:sequence>
                   <xs:element minOccurs="1" maxOccurs="1" name="min" type="xs:positiveInteger" />
                   <xs:element minOccurs="1" maxOccurs="1" name="max" type="xs:positiveInteger" />
-                </xs:all>
-                <xs:assert test="min le max"/>
+                </xs:sequence>
               </xs:complexType>
             </xs:element>
             <xs:element name="wirPercentage" type="percent" minOccurs="0" maxOccurs="1">
