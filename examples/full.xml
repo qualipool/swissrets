@@ -242,6 +242,10 @@
         <buy referring="all">
           <price>850000</price>
           <extra>25000</extra>
+          <priceRange>
+            <min>750000</min>
+            <max>950000</max>
+          </priceRange>
           <wirPercentage>5</wirPercentage>
         </buy>
         <auction start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:13">745</auction>

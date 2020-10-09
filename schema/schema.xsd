@@ -713,6 +713,19 @@
           <xs:all>
             <xs:element minOccurs="1" maxOccurs="1" name="price" type="xs:positiveInteger" />
             <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
+            <xs:element name="priceRange" minOccurs="0" maxOccurs="1">
+              <xs:annotation>
+                <xs:documentation>Optional price range to describe a more flexible pricing model for purchase</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:all>
+                  <xs:element minOccurs="1" maxOccurs="1" name="min" type="xs:positiveInteger" />
+                  <xs:element minOccurs="1" maxOccurs="1" name="max" type="xs:positiveInteger" />
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" name="priceFrom" type="xs:positiveInteger" />
+            <xs:element minOccurs="0" maxOccurs="1" name="priceTo" type="xs:positiveInteger" />
             <xs:element name="wirPercentage" type="percent" minOccurs="0" maxOccurs="1">
               <xs:annotation>
                 <xs:documentation>The percententage of the gross price which has to paid in WIR Franc electronic currency.</xs:documentation>
