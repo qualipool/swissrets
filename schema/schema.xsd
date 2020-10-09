@@ -721,8 +721,8 @@
                 <xs:all>
                   <xs:element minOccurs="1" maxOccurs="1" name="min" type="xs:positiveInteger" />
                   <xs:element minOccurs="1" maxOccurs="1" name="max" type="xs:positiveInteger" />
-                  <xs:assert test="min le max"/>
                 </xs:all>
+                <xs:assert test="min le max"/>
               </xs:complexType>
             </xs:element>
             <xs:element name="wirPercentage" type="percent" minOccurs="0" maxOccurs="1">
