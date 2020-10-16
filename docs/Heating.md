@@ -17,3 +17,12 @@ photovoltaics | In general, thermal photovoltaics use solar cells to convert the
 solar-thermal | The conversion of sunlight into heat for water heating using a solar thermal collector
 wood-pellet | Wood pellets, small pellets from wood chips and sawdust, are combusted.
 wood | Burning wood fuel and wood-derived biomass fuel, such as sawdust bricks.
+
+# Heating distribution
+
+How the heating system distributes and maintains temperature.
+
+key | description
+:--- | :---
+radiator |
+floor |
