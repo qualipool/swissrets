@@ -559,6 +559,11 @@
           <xs:documentation>Number of apartements contained.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="numberOfCommercialUnits" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Indicates the number of commercial units (i.e. needed for investment properties) for a single listing/publication.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="numberOfBathrooms" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Number of bathrooms.</xs:documentation>
