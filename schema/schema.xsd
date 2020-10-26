@@ -559,6 +559,11 @@
           <xs:documentation>Number of apartements contained.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="numberOfBuildings" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Number of buildings within offer (Relevant for investment properties).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="numberOfBathrooms" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Number of bathrooms.</xs:documentation>
