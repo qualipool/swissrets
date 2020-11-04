@@ -142,3 +142,4 @@ volumeSiaAvv | Volume SIA-AVV in m³ | positiveDecimal
 volumeSiaGv | Volume SIA-GV in m³ | positiveDecimal
 yearBuilt | Year of construction, in four digits. | year
 yearLastRenovated | Year of last renovation, in four digits. | year
+isVatOpted | A way to indicate whether a property is opted to tax or not. This information is relevant predominantly for the transaction of investment properties. | [applicable](#type-applicable)
