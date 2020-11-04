@@ -243,6 +243,7 @@
           <price>850000</price>
           <extra>25000</extra>
           <wirPercentage>5</wirPercentage>
+          <yearlyOperationAndMaitenanceCosts>50123</yearlyOperationAndMaitenanceCosts>
         </buy>
         <auction start="2012-12-13T12:12:12" expiration="2012-12-13T12:12:13">745</auction>
         <deposit type="bank-guarantee">60000</deposit>
