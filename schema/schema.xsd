@@ -669,6 +669,11 @@
           <xs:documentation>Year of last renovation, in four digits.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="yearlyOperationAndMaitenanceCosts" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Refers to the extra costs (operational and maintenance) per year that this property costs when owning it.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:all>
   </xs:complexType>
   <xs:complexType name="person">
@@ -716,11 +721,6 @@
             <xs:element name="wirPercentage" type="percent" minOccurs="0" maxOccurs="1">
               <xs:annotation>
                 <xs:documentation>The percententage of the gross price which has to paid in WIR Franc electronic currency.</xs:documentation>
-              </xs:annotation>
-            </xs:element>
-            <xs:element name="yearlyOperationAndMaitenanceCosts" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
-              <xs:annotation>
-                <xs:documentation>Refers to the extra costs (operational and maintenance) per year that this property costs when owning it.</xs:documentation>
               </xs:annotation>
             </xs:element>
           </xs:all>
