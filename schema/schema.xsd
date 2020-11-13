@@ -226,7 +226,17 @@
       </xs:element>
       <xs:element name="grossPremium" type="percent" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>A gross premium is the total premium of an insurance contract before brokerage or discounts have been deducted, in percent.</xs:documentation>
+          <xs:documentation>Current gross return in percentage by reporting date (Net annual rental income x 100 / investment costs)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="grossPremiumTarget" type="percent" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Targeted gross return in percentage (Net annual rental income x 100 / investment costs) if fully rented out.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="netPremium" type="percent" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Current net return in percentage (Net annual rental income - operation and maintenance costs) x 100 / investment costs).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hallHeight" type="positiveDecimal" minOccurs="0" maxOccurs="1">
