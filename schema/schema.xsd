@@ -669,6 +669,16 @@
           <xs:documentation>Year of last renovation, in four digits.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="rentalIncomeNet" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Current annual income excluding extra costs.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="rentalIncomeNetMaxPotential" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Max potential annual rental income if completely rented out excluding extra costs.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:all>
   </xs:complexType>
   <xs:complexType name="person">
