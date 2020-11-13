@@ -47,6 +47,8 @@ The element `<auction>` has the following distinctions:
 </property>
 ```
 
+## Bidding process
+
 Property for sale within a bidding war. Here anyone can bid a sum that is larger or equal to the asking price. The bidder with the largest commitment usually wins.
 
 The element `<bidding>` has the following distinctions:
@@ -60,12 +62,13 @@ The element `<bidding>` has the following distinctions:
 <property>
     <availability start="2018-12-13T12:12:12" expiration="2019-12-13T12:12:12">active</availability>
     <prices currency="CHF">
-        <bidding start="2012-12-13T12:12:12" bindingStart="2012-12-14T12:12:12" expiration="2012-12-15T12:12:13">745</auction>
+        <bidding start="2012-12-13T12:12:12" bindingStart="2012-12-14T12:12:12" expiration="2012-12-15T12:12:13">745</bidding>
     </prices>
 </property>
 ```
 
-Property for rent.
+## Property for rent.
+
 * **gross**: The total price (net + extra)
 * **net**: The cost minus extra costs (gross - extra)
 * **extra**: the difference between gross and net (gross - net)
