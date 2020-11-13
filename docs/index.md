@@ -25,6 +25,7 @@ Schema location declaration for validation.
 1. Details
    - [Attachments](./Attachments.md) - images, documents, links
    - [Availability](Availability.md) - lifecycle states
+   - [Prices](Prices.md) - Some clarifications for pricings (buy, rent, auction, bidding)
    - [Categories](Categories.md) - categorization
    - [Characteristics](./Characteristics.md) - facts and features
       - [Applicables](./Characteristics.md#type-applicable)
