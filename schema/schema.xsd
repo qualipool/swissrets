@@ -226,7 +226,7 @@
       </xs:element>
       <xs:element name="grossPremium" type="percent" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Current gross return in percentage by reporting date (Net annual rental income x 100 / investment costs)</xs:documentation>
+          <xs:documentation>Current gross return in percentage (Net annual rental income x 100 / investment costs)</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="grossPremiumTarget" type="percent" minOccurs="0" maxOccurs="1">
