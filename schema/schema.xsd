@@ -1327,6 +1327,11 @@
                                     <xs:documentation>heatpump-air-and-water -</xs:documentation>
                                   </xs:annotation>
                                 </xs:enumeration>
+                                <xs:enumeration value="heatpump-brine-and-water">
+                                  <xs:annotation>
+                                    <xs:documentation>heatpump-brine-and-water - Heat is generated using earthern temperature and transported with water to the surface.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="heatpump">
                                   <xs:annotation>
                                     <xs:documentation>heatpump - Heating and/or cooling system that transfers heat to or from the ground using a pump.</xs:documentation>
@@ -1355,6 +1360,17 @@
                                 <xs:enumeration value="wood">
                                   <xs:annotation>
                                     <xs:documentation>wood - Burning wood fuel and wood-derived biomass fuel, such as sawdust bricks.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="coal">
+                                  <xs:annotation>
+                                    <xs:documentation>coal - Burning coal fuel.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="bhkw">
+                                  <xs:annotation>
+                                    <xs:documentation>bhkw - A block-type thermal power station (BHKW) is a modular system for generating electrical energy and heat, which is preferably operated at the place where the heat is consumed.
+                                      .</xs:documentation>
                                   </xs:annotation>
                                 </xs:enumeration>
                               </xs:restriction>
