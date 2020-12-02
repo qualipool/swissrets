@@ -1454,6 +1454,11 @@
                                           <xs:documentation>Floorplan image or document.</xs:documentation>
                                         </xs:annotation>
                                       </xs:element>
+                                      <xs:element name="landRegisterExtract" type="attachmentDocument" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>A document given to political officials (commune) with basic information portraying the property and it's registrational validity.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
                                       <xs:element name="linkDirect" type="attachmentLink" minOccurs="0" maxOccurs="unbounded">
                                         <xs:annotation>
                                           <xs:documentation>Direct deeplink or original URL of the property.</xs:documentation>

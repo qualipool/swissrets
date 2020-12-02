@@ -206,6 +206,11 @@
               <title>The plan</title>
               <mimeType>image/jpeg</mimeType>
             </plan>
+            <landRegisterExtract>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The plan</title>
+              <mimeType>applicationn/pdf</mimeType>
+            </landRegisterExtract>
             <linkDirect>
               <url>http://www.someorg.com/dg546jdl</url>
               <title>The direct link</title>
