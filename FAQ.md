@@ -1,17 +1,15 @@
-[**◀ Home**](./)
+[**◀ Home**](index.md)
 
-
+# FAQ
 General questions and answers that have not found their place within the documentation yet get placed here.
 
-### How can I declare videos
+## How to map IDX 3.01 to Swissrets.
+It's recommendet to use the [Qualipool agreed mapping table](https://docs.google.com/spreadsheets/d/1NKx8oDF16AMF8nMXmaa4OQTC0iu9NdDPB2rN1pCa2vA/edit#gid=1387607905).
 
-TODO
+## How can I specify an offer "on request"
+Simply ommit the `<rent>` or `<buy>` tag within `<prices>`.
 
-### How to use custom fields
-
-TODO
-
-### How to specify local files
+## How to specify local files
 Whenever possible, try to **avoid using local files**. For all the other cases use the [file URI scheme](https://en.wikipedia.org/wiki/File_URI_scheme).
 
 <details>
@@ -33,8 +31,7 @@ Would result in using the following **export.xml**
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="https://swissrets.ch/v1.0.0/schema.xsd">
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://swissrets.ch/v1.0.0/schema.xsd">
   <properties>
     <property id="120080">
       <referenceId>LA-644238</referenceId>
