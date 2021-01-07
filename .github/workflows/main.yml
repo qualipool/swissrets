@@ -35,9 +35,9 @@ jobs:
     - run: npm install
     - name: build xsddoc static files
       run: npm run xsddoc
-    - name: add changes from docs/docs
-      run: git add docs/docs
-    - name: commit changes from docs/docs
-      run: git commit -m "committing xsddoc files"
-    - name: push changes
-      run: git push"
+    - name: commit xsddoc into documentation
+      uses: EndBug/add-and-commit@v6
+      with:
+        add: 'docs/docs'
+        author_name: 'xsddoc'
+        message: 'Build of new xsddocs from a GitHub action'
