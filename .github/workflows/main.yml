@@ -15,14 +15,14 @@ jobs:
       uses: ChristophWurst/xmllint-action@v1
       with:
         xml-file: ./examples/full.xml
-        xml-schema-file: ./schema.xsd
+        xml-schema-file: ./schema/schema.xsd
     - name: Lint minimal.xml
       uses: ChristophWurst/xmllint-action@v1
       with:
         xml-file: ./examples/minimal.xml
-        xml-schema-file: ./schema.xsd
+        xml-schema-file: ./schema/schema.xsd
     - name: Lint multiple.xml
       uses: ChristophWurst/xmllint-action@v1
       with:
         xml-file: ./examples/multiple.xml
-        xml-schema-file: ./schema.xsd
+        xml-schema-file: ./schema/schema.xsd
