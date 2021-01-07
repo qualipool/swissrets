@@ -25,3 +25,12 @@ jobs:
       with:
         xml-file: ./examples/multiple.xml
         xml-schema-file: ./schema/schema.xsd
+  xsd-docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '10'
+    - run: npm install
+    - run: npm run xsddoc
