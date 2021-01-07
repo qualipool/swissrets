@@ -1,7 +1,7 @@
 name: Lint
 
 on:
-  push:
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -33,4 +33,11 @@ jobs:
       with:
         node-version: '10'
     - run: npm install
-    - run: npm run xsddoc
+    - name: build xsddoc static files
+      run: npm run xsddoc
+    - name: add changes from docs/docs
+      run: git add docs/docs
+    - name: commit changes from docs/docs
+      run: git commit -m "committing xsddoc files"
+    - name: push changes
+      run: git push"
