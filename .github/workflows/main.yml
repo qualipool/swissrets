@@ -1,0 +1,28 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  xml-linters:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@github-actions
+    - name: Lint full.xml
+      uses: ChristophWurst/xmllint-action@v1
+      with:
+        xml-file: ./examples/full.xml
+        xml-schema-file: ./schema.xsd
+    - name: Lint minimal.xml
+      uses: ChristophWurst/xmllint-action@v1
+      with:
+        xml-file: ./examples/minimal.xml
+        xml-schema-file: ./schema.xsd
+    - name: Lint multiple.xml
+      uses: ChristophWurst/xmllint-action@v1
+      with:
+        xml-file: ./examples/multiple.xml
+        xml-schema-file: ./schema.xsd
