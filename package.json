@@ -6,12 +6,11 @@
     "doc": "docs"
   },
   "scripts": {
-    "lint": "standard",
+    "lint": "node scripts/lint",
     "xsddoc": "node scripts/xsddoc",
     "start": "nodemon --exec 'npm test -s'",
     "test": "dotnet test scripts/tests/SwissRETS.Tests.csproj",
-    "postversion": "node scripts/postversion",
-    "xsddocs": "node scripts/xsddocs"
+    "postversion": "node scripts/postversion"
   },
   "repository": {
     "type": "git",
@@ -43,5 +42,8 @@
       "examples/*",
       "schema/schema.xsd"
     ]
+  },
+  "dependencies": {
+    "xmllint": "^0.1.1"
   }
 }
