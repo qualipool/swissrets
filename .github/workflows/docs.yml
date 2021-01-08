@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  xsd-docs:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
