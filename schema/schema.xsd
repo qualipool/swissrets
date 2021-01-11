@@ -1246,6 +1246,11 @@
                               <xs:documentation>The flat identifier of the swiss population register</xs:documentation>
                             </xs:annotation>
                           </xs:element>
+                          <xs:element type="xs:string" name="egrid" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>The property (plot) identifier of the swiss population register. example: CH111111111122 ({country}{10 digits}{2 digit checkcode}).</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
@@ -1357,6 +1362,11 @@
                                     <xs:documentation>wood - Burning wood fuel and wood-derived biomass fuel, such as sawdust bricks.</xs:documentation>
                                   </xs:annotation>
                                 </xs:enumeration>
+                                <xs:enumeration value="coal">
+                                  <xs:annotation>
+                                    <xs:documentation>coal - Burning coal fuel.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -1456,7 +1466,7 @@
                                       </xs:element>
                                       <xs:element name="linkDirect" type="attachmentLink" minOccurs="0" maxOccurs="unbounded">
                                         <xs:annotation>
-                                          <xs:documentation>Direct deeplink or original URL of the property.</xs:documentation>
+                                          <xs:documentation>"direct-link" defines a link that will link visitors "directly" to the offer. For example from a List of properties one will be linked to the project website directly if clicked. This is usually used by websites, and portals tend to ignore that and kann opt into simply representing them as normal "link" types.</xs:documentation>
                                         </xs:annotation>
                                       </xs:element>
                                       <xs:element name="link" type="attachmentLink" minOccurs="0" maxOccurs="unbounded">
