@@ -24,11 +24,11 @@ const execConfig = {
   await fs.ensureDir(outputDir)
   await fs.copy(inputFile, outputFile)
 
-  await exec(`git add -A`, execConfig)
-  await exec(`git commit -am "Add dist file"`, execConfig)
+  await exec('git add -A', execConfig)
+  await exec('git commit -am "Add dist file"', execConfig)
   await exec(`git tag -fa v${version} -m "v${version}"`, execConfig)
-  await exec(`git push origin`, execConfig)
-  await exec(`git push origin --tags`, execConfig)
+  await exec('git push origin', execConfig)
+  await exec('git push origin --tags', execConfig)
 
   log.success('Distribution version file pushed')
 })()
