@@ -1357,6 +1357,11 @@
                                     <xs:documentation>wood - Burning wood fuel and wood-derived biomass fuel, such as sawdust bricks.</xs:documentation>
                                   </xs:annotation>
                                 </xs:enumeration>
+                                <xs:enumeration value="coal">
+                                  <xs:annotation>
+                                    <xs:documentation>coal - Burning coal fuel.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:enumeration>
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
