@@ -1246,6 +1246,11 @@
                               <xs:documentation>The flat identifier of the swiss population register</xs:documentation>
                             </xs:annotation>
                           </xs:element>
+                          <xs:element type="xs:string" name="egrid" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>The property (plot) identifier of the swiss population register. example: CH111111111122 ({country}{10 digits}{2 digit checkcode}).</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
                         </xs:all>
                       </xs:complexType>
                     </xs:element>
