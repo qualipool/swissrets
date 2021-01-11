@@ -9,7 +9,7 @@ key | description
 document | Specifications, brochures and other descriptive files.
 image | Picture from inside or outside, typically used in image galleries.
 link | An arbitrary related link.
-linkDirect | Direct deeplink or original URL of the property.
+linkDirect | "direct-link" defines a link that will link visitors "directly" to the offer. For example from a List of properties one will be linked to the project website directly if clicked. This is usually used by websites, and portals tend to ignore that and kann opt into simply representing them as normal "link" types.
 linkVirtualTour | Virtual tour link, typically used for embeddings and integrations.
 linkYoutube | Video link, typically used for embeddings and integrations.
 logo | Related logo image.
