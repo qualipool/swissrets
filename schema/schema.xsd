@@ -1201,7 +1201,7 @@
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="property" maxOccurs="unbounded" minOccurs="1">
+              <xs:element name="property" maxOccurs="unbounded" minOccurs="0">
                 <xs:annotation>
                   <xs:documentation>Property container for buildings, houses, flats and all other possible objects.</xs:documentation>
                 </xs:annotation>
