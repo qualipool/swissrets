@@ -12,7 +12,7 @@
     "xsddoc": "node scripts/xsddoc",
     "start": "nodemon --exec 'npm test -s'",
     "test": "node scripts/xmllint",
-    "postversion": "node scripts/postversion"
+    "publish-version": "node scripts/publish-version"
   },
   "repository": {
     "type": "git",
