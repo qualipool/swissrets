@@ -4,7 +4,6 @@ const path = require('path')
 const schemaPath = path.join(__dirname, '..', '..', 'schema', 'schema.xsd')
 const glob = require('glob')
 const { log } = require('../lib')
-// process.setMaxListeners(100);
 
 fs.readFile(schemaPath, {}, (err, schema) => {
   if (err) {
