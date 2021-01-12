@@ -1,9 +1,9 @@
 name: UpdateDocs
 
 on:
-  push:
-    branches:
-      - master
+  create:
+    tags:
+      - v*
   workflow_dispatch:
 
 jobs:
