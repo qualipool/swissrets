@@ -51,10 +51,10 @@ fs.readFile(schemaPath, {}, (err, schema) => {
           })
 
           if (!result.errors) {
-            log.failure(`❌ file should have failed but it did not: ${file}`)
+            log.failure(`❌ File should have failed but it did not: ${file}`)
             process.exit(1)
           } else {
-            log.success(`✅ errors found and expected for this file: ${file}`)
+            log.success(`✅ Errors found and expected for this file: ${file}`)
             result.errors.forEach((singleError) => {
               log.info(singleError)
             })
