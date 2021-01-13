@@ -14,7 +14,7 @@ Schema location declaration for validation.
 <?xml version="1.0" encoding="utf-8"?>
 <export
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.0.0/schema.xsd"
+  xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.1.0/schema.xsd"
   >
   <!-- ... -->
 </export>
@@ -31,6 +31,7 @@ Schema location declaration for validation.
       - [SIA-areas](./SIA-areas.md) - area definitions according to [SIA 416](http://www.svkg.ch/)
    - [Usage FAQ](FAQ)
    - [Utilizations](Utilizations.md) - usage groups
+   - [Heating generation and distribution](./Heating.md)
 1. [Example](https://github.com/qualipool/swissrets/tree/master/examples) files
 1. [Changelog](https://github.com/qualipool/swissrets/releases)
    Complete release history and migration paths for braking changes

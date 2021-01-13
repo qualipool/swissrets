@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.0.0/schema.xsd">
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.1.0/schema.xsd">
   <properties>
     <property id="1245687">
-      <referenceId>LA-644238</referenceId>
       <availability>active</availability>
       <type>rent</type>
       <address>
@@ -11,9 +10,8 @@
         <postalCode>3038</postalCode>
       </address>
       <localizations>
-        <localization lang="de">
+        <localization lang="en">
           <name>Calm and beautiful flat</name>
-          <phone>+41  65463218</phone>
         </localization>
       </localizations>
     </property>

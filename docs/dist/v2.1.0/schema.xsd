@@ -1016,16 +1016,6 @@
           <xs:documentation>workshop - A room or building in which goods are manufactured or repaired, for commercial or business reasons.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="plot">
-        <xs:annotation>
-          <xs:documentation>Land area or a piece of empty property.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="parking-space">
-        <xs:annotation>
-          <xs:documentation>Simple non-descriptive place to park a car.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="emailaddress">

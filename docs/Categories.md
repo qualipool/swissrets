@@ -58,11 +58,10 @@ cafe | - | Cafe | Cafe | -
 car-repair-shop | - | Car repair shop | Garage | -
 castle | - | Castle | Schloss | -
 chalet | Chalet | Chalet | Chalet | Chalet
+earth-sheltered-dwelling | - | Earth sheltered dwelling | Erdhaus | -
 detached-house | Maison individuelle | Single house | Einfamilienhaus | Casa unifamiliare
 doctors-office | - | Doctors office | Praxis | -
 duplex-house | Duplex | Duplex | Duplex | Casa bifamiliare
-earth-sheltered-dwelling | - | Earth sheltered dwelling | Erdhaus | -
-farm | Ferme | Farm | Bauernhaus | Fattoria
 farm-house | - | Farm house | Bauernhaus | -
 furnished-flat | Appartement meublé | Furnished flat | Möblierte Wohnung | Appartamento ammobiliato
 granny-flat | - | Granny flat | Einliegerwohnung | -
@@ -79,6 +78,7 @@ roof-flat | Appartement mansardé | Roof flat | Dachwohnung | Appartamento mansa
 row-house | Maison mitoyenne | Row house | Reihenhaus | Casa a schiera
 rustico | Rustico | Rustico | Rustico | Rustico
 single-room | Chambre individuelle | Single room | Einzelzimmer | Singola
+stoeckli | | | |
 stepped-flat | Appartement en terrasse | Terrace flat | Terrassenwohnung | Terrazza appartamento
 stepped-house | Maison en terrasse | Terrace house | Terrassenhaus | Casa a schiera
 villa | Villa | Villa | Villa | Villa
