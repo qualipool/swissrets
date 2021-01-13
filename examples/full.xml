@@ -116,6 +116,7 @@
         <hasTiledStove>applies</hasTiledStove>
         <hasTumbleDryer>applies</hasTumbleDryer>
         <hasWashingMachine>applies</hasWashingMachine>
+        <hasRemoteViewings>applies</hasRemoteViewings>
         <isChildFriendly>applies</isChildFriendly>
         <isCornerHouse>applies</isCornerHouse>
         <isDemolitionProperty>applies</isDemolitionProperty>
