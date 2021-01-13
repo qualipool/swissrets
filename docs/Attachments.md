@@ -14,4 +14,4 @@ linkVirtualTour | Virtual tour link, typically used for embeddings and integrati
 linkYoutube | Video link, typically used for embeddings and integrations.
 logo | Related logo image.
 plan | Floorplan image or document.
-landRegisterExtract | A document given to political officials (commune) with basic information portraying the property and it's registrational validity.
+landRegisterExtract | A document given to political officials (commune) with basic information portraying the property and it's registrational validity. (>= v2.2.0)
