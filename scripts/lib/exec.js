@@ -12,11 +12,11 @@ const buffersToString = (buffers, trim) => {
 const getResult = ({ stdout, stderr, command, args, trim, resolveTo, ...rest }) => resolveTo === 'string'
   ? buffersToString(stdout, trim)
   : {
-    ...rest,
-    command: `${command} ${args.join(' ')}`,
-    stdout: buffersToString(stdout, trim),
-    stderr: buffersToString(stderr, trim)
-  }
+      ...rest,
+      command: `${command} ${args.join(' ')}`,
+      stdout: buffersToString(stdout, trim),
+      stderr: buffersToString(stderr, trim)
+    }
 
 const error = bareResult => {
   const err = new Error(`Process exited with code ${bareResult.code}`)
@@ -66,7 +66,7 @@ const exec = (command, options = {}) => {
   } = mergedOptions
 
   command = command.trim()
-  let args = []
+  const args = []
 
   if (printCommand) {
     log('>', command)

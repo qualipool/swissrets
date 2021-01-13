@@ -424,11 +424,6 @@
           <xs:documentation>For washing clothes and other cloth.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hasRemoteViewings" type="applicable" minOccurs="0" maxOccurs="1">
-        <xs:annotation>
-          <xs:documentation>Indicates that prospects can visit the property virtually (i.e. with a video-call or guided virtual-tour hosted by the real estate agent)</xs:documentation>
-        </xs:annotation>
-      </xs:element>
       <xs:element name="isChildFriendly" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Suitable for families.</xs:documentation>

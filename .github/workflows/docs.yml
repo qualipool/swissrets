@@ -1,0 +1,25 @@
+name: UpdateDocs
+
+on:
+  create:
+    tags:
+      - v*
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '10'
+    - run: npm install
+    - name: build xsddoc static files
+      run: npm run xsddoc
+    - name: commit xsddoc into documentation
+      uses: EndBug/add-and-commit@v6
+      with:
+        add: 'docs/docs'
+        author_name: 'xsddoc'
+        message: 'Build of new xsddocs from a GitHub action'
