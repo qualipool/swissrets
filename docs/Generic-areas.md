@@ -11,11 +11,11 @@ key | description
 areaBwf | Living area in m², this is the more typically used and includes areas such as stairs or hallways.
 areaNwf | Net living area in m², sometimes referred to as the minimum area that could be represented as "livable space".
 areaPropertyLand | Property land area in m².
-areaCellar | Space allocated in cellar included within the offer.
-areaBalcony | If there is a balcony (non ground floor outside area) this field would specify the m².
-areaTerrace | Usually ground floor outside seating area.
-areaLoggia | Usually refers to a covered not necessarily heated area with fresh air, but not opened up to the outside.
-areaGarden | Area dedicated to growing plants or a garden. To differentiate from something like a Terrace.
+areaCellar | Space allocated in cellar included within the offer. (>= v2.2.0)
+areaBalcony | If there is a balcony (non ground floor outside area) this field would specify the m². (>= v2.2.0)
+areaTerrace | Usually ground floor outside seating area. (>= v2.2.0)
+areaLoggia | Usually refers to a covered not necessarily heated area with fresh air, but not opened up to the outside. (>= v2.2.0)
+areaGarden | Area dedicated to growing plants or a garden. To differentiate from something like a Terrace. (>= v2.2.0)
 
 # Translations
 
