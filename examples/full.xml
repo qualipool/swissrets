@@ -207,8 +207,8 @@
               <mimeType>image/jpeg</mimeType>
             </plan>
             <landRegisterExtract>
-              <url>http://www.someorg.com/dg546jdl</url>
-              <title>The plan</title>
+              <url>http://www.someorg.com/extract-file.pdf</url>
+              <title>Grundbuchauszug</title>
               <mimeType>applicationn/pdf</mimeType>
             </landRegisterExtract>
             <linkDirect>
