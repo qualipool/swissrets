@@ -43,8 +43,8 @@ stepped-flat | A set of rooms for living in, arranged in a staircase like manner
 stepped-house | A building containing one or more appartements arranged in a staircase manner, in order to maximize the outside space.
 villa | A large and luxurious house in its own grounds.
 workshop | A room or building in which goods are manufactured or repaired, for commercial or business reasons.
-plot | Land area or a piece of empty property.
-parking-space | Simple non-descriptive place to park a car.
+plot | Land area or a piece of empty property. (>= v2.2.0)
+parking-space | Simple non-descriptive place to park a car. (>= v2.2.0)
 
 ### Example translations
 
