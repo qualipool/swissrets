@@ -7,11 +7,12 @@
   },
   "scripts": {
     "lint": "standard",
+    "lint:fix": "standard --fix",
+    "xmllint": "node scripts/xmllint",
     "xsddoc": "node scripts/xsddoc",
     "start": "nodemon --exec 'npm test -s'",
-    "test": "dotnet test scripts/tests/SwissRETS.Tests.csproj",
-    "postversion": "node scripts/postversion",
-    "xsddocs": "node scripts/xsddocs"
+    "test": "node scripts/xmllint",
+    "publish-version": "node scripts/publish-version"
   },
   "repository": {
     "type": "git",
@@ -32,16 +33,18 @@
   },
   "homepage": "https://github.com/qualipool/swissrets#readme",
   "devDependencies": {
-    "chalk": "^2.4.2",
-    "fs-extra": "^8.0.1",
-    "globby": "^9.2.0",
-    "nodemon": "^1.19.1",
-    "standard": "^12.0.1"
+    "chalk": "^4.1.0",
+    "fs-extra": "^9.0.1",
+    "globby": "^11.0.2",
+    "nodemon": "^2.0.7",
+    "standard": "^16.0.3",
+    "xmllint": "^0.1.1"
   },
   "nodemonConfig": {
     "watch": [
       "examples/*",
       "schema/schema.xsd"
     ]
-  }
+  },
+  "dependencies": {}
 }
