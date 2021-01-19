@@ -1479,6 +1479,11 @@
                                           <xs:documentation>Floorplan image or document.</xs:documentation>
                                         </xs:annotation>
                                       </xs:element>
+                                      <xs:element name="landRegisterExtract" type="attachmentDocument" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>A document given to political officials (commune) with basic information portraying the property and its registrational validity.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
                                       <xs:element name="linkDirect" type="attachmentLink" minOccurs="0" maxOccurs="unbounded">
                                         <xs:annotation>
                                           <xs:documentation>"direct-link" defines a link that will link visitors "directly" to the offer. For example from a List of properties one will be linked to the project website directly if clicked. This is usually used by websites, and portals tend to ignore that and kann opt into simply representing them as normal "link" types.</xs:documentation>
