@@ -209,7 +209,7 @@
             <landRegisterExtract>
               <url>http://example.com/file.pdf</url>
               <title>Grundbuchauszug</title>
-              <mimeType>applicationn/pdf</mimeType>
+              <mimeType>application/pdf</mimeType>
             </landRegisterExtract>
             <linkDirect>
               <url>http://www.someorg.com/dg546jdl</url>
