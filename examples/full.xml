@@ -207,7 +207,7 @@
               <mimeType>image/jpeg</mimeType>
             </plan>
             <landRegisterExtract>
-              <url>http://www.someorg.com/extract-file.pdf</url>
+              <url>http://example.com/file.pdf</url>
               <title>Grundbuchauszug</title>
               <mimeType>applicationn/pdf</mimeType>
             </landRegisterExtract>
