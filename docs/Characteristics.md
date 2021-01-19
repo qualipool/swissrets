@@ -93,6 +93,7 @@ hasThermalSolarCollector | Whether or not a thermal solar collector system is pr
 hasTiledStove | A masonry heater or ceramic stove, is a device for warming an interior space usually fed with wood. | [applicable](#type-applicable)
 hasTumbleDryer | Dryer for clothes after washing them. | [applicable](#type-applicable)
 hasWashingMachine | For washing clothes and other cloth. | [applicable](#type-applicable)
+hasRemoteViewings | Indicates that prospects can visit the property virtually (e.g. with a video-call or guided virtual-tour hosted by the real estate agent). | [applicable](#type-applicable)
 isChildFriendly | Suitable for families. | [applicable](#type-applicable)
 isCornerHouse | A house situated on the corner of two streets. | [applicable](#type-applicable)
 isDemolitionProperty | If it's a tear-down property or a site of demolished structures. | [applicable](#type-applicable)
