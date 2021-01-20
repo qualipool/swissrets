@@ -121,6 +121,7 @@ isUnderRoof | Mainly used for parking slots. | [applicable](#type-applicable)
 isWellTended | Properly looked after. | [applicable](#type-applicable)
 isWheelchairAccessible | All aspects are accessible for wheelchair users. | [applicable](#type-applicable)
 numberOfApartements | Number of apartements contained. | positiveInteger
+numberOfCommercialUnits | Indicates the number of commercial units (i.e. needed for investment properties) for a single listing/publication. | positiveInteger
 numberOfBathrooms | Number of bathrooms. | positiveInteger
 numberOfFloors | Total amount of floors. | positiveInteger
 numberOfParcels | Number of parcels. | positiveInteger
