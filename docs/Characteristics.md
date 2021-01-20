@@ -53,7 +53,9 @@ craneCapacity | Carrying capacity for crane in kg. | positiveDecimal
 elevatorLoad | Maximum elevator load in kg. | positiveDecimal
 floor | Floor number, ground floor is 0, basement floors are negative. | integer
 floorLoad | Maximum floor load in kg/m² | positiveDecimal
-grossPremium | A gross premium is the total premium of an insurance contract before brokerage or | percentdiscounts have been deducted, in percent.
+grossPremium | Current gross return in percentage by reporting date (Net annual rental income x 100 / investment costs) | positiveDecimal
+grossPremiumTarget | Targeted gross return in percentage (Net annual rental income x 100 / investment costs) if fully rented out | positiveDecimal
+netPremium | Current net return in percentage (Net annual rental income - operation and maintenance costs) x 100 / investment costs) | positiveDecimal
 hallHeight | Hall height in m, usually for commercial properties. | positiveDecimal
 hasAttic | Has an attic. | [applicable](#type-applicable)
 hasBalcony | Balcony available. | [applicable](#type-applicable)
