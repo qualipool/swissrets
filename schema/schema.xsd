@@ -1457,16 +1457,7 @@
                                       </xs:element>
                                     </xs:all>
                                   </xs:complexType>
-                                </xs:element> <!-- <xs:element name="properties" maxOccurs="1" minOccurs="1">
-                                <xs:annotation>
-                                  <xs:documentation>List of property references</xs:documentation>
-                                </xs:annotation>
-                                <xs:complexType>
-                                  <xs:sequence>
-                                    <xs:element maxOccurs="unbounded" minOccurs="1" type="xs:string" name="propertyRef" />
-                                  </xs:sequence>
-                                </xs:complexType>
-                              </xs:element> -->
+                                </xs:element>
                               </xs:all>
                               <xs:attribute type="xs:ID" name="id" use="optional" />
                             </xs:complexType>
@@ -1493,12 +1484,10 @@
                 </xs:annotation>
                 <xs:complexType>
                   <xs:all>
-                    <xs:element name="projectUnitId" minOccurs="0" maxOccurs="1">
-                      <xs:complexContent>
-                        <xs:extension base="property">
-                          <xs:attribute name="refid" type="xs:IDREF" />
-                        </xs:extension>
-                      </xs:complexContent>
+                    <xs:element type="xs:string" name="projectUnitId" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Reference to a property:id</xs:documentation>
+                      </xs:annotation>
                     </xs:element>
                     <xs:element name="address" type="address" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
