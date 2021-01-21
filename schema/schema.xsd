@@ -1403,6 +1403,7 @@
                                   </xs:complexType>
                                 </xs:element>
                               </xs:all>
+                              <xs:attribute name="lang" type="languageCode" use="required" />
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
@@ -1439,6 +1440,7 @@
                                               </xs:annotation>
                                             </xs:element>
                                           </xs:all>
+                                          <xs:attribute name="lang" type="languageCode" use="required" />
                                         </xs:complexType>
                                       </xs:element>
                                     </xs:sequence>
