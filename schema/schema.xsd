@@ -1488,7 +1488,7 @@
                   <xs:all>
                     <xs:element type="xs:string" name="projectUnitId" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Reference to a property:id</xs:documentation>
+                        <xs:documentation>Reference to a project:unit:id</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <xs:element name="address" type="address" minOccurs="0" maxOccurs="1">
