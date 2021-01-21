@@ -1713,9 +1713,9 @@
                                     <xs:annotation>
                                       <xs:documentation source="https://en.wikipedia.org/wiki/File_URI_scheme">All attachements have an URL, to encurage the use of online available resources, if for some reason a public available resource is not suitable, the file URI scheme should be used.</xs:documentation>
                                     </xs:annotation>
-                                      <xs:sequence>
-                                        <xs:element name="image" type="attachmentImage" minOccurs="0" maxOccurs="unbounded" />
-                                        <xs:element name="logo" type="attachmentLogo" minOccurs="0" maxOccurs="unbounded" />
+                                    <xs:sequence>
+                                      <xs:element name="image" type="attachmentImage" minOccurs="0" maxOccurs="unbounded" />
+                                      <xs:element name="logo" type="attachmentLogo" minOccurs="0" maxOccurs="unbounded" />
                                       <xs:element name="document" type="attachmentDocument" minOccurs="0" maxOccurs="unbounded">
                                         <xs:annotation>
                                           <xs:documentation>Specifications, brochures and other descriptive files.</xs:documentation>

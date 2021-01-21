@@ -60,10 +60,6 @@
           <name>The best project of all time</name>
           <excerpt>This project is located in someplace and has a great view.</excerpt>
           <attachments>
-            <logo>
-              <url>http://www.someorg.com/dg546jdl</url>
-              <mimeType>image/jpeg</mimeType>
-            </logo>
             <image>
               <url>http://www.someorg.com/dg546jdl</url>
               <title>Groundwork</title>
@@ -76,6 +72,10 @@
               <description>Here we can see a bit of insight as to how it could appear when completed.</description>
               <mimeType>image/jpeg</mimeType>
             </image>
+            <logo>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <mimeType>image/jpeg</mimeType>
+            </logo>
             <plan>
               <url>http://www.someorg.com/dg546jdl</url>
               <title>The plan</title>
@@ -85,18 +85,18 @@
               <url>http://www.someorg.com/dg546jdl</url>
               <title>The direct link</title>
             </linkDirect>
-            <linkYoutube>
-              <url>http://www.youtube.com/dg546jdl</url>
-              <title>The video</title>
-            </linkYoutube>
-            <linkVirtualTour>
-              <url>http://www.virtualmax.com/dg546jdl</url>
-              <title>The virtual tour</title>
-            </linkVirtualTour>
             <link>
               <url>http://www.someorg.com/dg546jdl</url>
               <title>The link</title>
             </link>
+            <linkVirtualTour>
+              <url>http://www.virtualmax.com/dg546jdl</url>
+              <title>The virtual tour</title>
+            </linkVirtualTour>
+            <linkYoutube>
+              <url>http://www.youtube.com/dg546jdl</url>
+              <title>The video</title>
+            </linkYoutube>
           </attachments>
         </localization>
       </localizations>
