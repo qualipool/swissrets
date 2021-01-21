@@ -18,7 +18,6 @@
         </contactPerson>
       </seller>
       <availability start="2018-12-13T12:12:12" expiration="2019-12-13T12:12:12">active</availability>
-      <!-- planned|under-construction|ready|completed -->
       <constructionStatus>under-construction</constructionStatus> 
       <address>
         <countryCode>CH</countryCode>
@@ -36,12 +35,12 @@
           <elevation>350</elevation>
         </geo>
       </address>
-      <prices>
-        <rent interval="month|year|day" referring="m2|all|km2">
+      <prices currency="CHF">
+        <rent interval="month" referring="all">
           <netFrom>1000</netFrom>
           <netTo>5000</netTo>
         </rent>
-        <buy referring="m2|all|km2">
+        <buy referring="all">
           <priceFrom>250000</priceFrom>
           <priceTo>1000000</priceTo>
         </buy>

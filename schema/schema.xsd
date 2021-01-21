@@ -40,9 +40,29 @@
       </xs:element>
     </xs:all>
   </xs:complexType>
+  <xs:complexType name="attachmentImage">
+    <xs:annotation>
+      <xs:documentation>Picture from inside or outside, typically used in image galleries.</xs:documentation>
+    </xs:annotation>
+    <xs:all maxOccurs="1" minOccurs="1">
+      <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
+      <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
+      <xs:element type="xs:string" name="description" maxOccurs="1" minOccurs="0" />
+      <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="attachmentLogo">
+    <xs:annotation>
+      <xs:documentation>Related logo image.</xs:documentation>
+    </xs:annotation>
+    <xs:all maxOccurs="1" minOccurs="1">
+      <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
+      <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
   <xs:complexType name="attachmentDocument">
     <xs:annotation>
-      <xs:documentation>Localized document file attachemnt for properties.</xs:documentation>
+      <xs:documentation>Generic non-specific document.</xs:documentation>
     </xs:annotation>
     <xs:all maxOccurs="1" minOccurs="1">
       <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
@@ -1173,6 +1193,221 @@
                 <xs:complexType>
                   <xs:all>
                     <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="seller" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>The owner or the owners substitute (for example a broker).</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element type="person" name="contactPerson" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>Contact person for questions and typically responsible for making appointments.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="availability" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Mutually exclusive liveycle state.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="availability">
+                            <xs:attribute name="start" type="xs:dateTime" />
+                            <xs:attribute name="expiration" type="xs:dateTime" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="constructionStatus" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Construction status of project.</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:annotation />
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="planned" />
+                          <xs:enumeration value="under-construction" />
+                          <xs:enumeration value="ready" />
+                          <xs:enumeration value="completed" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="address" type="address" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Location of the property.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="prices" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Price ranges for marketing purposes.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element minOccurs="0" maxOccurs="1" name="rent">
+                            <xs:annotation>
+                              <xs:documentation>Recurring rental price.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element minOccurs="1" maxOccurs="1" name="netFrom" type="xs:positiveInteger" />
+                                <xs:element minOccurs="1" maxOccurs="1" name="netTo" type="xs:positiveInteger" />
+                              </xs:all>
+                              <xs:attribute name="interval" type="priceInterval" use="optional" />
+                              <xs:attribute name="referring" type="priceReferring" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" maxOccurs="1" name="buy">
+                            <xs:annotation>
+                              <xs:documentation>One time buy prices.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element minOccurs="1" maxOccurs="1" name="priceFrom" type="xs:positiveInteger" />
+                                <xs:element minOccurs="1" maxOccurs="1" name="priceTo" type="xs:positiveInteger" />
+                              </xs:all>
+                              <xs:attribute name="referring" type="priceReferring" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:all>
+                        <xs:attribute name="currency">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:minLength value="3" />
+                              <xs:maxLength value="3" />
+                              <xs:pattern value="[A-Z]{3}" />
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="characteristics" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Price ranges for marketing purposes.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="areaSiaNfFrom" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>areaSiaNfFrom</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="areaSiaNfTo" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>areaSiaNfTo</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="areaBwfFrom" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>areaBwfFrom</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="areaBwfTo" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>areaBwfTo</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="numberOfRoomsFrom" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>numberOfRoomsFrom</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="numberOfRoomsTo" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>numberOfRoomsTo</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="numberOfResidentialUnits" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>numberOfResidentialUnits</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="numberOfCommercialUnits" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>numberOfCommercialUnits</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="localizations" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Sequence of all language specific content and texts.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="localization" minOccurs="1" maxOccurs="unbounded">
+                            <xs:annotation>
+                              <xs:documentation>One for each language, a set of language specific content and texts.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Simple marketing title.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>A short extract from description, location and equipment.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="attachments" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Sequence links, files, embeds and media.</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:annotation>
+                                      <xs:documentation source="https://en.wikipedia.org/wiki/File_URI_scheme">All attachements have an URL, to encurage the use of online available resources, if for some reason a public available resource is not suitable, the file URI scheme should be used.</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:sequence>
+                                      <xs:element name="image" type="attachmentImage" minOccurs="0" maxOccurs="unbounded" />
+                                      <xs:element name="logo" type="attachmentLogo" minOccurs="0" maxOccurs="unbounded" />
+                                      <xs:element name="document" type="attachmentDocument" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>Specifications, brochures and other descriptive files.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="plan" type="attachmentDocument" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>Floorplan image or document.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="landRegisterExtract" type="attachmentDocument" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>A document given to political officials (commune) with basic information portraying the property and its registrational validity.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="linkDirect" type="attachmentLink" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>"direct-link" defines a link that will link visitors "directly" to the offer. For example from a List of properties one will be linked to the project website directly if clicked. This is usually used by websites, and portals tend to ignore that and kann opt into simply representing them as normal "link" types.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="link" type="attachmentLink" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>An arbitrary related link.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="linkVirtualTour" type="attachmentLink" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>Virtual tour link, typically used for embeddings and integrations.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="linkYoutube" type="attachmentLink" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>Video link, typically used for embeddings and integrations.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
                     <xs:element name="units" maxOccurs="1" minOccurs="1">
                       <xs:annotation>
                         <xs:documentation>List of units.</xs:documentation>
@@ -1186,16 +1421,52 @@
                             <xs:complexType>
                               <xs:all>
                                 <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1" />
-                                <xs:element name="properties" maxOccurs="1" minOccurs="1">
+                                <xs:element name="localizations" minOccurs="1" maxOccurs="1">
                                   <xs:annotation>
-                                    <xs:documentation>List of property references</xs:documentation>
+                                    <xs:documentation>Sequence of all language specific content and texts.</xs:documentation>
                                   </xs:annotation>
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element maxOccurs="unbounded" minOccurs="1" type="xs:string" name="propertyRef" />
+                                      <xs:element name="localization" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>One for each language, a set of language specific content and texts.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element type="xs:string" name="name" minOccurs="1" maxOccurs="1">
+                                              <xs:annotation>
+                                                <xs:documentation>Simple marketing title for unit.</xs:documentation>
+                                              </xs:annotation>
+                                            </xs:element>
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
+                                <xs:element name="characteristics" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Price ranges for marketing purposes.</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:all>
+                                      <xs:element name="numberOfFloors" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
+                                        <xs:annotation>
+                                          <xs:documentation>Total amount of floors.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:all>
+                                  </xs:complexType>
+                                </xs:element> <!-- <xs:element name="properties" maxOccurs="1" minOccurs="1">
+                                <xs:annotation>
+                                  <xs:documentation>List of property references</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element maxOccurs="unbounded" minOccurs="1" type="xs:string" name="propertyRef" />
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element> -->
                               </xs:all>
                               <xs:attribute type="xs:ID" name="id" use="optional" />
                             </xs:complexType>
@@ -1222,6 +1493,13 @@
                 </xs:annotation>
                 <xs:complexType>
                   <xs:all>
+                    <xs:element name="projectUnitId" minOccurs="0" maxOccurs="1">
+                      <xs:complexContent>
+                        <xs:extension base="property">
+                          <xs:attribute name="refid" type="xs:IDREF" />
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:element>
                     <xs:element name="address" type="address" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Location of the property.</xs:documentation>
@@ -1444,31 +1722,9 @@
                                     <xs:annotation>
                                       <xs:documentation source="https://en.wikipedia.org/wiki/File_URI_scheme">All attachements have an URL, to encurage the use of online available resources, if for some reason a public available resource is not suitable, the file URI scheme should be used.</xs:documentation>
                                     </xs:annotation>
-                                    <xs:sequence>
-                                      <xs:element name="image" minOccurs="0" maxOccurs="unbounded">
-                                        <xs:annotation>
-                                          <xs:documentation>Picture from inside or outside, typically used in image galleries.</xs:documentation>
-                                        </xs:annotation>
-                                        <xs:complexType>
-                                          <xs:all maxOccurs="1" minOccurs="1">
-                                            <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
-                                            <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="0" />
-                                            <xs:element type="xs:string" name="description" maxOccurs="1" minOccurs="0" />
-                                            <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
-                                          </xs:all>
-                                        </xs:complexType>
-                                      </xs:element>
-                                      <xs:element name="logo" minOccurs="0" maxOccurs="unbounded">
-                                        <xs:annotation>
-                                          <xs:documentation>Related logo image.</xs:documentation>
-                                        </xs:annotation>
-                                        <xs:complexType>
-                                          <xs:all maxOccurs="1" minOccurs="1">
-                                            <xs:element type="xs:anyURI" name="url" maxOccurs="1" minOccurs="1" />
-                                            <xs:element type="mimeType" name="mimeType" maxOccurs="1" minOccurs="0" />
-                                          </xs:all>
-                                        </xs:complexType>
-                                      </xs:element>
+                                      <xs:sequence>
+                                        <xs:element name="image" type="attachmentImage" minOccurs="0" maxOccurs="unbounded" />
+                                        <xs:element name="logo" type="attachmentLogo" minOccurs="0" maxOccurs="unbounded" />
                                       <xs:element name="document" type="attachmentDocument" minOccurs="0" maxOccurs="unbounded">
                                         <xs:annotation>
                                           <xs:documentation>Specifications, brochures and other descriptive files.</xs:documentation>
