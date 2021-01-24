@@ -6,6 +6,7 @@
 /testsbin
 /scripts/xsddoc/.tmp
 /.vscode
+.idea
 bin
 obj
 .vs

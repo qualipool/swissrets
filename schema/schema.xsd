@@ -466,7 +466,7 @@
       </xs:element>
       <xs:element name="isGutted" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Preparation for demolition or a part-demolition, all contaminants, doors, windows, floors and non-loadbearing walls were removed.</xs:documentation>
+          <xs:documentation>Preparation for demolition or a part-demolition, all contaminants, doors, windows, floors and non-load bearing walls were removed.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isInNeedOfRenovation" type="applicable" minOccurs="0" maxOccurs="1">
@@ -491,7 +491,7 @@
       </xs:element>
       <xs:element name="isModernized" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Modernized means improved, thins like a better insulated roof and walls, modern heating system and similar imrovements.</xs:documentation>
+          <xs:documentation>Modernized means improved, thins like a better insulated roof and walls, modern heating system and similar improvements.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="isNewConstruction" type="applicable" minOccurs="0" maxOccurs="1">
@@ -561,7 +561,7 @@
       </xs:element>
       <xs:element name="numberOfApartements" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Number of apartements contained.</xs:documentation>
+          <xs:documentation>Number of apartments contained.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="numberOfBathrooms" type="xs:positiveInteger" minOccurs="0" maxOccurs="1">
@@ -720,7 +720,7 @@
             <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
             <xs:element name="wirPercentage" type="percent" minOccurs="0" maxOccurs="1">
               <xs:annotation>
-                <xs:documentation>The percententage of the gross price which has to paid in WIR Franc electronic currency.</xs:documentation>
+                <xs:documentation>The percentage of the gross price which has to paid in WIR Franc electronic currency.</xs:documentation>
               </xs:annotation>
             </xs:element>
           </xs:all>
@@ -767,7 +767,7 @@
           <xs:sequence>
             <xs:element minOccurs="1" maxOccurs="unbounded" name="offer">
               <xs:annotation>
-                <xs:documentation>An extra whitch causes additional costs.</xs:documentation>
+                <xs:documentation>An extra which causes additional costs.</xs:documentation>
               </xs:annotation>
               <xs:complexType>
                 <xs:simpleContent>
@@ -811,7 +811,7 @@
   <!-- simple types -->
   <xs:simpleType name="applicable">
     <xs:annotation>
-      <xs:documentation>Applicables can have three states, unknown must be thretened as default.</xs:documentation>
+      <xs:documentation>Applicable can have three states, unknown must be treated as default.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="applies" />
@@ -863,7 +863,7 @@
       </xs:enumeration>
       <xs:enumeration value="atelier">
         <xs:annotation>
-          <xs:documentation>atelier - A private workshop or studio of hobbiests or professionals.</xs:documentation>
+          <xs:documentation>atelier - A private workshop or studio of hobbyists or professionals.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="attic-flat">
@@ -953,7 +953,7 @@
       </xs:enumeration>
       <xs:enumeration value="multiplex-house">
         <xs:annotation>
-          <xs:documentation>multiplex-house - A divided house, more than two living units attached, either side by side and/or one above the other, also called multyfamily house or multiple-dwelling.</xs:documentation>
+          <xs:documentation>multiplex-house - A divided house, more than two living units attached, either side by side and/or one above the other, also called multifamily house or multiple-dwelling.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="office">
@@ -993,7 +993,7 @@
       </xs:enumeration>
       <xs:enumeration value="single-room">
         <xs:annotation>
-          <xs:documentation>single-room - A single room, typically for rent, does not neccessary include an own bathroom or kitchen, not to be confused with the 'one-room-flat' category.</xs:documentation>
+          <xs:documentation>single-room - A single room, typically for rent, does not necessarily include an own bathroom or kitchen, not to be confused with the 'one-room-flat' category.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="stoeckli">
@@ -1008,7 +1008,7 @@
       </xs:enumeration>
       <xs:enumeration value="stepped-house">
         <xs:annotation>
-          <xs:documentation>stepped-house - A building containing one or more appartements arranged in a staircase manner, in order to maximize the outside space.</xs:documentation>
+          <xs:documentation>stepped-house - A building containing one or more apartments arranged in a staircase manner, in order to maximize the outside space.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="villa">
@@ -1052,7 +1052,7 @@
   </xs:simpleType>
   <xs:simpleType name="languageCode">
     <xs:annotation>
-      <xs:documentation>Lowercase, two letter representaion of a language.</xs:documentation>
+      <xs:documentation>Lowercase, two letter representation of a language.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:length value="2" />
@@ -1108,7 +1108,7 @@
   </xs:simpleType>
   <xs:simpleType name="utilization">
     <xs:annotation>
-      <xs:documentation>The intended usage, onsidered as the superset of the categories.</xs:documentation>
+      <xs:documentation>The intended usage, considered as the superset of the categories.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="agricultural" />
@@ -1234,7 +1234,7 @@
                     </xs:element>
                     <xs:element name="availability" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Mutually exclusive liveycle state.</xs:documentation>
+                        <xs:documentation>Mutually exclusive lifecycle state.</xs:documentation>
                       </xs:annotation>
                       <xs:complexType>
                         <xs:simpleContent>
@@ -1354,7 +1354,7 @@
                                 </xs:enumeration>
                                 <xs:enumeration value="oil">
                                   <xs:annotation>
-                                    <xs:documentation>oil - Heating by burning fosile heating oil.</xs:documentation>
+                                    <xs:documentation>oil - Heating by burning fossil heating oil.</xs:documentation>
                                   </xs:annotation>
                                 </xs:enumeration>
                                 <xs:enumeration value="photovoltaics">
@@ -1442,7 +1442,7 @@
                                   </xs:annotation>
                                   <xs:complexType>
                                     <xs:annotation>
-                                      <xs:documentation source="https://en.wikipedia.org/wiki/File_URI_scheme">All attachements have an URL, to encurage the use of online available resources, if for some reason a public available resource is not suitable, the file URI scheme should be used.</xs:documentation>
+                                      <xs:documentation source="https://en.wikipedia.org/wiki/File_URI_scheme">All attachements have an URL, to encourage the use of online available resources, if for some reason a public available resource is not suitable, the file URI scheme should be used.</xs:documentation>
                                     </xs:annotation>
                                     <xs:sequence>
                                       <xs:element name="image" minOccurs="0" maxOccurs="unbounded">
@@ -1486,7 +1486,7 @@
                                       </xs:element>
                                       <xs:element name="linkDirect" type="attachmentLink" minOccurs="0" maxOccurs="unbounded">
                                         <xs:annotation>
-                                          <xs:documentation>"direct-link" defines a link that will link visitors "directly" to the offer. For example from a List of properties one will be linked to the project website directly if clicked. This is usually used by websites, and portals tend to ignore that and kann opt into simply representing them as normal "link" types.</xs:documentation>
+                                          <xs:documentation>"direct-link" defines a link that will link visitors "directly" to the offer. For example from a List of properties one will be linked to the project website directly if clicked. This is usually used by websites, and portals tend to ignore that and can opt into simply representing them as normal "link" types.</xs:documentation>
                                         </xs:annotation>
                                       </xs:element>
                                       <xs:element name="link" type="attachmentLink" minOccurs="0" maxOccurs="unbounded">
@@ -1612,7 +1612,7 @@
                     </xs:element>
                     <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Can be used to track the original creation id (this should usualy be unique to the property)</xs:documentation>
+                        <xs:documentation>Can be used to track the original creation id (this should usually be unique to the property)</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <xs:element name="seller" minOccurs="0" maxOccurs="1">

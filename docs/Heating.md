@@ -12,7 +12,7 @@ gas | Heating by burning natural gas, liquefied petroleum gas, propane or butane
 geothermal-probe | -
 heatpump-air-and-water | -
 heatpump | Heating and/or cooling system that transfers heat to or from the ground using a pump.
-oil | Heating by burning fosile heating oil.
+oil | Heating by burning fossil heating oil.
 photovoltaics | In general, thermal photovoltaics use solar cells to convert the light that radiates from a hot surface into electricity and/or heating water.
 solar-thermal | The conversion of sunlight into heat for water heating using a solar thermal collector
 wood-pellet | Wood pellets, small pellets from wood chips and sawdust, are combusted.

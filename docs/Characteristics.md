@@ -2,14 +2,14 @@
 
 # Characteristics
 
-The cold facts, to represent the property or offer. These tend to be dictaded by the chosen utilization and to some extend the categories aswell. Based on the provided utilizations certain characteristics only are applicable accordingly.
+The cold facts, to represent the property or offer. These tend to be dictated by the chosen utilization and to some extent the categories as well. Based on the provided utilizations certain characteristics only are applicable accordingly.
 
 Every characteristic has a implicit SI-unit such as `m²` or `Kg` associated to it, unless it represents a simple count, at which point it does not have a `unit`.
 
 Descriptions for characteristics are in the [xsd documentation](https://swissrets.ch/docs/noNamespace/complexType/characteristics.html).
 
 ## Type applicable
-Applicables can have three states, `unknown` must be thretened as default.
+Applicable can have three states, `unknown` must be treated as default.
 
 state | meaning
 :--- | :---
@@ -53,7 +53,7 @@ craneCapacity | Carrying capacity for crane in kg. | positiveDecimal
 elevatorLoad | Maximum elevator load in kg. | positiveDecimal
 floor | Floor number, ground floor is 0, basement floors are negative. | integer
 floorLoad | Maximum floor load in kg/m² | positiveDecimal
-grossPremium | A gross premium is the total premium of an insurance contract before brokerage or | percentdiscounts have been deducted, in percent.
+grossPremium | A gross premium is the total premium of an insurance contract before brokerage or | percent discounts have been deducted, in percent.
 hallHeight | Hall height in m, usually for commercial properties. | positiveDecimal
 hasAttic | Has an attic. | [applicable](#type-applicable)
 hasBalcony | Balcony available. | [applicable](#type-applicable)
@@ -105,8 +105,8 @@ isGutted | Preparation for demolition or a part-demolition, all contaminants, do
 isInNeedOfRenovation | Needs to be renewed in order to be fully usable again. | [applicable](#type-applicable)
 isInNeedOfRenovationPartially | Needs to be renewed partially in order to be fully usable again. | [applicable](#type-applicable)
 isLikeNew | Used, but as good as new. | [applicable](#type-applicable)
-isMiddleHouse | Situated betwee two other houses or buildings. | [applicable](#type-applicable)
-isModernized | Modernized means improved, thins like a better insulated roof and walls, modern heating system and similar imrovements. | [applicable](#type-applicable)
+isMiddleHouse | Situated between two other houses or buildings. | [applicable](#type-applicable)
+isModernized | Modernized means improved, thins like a better insulated roof and walls, modern heating system and similar improvements. | [applicable](#type-applicable)
 isNewConstruction | Newly built house or building. | [applicable](#type-applicable)
 isOldBuilding | Refers to the construction method used until 60-80 years ago. | [applicable](#type-applicable)
 isProjection | Planned for the future. | [applicable](#type-applicable)
@@ -120,7 +120,7 @@ isSunny | Sunny surroundings, nor trees, mountains or other buildings do shadow.
 isUnderRoof | Mainly used for parking slots. | [applicable](#type-applicable)
 isWellTended | Properly looked after. | [applicable](#type-applicable)
 isWheelchairAccessible | All aspects are accessible for wheelchair users. | [applicable](#type-applicable)
-numberOfApartements | Number of apartements contained. | positiveInteger
+numberOfApartements | Number of apartments contained. | positiveInteger
 numberOfBathrooms | Number of bathrooms. | positiveInteger
 numberOfFloors | Total amount of floors. | positiveInteger
 numberOfParcels | Number of parcels. | positiveInteger
