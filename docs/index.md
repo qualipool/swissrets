@@ -14,7 +14,7 @@ Schema location declaration for validation.
 <?xml version="1.0" encoding="utf-8"?>
 <export
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.1.0/schema.xsd"
+  xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.2.0/schema.xsd"
   >
   <!-- ... -->
 </export>
@@ -28,6 +28,7 @@ Schema location declaration for validation.
    - [Categories](Categories.md) - categorization
    - [Characteristics](./Characteristics.md) - facts and features
       - [Applicables](./Characteristics.md#type-applicable)
+      - [Generic-areas](./Generic-areas.md) - definitions for the non-sia and more simple set of areas.
       - [SIA-areas](./SIA-areas.md) - area definitions according to [SIA 416](http://www.svkg.ch/)
    - [Usage FAQ](FAQ)
    - [Utilizations](Utilizations.md) - usage groups
