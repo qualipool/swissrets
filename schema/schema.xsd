@@ -1309,7 +1309,7 @@
                     </xs:element>
                     <xs:element name="characteristics" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Price ranges for marketing purposes.</xs:documentation>
+                        <xs:documentation>Characteristics and ranges relevant to entire project.</xs:documentation>
                       </xs:annotation>
                       <xs:complexType>
                         <xs:all>
@@ -1473,7 +1473,7 @@
                                 </xs:element>
                                 <xs:element name="characteristics" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
-                                    <xs:documentation>Price ranges for marketing purposes.</xs:documentation>
+                                    <xs:documentation>Characteristics and ranges relevant to unit.</xs:documentation>
                                   </xs:annotation>
                                   <xs:complexType>
                                     <xs:all>
