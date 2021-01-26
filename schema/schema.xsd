@@ -79,6 +79,31 @@
           <xs:documentation>Property land area in m²</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="areaCellar" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Space allocated in cellar included within the offer in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaBalcony" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>If there is a balcony (non ground floor outside area) this field would specify the area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaTerrace" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Usually ground floor outside seating area in m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaLoggia" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Usually refers to a covered not necessarily heated area with fresh air, but not opened up to the outside.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="areaGarden" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Area dedicated to growing plants or a garden. To differentiate from something like a Terrace. In m²</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="areaSiaAff" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>SIA-AFF area in m²</xs:documentation>

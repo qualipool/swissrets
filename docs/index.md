@@ -28,6 +28,7 @@ Schema location declaration for validation.
    - [Categories](Categories.md) - categorization
    - [Characteristics](./Characteristics.md) - facts and features
       - [Applicables](./Characteristics.md#type-applicable)
+      - [Generic-areas](./generic-areas.md) - definitions for the non-sia and more simple set of areas.
       - [SIA-areas](./SIA-areas.md) - area definitions according to [SIA 416](http://www.svkg.ch/)
    - [Usage FAQ](FAQ)
    - [Utilizations](Utilizations.md) - usage groups

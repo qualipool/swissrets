@@ -47,6 +47,11 @@
         <areaBwf>123.45</areaBwf>
         <areaNwf>123.45</areaNwf>
         <areaPropertyLand>123.45</areaPropertyLand>
+        <areaCellar>123.45</areaCellar>
+        <areaBalcony>123.45</areaBalcony>
+        <areaTerrace>123.45</areaTerrace>
+        <areaLoggia>123.45</areaLoggia>
+        <areaGarden>123.45</areaGarden>
         <areaSiaAff>123.45</areaSiaAff>
         <areaSiaAgf>123.45</areaSiaAgf>
         <areaSiaAkf>123.45</areaSiaAkf>
