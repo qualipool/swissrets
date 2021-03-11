@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.2.0/schema.xsd">
+  <projects>
+    <project id="proj">
+      <referenceId>proj</referenceId>
+      <availability>active</availability>
+      <localizations>
+        <localization lang="en">
+          <name>The best project of all time</name>
+        </localization>
+      </localizations>
+      <units>
+        <unit id="projA1">
+          <referenceId>projA1</referenceId>
+          <localizations>
+            <localization lang="en">
+              <name>Building A1</name>
+            </localization>
+          </localizations>
+        </unit>
+        <unit id="projB2">
+          <referenceId>projB2</referenceId>
+          <localizations>
+            <localization lang="en">
+              <name>Building B2</name>
+            </localization>
+          </localizations>
+        </unit>
+      </units>
+    </project>
+  </projects>
+  <properties>
+    <property id="1245687" unitReferenceId="projA1">
+      <referenceId>LA-644238</referenceId>
+      <availability>active</availability>
+      <type>rent</type>
+      <localizations>
+        <localization lang="en">
+          <name>A Project within a project unit A1</name>
+        </localization>
+      </localizations>
+    </property>
+    <property id="1245689" unitReferenceId="projA1">
+      <referenceId>LA-644239</referenceId>
+      <availability>active</availability>
+      <type>rent</type>
+      <localizations>
+        <localization lang="en">
+          <name>Another apartment within a project unit A1</name>
+        </localization>
+      </localizations>
+    </property>
+    <property id="1245689" unitReferenceId="projB2">
+      <referenceId>LA-23456</referenceId>
+      <availability>active</availability>
+      <type>rent</type>
+      <localizations>
+        <localization lang="en">
+          <name>An apartment within a project unit B2</name>
+        </localization>
+      </localizations>
+    </property>
+  </properties>
+</export>

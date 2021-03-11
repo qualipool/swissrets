@@ -116,8 +116,7 @@
     </project>
   </projects>
   <properties>
-    <property id="str12346">
-      <projectUnitId>str12345</projectUnitId>
+    <property id="str12346" unitReferenceId="str1234">
       <address>
         <countryCode>CH</countryCode>
         <locality>Kirchlindach</locality>

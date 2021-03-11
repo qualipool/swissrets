@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.2.0/schema.xsd">
+  <projects>
+    <project id="str1234">
+      <referenceId>str1234</referenceId>
+      <availability>active</availability>
+      <localizations>
+        <localization lang="en">
+          <name>The best project of all time</name>
+        </localization>
+      </localizations>
+      <units>
+        <unit id="str12345">
+          <referenceId>str1234</referenceId>
+          <localizations>
+            <localization lang="en">
+              <name>Building A1</name>
+            </localization>
+          </localizations>
+        </unit>
+      </units>
+    </project>
+  </projects>
+</export>
