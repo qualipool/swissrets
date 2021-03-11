@@ -1969,7 +1969,7 @@
                     </xs:element>
                     <xs:element type="xs:string" name="unitId" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing</xs:documentation>
+                        <xs:documentation>Reference to an existing project->unit within the xml. Used for grouping and representing a "project-tree"</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <!-- not important optional stuff -->
