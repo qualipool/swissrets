@@ -117,7 +117,7 @@
   </projects>
   <properties>
     <property id="str12346">
-      <unitId>str12345</unitId>
+      <unitReferenceId>str1234</unitReferenceId>
       <address>
         <countryCode>CH</countryCode>
         <locality>Kirchlindach</locality>

@@ -1190,11 +1190,11 @@
   <xs:element name="export" type="exportType">
     <xs:keyref name="propertyUnitKeyRef" refer="propertyUnitKey">
       <xs:selector xpath="properties/*"/>
-      <xs:field xpath="unitId"/>
+      <xs:field xpath="unitReferenceId"/>
     </xs:keyref>
     <xs:key name="propertyUnitKey">
       <xs:selector xpath=".//unit"/>
-      <xs:field xpath="@id"/>
+      <xs:field xpath="referenceId"/>
     </xs:key>
   </xs:element>
   <xs:complexType name="exportType">
@@ -1967,7 +1967,7 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element type="xs:string" name="unitId" minOccurs="0" maxOccurs="1">
+                    <xs:element type="xs:string" name="unitReferenceId" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Reference to an existing project->unit within the xml. Used for grouping and representing a "project-tree"</xs:documentation>
                       </xs:annotation>

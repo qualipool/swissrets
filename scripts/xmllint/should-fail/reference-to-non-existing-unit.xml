@@ -26,7 +26,7 @@
   <properties>
     <property id="str12346">
       <referenceId>LA-644238</referenceId>
-      <unitId>str1234wrong</unitId>
+      <unitReferenceId>str1234wrong</unitReferenceId>
       <availability>active</availability>
       <localizations>
         <localization lang="en">
