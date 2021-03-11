@@ -1190,11 +1190,11 @@
   <xs:element name="export" type="exportType">
     <xs:keyref name="propertyUnitKeyRef" refer="propertyUnitKey">
       <xs:selector xpath="properties/*"/>
-      <xs:field xpath="@unitReferenceId"/>
+      <xs:field xpath="unitId"/>
     </xs:keyref>
     <xs:key name="propertyUnitKey">
       <xs:selector xpath=".//unit"/>
-      <xs:field xpath="referenceId"/>
+      <xs:field xpath="@id"/>
     </xs:key>
   </xs:element>
   <xs:complexType name="exportType">
@@ -1521,11 +1521,6 @@
                 </xs:annotation>
                 <xs:complexType>
                   <xs:all>
-                    <xs:element type="xs:string" name="projectUnitId" minOccurs="0" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>Reference to a project:unit:id</xs:documentation>
-                      </xs:annotation>
-                    </xs:element>
                     <xs:element name="address" type="address" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Location of the property.</xs:documentation>
@@ -1972,6 +1967,11 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+                    <xs:element type="xs:string" name="unitId" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
                     <!-- not important optional stuff -->
                     <xs:element type="xs:string" name="visualReferenceId" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
@@ -1980,12 +1980,6 @@
                     </xs:element>
                     <!-- additional information about the data itself -->
                   </xs:all>
-                  <xs:attribute type="xs:string" name="unitReferenceId">
-                    <xs:annotation>
-                      <xs:documentation>Is part of a unit
-                      </xs:documentation>
-                    </xs:annotation>
-                  </xs:attribute>
                   <xs:attribute type="xs:string" name="id" use="required">
                     <xs:annotation>
                       <xs:documentation>this ID needs to be unique and represents the id from the exporter (this can be the same as referenceId if the exporter is the original creator)

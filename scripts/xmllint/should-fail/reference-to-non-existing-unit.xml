@@ -24,8 +24,9 @@
     </project>
   </projects>
   <properties>
-    <property id="str12346" unitReferenceId="str1234wrong">
+    <property id="str12346">
       <referenceId>LA-644238</referenceId>
+      <unitId>str1234wrong</unitId>
       <availability>active</availability>
       <localizations>
         <localization lang="en">

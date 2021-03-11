@@ -30,8 +30,9 @@
     </project>
   </projects>
   <properties>
-    <property id="1245687" unitReferenceId="projA1">
+    <property id="1245687">
       <referenceId>LA-644238</referenceId>
+      <unitId>projA1</unitId>
       <availability>active</availability>
       <type>rent</type>
       <localizations>
@@ -40,8 +41,9 @@
         </localization>
       </localizations>
     </property>
-    <property id="1245689" unitReferenceId="projA1">
+    <property id="1245689">
       <referenceId>LA-644239</referenceId>
+      <unitId>projA1</unitId>
       <availability>active</availability>
       <type>rent</type>
       <localizations>
@@ -50,8 +52,9 @@
         </localization>
       </localizations>
     </property>
-    <property id="1245689" unitReferenceId="projB2">
+    <property id="1245689">
       <referenceId>LA-23456</referenceId>
+      <unitId>projB2</unitId>
       <availability>active</availability>
       <type>rent</type>
       <localizations>
