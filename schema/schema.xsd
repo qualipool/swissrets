@@ -1450,7 +1450,7 @@
                       </xs:annotation>
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="unit" maxOccurs="unbounded" minOccurs="1">
+                          <xs:element name="unit" maxOccurs="unbounded" minOccurs="0">
                             <xs:annotation>
                               <xs:documentation>A set of properties</xs:documentation>
                             </xs:annotation>
