@@ -6,6 +6,31 @@
     <project id="str1234">
       <referenceId>str1234</referenceId>
       <seller>
+        <organization id="Someorg Ltd">
+          <address>
+            <countryCode>CH</countryCode>
+            <locality>str1234</locality>
+            <region>Bern</region>
+            <postalCode>3000</postalCode>
+            <postOfficeBoxNumber>1000</postOfficeBoxNumber>
+            <street>Somestreet</street>
+            <streetNumber>1</streetNumber>
+            <streetAddition>c</streetAddition>
+            <subunit>1</subunit>
+            <geo>
+              <latitude>46.9479739</latitude>
+              <longitude>7.4474468</longitude>
+              <elevation>350</elevation>
+            </geo>
+          </address>
+          <legalName>Someorg Ltd</legalName>
+          <brand>Someorg Ltd</brand>
+          <email>info@someorg.com</email>
+          <emailRem>info-remax@someorg.com</emailRem>
+          <mobile>+4178254657</mobile>
+          <phone>+4178254657</phone>
+          <website title="Some LTD org" label="Some LTD org">https://someorg.com</website>
+        </organization>
         <contactPerson>
           <function>Caretaker</function>
           <givenName>Jim</givenName>
