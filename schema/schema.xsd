@@ -89,15 +89,15 @@
             <xs:element type="xs:positiveInteger" name="from" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">
-                "from" needs to be smaller than "to"
-            </xs:documentation>
+                        "from" needs to be smaller than "to"
+                    </xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element type="xs:positiveInteger" name="to" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">
-                "to" needs to be larger than "from"
-            </xs:documentation>
+                        "to" needs to be larger than "from"
+                    </xs:documentation>
                 </xs:annotation>
             </xs:element>
         </xs:all>
@@ -299,6 +299,9 @@
     </xs:simpleType>
     <xs:simpleType name="featureTypes">
         <xs:restriction base="xs:string">
+            <xs:enumeration value="is-vat-opted"></xs:enumeration>
+            <xs:enumeration value="is-share-deal"></xs:enumeration>
+            <xs:enumeration value="has-remote-viewings"></xs:enumeration>
             <xs:enumeration value="has-elevator"></xs:enumeration>
             <xs:enumeration value="has-nice-view"></xs:enumeration>
             <xs:enumeration value="has-fireplace"></xs:enumeration>
@@ -401,7 +404,26 @@
     </xs:simpleType>
     <xs:simpleType name="numericValuekeys">
         <xs:restriction base="xs:string">
+            <xs:enumeration value="number_of_guest_toilets"></xs:enumeration>
+            <xs:enumeration value="net_premium"></xs:enumeration>
+            <xs:enumeration value="area_cellar"></xs:enumeration>
+            <xs:enumeration value="area_balcony"></xs:enumeration>
+            <xs:enumeration value="building_insurance_value"></xs:enumeration>
+            <xs:enumeration value="area_balcony"></xs:enumeration>
             <xs:enumeration value="floor"></xs:enumeration>
+            <xs:enumeration value="gross_premium_target"></xs:enumeration>
+            <xs:enumeration value="area_terrace"></xs:enumeration>
+            <xs:enumeration value="area_loggia"></xs:enumeration>
+            <xs:enumeration value="area_garden"></xs:enumeration>
+            <xs:enumeration value="occupancy_percentage"></xs:enumeration>
+            <xs:enumeration value="yearly_operation_and_maintenance_costs"></xs:enumeration>
+            <xs:enumeration value="rental_income_net"></xs:enumeration>
+            <xs:enumeration value="rental_income_net_max_potential"></xs:enumeration>
+            <xs:enumeration value="number_of_buildings"></xs:enumeration>
+            <xs:enumeration value="number_of_commercial_units"></xs:enumeration>
+            <xs:enumeration value="area_terrace"></xs:enumeration>
+            <xs:enumeration value="area_loggia"></xs:enumeration>
+
             <xs:enumeration value="number_of_floors"></xs:enumeration>
             <xs:enumeration value="number_of_apartments"></xs:enumeration>
             <xs:enumeration value="number_of_parcels"></xs:enumeration>
@@ -532,6 +554,69 @@
                                 <xs:complexType>
                                     <xs:all>
                                         <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1"></xs:element>
+                                        <xs:element name="publishers" maxOccurs="1" minOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="publisher" maxOccurs="unbounded" minOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:all>
+                                                                <xs:element type="xs:string" name="channel" minOccurs="1" maxOccurs="1"></xs:element>
+                                                            </xs:all>
+                                                            <xs:attribute type="xs:string" name="slug"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="address" maxOccurs="1" minOccurs="1">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element type="countryCodeType" name="country" minOccurs="1" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:string" name="locality" minOccurs="0" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:string" name="region" minOccurs="0" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:string" name="postalCode" minOccurs="0" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:string" name="street" minOccurs="0" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:string" name="streetNumber" minOccurs="0" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:float" name="latitude" minOccurs="1" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:float" name="longitude" minOccurs="1" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:float" name="elevation" minOccurs="0" maxOccurs="1"></xs:element>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="metas" maxOccurs="1" minOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="meta" maxOccurs="unbounded" minOccurs="1" >
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute name="key" type="xs:string" />
+                                                                    <xs:attribute name="lang" type="xs:string" />
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="medias" maxOccurs="1" minOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="media" maxOccurs="unbounded" minOccurs="1" >
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute name="lang" type="xs:string" />
+                                                                    <xs:attribute name="mimeType" type="xs:string" />
+                                                                    <xs:attribute name="type" type="xs:string" />
+                                                                    <xs:attribute name="publication" type="xs:string" />
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
                                         <xs:element name="units" maxOccurs="1" minOccurs="1">
                                             <xs:complexType>
                                                 <xs:sequence>
@@ -539,11 +624,27 @@
                                                         <xs:complexType>
                                                             <xs:all>
                                                                 <xs:element type="xs:string" name="referenceId" minOccurs="1" maxOccurs="1"></xs:element>
-                                                                <xs:element name="properties" maxOccurs="1" minOccurs="1">
+                                                                <xs:element name="properties" maxOccurs="1" minOccurs="0">
                                                                     <xs:complexType>
                                                                         <xs:sequence>
                                                                             <!-- <xs:element name="propertyRef" maxOccurs="unbounded" minOccurs="1" type="xs:IDREF" /> -->
                                                                             <xs:element maxOccurs="unbounded" minOccurs="1" type="xs:string" name="propertyRef"></xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="metas" maxOccurs="1" minOccurs="1">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="meta" maxOccurs="unbounded" minOccurs="1" >
+                                                                                <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                        <xs:extension base="xs:string">
+                                                                                            <xs:attribute name="key" type="xs:string" />
+                                                                                            <xs:attribute name="lang" type="xs:string" />
+                                                                                        </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
                                                                         </xs:sequence>
                                                                     </xs:complexType>
                                                                 </xs:element>
@@ -555,7 +656,7 @@
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:all>
-                                    <xs:attribute type="xs:ID" name="id" use="optional"></xs:attribute>
+                                    <xs:attribute type="xs:string" name="id" use="optional"></xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -585,8 +686,30 @@
                                                 <xs:documentation> Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
+                                        <xs:element type="xs:string" name="unitReferenceId" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation>Is relevant for project export as reference to a unit</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
                                         <xs:element type="propertyType" name="type" minOccurs="1" maxOccurs="1"></xs:element>
                                         <xs:element type="availability" name="availability" minOccurs="1" maxOccurs="1"></xs:element>
+                                        <xs:element name="heating" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element type="xs:string" name="generation" minOccurs="0" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:string" name="distribution" minOccurs="0" maxOccurs="1"></xs:element>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="bfs" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element type="xs:string" name="ewid" minOccurs="0" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:string" name="egid" minOccurs="0" maxOccurs="1"></xs:element>
+                                                    <xs:element type="xs:string" name="egrid" minOccurs="0" maxOccurs="1"></xs:element>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
                                         <xs:element type="xs:dateTime" name="start" minOccurs="0" maxOccurs="1"></xs:element>
                                         <xs:element type="currencyCodeType" name="priceCurrency" minOccurs="1" maxOccurs="1"></xs:element>
                                         <xs:element type="price" name="price" minOccurs="0" maxOccurs="1"></xs:element>
@@ -661,42 +784,42 @@
                                                         <xs:annotation>
                                                             <xs:documentation>Flächen:
 
-┌───────────────────────────────────────────────┐
-│                       GF                      │ Geschossfläche
-├───────────────────────────────┰───────────────┧
-│              NGF              ┃       KF      ┃ Nettogeschossfläche + Konstruktionsfläche
-├───────────────┬───────┬───────╂───────┬───────┨
-│       NF      │  VF   │  FF   ┃  KFT  │  KFN  ┃ (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
-├───────┬───────┼───────┴───────┺━━━━━━━┷━━━━━━━┛
-│  NNF  │  HNF  │ Neben + Hauptnutzfläche
-└───────┴───────┘
+                                                                ┌───────────────────────────────────────────────┐
+                                                                │                       GF                      │ Geschossfläche
+                                                                ├───────────────────────────────┰───────────────┧
+                                                                │              NGF              ┃       KF      ┃ Nettogeschossfläche + Konstruktionsfläche
+                                                                ├───────────────┬───────┬───────╂───────┬───────┨
+                                                                │       NF      │  VF   │  FF   ┃  KFT  │  KFN  ┃ (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
+                                                                ├───────┬───────┼───────┴───────┺━━━━━━━┷━━━━━━━┛
+                                                                │  NNF  │  HNF  │ Neben + Hauptnutzfläche
+                                                                └───────┴───────┘
 
-Ausenflächen
-┌───────────────────────────────────────────────┐
-│                      AGF                      │ Aussen-Geschossfläche
-├───────────────────────────────┰───────────────┧
-│             ANGF              ┃      AKF      ┃ Aussen-Nettogeschossfläche + Aussen-Konstruktionsfläche
-├───────────────┬───────┬───────╂───────┬───────┨
-│      ANF      │  AVF  │  AFF  ┃  AKFT │ AKFN  ┃ Aussen-* (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
-└───────────────┴───────┴───────┺━━━━━━━┷━━━━━━━┛
+                                                                Ausenflächen
+                                                                ┌───────────────────────────────────────────────┐
+                                                                │                      AGF                      │ Aussen-Geschossfläche
+                                                                ├───────────────────────────────┰───────────────┧
+                                                                │             ANGF              ┃      AKF      ┃ Aussen-Nettogeschossfläche + Aussen-Konstruktionsfläche
+                                                                ├───────────────┬───────┬───────╂───────┬───────┨
+                                                                │      ANF      │  AVF  │  AFF  ┃  AKFT │ AKFN  ┃ Aussen-* (Nutzfläche + Verkehrsfläche + Funktionsfläche) (FK tragend + KF nicht-tragend)
+                                                                └───────────────┴───────┴───────┺━━━━━━━┷━━━━━━━┛
 
-Volumen
-┌───────────────────────────────────────────────┐
-│                      GV                       │ Gebäudevolumen
-├───────────────────────────────┬───────────────┤
-│             ANGV              │      AKV      │ Nettogebäudevolumen + Konstruktions-Volumen
-├───────────────┬───────┬───────┼───────────────┘
-│      ANV      │  AVV  │  AFV  │   Nutzvolumen + Verkehrsvolumen + Funktionsvolumen
-└───────────────┴───────┴───────┘
+                                                                Volumen
+                                                                ┌───────────────────────────────────────────────┐
+                                                                │                      GV                       │ Gebäudevolumen
+                                                                ├───────────────────────────────┬───────────────┤
+                                                                │             ANGV              │      AKV      │ Nettogebäudevolumen + Konstruktions-Volumen
+                                                                ├───────────────┬───────┬───────┼───────────────┘
+                                                                │      ANV      │  AVV  │  AFV  │   Nutzvolumen + Verkehrsvolumen + Funktionsvolumen
+                                                                └───────────────┴───────┴───────┘
 
-Grundstückfläche
-┌───────────────────────────────────────────────┐
-│                      GSF                      │ Grundstückfläche
-├───────────────────────────────┬───────────────┤
-│               UF              │      GGF      │ Umgebungsfläche + Gebäudegrundfläche
-├───────────────┬───────────────┼───────────────┘
-│      BUF      │      UUF      │ Bearbeitete Umgebungsfläche + Unbearbeitete Umgebungsfläche
-└───────────────┴───────────────┘</xs:documentation>
+                                                                Grundstückfläche
+                                                                ┌───────────────────────────────────────────────┐
+                                                                │                      GSF                      │ Grundstückfläche
+                                                                ├───────────────────────────────┬───────────────┤
+                                                                │               UF              │      GGF      │ Umgebungsfläche + Gebäudegrundfläche
+                                                                ├───────────────┬───────────────┼───────────────┘
+                                                                │      BUF      │      UUF      │ Bearbeitete Umgebungsfläche + Unbearbeitete Umgebungsfläche
+                                                                └───────────────┴───────────────┘</xs:documentation>
                                                         </xs:annotation>
                                                         <xs:complexType>
                                                             <xs:simpleContent>
@@ -715,14 +838,14 @@ Grundstückfläche
                                                     <xs:annotation>
                                                         <xs:documentation>Order represents (least specific) to (most specific). For example house, single-house, rustico</xs:documentation>
                                                     </xs:annotation>
-                                                    <xs:element type="categoryTypes" name="category" minOccurs="1" maxOccurs="3"></xs:element>
+                                                    <xs:element type="categoryTypes" name="category" minOccurs="0" maxOccurs="3"></xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
                                         <xs:element name="utilities" minOccurs="0" maxOccurs="1">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element type="utilityTypes" name="utility" minOccurs="1" maxOccurs="3"></xs:element>
+                                                    <xs:element type="utilityTypes" name="utility" minOccurs="0" maxOccurs="3"></xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
