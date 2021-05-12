@@ -838,14 +838,14 @@
                                                     <xs:annotation>
                                                         <xs:documentation>Order represents (least specific) to (most specific). For example house, single-house, rustico</xs:documentation>
                                                     </xs:annotation>
-                                                    <xs:element type="categoryTypes" name="category" minOccurs="0"></xs:element>
+                                                    <xs:element type="categoryTypes" name="category" minOccurs="1" maxOccurs="unbounded"></xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
                                         <xs:element name="utilities" minOccurs="0" maxOccurs="1">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element type="utilityTypes" name="utility" minOccurs="0"></xs:element>
+                                                    <xs:element type="utilityTypes" name="utility" minOccurs="1" maxOccurs="unbounded"></xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
