@@ -5,18 +5,144 @@
   <projects>
     <project id="str1234">
       <referenceId>str1234</referenceId>
+      <seller>
+        <organization id="Someorg Ltd">
+          <address>
+            <countryCode>CH</countryCode>
+            <locality>str1234</locality>
+            <region>Bern</region>
+            <postalCode>3000</postalCode>
+            <postOfficeBoxNumber>1000</postOfficeBoxNumber>
+            <street>Somestreet</street>
+            <streetNumber>1</streetNumber>
+            <streetAddition>c</streetAddition>
+            <subunit>1</subunit>
+            <geo>
+              <latitude>46.9479739</latitude>
+              <longitude>7.4474468</longitude>
+              <elevation>350</elevation>
+            </geo>
+          </address>
+          <legalName>Someorg Ltd</legalName>
+          <brand>Someorg Ltd</brand>
+          <email>info@someorg.com</email>
+          <emailRem>info-remax@someorg.com</emailRem>
+          <mobile>+4178254657</mobile>
+          <phone>+4178254657</phone>
+          <website title="Some LTD org" label="Some LTD org">https://someorg.com</website>
+        </organization>
+        <contactPerson>
+          <function>Caretaker</function>
+          <givenName>Jim</givenName>
+          <familyName>Smith</familyName>
+          <email>jsmith@somehwere.com</email>
+          <mobile>+4178254657</mobile>
+          <phone>+4178254657</phone>
+          <gender>m</gender>
+          <note>Contact Mr. Smith</note>
+        </contactPerson>
+      </seller>
+      <availability start="2018-12-13T12:12:12" expiration="2019-12-13T12:12:12">active</availability>
+      <constructionStatus>under-construction</constructionStatus> 
+      <address>
+        <countryCode>CH</countryCode>
+        <locality>Kirchlindach</locality>
+        <region>Bern</region>
+        <postalCode>3038</postalCode>
+        <postOfficeBoxNumber>1</postOfficeBoxNumber>
+        <street>Somestreet</street>
+        <streetNumber>5</streetNumber>
+        <streetAddition>a</streetAddition>
+        <subunit>1</subunit>
+        <geo>
+          <latitude>46.9479739</latitude>
+          <longitude>7.4474468</longitude>
+          <elevation>350</elevation>
+        </geo>
+      </address>
+      <prices currency="CHF">
+        <rent interval="month" referring="all">
+          <netFrom>1000</netFrom>
+          <netTo>5000</netTo>
+        </rent>
+        <buy referring="all">
+          <priceFrom>250000</priceFrom>
+          <priceTo>1000000</priceTo>
+        </buy>
+      </prices>
+      <characteristics>
+        <areaSiaNfFrom>200</areaSiaNfFrom>
+        <areaSiaNfTo>1000</areaSiaNfTo>
+        <areaBwfFrom>300</areaBwfFrom>
+        <areaBwfTo>1200</areaBwfTo>
+        <numberOfRoomsFrom>2.5</numberOfRoomsFrom>
+        <numberOfRoomsTo>4.5</numberOfRoomsTo>
+        <numberOfResidentialUnits>23</numberOfResidentialUnits>
+        <numberOfCommercialUnits>12</numberOfCommercialUnits>
+      </characteristics>
+      <localizations>
+        <localization lang="en">
+          <name>The best project of all time</name>
+          <excerpt>This project is located in someplace and has a great view.</excerpt>
+          <attachments>
+            <image>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>Groundwork</title>
+              <description>On January 2021 the initial work-team appeared and cleared the area.</description>
+              <mimeType>image/jpeg</mimeType>
+            </image>
+            <image>
+              <url>http://www.someorg.com/dg546jdl2</url>
+              <title>Rendering of a appartment interior.</title>
+              <description>Here we can see a bit of insight as to how it could appear when completed.</description>
+              <mimeType>image/jpeg</mimeType>
+            </image>
+            <logo>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <mimeType>image/jpeg</mimeType>
+            </logo>
+            <plan>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The plan</title>
+              <mimeType>image/jpeg</mimeType>
+            </plan>
+            <linkDirect>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The direct link</title>
+            </linkDirect>
+            <link>
+              <url>http://www.someorg.com/dg546jdl</url>
+              <title>The link</title>
+            </link>
+            <linkVirtualTour>
+              <url>http://www.virtualmax.com/dg546jdl</url>
+              <title>The virtual tour</title>
+            </linkVirtualTour>
+            <linkYoutube>
+              <url>http://www.youtube.com/dg546jdl</url>
+              <title>The video</title>
+            </linkYoutube>
+          </attachments>
+        </localization>
+      </localizations>
       <units>
         <unit id="str12345">
           <referenceId>str1234</referenceId>
-          <properties>
-            <propertyRef>str1234</propertyRef>
-          </properties>
+          <localizations>
+            <localization lang="en">
+              <name>Building A1</name>
+            </localization>
+          </localizations>
+          <characteristics>
+            <numberOfFloors>12</numberOfFloors>
+          </characteristics>
         </unit>
       </units>
     </project>
   </projects>
   <properties>
     <property id="str12346">
+      <unitReferenceId>str1234</unitReferenceId>
       <address>
         <countryCode>CH</countryCode>
         <locality>Kirchlindach</locality>
