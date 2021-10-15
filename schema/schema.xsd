@@ -502,8 +502,10 @@
             <!--<xs:enumeration value="area_din_tf"/>-->
             <!--<xs:enumeration value="area_din_vf"/>-->
             <xs:enumeration value="volume_gva"></xs:enumeration>
-            <!-- Gebäudekubatur GVA (prefered) -->
+            <!-- Gebäudekubatur 116 (depricated!) -->
             <xs:enumeration value="volume_sia"></xs:enumeration>
+            <!-- Gebäudekubatur 116 (prefered) -->
+            <xs:enumeration value="volume_sia116_gv"></xs:enumeration>
             <!-- Gebäudekubatur SIA -->
             <xs:enumeration value="gross_premium"></xs:enumeration>
             <!-- Bruttorendite -->
