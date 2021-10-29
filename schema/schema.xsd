@@ -727,7 +727,11 @@
       <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1" />
       <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
-      <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
+      <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>This field is depricated and will be removed in a future major version!</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
       <xs:element type="phoneNumber" name="mobile" minOccurs="0" maxOccurs="1" />
       <xs:element name="website" minOccurs="0" maxOccurs="1">
