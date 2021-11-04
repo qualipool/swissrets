@@ -84,6 +84,9 @@
         <localization lang="en">
           <name>The best project of all time</name>
           <excerpt>This project is located in someplace and has a great view.</excerpt>
+          <description>
+            <![CDATA[<p>This project is beautiful</p>]]>
+          </description>
           <attachments>
             <image>
               <url>http://www.someorg.com/dg546jdl</url>

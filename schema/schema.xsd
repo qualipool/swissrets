@@ -1431,6 +1431,11 @@
                                     <xs:documentation>A short extract from description, location and equipment.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
+                                <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Main description for project.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
                                 <xs:element name="attachments" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Sequence links, files, embeds and media.</xs:documentation>
