@@ -727,7 +727,11 @@
       <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1" />
       <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
-      <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
+      <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>This field is depricated and will be removed in a future major version!</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
       <xs:element type="phoneNumber" name="mobile" minOccurs="0" maxOccurs="1" />
       <xs:element name="website" minOccurs="0" maxOccurs="1">
@@ -1279,7 +1283,12 @@
                           </xs:element>
                           <xs:element type="person" name="contactPerson" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Contact person for questions and typically responsible for making appointments.</xs:documentation>
+                              <xs:documentation>Contact person for questions and typically responsible for making appointments. This contact is typicaly presented publicly.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>The person responsible for receiving inquiries and applications. This person should not be presented publicly and is only intended as an indirect recipient using an online form or similar.</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                         </xs:all>
@@ -1953,7 +1962,7 @@
                           </xs:element>
                           <xs:element type="person" name="contactPerson" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Contact person for questions and typically responsible for making appointments.</xs:documentation>
+                              <xs:documentation>Contact person for questions and typically responsible for making appointments. This contact is typicaly presented publicly.</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1">
@@ -1963,7 +1972,7 @@
                           </xs:element>
                           <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Person responsible for receiving inquiries and applications.</xs:documentation>
+                              <xs:documentation>The person responsible for receiving inquiries and applications. This person should not be presented publicly and is only intended as an indirect recipient using an online form or similar.</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                         </xs:all>
