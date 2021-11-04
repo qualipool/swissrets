@@ -53,3 +53,15 @@ All children in `<characteristics>`s that start with `<areaSia***>` correspond w
 │      BUF      │      UUF      │ Bearbeitete Umgebungsfläche + Unbearbeitete Umgebungsfläche
 └───────────────┴───────────────┘
 ```
+
+# Legacy areas and volumes
+
+Some older and alternate standards are still supported since not all properties have been updated to SIA 416.
+
+# volumeSia116Gv
+
+An older building volume value from the previous SIA 116 standard.
+
+# volumeGva
+
+An even older building volume value that is still in use within legacy properties.
