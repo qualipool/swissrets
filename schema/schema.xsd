@@ -676,7 +676,12 @@
       </xs:element>
       <xs:element name="volumeSia" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Volume SIA in m³</xs:documentation>
+          <xs:documentation>DEPRICATED! please use volumeSia116Gv instead</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="volumeSia116Gv" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Volume SIA in m³ – Older Standard (SIA 116) with the Abbreviation "GV". This is still in use specifically for legacy properties.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="volumeSiaAfv" type="positiveDecimal" minOccurs="0" maxOccurs="1">

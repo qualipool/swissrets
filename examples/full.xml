@@ -288,7 +288,8 @@
         <utilizationRatio>0.7</utilizationRatio>
         <utilizationRatioConstruction>0.6</utilizationRatioConstruction>
         <volumeGva>123.45</volumeGva>
-        <volumeSia>123.45</volumeSia>
+        <volumeSia>123.45</volumeSia> <!-- DEPRICATED! -->
+        <volumeSia116Gv>123.45</volumeSia116Gv>
         <volumeSiaAfv>123.45</volumeSiaAfv>
         <volumeSiaAkv>123.45</volumeSiaAkv>
         <volumeSiaAngv>123.45</volumeSiaAngv>
