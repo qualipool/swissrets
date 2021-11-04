@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://swissrets.ch/dist/v2.3.0/schema.xsd">
+  <properties>
+    <property id="1245687only-full-default-order">
+      <referenceId>LA-644238</referenceId>
+      <availability>active</availability>
+      <type>rent</type>
+      <prices currency="CHF">
+        <rent referring="all" interval="month">
+          <gross>2000</gross>
+          <net>1800</net>
+          <extra>200</extra>
+        </rent>
+      </prices>
+      <localizations>
+        <localization lang="en">
+          <name>Calm and beautiful flat</name>
+        </localization>
+      </localizations>
+    </property>
+    <property id="1245687only-full-alternate-order">
+      <referenceId>LA-644238</referenceId>
+      <availability>active</availability>
+      <type>rent</type>
+      <prices currency="CHF">
+        <rent referring="all" interval="month">
+          <net>1800</net>
+          <gross>2000</gross>
+          <extra>200</extra>
+        </rent>
+      </prices>
+      <localizations>
+        <localization lang="en">
+          <name>Calm and beautiful flat</name>
+        </localization>
+      </localizations>
+    </property>
+    <property id="1245687only-extra">
+      <referenceId>LA-644238</referenceId>
+      <availability>active</availability>
+      <type>rent</type>
+      <prices currency="CHF">
+        <rent referring="all" interval="month">
+          <extra>200</extra>
+        </rent>
+      </prices>
+      <localizations>
+        <localization lang="en">
+          <name>Calm and beautiful flat</name>
+        </localization>
+      </localizations>
+    </property>
+    <property id="1245687only-gross">
+      <referenceId>LA-644238</referenceId>
+      <availability>active</availability>
+      <type>rent</type>
+      <prices currency="CHF">
+        <rent referring="all" interval="month">
+          <gross>2000</gross>
+        </rent>
+      </prices>
+      <localizations>
+        <localization lang="en">
+          <name>Calm and beautiful flat</name>
+        </localization>
+      </localizations>
+    </property>
+    <property id="1245687only-net">
+      <referenceId>LA-644238</referenceId>
+      <availability>active</availability>
+      <type>rent</type>
+      <prices currency="CHF">
+        <rent referring="all" interval="month">
+          <net>1800</net>
+        </rent>
+      </prices>
+      <localizations>
+        <localization lang="en">
+          <name>Calm and beautiful flat</name>
+        </localization>
+      </localizations>
+    </property>
+  </properties>
+</export>

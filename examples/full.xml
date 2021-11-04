@@ -26,7 +26,7 @@
           <legalName>Someorg Ltd</legalName>
           <brand>Someorg Ltd</brand>
           <email>info@someorg.com</email>
-          <emailRem>info-remax@someorg.com</emailRem>
+          <emailRem>DEPRICATED@FIELD.com</emailRem>
           <mobile>+4178254657</mobile>
           <phone>+4178254657</phone>
           <website title="Some LTD org" label="Some LTD org">https://someorg.com</website>
@@ -41,6 +41,16 @@
           <gender>m</gender>
           <note>Contact Mr. Smith</note>
         </contactPerson>
+        <inquiryPerson>
+          <function>Remcat</function>
+          <givenName>Backoffice</givenName>
+          <familyName>Jane</familyName>
+          <email>jane@backoffice.com</email>
+          <mobile>+4178254657</mobile>
+          <phone>+4178254657</phone>
+          <gender>f</gender>
+          <note>This email should not be shown publicly and is intended only for trusted forms submisions. This could be in a special inquiry format that can be parsed by softwares.</note>
+        </inquiryPerson>
       </seller>
       <availability start="2018-12-13T12:12:12" expiration="2019-12-13T12:12:12">active</availability>
       <constructionStatus>under-construction</constructionStatus>
@@ -84,6 +94,9 @@
         <localization lang="en">
           <name>The best project of all time</name>
           <excerpt>This project is located in someplace and has a great view.</excerpt>
+          <description>
+            <![CDATA[<p>This project is beautiful</p>]]>
+          </description>
           <attachments>
             <image>
               <url>http://www.someorg.com/dg546jdl</url>
@@ -288,7 +301,8 @@
         <utilizationRatio>0.7</utilizationRatio>
         <utilizationRatioConstruction>0.6</utilizationRatioConstruction>
         <volumeGva>123.45</volumeGva>
-        <volumeSia>123.45</volumeSia>
+        <volumeSia>123.45</volumeSia> <!-- DEPRICATED! -->
+        <volumeSia116Gv>123.45</volumeSia116Gv>
         <volumeSiaAfv>123.45</volumeSiaAfv>
         <volumeSiaAkv>123.45</volumeSiaAkv>
         <volumeSiaAngv>123.45</volumeSiaAngv>
@@ -416,7 +430,7 @@
           <legalName>Someorg Ltd</legalName>
           <brand>Someorg Ltd</brand>
           <email>info@someorg.com</email>
-          <emailRem>info-remax@someorg.com</emailRem>
+          <emailRem>DEPRICATED@FIELD.com</emailRem>
           <mobile>+4178254657</mobile>
           <phone>+4178254657</phone>
           <website title="Some LTD org" label="Some LTD org">https://someorg.com</website>

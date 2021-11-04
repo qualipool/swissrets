@@ -676,7 +676,12 @@
       </xs:element>
       <xs:element name="volumeSia" type="positiveDecimal" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Volume SIA in m³</xs:documentation>
+          <xs:documentation>DEPRICATED! please use volumeSia116Gv instead</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="volumeSia116Gv" type="positiveDecimal" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Volume SIA in m³ – Older Standard (SIA 116) with the Abbreviation "GV". This is still in use specifically for legacy properties.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="volumeSiaAfv" type="positiveDecimal" minOccurs="0" maxOccurs="1">
@@ -727,7 +732,11 @@
       <xs:element type="xs:string" name="legalName" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="brand" minOccurs="0" maxOccurs="1" />
       <xs:element type="emailaddress" name="email" minOccurs="0" maxOccurs="1" />
-      <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1" />
+      <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>This field is depricated and will be removed in a future major version!</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1" />
       <xs:element type="phoneNumber" name="mobile" minOccurs="0" maxOccurs="1" />
       <xs:element name="website" minOccurs="0" maxOccurs="1">
@@ -771,11 +780,24 @@
           <xs:documentation>Recurring rental price.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
-          <xs:all>
-            <xs:element minOccurs="1" maxOccurs="1" name="gross" type="xs:positiveInteger" />
-            <xs:element minOccurs="0" maxOccurs="1" name="net" type="xs:positiveInteger" />
-            <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
-          </xs:all>
+          <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="gross" type="xs:positiveInteger" />
+              <xs:element minOccurs="1" maxOccurs="1" name="net" type="xs:positiveInteger" />
+              <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
+            </xs:sequence>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="gross" type="xs:positiveInteger" />
+              <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
+            </xs:sequence>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="net" type="xs:positiveInteger" />
+              <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
+            </xs:sequence>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="extra" type="xs:positiveInteger" />
+            </xs:sequence>
+          </xs:choice>
           <xs:attribute name="interval" type="priceInterval" use="optional" />
           <xs:attribute name="referring" type="priceReferring" use="optional" />
         </xs:complexType>
@@ -1266,7 +1288,12 @@
                           </xs:element>
                           <xs:element type="person" name="contactPerson" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Contact person for questions and typically responsible for making appointments.</xs:documentation>
+                              <xs:documentation>Contact person for questions and typically responsible for making appointments. This contact is typicaly presented publicly.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1">
+                            <xs:annotation>
+                              <xs:documentation>The person responsible for receiving inquiries and applications. This person should not be presented publicly and is only intended as an indirect recipient using an online form or similar.</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                         </xs:all>
@@ -1416,6 +1443,11 @@
                                 <xs:element type="xs:string" name="excerpt" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>A short extract from description, location and equipment.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Main description for project.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
                                 <xs:element name="attachments" minOccurs="0" maxOccurs="1">
@@ -1935,7 +1967,7 @@
                           </xs:element>
                           <xs:element type="person" name="contactPerson" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Contact person for questions and typically responsible for making appointments.</xs:documentation>
+                              <xs:documentation>Contact person for questions and typically responsible for making appointments. This contact is typicaly presented publicly.</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element type="person" name="visitPerson" minOccurs="0" maxOccurs="1">
@@ -1945,7 +1977,7 @@
                           </xs:element>
                           <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Person responsible for receiving inquiries and applications.</xs:documentation>
+                              <xs:documentation>The person responsible for receiving inquiries and applications. This person should not be presented publicly and is only intended as an indirect recipient using an online form or similar.</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                         </xs:all>
