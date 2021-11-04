@@ -1897,7 +1897,7 @@
                     </xs:element>
                     <xs:element type="xs:dateTime" name="modified" minOccurs="0" maxOccurs="1">
                       <xs:annotation>
-                        <xs:documentation>Date and time of the last modifictiion.</xs:documentation>
+                        <xs:documentation>Date and time of the last modification. This field should only be used for presentational purposes and should not be relied upon for import cache-busting.</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <xs:element type="xs:string" name="parcelNumbers" minOccurs="0" maxOccurs="1">
