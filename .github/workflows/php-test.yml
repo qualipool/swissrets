@@ -1,4 +1,4 @@
-name: PHP Tests
+name: PHPTest
 
 on:
   pull_request:
@@ -6,15 +6,10 @@ on:
 
 jobs:
   build:
-  
     runs-on: ubuntu-18.04
-    
-    services:
-
     defaults:
       run:
         working-directory: ./scripts/php
-
     steps:
     - uses: actions/checkout@v2
 
