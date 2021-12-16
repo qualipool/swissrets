@@ -27,7 +27,7 @@ function run(): void
 {
     $schemaFile = '../../schema/schema.xsd';
 
-    print consoleTitle("Checking that Example files are Valid:\n");
+    echo consoleTitle("Checking that Example files are Valid:\n");
     $positiveSuccesses = 0;
     $exampleFilesCount = 0;
     $exampleFiles = scandir('../../examples');
@@ -42,9 +42,9 @@ function run(): void
             }
         }
     }
-    print "\n\n";
+    echo "\n\n";
 
-    print consoleTitle(
+    echo consoleTitle(
         "Checking that non-valid \"should-fail\" xmls are detected as invalid:\n"
     );
     $positiveFailures = 0;
@@ -64,25 +64,25 @@ function run(): void
             }
         }
     }
-    print "\n\n";
-    print consoleTitle("RESULTS\n");
-    print consoleTitle("=======\n");
-    print "Successes expected: " . $exampleFilesCount . " \n";
-    print "Successes received: " . $positiveSuccesses . " \n";
-    print "Failures expected: " . $shouldFailFilesCount . " \n";
-    print "Failures received: " . $positiveFailures . " \n";
+    echo "\n\n";
+    echo consoleTitle("RESULTS\n");
+    echo consoleTitle("=======\n");
+    echo "Successes expected: " . $exampleFilesCount . " \n";
+    echo "Successes received: " . $positiveSuccesses . " \n";
+    echo "Failures expected: " . $shouldFailFilesCount . " \n";
+    echo "Failures received: " . $positiveFailures . " \n";
 
-    print "\n";
-    print consoleTitle("VERDICT\n");
-    print consoleTitle("=======\n");
+    echo "\n";
+    echo consoleTitle("VERDICT\n");
+    echo consoleTitle("=======\n");
     if ($exampleFilesCount === $positiveSuccesses
         && $shouldFailFilesCount === $positiveFailures
         && $exampleFilesCount + $shouldFailFilesCount !== 0
     ) {
-        print consoleReallyGood("SUCCESS") . "\n";
+        echo consoleReallyGood("SUCCESS") . "\n";
         exit(0);
     } else {
-        print consoleReallyBad("FAILED") . "\n";
+        echo consoleReallyBad("FAILED") . "\n";
         exit(1);
     }
 }
@@ -179,18 +179,18 @@ function shouldPass(string $xmlFile, string $schemaFile): bool
     $xml = new DOMDocument();
     $xml->load($xmlFile);
     if (!$xml->schemaValidate($schemaFile)) {
-        print "\n";
-        print consoleXmark() . ' ' . consoleTitle($xmlFile);
+        echo "\n";
+        echo consoleXmark() . ' ' . consoleTitle($xmlFile);
         $errors = libxml_get_errors();
         foreach ($errors as $error) {
-            print "\n";
-            print ' | ' . libxmlDisplayError($error);
+            echo "\n";
+            echo ' | ' . libxmlDisplayError($error);
         }
         libxml_clear_errors();
         return false;
     }
-    print "\n";
-    print consoleCheckmark() . ' ' . consoleTitle($xmlFile);
+    echo "\n";
+    echo consoleCheckmark() . ' ' . consoleTitle($xmlFile);
     
     return true;
 }
@@ -209,18 +209,18 @@ function shouldFail(string $xmlFile, string $schemaFile): bool
     $xml = new DOMDocument();
     $xml->load($xmlFile);
     if (!$xml->schemaValidate($schemaFile)) {
-        print "\n";
-        print consoleCheckmark() . ' ' . consoleTitle($xmlFile);
+        echo "\n";
+        echo consoleCheckmark() . ' ' . consoleTitle($xmlFile);
         $errors = libxml_get_errors();
         foreach ($errors as $error) {
-            print "\n";
-            print ' | ' . libxmlDisplayError($error);
+            echo "\n";
+            echo ' | ' . libxmlDisplayError($error);
         }
         libxml_clear_errors();
         return true;
     }
-    print "\n";
-    print consoleXmark() . ' ' . consoleTitle($xmlFile);
+    echo "\n";
+    echo consoleXmark() . ' ' . consoleTitle($xmlFile);
     
     return false;
 }
