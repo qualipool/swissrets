@@ -94,7 +94,7 @@ namespace SwissRETS.Tests
         {
             var schema = new XmlSchemaSet();
             schema.Add("", Schema_should.schemaFilename);
-            var reader = XmlReader.Create(
+            using var reader = XmlReader.Create(
               $"{(expectedErrorCount == 0 ? "should-pass" : "should-fail")}/{filename}"
             );
             var document = XDocument.Load(
