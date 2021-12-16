@@ -18,7 +18,6 @@ jobs:
       with:
         php-version: '8.2'
         ini-values: pcov.directory=scripts/php
-        tools: sclable/xml-lint
 
     - name: Run PHP linting
       run: php run.php
