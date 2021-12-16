@@ -1,0 +1,29 @@
+name: PHP Tests
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+  
+    runs-on: ubuntu-18.04
+    
+    services:
+
+    defaults:
+      run:
+        working-directory: ./scripts/php
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup PHP linting
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        ini-values: pcov.directory=scripts/php
+        tools: sclable/xml-lint
+
+    - name: Run PHP linting
+      run: php scripts/xmllint-php/run.php

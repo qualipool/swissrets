@@ -10,4 +10,4 @@
 bin
 obj
 .vs
-/scripts/xmllint-php/vendor
+/scripts/php/vendor
