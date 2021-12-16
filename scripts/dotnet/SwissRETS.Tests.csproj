@@ -29,6 +29,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="..\xmllint\should-fail\availability-missing.xml" Link="should-fail\availability-missing.xml" />
+    <Content Include="..\xmllint\should-fail\categories-empty.xml" Link="should-fail\categories-empty.xml" />
+    <Content Include="..\xmllint\should-fail\localization-lang-missing.xml" Link="should-fail\localization-lang-missing.xml" />
+    <Content Include="..\xmllint\should-fail\localization-name-missing.xml" Link="should-fail\localization-name-missing.xml" />
+    <Content Include="..\xmllint\should-fail\localization-phone-malformated-1.xml" Link="should-fail\localization-phone-malformated-1.xml" />
+    <Content Include="..\xmllint\should-fail\localization-phone-malformated-2.xml" Link="should-fail\localization-phone-malformated-2.xml" />
+    <Content Include="..\xmllint\should-fail\localization-phone-malformated-3.xml" Link="should-fail\localization-phone-malformated-3.xml" />
+    <Content Include="..\xmllint\should-fail\localizations-empty.xml" Link="should-fail\localizations-empty.xml" />
+    <Content Include="..\xmllint\should-fail\localizations-missing.xml" Link="should-fail\localizations-missing.xml" />
+    <Content Include="..\xmllint\should-fail\property-id-missing.xml" Link="should-fail\property-id-missing.xml" />
+    <Content Include="..\xmllint\should-fail\property-reference-id-missing.xml" Link="should-fail\property-reference-id-missing.xml" />
+    <Content Include="..\xmllint\should-fail\property-rent-but-empty.xml" Link="should-fail\property-rent-but-empty.xml" />
+    <Content Include="..\xmllint\should-fail\publishers-empty.xml" Link="should-fail\publishers-empty.xml" />
+    <Content Include="..\xmllint\should-fail\reference-to-non-existing-unit.xml" Link="should-fail\reference-to-non-existing-unit.xml" />
+    <Content Include="..\xmllint\should-fail\utilizations-empty.xml" Link="should-fail\utilizations-empty.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="should-fail\" />
     <Folder Include="schema\" />
   </ItemGroup>
 
