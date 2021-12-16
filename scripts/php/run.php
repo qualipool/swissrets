@@ -4,16 +4,16 @@ libxml_use_internal_errors(true);
 
 function run()
 {
-    $schemaFile = 'schema/schema.xsd';
+    $schemaFile = '../../schema/schema.xsd';
 
     print consoleTitle("Checking that Example files are Valid:\n");
     $positiveSuccesses = 0;
     $exampleFilesCount = 0;
-    $exampleFiles = scandir('examples');
+    $exampleFiles = scandir('../../examples');
     foreach ($exampleFiles as $exampleFile) {
         if(strpos($exampleFile, '.xml')) {
             $exampleFilesCount++;
-            $success = shouldPass('examples/' . $exampleFile, $schemaFile);
+            $success = shouldPass('../../examples/' . $exampleFile, $schemaFile);
             if ($success) {
                 $positiveSuccesses++;
             }
@@ -24,11 +24,11 @@ function run()
     print consoleTitle("Checking that non-valid \"should-fail\" xmls are detected as invalid:\n");
     $positiveFailures = 0;
     $shouldFailFilesCount = 0;
-    $shouldFailFiles = scandir('scripts/xmllint/should-fail');
+    $shouldFailFiles = scandir('../../scripts/xmllint/should-fail');
     foreach ($shouldFailFiles as $shouldFailFile) {
         if(strpos($shouldFailFile, '.xml')) {
             $shouldFailFilesCount++;
-            $success = shouldFail('scripts/xmllint/should-fail/' . $shouldFailFile, $schemaFile);
+            $success = shouldFail('../../scripts/xmllint/should-fail/' . $shouldFailFile, $schemaFile);
             if ($success) {
                 $positiveFailures++;
             }
@@ -47,6 +47,7 @@ function run()
     print consoleTitle("=======\n");
     if ($exampleFilesCount === $positiveSuccesses
         && $shouldFailFilesCount === $positiveFailures
+        && $exampleFilesCount + $shouldFailFilesCount !== 0
     ) {
         print consoleReallyGood("SUCCESS") . "\n";
         exit(0);
