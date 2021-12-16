@@ -10,7 +10,7 @@ services:
     env_file:
       - ./.env
     volumes:
-      - .:/scripts/xmllint
+      - .:/scripts/php
       - ../../examples:/examples
       - ../../schema:/schema
       - ../xmllint/should-fail:/scripts/xmllint/should-fail
