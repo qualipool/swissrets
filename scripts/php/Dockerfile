@@ -12,7 +12,4 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 RUN apt-get install --yes git zlib1g-dev libzip-dev \
     && docker-php-ext-install zip
 
-# COPY scripts/php/composer.json /composer.json
-# COPY scripts/php/composer.lock /composer.lock
-# RUN composer install
 
