@@ -21,4 +21,4 @@ jobs:
         tools: sclable/xml-lint
 
     - name: Run PHP linting
-      run: php scripts/xmllint-php/run.php
+      run: php run.php
