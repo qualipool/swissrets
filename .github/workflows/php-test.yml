@@ -1,8 +1,11 @@
-name: PHPTest
+name: PHP validator
 
 on:
   pull_request:
   workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
