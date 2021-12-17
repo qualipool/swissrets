@@ -2,6 +2,7 @@
 [![GitHub](https://img.shields.io/github/license/qualipool/swissrets.svg)](https://github.com/qualipool/swissrets/blob/master/LICENSE.md)
 [![Node validator](https://github.com/qualipool/swissrets/actions/workflows/lint.yml/badge.svg)](https://github.com/qualipool/swissrets/actions/workflows/lint.yml)
 [![PHP validator](https://github.com/qualipool/swissrets/actions/workflows/php-test.yml/badge.svg)](https://github.com/qualipool/swissrets/actions/workflows/php-test.yml)
+[![.NET validator](https://github.com/qualipool/swissrets/actions/workflows/dotnet-test.yml/badge.svg)](https://github.com/qualipool/swissrets/actions/workflows/dotnet-test.yml)
 
 SwissRETS
 =========
