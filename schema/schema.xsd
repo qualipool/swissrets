@@ -795,7 +795,7 @@
         </xs:annotation>
         <xs:complexType>
           <xs:all>
-            <xs:element minOccurs="1" maxOccurs="1" name="price" type="xs:positiveInteger" />
+            <xs:element minOccurs="0" maxOccurs="1" name="price" type="xs:positiveInteger" />
             <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
             <xs:element name="wirPercentage" type="percent" minOccurs="0" maxOccurs="1">
               <xs:annotation>
