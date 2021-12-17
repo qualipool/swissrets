@@ -1,4 +1,4 @@
-name: PHPTest
+name: PHP validator
 
 on:
   pull_request:
