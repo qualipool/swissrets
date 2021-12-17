@@ -780,24 +780,11 @@
           <xs:documentation>Recurring rental price.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
-          <xs:choice minOccurs="1" maxOccurs="unbounded">
-            <xs:sequence>
-              <xs:element minOccurs="1" maxOccurs="1" name="gross" type="xs:positiveInteger" />
-              <xs:element minOccurs="1" maxOccurs="1" name="net" type="xs:positiveInteger" />
-              <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
-            </xs:sequence>
-            <xs:sequence>
-              <xs:element minOccurs="1" maxOccurs="1" name="gross" type="xs:positiveInteger" />
-              <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
-            </xs:sequence>
-            <xs:sequence>
-              <xs:element minOccurs="1" maxOccurs="1" name="net" type="xs:positiveInteger" />
-              <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
-            </xs:sequence>
-            <xs:sequence>
-              <xs:element minOccurs="1" maxOccurs="1" name="extra" type="xs:positiveInteger" />
-            </xs:sequence>
-          </xs:choice>
+          <xs:all>
+            <xs:element minOccurs="0" maxOccurs="1" name="gross" type="xs:positiveInteger" />
+            <xs:element minOccurs="0" maxOccurs="1" name="net" type="xs:positiveInteger" />
+            <xs:element minOccurs="0" maxOccurs="1" name="extra" type="xs:positiveInteger" />
+          </xs:all>
           <xs:attribute name="interval" type="priceInterval" use="optional" />
           <xs:attribute name="referring" type="priceReferring" use="optional" />
         </xs:complexType>
