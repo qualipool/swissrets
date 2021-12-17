@@ -1,8 +1,11 @@
-name: Lint
+name: Node validator
 
 on:
   pull_request:
   workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
