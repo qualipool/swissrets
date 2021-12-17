@@ -1,6 +1,7 @@
 [![GitHub package version](https://img.shields.io/github/release/qualipool/swissrets.svg)](https://github.com/qualipool/swissrets/releases)
 [![Build Status](https://travis-ci.com/qualipool/swissrets.svg?branch=master)](https://travis-ci.com/qualipool/swissrets)
 [![GitHub](https://img.shields.io/github/license/qualipool/swissrets.svg)](https://github.com/qualipool/swissrets/blob/master/LICENSE.md)
+[![PHPTest](https://github.com/qualipool/swissrets/actions/workflows/php-test.yml/badge.svg)](https://github.com/qualipool/swissrets/actions/workflows/php-test.yml)
 
 SwissRETS
 =========
