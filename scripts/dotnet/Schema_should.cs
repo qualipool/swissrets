@@ -28,7 +28,8 @@ namespace SwissRETS.Tests
         public void should_pass()
         {
             this.validate(@"full.xml", 0);
-            this.validate(@"minimal.xml", 0);
+            this.validate(@"minimal-properties.xml", 0);
+            this.validate(@"minimal-projects.xml", 0);
             this.validate(@"multiple.xml", 0);
         }
 

@@ -62,9 +62,6 @@
     <Content Include="..\xmllint\should-fail\property-reference-id-missing.xml" Link="should-fail\property-reference-id-missing.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\xmllint\should-fail\property-rent-but-empty.xml" Link="should-fail\property-rent-but-empty.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\xmllint\should-fail\publishers-empty.xml" Link="should-fail\publishers-empty.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
