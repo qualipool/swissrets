@@ -935,44 +935,83 @@
       <xs:documentation>The distinct object type name or object built type.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
+      <xs:enumeration value="agricultural-lot" />
+      <xs:enumeration value="allotment-garden" />
       <xs:enumeration value="apartment">
         <xs:annotation>
           <xs:documentation>apartment - A part of a building, suitable for people to live in.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="arcade" />
       <xs:enumeration value="atelier">
         <xs:annotation>
           <xs:documentation>atelier - A private workshop or studio of hobbyists or professionals.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="attic-compartment" />
       <xs:enumeration value="attic-flat">
         <xs:annotation>
           <xs:documentation>attic-flat - A free-standing apartment, built onto the roof of a multi-story building, also called a penthouse.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="bakery" />
       <xs:enumeration value="bar">
         <xs:annotation>
           <xs:documentation>bar - Where drinks, especially alcoholic drinks, are sold and drunk.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="boat-dry-dock" />
+      <xs:enumeration value="boat-landing-stage" />
+      <xs:enumeration value="boat-mooring" />
+      <xs:enumeration value="building-lot" />
+      <xs:enumeration value="butcher" />
       <xs:enumeration value="cafe">
         <xs:annotation>
           <xs:documentation>cafe - Small restaurant where simple meals and drinks are served.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="campground" />
+      <xs:enumeration value="car-park" />
       <xs:enumeration value="car-repair-shop">
         <xs:annotation>
           <xs:documentation>car-repair-shop - An automobile repair shop, also known regionally as a garage.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="carpentry-shop" />
+      <xs:enumeration value="casino" />
       <xs:enumeration value="castle">
         <xs:annotation>
           <xs:documentation>castle - A large building, typically of the medieval period, fortified against attack with thick walls, battlements, towers, and in many cases a moat.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="cellar-compartment" />
       <xs:enumeration value="chalet">
         <xs:annotation>
           <xs:documentation>chalet - A wooden house with overhanging eaves, typically found in the Swiss Alps.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cheese-factory" />
+      <xs:enumeration value="club-disco" />
+      <xs:enumeration value="commercial-lot" />
+      <xs:enumeration value="commercial-space" />
+      <xs:enumeration value="covered-motorbike-parking-space" />
+      <xs:enumeration value="covered-parking-space" />
+      <xs:enumeration value="department-store" />
+      <xs:enumeration value="detached-house">
+        <xs:annotation>
+          <xs:documentation>detached-house - A stand-alone free-standing residential building, also called a single-detached dwelling or single-family house.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="display-window" />
+      <xs:enumeration value="doctors-office">
+        <xs:annotation>
+          <xs:documentation>doctors-office - Doctors' offices are the primary place where ambulatory care is given, and are often the first place that a sick person would go for care, also called a doctor's practice.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="double-garage" />
+      <xs:enumeration value="duplex-house">
+        <xs:annotation>
+          <xs:documentation>duplex-house - A divided house, two living units attached, either side by side or one above the other, also called two-family house.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="earth-sheltered-dwelling">
@@ -980,46 +1019,44 @@
           <xs:documentation>earth-sheltered-dwelling - A house, flat, or other place of residence, with a significant amount of soil or substrate in contact with its external envelope.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="detached-house">
-        <xs:annotation>
-          <xs:documentation>detached-house - A stand-alone free-standing residential building, also called a single-detached dwelling or single-family house.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="doctors-office">
-        <xs:annotation>
-          <xs:documentation>doctors-office - Doctors' offices are the primary place where ambulatory care is given, and are often the first place that a sick person would go for care, also called a doctor's practice.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="duplex-house">
-        <xs:annotation>
-          <xs:documentation>duplex-house - A divided house, two living units attached, either side by side or one above the other, also called two-family house.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
+      <xs:enumeration value="factory" />
       <xs:enumeration value="farm-house">
         <xs:annotation>
           <xs:documentation>farm-house - Usually a larger house combining different needs, typically the accommodation wing is attached to a stable, a shelter, a shed or a stock.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="fuel-station" />
       <xs:enumeration value="furnished-flat">
         <xs:annotation>
           <xs:documentation>furnished-flat - Typically a flat or house which comes with all the built-in and loose furniture, refrigerator, washer and dryer and other essential electric appliances.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="golf-course" />
       <xs:enumeration value="granny-flat">
         <xs:annotation>
           <xs:documentation>granny-flat - A set of rooms, often connected to or part of a relation's house, typically with a separate house entry, not to be confused with the 'stoeckli' category.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="hairdresser" />
       <xs:enumeration value="hobby-room">
         <xs:annotation>
           <xs:documentation>hobby-room - A sparate room for activities done regularly in one's leisure time for pleasure, similar to an atelier, but not limited to creating things.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="hospital" />
       <xs:enumeration value="hotel">
         <xs:annotation>
           <xs:documentation>hotel - An establishment providing accommodation, meals, and other services for travellers and tourists.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="horse-box" />
+      <xs:enumeration value="indoor-swimming-pool" />
+      <xs:enumeration value="indoor-tennis-court" />
+      <xs:enumeration value="industrial-lot" />
+      <xs:enumeration value="industrial-object" />
+      <xs:enumeration value="kiosk" />
+      <xs:enumeration value="laboratory" />
+      <xs:enumeration value="library" />
       <xs:enumeration value="loft">
         <xs:annotation>
           <xs:documentation>loft - A single room flat, typically built in an old industry storage halls or newly built as a loft flat.</xs:documentation>
@@ -1030,11 +1067,17 @@
           <xs:documentation>maisonette - A flat with at least two connected stories in a building, typically the story directly under the roof and the one below.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="market-garden" />
+      <xs:enumeration value="mini-golf-course" />
+      <xs:enumeration value="motel" />
+      <xs:enumeration value="movie-theater" />
       <xs:enumeration value="multiplex-house">
         <xs:annotation>
           <xs:documentation>multiplex-house - A divided house, more than two living units attached, either side by side and/or one above the other, also called multifamily house or multiple-dwelling.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="multistorey-car-park" />
+      <xs:enumeration value="nursing-home" />
       <xs:enumeration value="office">
         <xs:annotation>
           <xs:documentation>office - A place in which business, clerical, or professional activities are conducted.</xs:documentation>
@@ -1045,6 +1088,23 @@
           <xs:documentation>one-room-flat - A studio flat in which the bedroom, sitting-room and kitchen are all one-room, not to be confused with the 'single-room' category.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="open-motorbike-parking-space" />
+      <xs:enumeration value="open-parking-space" />
+      <xs:enumeration value="orphanage" />
+      <xs:enumeration value="outdoor-swimming-pool" />
+      <xs:enumeration value="parking-space">
+        <xs:annotation>
+          <xs:documentation>Simple non-descriptive place to park a car.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="party-room" />
+      <xs:enumeration value="plot">
+        <xs:annotation>
+          <xs:documentation>Land area or a piece of empty property.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pub" />
+      <xs:enumeration value="residential-commercial-building" />
       <xs:enumeration value="restaurant">
         <xs:annotation>
           <xs:documentation>restaurant - Commercial establishment where meals are prepared and served to customers.</xs:documentation>
@@ -1055,6 +1115,8 @@
           <xs:documentation>retail-location - A space for the selling of goods to consumers.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="retirement-home" />
+      <xs:enumeration value="riding-hall" />
       <xs:enumeration value="roof-flat">
         <xs:annotation>
           <xs:documentation>roof-flat - An apartment directly under the roof, typically features roof slopes.</xs:documentation>
@@ -1070,16 +1132,17 @@
           <xs:documentation>rustico - A converted or rebuilt old small landside house, typically found in Ticino region on mountain slopes.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="sanatorium" />
+      <xs:enumeration value="sauna" />
+      <xs:enumeration value="shopping-center" />
       <xs:enumeration value="single-room">
         <xs:annotation>
           <xs:documentation>single-room - A single room, typically for rent, does not necessarily include an own bathroom or kitchen, not to be confused with the 'one-room-flat' category.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="stoeckli">
-        <xs:annotation>
-          <xs:documentation>stoeckli - A small house, typically near a larger farm-house, in the past they were residences for aged farmers after turning over the farm to their heirs, not to be confused with the 'granny-flat' category.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
+      <xs:enumeration value="solarium" />
+      <xs:enumeration value="sports-hall" />
+      <xs:enumeration value="squash-badminton" />
       <xs:enumeration value="stepped-flat">
         <xs:annotation>
           <xs:documentation>stepped-flat - A set of rooms for living in, arranged in a staircase like manner, typicaly over two or more floors.</xs:documentation>
@@ -1090,6 +1153,14 @@
           <xs:documentation>stepped-house - A building containing one or more apartments arranged in a staircase manner, in order to maximize the outside space.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="stoeckli">
+        <xs:annotation>
+          <xs:documentation>stoeckli - A small house, typically near a larger farm-house, in the past they were residences for aged farmers after turning over the farm to their heirs, not to be confused with the 'granny-flat' category.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="storage-room" />
+      <xs:enumeration value="tennis-court" />
+      <xs:enumeration value="underground-parking-space" />
       <xs:enumeration value="villa">
         <xs:annotation>
           <xs:documentation>villa - A large and luxurious house in its own grounds.</xs:documentation>
@@ -1098,16 +1169,6 @@
       <xs:enumeration value="workshop">
         <xs:annotation>
           <xs:documentation>workshop - A room or building in which goods are manufactured or repaired, for commercial or business reasons.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="plot">
-        <xs:annotation>
-          <xs:documentation>Land area or a piece of empty property.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="parking-space">
-        <xs:annotation>
-          <xs:documentation>Simple non-descriptive place to park a car.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
@@ -1220,7 +1281,7 @@
     </xs:restriction>
   </xs:simpleType>
   <!-- actual xml structure -->
-  
+
   <xs:element name="export" type="exportType">
     <xs:keyref name="propertyUnitKeyRef" refer="propertyUnitKey">
       <xs:selector xpath="properties/*"/>
