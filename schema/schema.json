@@ -1,0 +1,1854 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/product.schema.json",
+  "title": "Product",
+  "description": "A product in the catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "created": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date-time"
+    },
+    "generator": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "title": "Project",
+      "items": {
+        "$ref": "#/$defs/projectType"
+      }
+    },
+    "properties": {
+      "type": "array",
+      "title": "Property",
+      "items": {
+        "$ref": "#/$defs/propertyType"
+      }
+    }
+  },
+  "$defs": {
+    "projectType": {
+      "type": "object",
+      "description": "Building project container.",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "referenceId": {
+          "type": "string"
+        },
+        "seller": {
+          "type": "object",
+          "description": "The owner or the owners substitute (for example a broker).",
+          "additionalProperties": false,
+          "properties": {
+            "organization": {
+              "$ref": "#/$defs/organizationType",
+              "description": "The company selling"
+            },
+            "contactPerson": {
+              "$ref": "#/$defs/personType",
+              "title": "Person",
+              "description": "Contact person for questions and typically responsible for making appointments. This contact is typicaly presented publicly."
+            },
+            "inquiryPerson": {
+              "$ref": "#/$defs/personType",
+              "title": "Person",
+              "description": "The person responsible for receiving inquiries and applications. This person should not be presented publicly and is only intended as an indirect recipient using an online form or similar."
+            }
+          }
+        },
+        "availability": {
+          "type": "object",
+          "description": "Mutually exclusive lifecycle state.",
+          "additionalProperties": false,
+          "properties": {
+            "state": {
+              "type": "string",
+              "$ref": "#/$defs/availabilityStateType"
+            },
+            "start": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "expiration": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": ["state"]
+        },
+        "constructionStatus": {
+          "type": "string",
+          "description": "Construction status of project.",
+          "enum": ["planned", "under-construction", "ready", "completed"]
+        },
+        "address": {
+          "$ref": "#/$defs/addressType",
+          "description": "Location of the property."
+        },
+        "prices": {
+          "type": "object",
+          "description": "Price ranges for marketing purposes.",
+          "additionalProperties": false,
+          "properties": {
+            "currency": {
+              "$ref": "#/$defs/currencyType"
+            },
+            "rent": {
+              "description": "Recurring rental price.",
+              "title": "projectPriceRent",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "netFrom": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "netTo": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "interval": {
+                  "$ref": "#/$defs/priceIntervalType"
+                },
+                "referring": {
+                  "$ref": "#/$defs/priceReferringType"
+                }
+              },
+              "required": ["netFrom", "netTo"]
+            },
+            "buy": {
+              "description": "One time buy prices.",
+              "title": "projectPriceBuy",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "priceFrom": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "priceTo": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "referring": {
+                  "$ref": "#/$defs/priceReferringType"
+                }
+              },
+              "required": ["priceFrom", "priceTo", "referring"]
+            }
+          },
+          "required": ["currency"]
+        },
+        "characteristics": {
+          "type": "object",
+          "description": "Characteristics and ranges relevant to entire project.",
+          "additionalProperties": false,
+          "properties": {
+            "areaSiaNfFrom": {
+              "type": "number",
+              "minimum": 0
+            },
+            "areaSiaNfTo": {
+              "type": "number",
+              "minimum": 0
+            },
+            "areaBwfFrom": {
+              "type": "number",
+              "minimum": 0
+            },
+            "areaBwfTo": {
+              "type": "number",
+              "minimum": 0
+            },
+            "numberOfRoomsFrom": {
+              "type": "number",
+              "minimum": 0
+            },
+            "numberOfRoomsTo": {
+              "type": "number",
+              "minimum": 0
+            },
+            "numberOfResidentialUnits": {
+              "type": "number",
+              "minimum": 0
+            },
+            "numberOfCommercialUnits": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "localizations": {
+          "type": "array",
+          "description": "Sequence of all language specific content and texts.",
+          "items": {
+            "type": "object",
+            "description": "One for each language, a set of language specific content and texts.",
+            "additionalProperties": false,
+            "properties": {
+              "languageCode": {
+                "$ref": "#/$defs/languageCodeType"
+              },
+              "title": {
+                "type": "string",
+                "description": "Simple marketing title."
+              },
+              "excerpt": {
+                "type": "string",
+                "description": "A short extract from description, location and equipment."
+              },
+              "description": {
+                "type": "string",
+                "description": "Main description."
+              },
+              "attachments": {
+                "type": "object",
+                "description": "Sequence links, files, embeds and media.",
+                "title": "ProjectAttachment",
+                "additionalProperties": false,
+                "properties": {
+                  "images": {
+                    "type": "array",
+                    "title": "Image",
+                    "items": {
+                      "$ref": "#/$defs/attachmentImageType"
+                    }
+                  },
+                  "logos": {
+                    "type": "array",
+                    "title": "Logo",
+                    "items": {
+                      "$ref": "#/$defs/attachmentLogoType"
+                    }
+                  },
+                  "documents": {
+                    "type": "array",
+                    "title": "Document",
+                    "items": {
+                      "$ref": "#/$defs/attachmentDocumentType",
+                      "description": "Specifications, brochures and other descriptive files."
+                    }
+                  },
+                  "plans": {
+                    "type": "array",
+                    "title": "Document",
+                    "items": {
+                      "$ref": "#/$defs/attachmentDocumentType",
+                      "description": "Floorplan image or document."
+                    }
+                  },
+                  "landRegisterExtracts": {
+                    "type": "array",
+                    "title": "Document",
+                    "items": {
+                      "$ref": "#/$defs/attachmentDocumentType",
+                      "description": "A document given to political officials (commune) with basic information portraying the property and its registrational validity."
+                    }
+                  },
+                  "directLinks": {
+                    "type": "array",
+                    "title": "Link",
+                    "items": {
+                      "$ref": "#/$defs/attachmentLinkType",
+                      "description": "'direct-link' defines a link that will link visitors 'directly' to the offer. For example from a List of properties one will be linked to the project website directly if clicked. This is usually used by websites, and portals tend to ignore that and can opt into simply representing them as normal 'link' types."
+                    }
+                  },
+                  "links": {
+                    "type": "array",
+                    "title": "Link",
+                    "items": {
+                      "$ref": "#/$defs/attachmentLinkType",
+                      "description": "An arbitrary related link."
+                    }
+                  },
+                  "virtualTourLinks": {
+                    "type": "array",
+                    "title": "Link",
+                    "items": {
+                      "$ref": "#/$defs/attachmentLinkType",
+                      "description": "Virtual tour link, typically used for embeddings and integrations."
+                    }
+                  },
+                  "youTubeLinks": {
+                    "type": "array",
+                    "title": "Link",
+                    "items": {
+                      "$ref": "#/$defs/attachmentLinkType",
+                      "description": "Video link, typically used for embeddings and integrations."
+                    }
+                  }
+                }
+              }
+            },
+            "required": ["title", "languageCode"]
+          }
+        },
+        "units": {
+          "type": "array",
+          "description": "List of units.",
+          "items": {
+            "type": "object",
+            "description": "A set of properties",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "referenceId": {
+                "type": "string"
+              },
+              "localizations": {
+                "type": "array",
+                "description": "Sequence of all language specific content and texts.",
+                "items": {
+                  "type": "object",
+                  "description": "One for each language, a set of language specific content and texts.",
+                  "additionalProperties": false,
+                  "properties": {
+                    "languageCode": {
+                      "$ref": "#/$defs/languageCodeType"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Simple marketing title for unit."
+                    }
+                  },
+                  "required": ["languageCode", "title"]
+                }
+              },
+              "characteristics": {
+                "type": "array",
+                "title": "UnitCharacteristic",
+                "items": {
+                  "$ref": "#/$defs/unitCharacteristicsType"
+                }
+              }
+            },
+            "required": ["referenceId", "localizations"]
+          },
+          "uniqueId": "units"
+        }
+      },
+      "required": ["referenceId", "availability", "units"]
+    },
+    "propertyType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "This ID needs to be unique and represents the id from the exporter (this can be the same as referenceId if the exporter is the original creator)"
+        },
+        "type": {
+          "description": "Specifies rent or buy.",
+          "type": "string",
+          "enum": ["buy", "rent"]
+        },
+        "referenceId": {
+          "description": "Can be used to track the original creation id (this should usually be unique to the property)",
+          "type": "string",
+          "examples": ["3000123456", "97666adc-d1aa-4591-8d3f-716ad65ee477"]
+        },
+        "unitReferenceId": {
+          "type": "string",
+          "sameAs": true,
+          "description": "Reference to an existing project - unit within the xml. Used for grouping and representing a 'project-tree'"
+        },
+        "visualReferenceId": {
+          "type": "string",
+          "description": "Can should only be used for presentational purposes publishers tend to present the referenceId if this one is missing"
+        },
+        "utilizations": {
+          "type": "array",
+          "minItems": 0,
+          "uniqueItems": true,
+          "description": "Prioritized sequence for the intended utilization of the property, main comes first.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "agricultural",
+              "commercial",
+              "construction",
+              "gastronomy",
+              "industrial",
+              "investment",
+              "parking",
+              "residential",
+              "storage",
+              "vacation"
+            ]
+          }
+        },
+        "minergieCertification": {
+          "description": "Quality label for new and refurbished low-energy-consumption buildings.",
+          "type": "string",
+          "enum": ["Minergie", "Minergie-P", "Minergie-Eco", "Minergie-P-Eco"]
+        },
+        "modified": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time of the last modification. This field should only be used for presentational purposes and should not be relied upon for import cache-busting."
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation date and time of the data."
+        },
+        "parcelNumbers": {
+          "type": "string",
+          "description": "Arbitrary string that holds one or more parcel numbers, either from the swiss cadastral system or from a certain municipality."
+        },
+        "author": {
+          "type": "string",
+          "description": "The name or username of the author, who created the record."
+        },
+        "buildingZones": {
+          "type": "string",
+          "description": "Building zones intended for residential buildings or for other buildings intended as long-stay accommodation, those are typically municipal-specific abbreviations."
+        },
+        "development": {
+          "type": "string",
+          "description": "The development state of the property.",
+          "enum": ["full", "partial", "undeveloped"]
+        },
+        "bfs": {
+          "$ref": "#/$defs/bfsType",
+          "description": "Federal statistical office specific information"
+        },
+        "heating": {
+          "$ref": "#/$defs/heatingType",
+          "description": "The main heating system."
+        },
+        "categories": {
+          "description": "Sequence of ordered categories (main first).",
+          "type": "array",
+          "minItems": 0,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "apartment",
+              "atelier",
+              "attic-flat",
+              "bar",
+              "cafe",
+              "car-repair-shop",
+              "castle",
+              "chalet",
+              "earth-sheltered-dwelling",
+              "detached-house",
+              "doctors-office",
+              "duplex-house",
+              "farm-house",
+              "furnished-flat",
+              "granny-flat",
+              "hobby-room",
+              "hotel",
+              "loft",
+              "maisonette",
+              "multiplex-house",
+              "office",
+              "one-room-flat",
+              "restaurant",
+              "retail-location",
+              "roof-flat",
+              "row-house",
+              "rustico",
+              "single-room",
+              "stoeckli",
+              "stepped-flat",
+              "stepped-house",
+              "villa",
+              "workshop",
+              "plot",
+              "parking-space"
+            ]
+          }
+        },
+        "characteristics": {
+          "$ref": "#/$defs/propertyCharacteristicsType",
+          "description": "Main characteristics of properties"
+        },
+        "availability": {
+          "description": "Mutually exclusive lifecycle state.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "state": {
+              "type": "string",
+              "$ref": "#/$defs/availabilityStateType"
+            },
+            "start": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "expiration": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": ["state"]
+        },
+        "publishers": {
+          "type": "array",
+          "title": "Publishers",
+          "description": "List of publishers",
+          "items": {
+            "$ref": "#/$defs/publisherType"
+          }
+        },
+        "address": {
+          "$ref": "#/$defs/addressType",
+          "description": "Location of the property."
+        },
+        "seller": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "organization": {
+              "$ref": "#/$defs/organizationType",
+              "description": "The company selling"
+            },
+            "contactPerson": {
+              "$ref": "#/$defs/personType",
+              "title": "Person",
+              "description": "Contact person for questions and typically responsible for making appointments. This contact is typicaly presented publicly."
+            },
+            "visitPerson": {
+              "$ref": "#/$defs/personType",
+              "title": "Person",
+              "description": "Person responsible opening the door for visiting."
+            },
+            "inquiryPerson": {
+              "$ref": "#/$defs/personType",
+              "title": "Person",
+              "description": "The person responsible for receiving inquiries and applications. This person should not be presented publicly and is only intended as an indirect recipient using an online form or similar."
+            }
+          }
+        },
+        "prices": {
+          "$ref": "#/$defs/pricesType"
+        },
+        "localizations": {
+          "type": "array",
+          "title": "PropertyLocalization",
+          "items": {
+            "$ref": "#/$defs/localizationType"
+          },
+          "description": "Sequence of all language specific content and texts."
+        }
+      },
+      "required": ["id", "referenceId", "type", "availability", "localizations"]
+    },
+    "languageCodeType": {
+      "description": "Lowercase, two letter representation of a language.",
+      "type": "string",
+      "pattern": "^[a-z]{2}$",
+      "maxLength": 2,
+      "minLength": 2
+    },
+    "priceIntervalType": {
+      "description": "The payment interval, the price stands for.",
+      "type": "string",
+      "enum": ["onetime", "day", "week", "month", "year"]
+    },
+    "priceReferringType": {
+      "description": "For what area the price stands for.",
+      "type": "string",
+      "enum": ["all", "m2", "km2"]
+    },
+    "emailType": {
+      "description": "Very loose email like strings, validation basically just checks, if there is an @ sign and a dot after that.",
+      "type": "string",
+      "pattern": "[^@]+@[^\\.]+\\..+"
+    },
+    "phoneNumberType": {
+      "type": "string",
+      "pattern": "^[+]?([0-9] )*[0-9]{3,}$",
+      "description": "Strings of at least three digits, may start with a plus sign and can have single spaces between digits, leading and trailing whitespace are not allowed."
+    },
+    "attachmentImageType": {
+      "description": "Picture from inside or outside, typically used in image galleries.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "mimeType": {
+          "type": "string"
+        }
+      },
+      "required": ["url"]
+    },
+    "attachmentLogoType": {
+      "description": "Related logo image.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "mimeType": {
+          "type": "string"
+        }
+      },
+      "required": ["url"]
+    },
+    "attachmentLinkType": {
+      "description": "Localized link attachment for properties.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": ["url"]
+    },
+    "attachmentDocumentType": {
+      "description": "Generic non-specific document.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string"
+        },
+        "mimeType": {
+          "type": "string"
+        }
+      },
+      "required": ["url"]
+    },
+    "bfsType": {
+      "type": "object",
+      "description": "Federal statistical office specific information",
+      "additionalProperties": false,
+      "properties": {
+        "egid": {
+          "type": "string",
+          "description": "The building identifier of the swiss population register",
+          "examples": ["1254"]
+        },
+        "ewid": {
+          "type": "string",
+          "description": "The flat identifier of the swiss population register ",
+          "examples": ["1254"]
+        },
+        "egrid": {
+          "type": "string",
+          "description": "The property (plot) identifier of the swiss population register",
+          "examples": ["1254"]
+        }
+      }
+    },
+    "heatingType": {
+      "type": "object",
+      "description": "The main heating system.",
+      "additionalProperties": false,
+      "properties": {
+        "generation": {
+          "type": "string",
+          "title": "HeatingGeneration",
+          "description": "Technology used to create heat.",
+          "enum": [
+            "district",
+            "electricity",
+            "gas",
+            "geothermal-probe",
+            "heatpump-air-and-water",
+            "heatpump",
+            "oil",
+            "photovoltaics",
+            "solar-thermal",
+            "wood-pellet",
+            "wood",
+            "coal"
+          ]
+        },
+        "distribution": {
+          "type": "string",
+          "title": "HeatingDistribution",
+          "description": "How the heating system distributes and maintains temperature.",
+          "enum": ["radiator", "floor"]
+        }
+      }
+    },
+    "propertyCharacteristicsType": {
+      "type": "object",
+      "description": "The cold facts, to represent the property or offer.",
+      "additionalProperties": false,
+      "properties": {
+        "areaBwf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Living area in m²"
+        },
+        "areaNwf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Net livin area in m²"
+        },
+        "areaPropertyLand": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property land area in m²"
+        },
+        "areaCellar": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Space allocated in cellar included within the offer in m²"
+        },
+        "areaBalcony": {
+          "type": "number",
+          "minimum": 0,
+          "description": "If there is a balcony (non ground floor outside area) this field would specify the area in m²"
+        },
+        "areaTerrace": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Usually ground floor outside seating area in m²"
+        },
+        "areaLoggia": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Usually refers to a covered not necessarily heated area with fresh air, but not opened up to the outside."
+        },
+        "areaGarden": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Area dedicated to growing plants or a garden. To differentiate from something like a Terrace. In m²"
+        },
+        "areaSiaAff": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-AFF area in m²"
+        },
+        "areaSiaAgf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-AGF area in m²"
+        },
+        "areaSiaAkf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-AKF area in m²"
+        },
+        "areaSiaAkfn": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-AKFN area in m²"
+        },
+        "areaSiaAkft": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-AKFT area in m²"
+        },
+        "areaSiaAnf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-ANF area in m²"
+        },
+        "areaSiaAngf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-ANGF area in m²"
+        },
+        "areaSiaAvf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-AVF area in m²"
+        },
+        "areaSiaBuf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-BUF area in m²"
+        },
+        "areaSiaFf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-FF area in m²"
+        },
+        "areaSiaGf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-GF area in m²"
+        },
+        "areaSiaGgf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-GGF area in m²"
+        },
+        "areaSiaGsf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-GSF area in m²"
+        },
+        "areaSiaHnf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-HNF area in m²"
+        },
+        "areaSiaKf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-KF area in m²"
+        },
+        "areaSiaKfn": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-KFN area in m²"
+        },
+        "areaSiaKft": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-KFT area in m²"
+        },
+        "areaSiaNf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-NF area in m²"
+        },
+        "areaSiaNgf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-NGF area in m²"
+        },
+        "areaSiaNnf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-NNF area in m²"
+        },
+        "areaSiaUf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-UF area in m²"
+        },
+        "areaSiaUuf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-UUF area in m²"
+        },
+        "areaSiaVf": {
+          "type": "number",
+          "minimum": 0,
+          "description": "SIA-VF area in m²"
+        },
+        "arePetsAllowed": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Pets are allowed or not tolerated."
+        },
+        "ceilingHeight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Height of the rooms in m."
+        },
+        "craneCapacity": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Carrying capacity for crane in kg."
+        },
+        "elevatorLoad": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum elevator load in kg."
+        },
+        "floor": {
+          "type": "integer",
+          "description": "Floor number, ground floor is 0, basement floors are negative."
+        },
+        "floorLoad": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum floor load in kg/m²"
+        },
+        "grossPremium": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "A gross premium is the total premium of an insurance contract before brokerage or discounts have been deducted, in percent."
+        },
+        "hallHeight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Hall height in m, usually for commercial properties."
+        },
+        "hasAttic": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Has an attic."
+        },
+        "hasBalcony": {
+          "description": "Balcony available.",
+          "title": "applicableType",
+          "$ref": "#/$defs/applicableType"
+        },
+        "hasBuildingLawRestrictions": {
+          "description": "Restrictions for modifications apply, like monument protection and similar.",
+          "title": "applicableType",
+          "$ref": "#/$defs/applicableType"
+        },
+        "hasCableTv": {
+          "description": "Availability of cable tv.",
+          "title": "applicableType",
+          "$ref": "#/$defs/applicableType"
+        },
+        "hasCarPort": {
+          "description": "A covered structure used to offer limited protection from rain and snow, for one car.",
+          "title": "applicableType",
+          "$ref": "#/$defs/applicableType"
+        },
+        "hasCarPortDouble": {
+          "description": "A covered structure used to offer limited protection from rain and snow, for two cars.",
+          "title": "applicableType",
+          "$ref": "#/$defs/applicableType"
+        },
+        "hasCellar": {
+          "description": "Availability of a cellar.",
+          "title": "applicableType",
+          "$ref": "#/$defs/applicableType"
+        },
+        "hasChargingStation": {
+          "description": "Whether or not a charging station for e-Cars is provided.",
+          "title": "applicableType",
+          "$ref": "#/$defs/applicableType"
+        },
+        "hasConnectedBuildingLand": {
+          "description": "States if the land is fully developed and ready being built on it.",
+          "title": "applicableType",
+          "$ref": "#/$defs/applicableType"
+        },
+        "hasDemolitionProperty": {
+          "description": "Used for building land, states if there is some demolition property on it (or pieces of it).",
+          "title": "applicableType",
+          "$ref": "#/$defs/applicableType"
+        },
+        "hasDishwasher": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Availability of a dishwasher."
+        },
+        "hasElevator": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Availability of an elevator."
+        },
+        "hasFireplace": {
+          "description": "Includes a framed opening to hold an open fire, indoors.",
+          "title": "applicableType",
+          "$ref": "#/$defs/applicableType"
+        },
+        "hasFlatSharingCommunity": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Whether or not there is a residential community, sharing the living space."
+        },
+        "hasForeignQuota": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Widely used to control the amount of foreigners buying holiday flats in popular regions."
+        },
+        "hasGarage": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "A shelter for one car."
+        },
+        "hasGarageDouble": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "A shelter for two cars."
+        },
+        "hasGarageUnderground": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Subterranean garage for cars."
+        },
+        "hasGardenShed": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "A small building for storing garden tools, bicycles, and other equipment."
+        },
+        "hasLakeView": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Direct visibility of a lake."
+        },
+        "hasLiftingPlatform": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Provides vertical transportation between building floors, levels or decks, and are commonly found in offices, public buildings and other types of multi-story accommodation."
+        },
+        "hasMountainView": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Direct visibility of mountains."
+        },
+        "hasNiceView": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Has a lovely view, usually from the balcony or the living room."
+        },
+        "hasParking": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "An uncovered space for one car or more cars."
+        },
+        "hasPhotovoltaic": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Whether or not a photovoltaic system is provided."
+        },
+        "hasPlayground": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Has a playground for children nearby."
+        },
+        "hasRamp": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "A sloping floor, walk, or roadway leading from one level to another, usually to make a place accessible for wheels."
+        },
+        "hasSteamer": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Has a steamer."
+        },
+        "hasStoreRoom": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Storeroom, stowage room."
+        },
+        "hasSupplyGas": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Availability of a gas connection, usually for heating and cooking."
+        },
+        "hasSupplyPower": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "A connection to the public electric grid."
+        },
+        "hasSupplySewage": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "A connection to the public waste water system."
+        },
+        "hasSupplyWater": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "A connection to the public water supply."
+        },
+        "hasSwimmingPool": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Personal swimming pool."
+        },
+        "hasThermalSolarCollector": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Whether or not a thermal solar collector system is provided."
+        },
+        "hasTiledStove": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "A masonry heater or ceramic stove, is a device for warming an interior space usually fed with wood."
+        },
+        "hasTumbleDryer": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Dryer for clothes after washing them."
+        },
+        "hasWashingMachine": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "For washing clothes and other cloth."
+        },
+        "hasRemoteViewings": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Indicates that prospects can visit the property virtually (e.g. with a video-call or guided virtual-tour hosted by the real estate agent)"
+        },
+        "isChildFriendly": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Suitable for families."
+        },
+        "isCornerHouse": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "A house situated on the corner of two streets."
+        },
+        "isDemolitionProperty": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "If it's a tear-down property or a site of demolished structures."
+        },
+        "isDilapidated": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Old and in poor condition, in a state of decay."
+        },
+        "isFirstOccupancy": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "No one used the flat or the building before, since it was built or heavily renovated from ground up."
+        },
+        "isGroundFloor": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Nearly on a level with the ground."
+        },
+        "isGroundFloorRaised": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Half of a stair elevated story, in a building."
+        },
+        "isGutted": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Preparation for demolition or a part-demolition, all contaminants, doors, windows, floors and non-load bearing walls were removed."
+        },
+        "isInNeedOfRenovation": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Needs to be renewed in order to be fully usable again."
+        },
+        "isInNeedOfRenovationPartially": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Needs to be renewed partially in order to be fully usable again."
+        },
+        "isLikeNew": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Used, but as good as new."
+        },
+        "isMiddleHouse": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Situated between two other houses or buildings."
+        },
+        "isModernized": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Modernized means improved, things like a better insulated roof and walls, modern heating system and similar improvements."
+        },
+        "isNewConstruction": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Newly built house or building."
+        },
+        "isOldBuilding": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Refers to the construction method used until 60-80 years ago."
+        },
+        "isProjection": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Planned for the future."
+        },
+        "isQuiet": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Part of a quiet surrounding or neighbourhood."
+        },
+        "isRefurbished": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Fully renovated, neat, clean and restored."
+        },
+        "isRefurbishedPartially": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Partially renovated or restored."
+        },
+        "isSecondaryResidenceAllowed": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Where a person lives part time or less than the majority of the calendar year, typically a holiday flat, some laws and landlords do not allow this."
+        },
+        "isShellConstruction": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Intentionally missing interior finish in order to allow customization."
+        },
+        "isSmokingAllowed": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Smoking allowed inside."
+        },
+        "isSunny": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Sunny surroundings, nor trees, mountains or other buildings do shadow."
+        },
+        "isUnderRoof": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Mainly used for parking slots."
+        },
+        "isWellTended": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Properly looked after."
+        },
+        "isWheelchairAccessible": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "All aspects are accessible for wheelchair users."
+        },
+        "numberOfApartements": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of apartments contained."
+        },
+        "numberOfBathrooms": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of bathrooms."
+        },
+        "numberOfFloors": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total amount of floors."
+        },
+        "numberOfParcels": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of parcels."
+        },
+        "numberOfRooms": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total number of rooms."
+        },
+        "numberOfShowers": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The number of showers"
+        },
+        "numberOfToilets": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The number of toilets"
+        },
+        "numberOfToiletsGuest": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "The number of guest and additional toilets"
+        },
+        "onEvenGround": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Built on even grounds."
+        },
+        "onHillside": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Built on a sloping hillside."
+        },
+        "onHillsideSouth": {
+          "$ref": "#/$defs/applicableType",
+          "title": "applicableType",
+          "description": "Built on a sloping hillside towards the south."
+        },
+        "utilizationRatio": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Plot area built on, the ratio between plot area and gross floor area."
+        },
+        "utilizationRatioConstruction": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Plot area to be built on, the ratio between plot area and gross floor area."
+        },
+        "volumeGva": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Building volume in m³"
+        },
+        "volumeSia": {
+          "type": "number",
+          "minimum": 0,
+          "description": "DEPRICATED! please use volumeSia116Gv instead"
+        },
+        "volumeSia116Gv": {
+          "type": "number",
+          "minimum": 0,
+          "description": "olume SIA in m³ – Older Standard (SIA 116) with the Abbreviation 'GV'. This is still in use specifically for legacy properties."
+        },
+        "volumeSiaAfv": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Volume SIA-AFV in m³"
+        },
+        "volumeSiaAkv": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Volume SIA-AKV in m³"
+        },
+        "volumeSiaAngv": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Volume SIA-ANGV in m³"
+        },
+        "volumeSiaAnv": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Volume SIA-ANV in m³"
+        },
+        "volumeSiaAvv": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Volume SIA-AVV in m³"
+        },
+        "volumeSiaGv": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Volume SIA-GV in m³"
+        },
+        "yearBuilt": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9999,
+          "description": "Year of construction, in four digits."
+        },
+        "yearLastRenovated": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9999,
+          "description": "Year of last renovation, in four digits."
+        }
+      }
+    },
+    "addressType": {
+      "type": "object",
+      "description": "Postal address.",
+      "additionalProperties": false,
+      "properties": {
+        "countryCode": {
+          "description": "Uppercase two letter country code.",
+          "type": "string",
+          "pattern": "[A-Z]{2}"
+        },
+        "locality": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "postOfficeBoxNumber": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "streetNumber": {
+          "type": "string"
+        },
+        "streetAddition": {
+          "type": "string"
+        },
+        "subunit": {
+          "type": "integer"
+        },
+        "geo": {
+          "type": "object",
+          "description": "Geo coordinates and elevation",
+          "additionalProperties": false,
+          "properties": {
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "elevation": {
+              "type": "number"
+            }
+          },
+          "required": ["latitude", "longitude"]
+        }
+      }
+    },
+    "pricesType": {
+      "type": "object",
+      "description": "Sell, rent, deposit and auction prices.",
+      "additionalProperties": false,
+      "properties": {
+        "currency": {
+          "$ref": "#/$defs/currencyType"
+        },
+        "rent": {
+          "description": "Recurring rental price.",
+          "title": "propertyPriceRent",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "gross": {
+              "description": "Gross rental price.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "net": {
+              "description": "Net rental price.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "extra": {
+              "description": "Extra rental price.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "interval": {
+              "$ref": "#/$defs/priceIntervalType"
+            },
+            "referring": {
+              "$ref": "#/$defs/priceReferringType"
+            }
+          }
+        },
+        "buy": {
+          "description": "One time buy prices.",
+          "type": "object",
+          "title": "propertyPriceBuy",
+          "additionalProperties": false,
+          "properties": {
+            "price": {
+              "description": "Price for buying.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "extra": {
+              "description": "Extra buying price.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "wirPercentage": {
+              "description": "The percentage of the gross price which has to paid in WIR Franc electronic currency.",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "referring": {
+              "$ref": "#/$defs/priceReferringType"
+            }
+          },
+          "required": ["referring"]
+        },
+        "auction": {
+          "description": "Starting price for an auction.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "startPrice": {
+              "description": "Starting price for an auction.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "startDate": {
+              "description": "Starting time of auction.",
+              "type": "string",
+              "format": "date-time"
+            },
+            "expiration": {
+              "description": "Expiration time of auction.",
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": ["startPrice", "startDate", "expiration"]
+        },
+        "deposit": {
+          "description": "Required amount of deposit.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "amount": {
+              "description": "Amount of deposit.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "type": {
+              "description": "Type of deposit.",
+              "type": "string",
+              "enum": ["bank-guarantee", "deposit-guarantee"]
+            }
+          },
+          "required": ["amount", "type"]
+        },
+        "additionalOffers": {
+          "type": "array",
+          "description": "List of extras.",
+          "items": {
+            "$ref": "#/$defs/additionalOfferType"
+          }
+        }
+      }
+    },
+    "organizationType": {
+      "description": "An organization selling the property.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "address": {
+          "$ref": "#/$defs/addressType"
+        },
+        "legalName": {
+          "type": "string"
+        },
+        "brand": {
+          "type": "string"
+        },
+        "email": {
+          "$ref": "#/$defs/emailType"
+        },
+        "emailRem": {
+          "$ref": "#/$defs/emailType",
+          "description": "This field is depricated and will be removed in a future major version!"
+        },
+        "phone": {
+          "$ref": "#/$defs/phoneNumberType"
+        },
+        "mobile": {
+          "$ref": "#/$defs/phoneNumberType"
+        },
+        "website": {
+          "$ref": "#/$defs/websiteType"
+        }
+      }
+    },
+    "personType": {
+      "description": "An organization selling the property.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gender": {
+          "type": "string"
+        },
+        "function": {
+          "type": "string"
+        },
+        "givenName": {
+          "type": "string"
+        },
+        "familyName": {
+          "type": "string"
+        },
+        "email": {
+          "$ref": "#/$defs/emailType"
+        },
+        "phone": {
+          "$ref": "#/$defs/phoneNumberType"
+        },
+        "mobile": {
+          "$ref": "#/$defs/phoneNumberType"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "applicableType": {
+      "description": "Applicable can have three states, unknown must be treated as default.",
+      "type": "string",
+      "enum": ["applies", "does-not-apply", "unknown"]
+    },
+    "availabilityStateType": {
+      "description": "Lifecycle state of properties.",
+      "type": "string",
+      "enum": ["active", "private", "reference", "reserved", "taken"]
+    },
+    "publisherType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "options": {
+          "description": "List of publisher specific custom fields",
+          "type": "array",
+          "title": "PublisherOption",
+          "items": {
+            "$ref": "#/$defs/publisherOptionType"
+          }
+        }
+      },
+      "required": ["id"]
+    },
+    "publisherOptionType": {
+      "description": "Custom key-value pair, or generic data field, used for non-standardized data transaction, between two entities.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "languageCode": {
+          "$ref": "#/$defs/languageCodeType"
+        },
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expiration": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["key", "value"]
+    },
+    "localizationType": {
+      "description": "One for each language, a set of language specific content and texts.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "languageCode": {
+          "$ref": "#/$defs/languageCodeType"
+        },
+        "title": {
+          "type": "string",
+          "description": "Simple marketing title."
+        },
+        "excerpt": {
+          "type": "string",
+          "description": "A short extract from description, location and equipment."
+        },
+        "description": {
+          "type": "string",
+          "description": "Main description."
+        },
+        "location": {
+          "type": "string",
+          "description": "Description of the surrounding and location."
+        },
+        "equipment": {
+          "type": "string",
+          "description": "Description of available and included equipment."
+        },
+        "attachments": {
+          "type": "object",
+          "additionalProperties": false,
+          "title": "PropertyAttachment",
+          "description": "Sequence links, files, embeds and media.",
+          "properties": {
+            "images": {
+              "type": "array",
+              "title": "Image",
+              "items": {
+                "$ref": "#/$defs/attachmentImageType"
+              }
+            },
+            "logos": {
+              "type": "array",
+              "title": "Logo",
+              "items": {
+                "$ref": "#/$defs/attachmentLogoType"
+              }
+            },
+            "documents": {
+              "type": "array",
+              "title": "Document",
+              "items": {
+                "$ref": "#/$defs/attachmentDocumentType",
+                "description": "Specifications, brochures and other descriptive files."
+              }
+            },
+            "plans": {
+              "type": "array",
+              "title": "Document",
+              "items": {
+                "$ref": "#/$defs/attachmentDocumentType",
+                "description": "Floorplan image or document."
+              }
+            },
+            "landRegisterExtracts": {
+              "type": "array",
+              "title": "Document",
+              "items": {
+                "$ref": "#/$defs/attachmentDocumentType",
+                "description": "A document given to political officials (commune) with basic information portraying the property and its registrational validity."
+              }
+            },
+            "directLinks": {
+              "type": "array",
+              "title": "Link",
+              "items": {
+                "$ref": "#/$defs/attachmentLinkType",
+                "description": "'direct-link' defines a link that will link visitors 'directly' to the offer. For example from a List of properties one will be linked to the project website directly if clicked. This is usually used by websites, and portals tend to ignore that and can opt into simply representing them as normal 'link' types."
+              }
+            },
+            "links": {
+              "type": "array",
+              "title": "Link",
+              "items": {
+                "$ref": "#/$defs/attachmentLinkType",
+                "description": "An arbitrary related link."
+              }
+            },
+            "virtualTourLinks": {
+              "type": "array",
+              "title": "Link",
+              "items": {
+                "$ref": "#/$defs/attachmentLinkType",
+                "description": "Virtual tour link, typically used for embeddings and integrations."
+              }
+            },
+            "youTubeLinks": {
+              "type": "array",
+              "title": "Link",
+              "items": {
+                "$ref": "#/$defs/attachmentLinkType",
+                "description": "Video link, typically used for embeddings and integrations."
+              }
+            }
+          }
+        },
+        "visitInformation": {
+          "type": "string",
+          "description": "Specific visiting instructions or information, where to get the key, when to contact and similar."
+        },
+        "events": {
+          "type": "array",
+          "title": "Event",
+          "description": "List of events",
+          "items": {
+            "$ref": "#/$defs/attachmentEventType"
+          }
+        }
+      },
+      "required": ["title", "languageCode"]
+    },
+    "attachmentEventType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "location": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "start", "end"]
+    },
+    "websiteType": {
+      "type": "object",
+      "description": "Sellers URL, typically the company website.",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["url"]
+    },
+    "currencyType": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "additionalOfferType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "price": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "parking-exterior-space",
+            "parking-carport",
+            "parking-garage",
+            "parking-garage-connected",
+            "parking-garage-box",
+            "parking-garage-underground",
+            "parking-house",
+            "parking-duplex",
+            "parking-double-garage",
+            "room-workroom",
+            "room-storage-basement"
+          ]
+        },
+        "interval": {
+          "$ref": "#/$defs/priceIntervalType"
+        }
+      },
+      "required": ["price", "type"]
+    },
+    "unitCharacteristicsType": {
+      "type": "object",
+      "description": "The cold facts, to represent a unit.",
+      "additionalProperties": false,
+      "properties": {
+        "numberOfFloors": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}
