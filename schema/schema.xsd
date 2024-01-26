@@ -339,6 +339,8 @@
           <xs:documentation>Availability of an elevator.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="hasEvChargingStation" type="applicable" minOccurs="0" maxOccurs="1" />
+      <xs:element name="hasFiberOptics" type="applicable" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasFireplace" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Includes a framed opening to hold an open fire, indoors.</xs:documentation>
@@ -389,6 +391,7 @@
           <xs:documentation>Direct visibility of mountains.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="hasMultimediaWiring" type="applicable" minOccurs="0" maxOccurs="1" />
       <xs:element name="hasNiceView" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Has a lovely view, usually from the balcony or the living room.</xs:documentation>
@@ -589,6 +592,7 @@
           <xs:documentation>Sunny surroundings, nor trees, mountains or other buildings do shadow.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="isTemporaryUse" type="applicable" minOccurs="0" maxOccurs="1" />
       <xs:element name="isUnderRoof" type="applicable" minOccurs="0" maxOccurs="1">
         <xs:annotation>
           <xs:documentation>Mainly used for parking slots.</xs:documentation>
@@ -935,6 +939,7 @@
       <xs:documentation>The distinct object type name or object built type.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
+      <xs:enumeration value="advertising-area" />
       <xs:enumeration value="agricultural-lot" />
       <xs:enumeration value="allotment-garden" />
       <xs:enumeration value="apartment">
@@ -1135,6 +1140,7 @@
       <xs:enumeration value="sanatorium" />
       <xs:enumeration value="sauna" />
       <xs:enumeration value="shopping-center" />
+      <xs:enumeration value="single-garage" />
       <xs:enumeration value="single-room">
         <xs:annotation>
           <xs:documentation>single-room - A single room, typically for rent, does not necessarily include an own bathroom or kitchen, not to be confused with the 'one-room-flat' category.</xs:documentation>
@@ -1937,8 +1943,13 @@
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
                           <xs:enumeration value="Minergie" />
-                          <xs:enumeration value="Minergie-P" />
+                          <xs:enumeration value="Minergie-A" />
+                          <xs:enumeration value="Minergie-A-Eco" />
+                          <xs:enumeration value="Minergie-Areal" />
                           <xs:enumeration value="Minergie-Eco" />
+                          <xs:enumeration value="Minergie-Mqs-Bau" />
+                          <xs:enumeration value="Minergie-Mqs-Betrieb" />
+                          <xs:enumeration value="Minergie-P" />
                           <xs:enumeration value="Minergie-P-Eco" />
                         </xs:restriction>
                       </xs:simpleType>
