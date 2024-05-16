@@ -773,7 +773,7 @@
       <xs:element type="xs:string" name="gender" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1" />
     </xs:all>
-  </xs:complexType>
+  </xs:complexType>  
   <xs:complexType name="prices">
     <xs:annotation>
       <xs:documentation>Sell, rent, deposit and auction prices.</xs:documentation>
@@ -890,7 +890,7 @@
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
-  </xs:complexType>
+  </xs:complexType>  
   <!-- simple types -->
   <xs:simpleType name="applicable">
     <xs:annotation>
@@ -2012,6 +2012,18 @@
                       <xs:annotation>
                         <xs:documentation>Can be used to track the original creation id (this should usually be unique to the property)</xs:documentation>
                       </xs:annotation>
+                    </xs:element>
+                    <xs:element name="externalReference" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Object references based on other than SwissRETS standard (e.g IDX).</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                      <xs:all>
+                        <xs:element type="xs:string" name="refProperty" minOccurs="0" maxOccurs="1" />
+                        <xs:element type="xs:string" name="refHouse" minOccurs="0" maxOccurs="1" />
+                        <xs:element type="xs:string" name="refObject" minOccurs="0" maxOccurs="1" />
+                      </xs:all>
+                      </xs:complexType>
                     </xs:element>
                     <xs:element name="seller" minOccurs="0" maxOccurs="1">
                       <xs:annotation>

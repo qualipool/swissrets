@@ -466,6 +466,11 @@
           <note>Contact Mr. Smith</note>
         </inquiryPerson>
       </seller>
+      <externalReference>
+        <refProperty>str1234</refProperty>
+        <refHouse>str1234</refHouse>
+        <refObject>str1234</refObject>
+      </externalReference>
       <type>buy</type>
       <utilizations>
         <utilization>residential</utilization>
