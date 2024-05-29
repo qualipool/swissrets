@@ -773,7 +773,7 @@
       <xs:element type="xs:string" name="gender" minOccurs="0" maxOccurs="1" />
       <xs:element type="xs:string" name="note" minOccurs="0" maxOccurs="1" />
     </xs:all>
-  </xs:complexType>  
+  </xs:complexType>
   <xs:complexType name="prices">
     <xs:annotation>
       <xs:documentation>Sell, rent, deposit and auction prices.</xs:documentation>
@@ -890,7 +890,7 @@
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
-  </xs:complexType>  
+  </xs:complexType>
   <!-- simple types -->
   <xs:simpleType name="applicable">
     <xs:annotation>
@@ -1977,6 +1977,21 @@
                             </xs:annotation>
                             <xs:complexType>
                               <xs:all>
+                                <xs:element name="promotions" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="promotion" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                            <xs:element name="start" type="xs:dateTime" minOccurs="0" maxOccurs="1" />
+                                            <xs:element name="expiration" type="xs:dateTime" minOccurs="0" maxOccurs="1" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
                                 <xs:element name="options" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>List of publisher specific custom fields</xs:documentation>
