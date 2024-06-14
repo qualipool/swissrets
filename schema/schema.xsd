@@ -1851,6 +1851,11 @@
                                     <xs:documentation>Description of available and included equipment.</xs:documentation>
                                   </xs:annotation>
                                 </xs:element>
+                                <xs:element name="termsOfSale" type="xs:string" minOccurs="0" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Terms that apply for the sale of this investment property.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
                                 <xs:element name="attachments" minOccurs="0" maxOccurs="1">
                                   <xs:annotation>
                                     <xs:documentation>Sequence links, files, embeds and media.</xs:documentation>
