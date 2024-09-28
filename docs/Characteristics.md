@@ -143,3 +143,4 @@ volumeSiaAvv | Volume SIA-AVV in m³ | positiveDecimal
 volumeSiaGv | Volume SIA-GV in m³ | positiveDecimal
 yearBuilt | Year of construction, in four digits. | year
 yearLastRenovated | Year of last renovation, in four digits. | year
+yearlyOperationAndMaintenanceCosts | Refers to the extra costs (operational and maintenance) per year that this property costs when owning it. | positiveInteger
