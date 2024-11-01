@@ -742,7 +742,7 @@
       </xs:element>
       <xs:element type="emailaddress" name="emailRem" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>This field is depricated and will be removed in a future major version!</xs:documentation>
+          <xs:documentation>This field is deprecated and will be removed in a future major version!</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element type="phoneNumber" name="phone" minOccurs="0" maxOccurs="1">
