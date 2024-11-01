@@ -1354,12 +1354,12 @@
                           </xs:element>
                           <xs:element type="person" name="contactPerson" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>Contact person for questions and typically responsible for making appointments. This contact is typicaly presented publicly.</xs:documentation>
+                              <xs:documentation>Contact person for questions and typically responsible for making appointments. This contact is typicaly presented publicly. It may serve as a fallback for receiving inquiries if the inquiryPerson is not specified.</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element type="person" name="inquiryPerson" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
-                              <xs:documentation>The person responsible for receiving inquiries and applications. This person should not be presented publicly and is only intended as an indirect recipient using an online form or similar.</xs:documentation>
+                              <xs:documentation>The person responsible for receiving inquiries and applications. This person should not be presented publicly and is only intended as an indirect recipient using an online form or similar. If this person is not specified, the contactPerson may serve as the default recipient for the contact form.</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                         </xs:all>
