@@ -7,6 +7,7 @@
 | :warning: IMPORTANT         |
 |:----------------------------|
 | **We are moving to JSON format!** The Qualipool organization has decided to transition to the JSON format. The standard is now maintained in the [Qualipool SwissRETS-JSON repository](https://github.com/qualipool/swissrets-json). Both XML and JSON formats will be supported in parallel for all non-breaking changes, while breaking changes will only be introduced in JSON. We recommend new adopters to use the JSON format. For existing users, we suggest planning the migration to JSON to take full advantage of the SwissRETS feature set. You can find the SwissRETS XML to JSON migration guide [here](https://github.com/qualipool/swissrets-json/blob/master/MIGRATION-GUIDE.md).  |
+| **Motivation**: JSON has clearly emerged as the dominant format over XML on the market, and we aim to complete the transition before the SwissRETS format becomes too widely adopted. |
 
 SwissRETS is a swiss real estate transaction standard. The main goal ist to standardise data exchange between real estate software and platforms. It's meant to be a replacement for old and static formats like the widely used [IDX 3.01](https://en.wikipedia.org/wiki/Internet_Data_Exchange) in Switzerland.
 
