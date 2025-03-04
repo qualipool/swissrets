@@ -9,6 +9,7 @@ on:
 
 jobs:
   build:
+    name: PHP validator
     runs-on: ubuntu-latest
     defaults:
       run:

@@ -9,11 +9,11 @@ on:
 
 jobs:
   build:
-
+    name: .NET validator
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet-version: ['5.0.x']
+        dotnet-version: ['8.0.x']
 
     steps:
       - uses: actions/checkout@v4
