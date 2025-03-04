@@ -7,7 +7,6 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Schema;
 using Xunit;
-using FluentAssertions;
 
 namespace SwissRETS.Tests
 {
@@ -113,9 +112,8 @@ namespace SwissRETS.Tests
             }
 
             // make sure the right amount of errors occured
-            this.validationErrors.Count.Should().Be(
-              expectedErrorCount,
-              $"{filename} is {(expectedErrorCount == 0 ? "" : "not ")}well formated"
+            Assert.True(expectedErrorCount == this.validationErrors.Count,
+              $"{filename} is {(expectedErrorCount == 0 ? "" : "not ")} well formated"
             );
 
             // uncomment for descovering new should fail messages
@@ -125,15 +123,15 @@ namespace SwissRETS.Tests
             // abort if no pattern supplied
             if (errorPattern == "" || errorPattern == null)
             {
-              expectedErrorCount.Should().Be(0,
+              Assert.True(
+                expectedErrorCount == 0,
                 $"errorPattern can't be empty if validation errors are expected for {filename}"
               );
               return;
             }
 
             // also make sure, it is the correct validation error
-            allErrors.Should().Contain(errorPattern, errorPattern);
-
+            Assert.Contains(errorPattern, allErrors);
         }
         #endregion
 

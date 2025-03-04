@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{02ED9865-49B0-4F9E-96CB-11F2838E251B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnet", "dotnet", "{D1FD520D-0DCE-493E-B81D-D4F656512DE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetTests", "scripts\dotnet\DotnetTests\DotnetTests.csproj", "{6EAC437C-7660-4CB3-B349-72FA3E65C365}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EAC437C-7660-4CB3-B349-72FA3E65C365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EAC437C-7660-4CB3-B349-72FA3E65C365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EAC437C-7660-4CB3-B349-72FA3E65C365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EAC437C-7660-4CB3-B349-72FA3E65C365}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D1FD520D-0DCE-493E-B81D-D4F656512DE1} = {02ED9865-49B0-4F9E-96CB-11F2838E251B}
+		{6EAC437C-7660-4CB3-B349-72FA3E65C365} = {D1FD520D-0DCE-493E-B81D-D4F656512DE1}
+	EndGlobalSection
+EndGlobal
