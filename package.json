@@ -36,7 +36,7 @@
     "chalk": "^4.1.0",
     "fs-extra": "^9.0.1",
     "globby": "^11.0.2",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.20",
     "standard": "^16.0.3",
     "xmllint": "^0.1.1"
   },
