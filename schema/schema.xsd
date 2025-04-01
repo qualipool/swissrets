@@ -728,6 +728,11 @@
           <xs:documentation>Year of last renovation, in four digits.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="isShareDeal" type="applicable" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>In a share deal, the buyer acquires the property indirectly through the purchase of a company that is the owner of the property. The subject of the purchase agreement are the shares of the real estate company. In order to determine the share purchase price, the parties first agree on the market value of the property (e.g. CHF 40 million). The mortgage of CHF 15 million, for example, must be deducted from this value. Added to this are the assets that are not property-specific belonging to the real estate company (e.g. cash and cash equivalents of CHF 2 million and accounts receivable of CHF 1 million). The result is a share purchase price of CHF 28 million. This amount forms the basis for the negotiation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:all>
   </xs:complexType>
   <xs:complexType name="organization">
