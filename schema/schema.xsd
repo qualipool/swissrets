@@ -2075,6 +2075,22 @@
                       </xs:annotation>
                     </xs:element>
                     <!-- additional information about the data itself -->
+                    <xs:element name="occupancyPercentage" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Describes the precentage the property is occupied at the given date.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="date" type="xs:date" use="required">
+                              <xs:annotation>
+                                <xs:documentation>The day when the percentage was evaluated.</xs:documentation>
+                              </xs:annotation>
+                            </xs:attribute>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
                   </xs:all>
                   <xs:attribute type="xs:string" name="id" use="required">
                     <xs:annotation>

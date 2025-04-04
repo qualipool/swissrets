@@ -182,6 +182,7 @@
       <categories>
         <category>apartment</category>
       </categories>
+      <occupancyPercentage date="2020-01-23">75</occupancyPercentage>
       <characteristics>
         <areaBwf>123.45</areaBwf>
         <areaNwf>123.45</areaNwf>
