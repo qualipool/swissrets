@@ -818,6 +818,21 @@
           <xs:simpleContent>
             <xs:extension base="xs:positiveInteger">
               <xs:attribute name="start" type="xs:dateTime" />
+              <xs:attribute name="minimalIncrease" type="xs:positiveInteger" />
+              <xs:attribute name="expiration" type="xs:dateTime" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="bidding">
+        <xs:annotation>
+          <xs:documentation>Starting price for a bidding war.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:positiveInteger">
+              <xs:attribute name="start" type="xs:dateTime" />
+              <xs:attribute name="bindingStart" type="xs:dateTime" />
               <xs:attribute name="expiration" type="xs:dateTime" />
             </xs:extension>
           </xs:simpleContent>
