@@ -728,6 +728,11 @@
           <xs:documentation>Year of last renovation, in four digits.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="isVatOpted" type="applicable" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>A way to indicate whether a property is opted to tax or not. This information is relevant predominantly for the transaction of investment properties.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:all>
   </xs:complexType>
   <xs:complexType name="organization">
