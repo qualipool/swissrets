@@ -311,6 +311,7 @@
         <volumeSiaGv>123.45</volumeSiaGv>
         <yearBuilt>2009</yearBuilt>
         <yearLastRenovated>2019</yearLastRenovated>
+        <yearlyOperationAndMaintenanceCosts>50123</yearlyOperationAndMaintenanceCosts>
       </characteristics>
       <created>2012-12-13T12:12:12</created>
       <development>full</development>
